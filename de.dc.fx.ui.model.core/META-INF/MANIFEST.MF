@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Core
+Bundle-SymbolicName: de.dc.fx.ui.model.core
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: de.dc.fx.ui.model.core
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
