@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension
+         point="org.eclipse.core.runtime.applications"
+         id="FxuiEditorAdvisorApplication">
+      <!-- @generated fxui -->
+      <application>
+         <run class="de.dc.fx.ui.model.fxui.presentation.FxuiEditorAdvisor$Application"/>
+      </application>
+   </extension>
+
+   <extension point="org.eclipse.ui.perspectives">
+      <!-- @generated fxui -->
+      <perspective
+            name="%_UI_Perspective_label"
+            class="de.dc.fx.ui.model.fxui.presentation.FxuiEditorAdvisor$Perspective"
+            id="de.dc.fx.ui.model.fxui.presentation.FxuiEditorAdvisorPerspective">
+      </perspective>
+   </extension>
+
+   <extension point="org.eclipse.ui.commands">
+      <!-- @generated fxui -->
+      <command
+            name="%_UI_Menu_OpenURI_label"
+            description="%_UI_Menu_OpenURI_description"
+            categoryId="org.eclipse.ui.category.file"
+            id="de.dc.fx.ui.model.fxui.presentation.FxuiEditorAdvisorOpenURICommand"/>
+      <command
+            name="%_UI_Menu_Open_label"
+            description="%_UI_Menu_Open_description"
+            categoryId="org.eclipse.ui.category.file"
+            id="de.dc.fx.ui.model.fxui.presentation.FxuiEditorAdvisorOpenCommand"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.bindings">
+      <!-- @generated fxui -->
+      <key
+            commandId="de.dc.fx.ui.model.fxui.presentation.FxuiEditorAdvisorOpenURICommand"
+            sequence="M1+U"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+      <key
+            commandId="de.dc.fx.ui.model.fxui.presentation.FxuiEditorAdvisorOpenCommand"
+            sequence="M1+O"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.actionSets">
+      <!-- @generated fxui -->
+      <actionSet
+            label="%_UI_FxuiEditorAdvisor_ActionSet_label"
+            visible="true"
+            id="FxuiEditorAdvisorActionSet">
+         <action
+               label="%_UI_Menu_About_label"
+               class="de.dc.fx.ui.model.fxui.presentation.FxuiEditorAdvisor$AboutAction"
+               menubarPath="help/additions"
+               id="de.dc.fx.ui.model.fxui.presentation.FxuiEditorAdvisorAboutAction"/>
+         <action
+               label="%_UI_Menu_OpenURI_label"
+               definitionId="de.dc.fx.ui.model.fxui.presentation.FxuiEditorAdvisorOpenURICommand"
+               class="de.dc.fx.ui.model.fxui.presentation.FxuiEditorAdvisor$OpenURIAction"
+               menubarPath="file/additions"
+               id="de.dc.fx.ui.model.fxui.presentation.FxuiEditorAdvisorOpenURIAction"/>
+         <action
+               label="%_UI_Menu_Open_label"
+               definitionId="de.dc.fx.ui.model.fxui.presentation.FxuiEditorAdvisorOpenCommand"
+               class="de.dc.fx.ui.model.fxui.presentation.FxuiEditorAdvisor$OpenAction"
+               menubarPath="file/additions"
+               id="de.dc.fx.ui.model.fxui.presentation.FxuiEditorAdvisorOpenAction"/>
+      </actionSet>
+   </extension>
+
+   <extension point="org.eclipse.ui.actionSets">
+      <!-- @generated fxui -->
+      <actionSet
+            label="%_UI_FxuiModelWizard_ActionSet_label"
+            visible="true"
+            id="de.dc.fx.ui.model.fxui.presentation.FxuiActionBarContributorActionSet">
+         <action
+               label="%_UI_FxuiModelWizard_label"
+               class="de.dc.fx.ui.model.fxui.presentation.FxuiActionBarContributor$NewAction"
+               menubarPath="file/new/additions"
+               id="de.dc.fx.ui.model.fxui.presentation.FxuiActionBarContributorNewAction"/>
+      </actionSet>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated fxui -->
+      <editor
+            id="de.dc.fx.ui.model.fxui.presentation.FxuiEditorID"
+            name="%_UI_FxuiEditor_label"
+            icon="icons/full/obj16/FxuiModelFile.gif"
+            extensions="fxui"
+            class="de.dc.fx.ui.model.fxui.presentation.FxuiEditor"
+            contributorClass="de.dc.fx.ui.model.fxui.presentation.FxuiActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fxui:FXTableView xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:fxui="http://www.example.org/fxui" name="Person">
+  <fxColumns associatedFXProperty="//@fxEntity/@fxProperties.0"/>
+  <fxColumns associatedFXProperty="//@fxEntity/@fxProperties.1"/>
+  <fxColumns associatedFXProperty="//@fxEntity/@fxProperties.2"/>
+  <fxEntity name="Person">
+    <fxProperties name="Name" type="String"/>
+    <fxProperties name="Surname" type="String"/>
+    <fxProperties name="Age" type="Integer"/>
+  </fxEntity>
+</fxui:FXTableView>

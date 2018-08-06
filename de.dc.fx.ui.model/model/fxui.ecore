@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="fxui" nsURI="http://www.example.org/fxui" nsPrefix="fxui">
+  <eClassifiers xsi:type="ecore:EClass" name="FXTableView" eSuperTypes="#//FXNamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fxColumns" upperBound="-1"
+        eType="#//FXColumn" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fxEntity" eType="#//FXModel"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="hasFilter" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="hasSorter" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FXColumn" eSuperTypes="#//FXNamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="associatedFXProperty" eType="#//FXProperty"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="editable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="useCustomCellFactory" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FXNamedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FXModel" eSuperTypes="#//FXNamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fxProperties" upperBound="-1"
+        eType="#//FXProperty" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FXProperty" eSuperTypes="#//FXNamedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+</ecore:EPackage>
