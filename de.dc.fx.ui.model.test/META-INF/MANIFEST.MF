@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Test
+Bundle-SymbolicName: de.dc.fx.ui.model.test
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: de.dc.fx.ui.model.test
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: de.dc.fx.ui.model.core;bundle-version="1.0.0"
