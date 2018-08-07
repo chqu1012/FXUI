@@ -6,10 +6,16 @@ import de.dc.fx.ui.model.test.model.Person;
 
 public class PersonTableViewer extends BaseFXTableViewer<Person> {
 
-	public PersonTableViewer() {
-		createColumn("Name");
-		createColumn("Surname", 200);
-		createColumn("Age");
-		createColumn("Gender", new GenderFactory());
+	public static final String COL_NAME = "Name";
+	public static final String COL_SURNAME = "Surname";
+	public static final String COL_AGE= "Age";
+	public static final String COL_GENDER = "Gender";
+	
+	@Override
+	protected void initColumns() {
+		createColumn(COL_NAME);
+		createColumn(COL_SURNAME, 200);
+		createColumn(COL_AGE);
+		createColumn(COL_GENDER, new GenderFactory());
 	}
 }

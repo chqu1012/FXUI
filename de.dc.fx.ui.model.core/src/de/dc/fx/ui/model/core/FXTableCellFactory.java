@@ -4,7 +4,7 @@ import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.util.Callback;
 
-public abstract class FXCellFactory<T> implements Callback<TableColumn<T, T>, TableCell<T, T>> {
+public abstract class FXTableCellFactory<T> implements Callback<TableColumn<T, T>, TableCell<T, T>> {
 
 	T data;
 	
