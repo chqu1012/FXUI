@@ -1,8 +1,8 @@
-package de.dc.fx.ui.model.test;
+package de.dc.fx.ui.model.demo;
 
 import de.dc.fx.ui.model.core.FXApplication;
-import de.dc.fx.ui.model.test.model.Person;
-import de.dc.fx.ui.model.test.ui.PersonTableViewer;
+import de.dc.fx.ui.model.demo.control.PersonTableViewer;
+import de.dc.fx.ui.model.demo.model.Person;
 import javafx.scene.Parent;
 
 public class PersonApplication extends FXApplication{

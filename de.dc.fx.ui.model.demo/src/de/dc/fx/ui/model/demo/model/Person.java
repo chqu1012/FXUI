@@ -1,4 +1,4 @@
-package de.dc.fx.ui.model.test.model;
+package de.dc.fx.ui.model.demo.model;
 
 public class Person {
 	

@@ -3,9 +3,12 @@ package de.dc.fx.ui.model.core;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.function.Predicate;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.TableCell;
@@ -20,6 +23,9 @@ public abstract class BaseFXTableViewer<T> extends AnchorPane{
 	@FXML TableView<T> tableView;
 	
 	protected ObservableList<T> input = FXCollections.observableArrayList();
+	protected FilteredList<T> filteredInput = new FilteredList<>(input, p->true);
+	protected SortedList<T> sortedInput = new SortedList<>(filteredInput);
+	
 	protected Map<String, TableColumn<T,T>> columns = new HashMap<String,TableColumn<T,T>>();
 	
 	public BaseFXTableViewer() {
@@ -69,12 +75,25 @@ public abstract class BaseFXTableViewer<T> extends AnchorPane{
 		return tableView;
 	}
 	
+	public FilteredList<T> getFilteredInput() {
+		return filteredInput;
+	}
+
+	public SortedList<T> getSortedInput() {
+		return sortedInput;
+	}
+
 	public ObservableList<T> getInput(){
 		return input;
 	}
 	
+	public void clear() {
+		input.clear();
+	}
+	
 	private void initTableView() {
-		tableView.setItems(input);
+		sortedInput.comparatorProperty().bind(tableView.comparatorProperty());
+		tableView.setItems(sortedInput);
 		initColumns();
 	}
 

@@ -1,9 +1,9 @@
-package de.dc.fx.ui.model.test.factory;
+package de.dc.fx.ui.model.demo.cell;
 
 import de.dc.fx.ui.model.core.FXTableCellFactory;
-import de.dc.fx.ui.model.test.model.Person;
+import de.dc.fx.ui.model.demo.model.Person;
 
-public class GenderFactory extends FXTableCellFactory<Person> {
+public class PersonTableCellGenderFactory extends FXTableCellFactory<Person> {
 
 	@Override
 	protected String extractValue(Person data) {

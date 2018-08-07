@@ -1,20 +1,18 @@
 package de.dc.fx.ui.model.core.file;
-import de.dc.fx.ui.model.fxui.FXModel;
-import de.dc.fx.ui.model.fxui.FxuiFactory;
-import de.dc.fx.ui.model.fxui.FxuiPackage;
-
 import java.io.IOException;
 import java.util.Collections;
 import java.util.Map;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.EcoreFactory;
-import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
+
+import de.dc.fx.ui.model.fxui.FXTableView;
+import de.dc.fx.ui.model.fxui.FxuiFactory;
+import de.dc.fx.ui.model.fxui.FxuiPackage;
 
 public class FXUIFile {
 
@@ -29,8 +27,7 @@ public class FXUIFile {
 		FxuiFactory einstance = FxuiFactory.eINSTANCE;
 	}
 	
-    @SuppressWarnings("unchecked")
-	public FXModel load(String filePath) {
+	public FXTableView load(String filePath) {
         URI uri = URI.createFileURI(filePath);
         
         Resource.Factory.Registry reg = Resource.Factory.Registry.INSTANCE;
@@ -38,11 +35,11 @@ public class FXUIFile {
         m.put(EXTENSION, new XMIResourceFactoryImpl());
         ResourceSet resSet = new ResourceSetImpl();
         Resource resource = resSet.getResource(uri, true);
-        FXModel model = (FXModel) resource.getContents().get(0);
+        FXTableView model = (FXTableView) resource.getContents().get(0);
         return model;
     }
 
-    public void write(FXModel model, String path) {
+    public void write(FXTableView model, String path) {
         URI uri = URI.createFileURI(path);
 
         Resource.Factory.Registry reg = Resource.Factory.Registry.INSTANCE;

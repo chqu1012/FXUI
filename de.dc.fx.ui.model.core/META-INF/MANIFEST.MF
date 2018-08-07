@@ -10,4 +10,6 @@ Require-Bundle: org.eclipse.emf.common;bundle-version="2.14.0",
  org.eclipse.emf.ecore.xmi;bundle-version="2.14.0",
  de.dc.fx.ui.model
 Export-Package: de.dc.fx.ui.model.core,
- de.dc.fx.ui.model.core.file
+ de.dc.fx.ui.model.core.control,
+ de.dc.fx.ui.model.core.file,
+ de.dc.fx.ui.model.core.renderer
