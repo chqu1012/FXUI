@@ -39,6 +39,7 @@ public class FXTableViewerRenderer<T> extends FxuiSwitch<Object>{
 		}
 		TableColumn<T, T> column = new TableColumn<T,T>(name);
 		column.setCellValueFactory(new PropertyValueFactory<T, T>(propertyName));
+		column.setMinWidth(object.getWidth());
 		columns.put(propertyName, column);
 		return column;
 	}

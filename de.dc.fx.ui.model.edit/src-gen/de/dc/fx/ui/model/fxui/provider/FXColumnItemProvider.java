@@ -47,6 +47,7 @@ public class FXColumnItemProvider extends FXNamedElementItemProvider {
 			addAssociatedFXPropertyPropertyDescriptor(object);
 			addEditablePropertyDescriptor(object);
 			addUseCustomCellFactoryPropertyDescriptor(object);
+			addWidthPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -99,6 +100,22 @@ public class FXColumnItemProvider extends FXNamedElementItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Width feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addWidthPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_FXColumn_width_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_FXColumn_width_feature",
+								"_UI_FXColumn_type"),
+						FxuiPackage.Literals.FX_COLUMN__WIDTH, true, false, false,
+						ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+	}
+
+	/**
 	 * This returns FXColumn.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -146,6 +163,7 @@ public class FXColumnItemProvider extends FXNamedElementItemProvider {
 		switch (notification.getFeatureID(FXColumn.class)) {
 		case FxuiPackage.FX_COLUMN__EDITABLE:
 		case FxuiPackage.FX_COLUMN__USE_CUSTOM_CELL_FACTORY:
+		case FxuiPackage.FX_COLUMN__WIDTH:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

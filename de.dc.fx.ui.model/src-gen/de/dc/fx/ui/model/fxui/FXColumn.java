@@ -14,6 +14,7 @@ package de.dc.fx.ui.model.fxui;
  *   <li>{@link de.dc.fx.ui.model.fxui.FXColumn#getAssociatedFXProperty <em>Associated FX Property</em>}</li>
  *   <li>{@link de.dc.fx.ui.model.fxui.FXColumn#isEditable <em>Editable</em>}</li>
  *   <li>{@link de.dc.fx.ui.model.fxui.FXColumn#isUseCustomCellFactory <em>Use Custom Cell Factory</em>}</li>
+ *   <li>{@link de.dc.fx.ui.model.fxui.FXColumn#getWidth <em>Width</em>}</li>
  * </ul>
  *
  * @see de.dc.fx.ui.model.fxui.FxuiPackage#getFXColumn()
@@ -98,5 +99,32 @@ public interface FXColumn extends FXNamedElement {
 	 * @generated
 	 */
 	void setUseCustomCellFactory(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Width</b></em>' attribute.
+	 * The default value is <code>"100.0"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Width</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Width</em>' attribute.
+	 * @see #setWidth(double)
+	 * @see de.dc.fx.ui.model.fxui.FxuiPackage#getFXColumn_Width()
+	 * @model default="100.0"
+	 * @generated
+	 */
+	double getWidth();
+
+	/**
+	 * Sets the value of the '{@link de.dc.fx.ui.model.fxui.FXColumn#getWidth <em>Width</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Width</em>' attribute.
+	 * @see #getWidth()
+	 * @generated
+	 */
+	void setWidth(double value);
 
 } // FXColumn

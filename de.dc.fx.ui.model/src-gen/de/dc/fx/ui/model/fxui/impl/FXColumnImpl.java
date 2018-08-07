@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link de.dc.fx.ui.model.fxui.impl.FXColumnImpl#getAssociatedFXProperty <em>Associated FX Property</em>}</li>
  *   <li>{@link de.dc.fx.ui.model.fxui.impl.FXColumnImpl#isEditable <em>Editable</em>}</li>
  *   <li>{@link de.dc.fx.ui.model.fxui.impl.FXColumnImpl#isUseCustomCellFactory <em>Use Custom Cell Factory</em>}</li>
+ *   <li>{@link de.dc.fx.ui.model.fxui.impl.FXColumnImpl#getWidth <em>Width</em>}</li>
  * </ul>
  *
  * @generated
@@ -78,6 +79,26 @@ public class FXColumnImpl extends FXNamedElementImpl implements FXColumn {
 	 * @ordered
 	 */
 	protected boolean useCustomCellFactory = USE_CUSTOM_CELL_FACTORY_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getWidth() <em>Width</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getWidth()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double WIDTH_EDEFAULT = 100.0;
+
+	/**
+	 * The cached value of the '{@link #getWidth() <em>Width</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getWidth()
+	 * @generated
+	 * @ordered
+	 */
+	protected double width = WIDTH_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -188,6 +209,27 @@ public class FXColumnImpl extends FXNamedElementImpl implements FXColumn {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public double getWidth() {
+		return width;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setWidth(double newWidth) {
+		double oldWidth = width;
+		width = newWidth;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FxuiPackage.FX_COLUMN__WIDTH, oldWidth, width));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -199,6 +241,8 @@ public class FXColumnImpl extends FXNamedElementImpl implements FXColumn {
 			return isEditable();
 		case FxuiPackage.FX_COLUMN__USE_CUSTOM_CELL_FACTORY:
 			return isUseCustomCellFactory();
+		case FxuiPackage.FX_COLUMN__WIDTH:
+			return getWidth();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -219,6 +263,9 @@ public class FXColumnImpl extends FXNamedElementImpl implements FXColumn {
 			return;
 		case FxuiPackage.FX_COLUMN__USE_CUSTOM_CELL_FACTORY:
 			setUseCustomCellFactory((Boolean) newValue);
+			return;
+		case FxuiPackage.FX_COLUMN__WIDTH:
+			setWidth((Double) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -241,6 +288,9 @@ public class FXColumnImpl extends FXNamedElementImpl implements FXColumn {
 		case FxuiPackage.FX_COLUMN__USE_CUSTOM_CELL_FACTORY:
 			setUseCustomCellFactory(USE_CUSTOM_CELL_FACTORY_EDEFAULT);
 			return;
+		case FxuiPackage.FX_COLUMN__WIDTH:
+			setWidth(WIDTH_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -259,6 +309,8 @@ public class FXColumnImpl extends FXNamedElementImpl implements FXColumn {
 			return editable != EDITABLE_EDEFAULT;
 		case FxuiPackage.FX_COLUMN__USE_CUSTOM_CELL_FACTORY:
 			return useCustomCellFactory != USE_CUSTOM_CELL_FACTORY_EDEFAULT;
+		case FxuiPackage.FX_COLUMN__WIDTH:
+			return width != WIDTH_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -278,6 +330,8 @@ public class FXColumnImpl extends FXNamedElementImpl implements FXColumn {
 		result.append(editable);
 		result.append(", useCustomCellFactory: ");
 		result.append(useCustomCellFactory);
+		result.append(", width: ");
+		result.append(width);
 		result.append(')');
 		return result.toString();
 	}

@@ -213,13 +213,22 @@ public interface FxuiPackage extends EPackage {
 	int FX_COLUMN__USE_CUSTOM_CELL_FACTORY = FX_NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_COLUMN__WIDTH = FX_NAMED_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>FX Column</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FX_COLUMN_FEATURE_COUNT = FX_NAMED_ELEMENT_FEATURE_COUNT + 3;
+	int FX_COLUMN_FEATURE_COUNT = FX_NAMED_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>FX Column</em>' class.
@@ -420,6 +429,17 @@ public interface FxuiPackage extends EPackage {
 	EAttribute getFXColumn_UseCustomCellFactory();
 
 	/**
+	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.model.fxui.FXColumn#getWidth <em>Width</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Width</em>'.
+	 * @see de.dc.fx.ui.model.fxui.FXColumn#getWidth()
+	 * @see #getFXColumn()
+	 * @generated
+	 */
+	EAttribute getFXColumn_Width();
+
+	/**
 	 * Returns the meta object for class '{@link de.dc.fx.ui.model.fxui.FXNamedElement <em>FX Named Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -580,6 +600,14 @@ public interface FxuiPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute FX_COLUMN__USE_CUSTOM_CELL_FACTORY = eINSTANCE.getFXColumn_UseCustomCellFactory();
+
+		/**
+		 * The meta object literal for the '<em><b>Width</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FX_COLUMN__WIDTH = eINSTANCE.getFXColumn_Width();
 
 		/**
 		 * The meta object literal for the '{@link de.dc.fx.ui.model.fxui.impl.FXNamedElementImpl <em>FX Named Element</em>}' class.

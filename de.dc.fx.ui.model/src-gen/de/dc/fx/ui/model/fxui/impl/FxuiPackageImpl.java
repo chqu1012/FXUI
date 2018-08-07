@@ -209,6 +209,15 @@ public class FxuiPackageImpl extends EPackageImpl implements FxuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getFXColumn_Width() {
+		return (EAttribute) fxColumnEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getFXNamedElement() {
 		return fxNamedElementEClass;
 	}
@@ -297,6 +306,7 @@ public class FxuiPackageImpl extends EPackageImpl implements FxuiPackage {
 		createEReference(fxColumnEClass, FX_COLUMN__ASSOCIATED_FX_PROPERTY);
 		createEAttribute(fxColumnEClass, FX_COLUMN__EDITABLE);
 		createEAttribute(fxColumnEClass, FX_COLUMN__USE_CUSTOM_CELL_FACTORY);
+		createEAttribute(fxColumnEClass, FX_COLUMN__WIDTH);
 
 		fxNamedElementEClass = createEClass(FX_NAMED_ELEMENT);
 		createEAttribute(fxNamedElementEClass, FX_NAMED_ELEMENT__NAME);
@@ -368,6 +378,8 @@ public class FxuiPackageImpl extends EPackageImpl implements FxuiPackage {
 		initEAttribute(getFXColumn_UseCustomCellFactory(), ecorePackage.getEBoolean(), "useCustomCellFactory", null, 0,
 				1, FXColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFXColumn_Width(), ecorePackage.getEDouble(), "width", "100.0", 0, 1, FXColumn.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(fxNamedElementEClass, FXNamedElement.class, "FXNamedElement", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);

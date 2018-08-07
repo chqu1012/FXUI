@@ -20,6 +20,7 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fxui.ecore#//FXColumn/associatedFXProperty"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fxui.ecore#//FXColumn/editable"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fxui.ecore#//FXColumn/useCustomCellFactory"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fxui.ecore#//FXColumn/width"/>
     </genClasses>
     <genClasses ecoreClass="fxui.ecore#//FXNamedElement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fxui.ecore#//FXNamedElement/name"/>
