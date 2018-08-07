@@ -10,8 +10,10 @@ import de.dc.fx.ui.model.fxui.FXTableView;
 import de.dc.fx.ui.model.fxui.FxuiFactory;
 import de.dc.fx.ui.model.fxui.FxuiPackage;
 
+import de.dc.fx.ui.model.fxui.Pos;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -58,6 +60,13 @@ public class FxuiPackageImpl extends EPackageImpl implements FxuiPackage {
 	 * @generated
 	 */
 	private EClass fxPropertyEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum posEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -218,6 +227,15 @@ public class FxuiPackageImpl extends EPackageImpl implements FxuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getFXColumn_Alignment() {
+		return (EAttribute) fxColumnEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getFXNamedElement() {
 		return fxNamedElementEClass;
 	}
@@ -272,6 +290,15 @@ public class FxuiPackageImpl extends EPackageImpl implements FxuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getPos() {
+		return posEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public FxuiFactory getFxuiFactory() {
 		return (FxuiFactory) getEFactoryInstance();
 	}
@@ -307,6 +334,7 @@ public class FxuiPackageImpl extends EPackageImpl implements FxuiPackage {
 		createEAttribute(fxColumnEClass, FX_COLUMN__EDITABLE);
 		createEAttribute(fxColumnEClass, FX_COLUMN__USE_CUSTOM_CELL_FACTORY);
 		createEAttribute(fxColumnEClass, FX_COLUMN__WIDTH);
+		createEAttribute(fxColumnEClass, FX_COLUMN__ALIGNMENT);
 
 		fxNamedElementEClass = createEClass(FX_NAMED_ELEMENT);
 		createEAttribute(fxNamedElementEClass, FX_NAMED_ELEMENT__NAME);
@@ -316,6 +344,9 @@ public class FxuiPackageImpl extends EPackageImpl implements FxuiPackage {
 
 		fxPropertyEClass = createEClass(FX_PROPERTY);
 		createEAttribute(fxPropertyEClass, FX_PROPERTY__TYPE);
+
+		// Create enums
+		posEEnum = createEEnum(POS);
 	}
 
 	/**
@@ -380,6 +411,8 @@ public class FxuiPackageImpl extends EPackageImpl implements FxuiPackage {
 				!IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFXColumn_Width(), ecorePackage.getEDouble(), "width", "100.0", 0, 1, FXColumn.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFXColumn_Alignment(), this.getPos(), "alignment", "CENTER", 0, 1, FXColumn.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(fxNamedElementEClass, FXNamedElement.class, "FXNamedElement", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -395,6 +428,18 @@ public class FxuiPackageImpl extends EPackageImpl implements FxuiPackage {
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFXProperty_Type(), ecorePackage.getEString(), "type", null, 0, 1, FXProperty.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		// Initialize enums and add enum literals
+		initEEnum(posEEnum, Pos.class, "Pos");
+		addEEnumLiteral(posEEnum, Pos.TOP_LEFT);
+		addEEnumLiteral(posEEnum, Pos.TOP_CENTER);
+		addEEnumLiteral(posEEnum, Pos.TOP_RIGHT);
+		addEEnumLiteral(posEEnum, Pos.CENTER_LEFT);
+		addEEnumLiteral(posEEnum, Pos.CENTER);
+		addEEnumLiteral(posEEnum, Pos.CENTER_RIGHT);
+		addEEnumLiteral(posEEnum, Pos.BOTTOM_LEFT);
+		addEEnumLiteral(posEEnum, Pos.BOTTOM_CENTER);
+		addEEnumLiteral(posEEnum, Pos.BOTTOM_RIGHT);
 
 		// Create resource
 		createResource(eNS_URI);

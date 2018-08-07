@@ -48,6 +48,7 @@ public class FXColumnItemProvider extends FXNamedElementItemProvider {
 			addEditablePropertyDescriptor(object);
 			addUseCustomCellFactoryPropertyDescriptor(object);
 			addWidthPropertyDescriptor(object);
+			addAlignmentPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -116,6 +117,22 @@ public class FXColumnItemProvider extends FXNamedElementItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Alignment feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAlignmentPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_FXColumn_alignment_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_FXColumn_alignment_feature",
+								"_UI_FXColumn_type"),
+						FxuiPackage.Literals.FX_COLUMN__ALIGNMENT, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
 	 * This returns FXColumn.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -164,6 +181,7 @@ public class FXColumnItemProvider extends FXNamedElementItemProvider {
 		case FxuiPackage.FX_COLUMN__EDITABLE:
 		case FxuiPackage.FX_COLUMN__USE_CUSTOM_CELL_FACTORY:
 		case FxuiPackage.FX_COLUMN__WIDTH:
+		case FxuiPackage.FX_COLUMN__ALIGNMENT:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

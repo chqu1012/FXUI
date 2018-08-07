@@ -5,4 +5,5 @@ Bundle-SymbolicName: de.dc.fx.ui.model.demo
 Bundle-Version: 1.0.0.qualifier
 Automatic-Module-Name: de.dc.fx.ui.model.test
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Require-Bundle: de.dc.fx.ui.model.core;bundle-version="1.0.0"
+Require-Bundle: de.dc.fx.ui.model.core;bundle-version="1.0.0",
+ de.dc.fx.ui.model

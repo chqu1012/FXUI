@@ -15,6 +15,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="useCustomCellFactory" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
         defaultValueLiteral="100.0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="alignment" eType="#//Pos"
+        defaultValueLiteral="CENTER"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FXNamedElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -25,5 +27,16 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FXProperty" eSuperTypes="#//FXNamedElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Pos">
+    <eLiterals name="TOP_LEFT" literal="TOP_LEFT"/>
+    <eLiterals name="TOP_CENTER" value="1"/>
+    <eLiterals name="TOP_RIGHT" value="2"/>
+    <eLiterals name="CENTER_LEFT" value="3"/>
+    <eLiterals name="CENTER" value="4"/>
+    <eLiterals name="CENTER_RIGHT" value="5"/>
+    <eLiterals name="BOTTOM_LEFT" value="6"/>
+    <eLiterals name="BOTTOM_CENTER" value="7"/>
+    <eLiterals name="BOTTOM_RIGHT" value="8"/>
   </eClassifiers>
 </ecore:EPackage>

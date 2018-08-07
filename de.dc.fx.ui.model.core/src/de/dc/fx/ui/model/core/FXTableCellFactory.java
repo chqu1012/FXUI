@@ -7,11 +7,13 @@ import javafx.util.Callback;
 
 public abstract class FXTableCellFactory<T> implements Callback<TableColumn<T, T>, TableCell<T, T>> {
 
-	T data;
+	protected T data;
+	private TableCell<T,T> cell;
+	private String style = "";
 	
 	@Override
 	public TableCell<T, T> call(TableColumn<T, T> param) {
-		TableCell<T,T> cell = new TableCell<T,T>() {
+		cell = new TableCell<T,T>() {
 			@SuppressWarnings("unchecked")
 			@Override
 			protected void updateItem(T item, boolean empty) {
@@ -26,10 +28,19 @@ public abstract class FXTableCellFactory<T> implements Callback<TableColumn<T, T
 				setText(content);
 			}
 		};
+		cell.setStyle(getStyle());
 		cell.setAlignment(getAlignment());
 		return cell;
 	}
 	
+	protected void setStyle(String style) {
+		this.style=style;
+	}
+
+	protected String getStyle() {
+		return style;
+	}
+
 	protected Pos getAlignment() {
 		return Pos.CENTER;
 	}

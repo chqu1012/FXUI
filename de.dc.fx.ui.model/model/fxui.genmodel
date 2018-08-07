@@ -10,6 +10,17 @@
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="Fxui" basePackage="de.dc.fx.ui.model" disposableProviderFactory="true"
       multipleEditorPages="false" ecorePackage="fxui.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="fxui.ecore#//Pos">
+      <genEnumLiterals ecoreEnumLiteral="fxui.ecore#//Pos/TOP_LEFT"/>
+      <genEnumLiterals ecoreEnumLiteral="fxui.ecore#//Pos/TOP_CENTER"/>
+      <genEnumLiterals ecoreEnumLiteral="fxui.ecore#//Pos/TOP_RIGHT"/>
+      <genEnumLiterals ecoreEnumLiteral="fxui.ecore#//Pos/CENTER_LEFT"/>
+      <genEnumLiterals ecoreEnumLiteral="fxui.ecore#//Pos/CENTER"/>
+      <genEnumLiterals ecoreEnumLiteral="fxui.ecore#//Pos/CENTER_RIGHT"/>
+      <genEnumLiterals ecoreEnumLiteral="fxui.ecore#//Pos/BOTTOM_LEFT"/>
+      <genEnumLiterals ecoreEnumLiteral="fxui.ecore#//Pos/BOTTOM_CENTER"/>
+      <genEnumLiterals ecoreEnumLiteral="fxui.ecore#//Pos/BOTTOM_RIGHT"/>
+    </genEnums>
     <genClasses ecoreClass="fxui.ecore#//FXTableView">
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fxui.ecore#//FXTableView/fxColumns"/>
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fxui.ecore#//FXTableView/fxEntity"/>
@@ -21,6 +32,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fxui.ecore#//FXColumn/editable"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fxui.ecore#//FXColumn/useCustomCellFactory"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fxui.ecore#//FXColumn/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fxui.ecore#//FXColumn/alignment"/>
     </genClasses>
     <genClasses ecoreClass="fxui.ecore#//FXNamedElement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fxui.ecore#//FXNamedElement/name"/>

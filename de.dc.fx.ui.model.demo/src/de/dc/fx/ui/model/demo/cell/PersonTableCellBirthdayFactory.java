@@ -16,6 +16,11 @@ public class PersonTableCellBirthdayFactory extends FXTableCellFactory<Person> {
 	}
 	
 	@Override
+	protected String getStyle() {
+		return "-fx-text-fill: green;";
+	}
+	
+	@Override
 	protected Pos getAlignment() {
 		return Pos.CENTER_RIGHT;
 	}

@@ -6,6 +6,7 @@ import de.dc.fx.ui.model.fxui.FXColumn;
 import de.dc.fx.ui.model.fxui.FXProperty;
 import de.dc.fx.ui.model.fxui.FxuiPackage;
 
+import de.dc.fx.ui.model.fxui.Pos;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -25,6 +26,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link de.dc.fx.ui.model.fxui.impl.FXColumnImpl#isEditable <em>Editable</em>}</li>
  *   <li>{@link de.dc.fx.ui.model.fxui.impl.FXColumnImpl#isUseCustomCellFactory <em>Use Custom Cell Factory</em>}</li>
  *   <li>{@link de.dc.fx.ui.model.fxui.impl.FXColumnImpl#getWidth <em>Width</em>}</li>
+ *   <li>{@link de.dc.fx.ui.model.fxui.impl.FXColumnImpl#getAlignment <em>Alignment</em>}</li>
  * </ul>
  *
  * @generated
@@ -99,6 +101,26 @@ public class FXColumnImpl extends FXNamedElementImpl implements FXColumn {
 	 * @ordered
 	 */
 	protected double width = WIDTH_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getAlignment() <em>Alignment</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAlignment()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Pos ALIGNMENT_EDEFAULT = Pos.CENTER;
+
+	/**
+	 * The cached value of the '{@link #getAlignment() <em>Alignment</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAlignment()
+	 * @generated
+	 * @ordered
+	 */
+	protected Pos alignment = ALIGNMENT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -230,6 +252,28 @@ public class FXColumnImpl extends FXNamedElementImpl implements FXColumn {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Pos getAlignment() {
+		return alignment;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAlignment(Pos newAlignment) {
+		Pos oldAlignment = alignment;
+		alignment = newAlignment == null ? ALIGNMENT_EDEFAULT : newAlignment;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FxuiPackage.FX_COLUMN__ALIGNMENT, oldAlignment,
+					alignment));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -243,6 +287,8 @@ public class FXColumnImpl extends FXNamedElementImpl implements FXColumn {
 			return isUseCustomCellFactory();
 		case FxuiPackage.FX_COLUMN__WIDTH:
 			return getWidth();
+		case FxuiPackage.FX_COLUMN__ALIGNMENT:
+			return getAlignment();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -266,6 +312,9 @@ public class FXColumnImpl extends FXNamedElementImpl implements FXColumn {
 			return;
 		case FxuiPackage.FX_COLUMN__WIDTH:
 			setWidth((Double) newValue);
+			return;
+		case FxuiPackage.FX_COLUMN__ALIGNMENT:
+			setAlignment((Pos) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -291,6 +340,9 @@ public class FXColumnImpl extends FXNamedElementImpl implements FXColumn {
 		case FxuiPackage.FX_COLUMN__WIDTH:
 			setWidth(WIDTH_EDEFAULT);
 			return;
+		case FxuiPackage.FX_COLUMN__ALIGNMENT:
+			setAlignment(ALIGNMENT_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -311,6 +363,8 @@ public class FXColumnImpl extends FXNamedElementImpl implements FXColumn {
 			return useCustomCellFactory != USE_CUSTOM_CELL_FACTORY_EDEFAULT;
 		case FxuiPackage.FX_COLUMN__WIDTH:
 			return width != WIDTH_EDEFAULT;
+		case FxuiPackage.FX_COLUMN__ALIGNMENT:
+			return alignment != ALIGNMENT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -332,6 +386,8 @@ public class FXColumnImpl extends FXNamedElementImpl implements FXColumn {
 		result.append(useCustomCellFactory);
 		result.append(", width: ");
 		result.append(width);
+		result.append(", alignment: ");
+		result.append(alignment);
 		result.append(')');
 		return result.toString();
 	}
