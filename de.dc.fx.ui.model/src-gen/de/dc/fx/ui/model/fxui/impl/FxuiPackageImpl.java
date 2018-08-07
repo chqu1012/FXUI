@@ -182,6 +182,15 @@ public class FxuiPackageImpl extends EPackageImpl implements FxuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getFXTableView_PackagePath() {
+		return (EAttribute) fxTableViewEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getFXColumn() {
 		return fxColumnEClass;
 	}
@@ -328,6 +337,7 @@ public class FxuiPackageImpl extends EPackageImpl implements FxuiPackage {
 		createEReference(fxTableViewEClass, FX_TABLE_VIEW__FX_ENTITY);
 		createEAttribute(fxTableViewEClass, FX_TABLE_VIEW__HAS_FILTER);
 		createEAttribute(fxTableViewEClass, FX_TABLE_VIEW__HAS_SORTER);
+		createEAttribute(fxTableViewEClass, FX_TABLE_VIEW__PACKAGE_PATH);
 
 		fxColumnEClass = createEClass(FX_COLUMN);
 		createEReference(fxColumnEClass, FX_COLUMN__ASSOCIATED_FX_PROPERTY);
@@ -396,6 +406,9 @@ public class FxuiPackageImpl extends EPackageImpl implements FxuiPackage {
 				FXTableView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFXTableView_HasSorter(), ecorePackage.getEBoolean(), "hasSorter", null, 0, 1,
+				FXTableView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFXTableView_PackagePath(), ecorePackage.getEString(), "packagePath", null, 0, 1,
 				FXTableView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 

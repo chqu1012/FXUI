@@ -34,6 +34,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.dc.fx.ui.model.fxui.impl.FXTableViewImpl#getFxEntity <em>Fx Entity</em>}</li>
  *   <li>{@link de.dc.fx.ui.model.fxui.impl.FXTableViewImpl#isHasFilter <em>Has Filter</em>}</li>
  *   <li>{@link de.dc.fx.ui.model.fxui.impl.FXTableViewImpl#isHasSorter <em>Has Sorter</em>}</li>
+ *   <li>{@link de.dc.fx.ui.model.fxui.impl.FXTableViewImpl#getPackagePath <em>Package Path</em>}</li>
  * </ul>
  *
  * @generated
@@ -98,6 +99,26 @@ public class FXTableViewImpl extends FXNamedElementImpl implements FXTableView {
 	 * @ordered
 	 */
 	protected boolean hasSorter = HAS_SORTER_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getPackagePath() <em>Package Path</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPackagePath()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String PACKAGE_PATH_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getPackagePath() <em>Package Path</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPackagePath()
+	 * @generated
+	 * @ordered
+	 */
+	protected String packagePath = PACKAGE_PATH_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -230,6 +251,28 @@ public class FXTableViewImpl extends FXNamedElementImpl implements FXTableView {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getPackagePath() {
+		return packagePath;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPackagePath(String newPackagePath) {
+		String oldPackagePath = packagePath;
+		packagePath = newPackagePath;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FxuiPackage.FX_TABLE_VIEW__PACKAGE_PATH,
+					oldPackagePath, packagePath));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -257,6 +300,8 @@ public class FXTableViewImpl extends FXNamedElementImpl implements FXTableView {
 			return isHasFilter();
 		case FxuiPackage.FX_TABLE_VIEW__HAS_SORTER:
 			return isHasSorter();
+		case FxuiPackage.FX_TABLE_VIEW__PACKAGE_PATH:
+			return getPackagePath();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -283,6 +328,9 @@ public class FXTableViewImpl extends FXNamedElementImpl implements FXTableView {
 		case FxuiPackage.FX_TABLE_VIEW__HAS_SORTER:
 			setHasSorter((Boolean) newValue);
 			return;
+		case FxuiPackage.FX_TABLE_VIEW__PACKAGE_PATH:
+			setPackagePath((String) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -307,6 +355,9 @@ public class FXTableViewImpl extends FXNamedElementImpl implements FXTableView {
 		case FxuiPackage.FX_TABLE_VIEW__HAS_SORTER:
 			setHasSorter(HAS_SORTER_EDEFAULT);
 			return;
+		case FxuiPackage.FX_TABLE_VIEW__PACKAGE_PATH:
+			setPackagePath(PACKAGE_PATH_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -327,6 +378,8 @@ public class FXTableViewImpl extends FXNamedElementImpl implements FXTableView {
 			return hasFilter != HAS_FILTER_EDEFAULT;
 		case FxuiPackage.FX_TABLE_VIEW__HAS_SORTER:
 			return hasSorter != HAS_SORTER_EDEFAULT;
+		case FxuiPackage.FX_TABLE_VIEW__PACKAGE_PATH:
+			return PACKAGE_PATH_EDEFAULT == null ? packagePath != null : !PACKAGE_PATH_EDEFAULT.equals(packagePath);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -346,6 +399,8 @@ public class FXTableViewImpl extends FXNamedElementImpl implements FXTableView {
 		result.append(hasFilter);
 		result.append(", hasSorter: ");
 		result.append(hasSorter);
+		result.append(", packagePath: ");
+		result.append(packagePath);
 		result.append(')');
 		return result.toString();
 	}

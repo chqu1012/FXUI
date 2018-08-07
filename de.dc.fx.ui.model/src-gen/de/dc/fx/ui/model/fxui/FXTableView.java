@@ -17,6 +17,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.dc.fx.ui.model.fxui.FXTableView#getFxEntity <em>Fx Entity</em>}</li>
  *   <li>{@link de.dc.fx.ui.model.fxui.FXTableView#isHasFilter <em>Has Filter</em>}</li>
  *   <li>{@link de.dc.fx.ui.model.fxui.FXTableView#isHasSorter <em>Has Sorter</em>}</li>
+ *   <li>{@link de.dc.fx.ui.model.fxui.FXTableView#getPackagePath <em>Package Path</em>}</li>
  * </ul>
  *
  * @see de.dc.fx.ui.model.fxui.FxuiPackage#getFXTableView()
@@ -117,5 +118,31 @@ public interface FXTableView extends FXNamedElement {
 	 * @generated
 	 */
 	void setHasSorter(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Package Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Package Path</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Package Path</em>' attribute.
+	 * @see #setPackagePath(String)
+	 * @see de.dc.fx.ui.model.fxui.FxuiPackage#getFXTableView_PackagePath()
+	 * @model
+	 * @generated
+	 */
+	String getPackagePath();
+
+	/**
+	 * Sets the value of the '{@link de.dc.fx.ui.model.fxui.FXTableView#getPackagePath <em>Package Path</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Package Path</em>' attribute.
+	 * @see #getPackagePath()
+	 * @generated
+	 */
+	void setPackagePath(String value);
 
 } // FXTableView

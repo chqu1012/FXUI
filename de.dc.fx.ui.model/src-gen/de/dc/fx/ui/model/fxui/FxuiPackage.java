@@ -150,13 +150,22 @@ public interface FxuiPackage extends EPackage {
 	int FX_TABLE_VIEW__HAS_SORTER = FX_NAMED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Package Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TABLE_VIEW__PACKAGE_PATH = FX_NAMED_ELEMENT_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>FX Table View</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FX_TABLE_VIEW_FEATURE_COUNT = FX_NAMED_ELEMENT_FEATURE_COUNT + 4;
+	int FX_TABLE_VIEW_FEATURE_COUNT = FX_NAMED_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>FX Table View</em>' class.
@@ -406,6 +415,17 @@ public interface FxuiPackage extends EPackage {
 	EAttribute getFXTableView_HasSorter();
 
 	/**
+	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.model.fxui.FXTableView#getPackagePath <em>Package Path</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Package Path</em>'.
+	 * @see de.dc.fx.ui.model.fxui.FXTableView#getPackagePath()
+	 * @see #getFXTableView()
+	 * @generated
+	 */
+	EAttribute getFXTableView_PackagePath();
+
+	/**
 	 * Returns the meta object for class '{@link de.dc.fx.ui.model.fxui.FXColumn <em>FX Column</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -607,6 +627,14 @@ public interface FxuiPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute FX_TABLE_VIEW__HAS_SORTER = eINSTANCE.getFXTableView_HasSorter();
+
+		/**
+		 * The meta object literal for the '<em><b>Package Path</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FX_TABLE_VIEW__PACKAGE_PATH = eINSTANCE.getFXTableView_PackagePath();
 
 		/**
 		 * The meta object literal for the '{@link de.dc.fx.ui.model.fxui.impl.FXColumnImpl <em>FX Column</em>}' class.

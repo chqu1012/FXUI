@@ -51,6 +51,7 @@ public class FXTableViewItemProvider extends FXNamedElementItemProvider {
 			addFxEntityPropertyDescriptor(object);
 			addHasFilterPropertyDescriptor(object);
 			addHasSorterPropertyDescriptor(object);
+			addPackagePathPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -115,6 +116,22 @@ public class FXTableViewItemProvider extends FXNamedElementItemProvider {
 								"_UI_FXTableView_type"),
 						FxuiPackage.Literals.FX_TABLE_VIEW__HAS_SORTER, true, false, false,
 						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Package Path feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPackagePathPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_FXTableView_packagePath_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_FXTableView_packagePath_feature",
+								"_UI_FXTableView_type"),
+						FxuiPackage.Literals.FX_TABLE_VIEW__PACKAGE_PATH, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -196,6 +213,7 @@ public class FXTableViewItemProvider extends FXNamedElementItemProvider {
 		switch (notification.getFeatureID(FXTableView.class)) {
 		case FxuiPackage.FX_TABLE_VIEW__HAS_FILTER:
 		case FxuiPackage.FX_TABLE_VIEW__HAS_SORTER:
+		case FxuiPackage.FX_TABLE_VIEW__PACKAGE_PATH:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		case FxuiPackage.FX_TABLE_VIEW__FX_COLUMNS:

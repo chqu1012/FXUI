@@ -26,6 +26,7 @@
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fxui.ecore#//FXTableView/fxEntity"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fxui.ecore#//FXTableView/hasFilter"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fxui.ecore#//FXTableView/hasSorter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fxui.ecore#//FXTableView/packagePath"/>
     </genClasses>
     <genClasses ecoreClass="fxui.ecore#//FXColumn">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fxui.ecore#//FXColumn/associatedFXProperty"/>
