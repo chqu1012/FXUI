@@ -1,20 +1,24 @@
 package de.dc.fx.ui.model.demo.model;
 
+import java.time.LocalDate;
+
 public class Person {
 	
 	private String name;
 	private String surname;
 	private Integer age;
 	private Boolean gender;
+	private LocalDate birthday;
 
 	public Person() {
 	}
 	
-	public Person(String name, String surname, Integer age, Boolean gender) {
+	public Person(String name, String surname, Integer age, Boolean gender, LocalDate birthday) {
 		this.name = name;
 		this.surname = surname;
 		this.age = age;
 		this.gender = gender;
+		this.birthday = birthday;
 	}
 
 	public String getName() {
@@ -47,5 +51,13 @@ public class Person {
 
 	public void setGender(Boolean gender) {
 		this.gender = gender;
+	}
+
+	public LocalDate getBirthday() {
+		return birthday;
+	}
+
+	public void setBirthday(LocalDate birthday) {
+		this.birthday = birthday;
 	}
 }

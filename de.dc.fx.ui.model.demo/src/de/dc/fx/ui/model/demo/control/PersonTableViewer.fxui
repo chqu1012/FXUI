@@ -4,10 +4,12 @@
   <fxColumns associatedFXProperty="//@fxEntity/@fxProperties.1" width="200.0"/>
   <fxColumns associatedFXProperty="//@fxEntity/@fxProperties.2"/>
   <fxColumns associatedFXProperty="//@fxEntity/@fxProperties.3"/>
+  <fxColumns associatedFXProperty="//@fxEntity/@fxProperties.4"/>
   <fxEntity name="Person">
     <fxProperties name="Name" type="String"/>
     <fxProperties name="Surname" type="String"/>
     <fxProperties name="Age" type="Integer"/>
     <fxProperties name="Gender" type="Boolean"/>
+    <fxProperties name="Birthday" type="LocalDate"/>
   </fxEntity>
 </fxui:FXTableView>
