@@ -4,6 +4,7 @@ import java.time.format.DateTimeFormatter;
 
 import de.dc.fx.ui.model.core.FXTableCellFactory;
 import de.dc.fx.ui.model.demo.model.Person;
+import javafx.geometry.Pos;
 
 public class PersonTableCellBirthdayFactory extends FXTableCellFactory<Person> {
 
@@ -12,5 +13,10 @@ public class PersonTableCellBirthdayFactory extends FXTableCellFactory<Person> {
 	@Override
 	protected String extractValue(Person data) {
 		return data.getBirthday().format(formatter);
+	}
+	
+	@Override
+	protected Pos getAlignment() {
+		return Pos.CENTER_RIGHT;
 	}
 }
