@@ -3,7 +3,7 @@ package de.dc.fx.ui.model.template
 import de.dc.fx.ui.model.fxui.FXColumn
 import de.dc.fx.ui.model.fxui.FXTableView
 
-class TableCellFactory implements IGenerator<FXColumn>{
+class TableCellFactoryTemplate implements IGenerator<FXColumn>{
 	
 	override gen(FXColumn data)'''
 	«val view = data.eContainer as FXTableView»
