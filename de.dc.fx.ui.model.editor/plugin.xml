@@ -36,6 +36,11 @@
             description="%_UI_Menu_Open_description"
             categoryId="org.eclipse.ui.category.file"
             id="de.dc.fx.ui.model.fxui.presentation.FxuiEditorAdvisorOpenCommand"/>
+      <command
+            defaultHandler="de.dc.fx.ui.model.editor.command.GenerateSourceHandler"
+            id="de.dc.fx.ui.model.editor.GenerateSource"
+            name="Generate Source">
+      </command>
    </extension>
 
    <extension point="org.eclipse.ui.bindings">
@@ -101,5 +106,23 @@
             contributorClass="de.dc.fx.ui.model.fxui.presentation.FxuiActionBarContributor">
       </editor>
    </extension>
-
+<extension point="org.eclipse.ui.menus">
+  <menuContribution allPopups="false" locationURI="popup:de.dc.fx.ui.model.editor.popup?before=additions">
+    <command commandId="de.dc.fx.ui.model.editor.GenerateSource" label="Generate Source" style="push">
+    </command>
+  </menuContribution>
+  
+  <menuContribution locationURI="menu:org.eclipse.ui.main.menu">
+    <menu label="Window">
+      <command commandId="org.eclipse.ui.window.preferences" label="Preferences" style="push"/>
+    </menu>
+  </menuContribution>
+</extension>
+<extension point="org.eclipse.ui.popupMenus">
+  <objectContribution id="de.dc.fx.ui.model.editor.menu" objectClass="de.dc.fx.ui.model.fxui.FXTableView">
+    <action  id="de.dc.fx.ui.model.editor.GenerateSource"
+      label="Generate Source" menubarPath="additions"    class="de.dc.fx.ui.model.editor.command.GenerateSourceAction"
+      enablesFor="1"/>
+  </objectContribution>
+</extension>
 </plugin>

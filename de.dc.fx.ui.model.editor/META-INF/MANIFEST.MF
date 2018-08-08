@@ -13,5 +13,16 @@ Export-Package: de.dc.fx.ui.model.fxui.presentation
 Require-Bundle: org.eclipse.core.runtime,
  de.dc.fx.ui.model.edit;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
- org.eclipse.emf.edit.ui;visibility:=reexport
+ org.eclipse.emf.edit.ui;visibility:=reexport,
+ org.eclipse.jdt.ui,
+ org.eclipse.jdt.annotation,
+ org.eclipse.jdt.apt.core,
+ org.eclipse.jdt.apt.ui,
+ org.eclipse.jdt.core,
+ org.eclipse.jdt.launching,
+ org.eclipse.jdt,
+ org.eclipse.jdt.apt.pluggable.core,
+ org.eclipse.jdt.core.manipulation,
+ org.eclipse.jdt.debug,
+ org.eclipse.ui.themes;bundle-version="1.2.100"
 Bundle-ActivationPolicy: lazy
