@@ -1,13 +1,20 @@
 package de.dc.fx.ui.model.template;
 
-import de.dc.fx.ui.model.fxui.FXColumn;
-import de.dc.fx.ui.model.fxui.util.FxuiSwitch;
+import org.eclipse.emf.ecore.EObject;
 
-public class TemplateRegistry extends FxuiSwitch<String>{
-
-	private TableCellFactoryTemplate cellFactoryTemplate = new TableCellFactoryTemplate();
+public enum TemplateRegistry {
+	Application(new ApplicationTemplate()),
+	ModelTemplate(new ModelTemplate()),
+	TableCellFactoryTemplate(new TableCellFactoryTemplate()),
+	TableViewerTemplate(new TableViewerTemplate());
 	
-	@Override
-	public String caseFXColumn(FXColumn object) {
-		return cellFactoryTemplate.gen(object);	}
+	private IGenerator<? extends EObject> template;
+	
+	private TemplateRegistry(IGenerator<? extends EObject> template) {
+		this.template = template;
+	}
+	
+	public IGenerator<? extends EObject> getTemplate(){
+		return template;
+	}
 }

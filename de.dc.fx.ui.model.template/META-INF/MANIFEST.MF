@@ -10,4 +10,5 @@ Require-Bundle: com.google.guava,
  org.eclipse.xtend.lib,
  org.eclipse.xtend.lib.macro,
  de.dc.fx.ui.model;bundle-version="0.1.0"
+Export-Package: de.dc.fx.ui.model.template
 
