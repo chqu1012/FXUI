@@ -12,8 +12,8 @@ FXTableView returns FXTableView:
 	name=EString
 	'{'
 		('packagePath' packagePath=EString)?
-		('fxColumns' '{' fxColumns+=FXColumn ( "," fxColumns+=FXColumn)* '}' )?
-		('fxEntity' fxEntity=FXModel)?
+		(fxColumns+=FXColumn (fxColumns+=FXColumn)*)?
+		(fxEntity=FXModel)?
 	'}';
 
 
@@ -28,18 +28,18 @@ FXColumn returns FXColumn:
 	(useCustomCellFactory?='useCustomCellFactory')?
 	'FXColumn'
 	name=EString
-	'{'
+	('{'
 		('width' width=EDouble)?
 		('alignment' alignment=Pos)?
 		('associatedFXProperty' associatedFXProperty=[FXProperty|EString])?
-	'}';
+	'}')?;
 
 FXModel returns FXModel:
 	{FXModel}
 	'FXModel'
 	name=EString
 	'{'
-		('fxProperties' '{' fxProperties+=FXProperty ( "," fxProperties+=FXProperty)* '}' )?
+		fxProperties+=FXProperty ( fxProperties+=FXProperty)*
 	'}';
 
 EBoolean returns ecore::EBoolean:
@@ -47,11 +47,8 @@ EBoolean returns ecore::EBoolean:
 
 FXProperty returns FXProperty:
 	{FXProperty}
-	'FXProperty'
-	name=EString
-	'{'
-		('type' type=EString)?
-	'}';
+	type=EString name=EString
+;
 
 EDouble returns ecore::EDouble:
 	'-'? INT? '.' INT (('E'|'e') '-'? INT)?;

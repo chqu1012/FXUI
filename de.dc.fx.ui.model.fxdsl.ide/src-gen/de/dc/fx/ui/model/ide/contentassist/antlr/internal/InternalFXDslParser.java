@@ -22,17 +22,14 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalFXDslParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'E'", "'e'", "'TOP_LEFT'", "'TOP_CENTER'", "'TOP_RIGHT'", "'CENTER_LEFT'", "'CENTER'", "'CENTER_RIGHT'", "'BOTTOM_LEFT'", "'BOTTOM_CENTER'", "'BOTTOM_RIGHT'", "'FXTableView'", "'{'", "'}'", "'packagePath'", "'fxColumns'", "','", "'fxEntity'", "'FXColumn'", "'width'", "'alignment'", "'associatedFXProperty'", "'FXModel'", "'fxProperties'", "'FXProperty'", "'type'", "'-'", "'.'", "'hasFilter'", "'hasSorter'", "'editable'", "'useCustomCellFactory'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'E'", "'e'", "'TOP_LEFT'", "'TOP_CENTER'", "'TOP_RIGHT'", "'CENTER_LEFT'", "'CENTER'", "'CENTER_RIGHT'", "'BOTTOM_LEFT'", "'BOTTOM_CENTER'", "'BOTTOM_RIGHT'", "'FXTableView'", "'{'", "'}'", "'packagePath'", "'FXColumn'", "'width'", "'alignment'", "'associatedFXProperty'", "'FXModel'", "'-'", "'.'", "'hasFilter'", "'hasSorter'", "'editable'", "'useCustomCellFactory'"
     };
     public static final int RULE_STRING=4;
     public static final int RULE_SL_COMMENT=8;
     public static final int T__19=19;
     public static final int T__15=15;
-    public static final int T__37=37;
     public static final int T__16=16;
-    public static final int T__38=38;
     public static final int T__17=17;
-    public static final int T__39=39;
     public static final int T__18=18;
     public static final int T__11=11;
     public static final int T__33=33;
@@ -59,10 +56,7 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
     public static final int T__23=23;
     public static final int T__24=24;
     public static final int T__25=25;
-    public static final int T__40=40;
-    public static final int T__41=41;
     public static final int T__20=20;
-    public static final int T__42=42;
     public static final int T__21=21;
 
     // delegates
@@ -1151,7 +1145,7 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
             int alt4=2;
             int LA4_0 = input.LA(1);
 
-            if ( (LA4_0==39) ) {
+            if ( (LA4_0==33) ) {
                 alt4=1;
             }
             switch (alt4) {
@@ -1247,7 +1241,7 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
             int alt5=2;
             int LA5_0 = input.LA(1);
 
-            if ( (LA5_0==40) ) {
+            if ( (LA5_0==34) ) {
                 alt5=1;
             }
             switch (alt5) {
@@ -1674,7 +1668,7 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
             int alt7=2;
             int LA7_0 = input.LA(1);
 
-            if ( (LA7_0==26) ) {
+            if ( (LA7_0==26||(LA7_0>=35 && LA7_0<=36)) ) {
                 alt7=1;
             }
             switch (alt7) {
@@ -1753,32 +1747,32 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FXTableView__Group__8__Impl"
-    // InternalFXDsl.g:551:1: rule__FXTableView__Group__8__Impl : ( ( rule__FXTableView__Group_8__0 )? ) ;
+    // InternalFXDsl.g:551:1: rule__FXTableView__Group__8__Impl : ( ( rule__FXTableView__FxEntityAssignment_8 )? ) ;
     public final void rule__FXTableView__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:555:1: ( ( ( rule__FXTableView__Group_8__0 )? ) )
-            // InternalFXDsl.g:556:1: ( ( rule__FXTableView__Group_8__0 )? )
+            // InternalFXDsl.g:555:1: ( ( ( rule__FXTableView__FxEntityAssignment_8 )? ) )
+            // InternalFXDsl.g:556:1: ( ( rule__FXTableView__FxEntityAssignment_8 )? )
             {
-            // InternalFXDsl.g:556:1: ( ( rule__FXTableView__Group_8__0 )? )
-            // InternalFXDsl.g:557:2: ( rule__FXTableView__Group_8__0 )?
+            // InternalFXDsl.g:556:1: ( ( rule__FXTableView__FxEntityAssignment_8 )? )
+            // InternalFXDsl.g:557:2: ( rule__FXTableView__FxEntityAssignment_8 )?
             {
-             before(grammarAccess.getFXTableViewAccess().getGroup_8()); 
-            // InternalFXDsl.g:558:2: ( rule__FXTableView__Group_8__0 )?
+             before(grammarAccess.getFXTableViewAccess().getFxEntityAssignment_8()); 
+            // InternalFXDsl.g:558:2: ( rule__FXTableView__FxEntityAssignment_8 )?
             int alt8=2;
             int LA8_0 = input.LA(1);
 
-            if ( (LA8_0==28) ) {
+            if ( (LA8_0==30) ) {
                 alt8=1;
             }
             switch (alt8) {
                 case 1 :
-                    // InternalFXDsl.g:558:3: rule__FXTableView__Group_8__0
+                    // InternalFXDsl.g:558:3: rule__FXTableView__FxEntityAssignment_8
                     {
                     pushFollow(FOLLOW_2);
-                    rule__FXTableView__Group_8__0();
+                    rule__FXTableView__FxEntityAssignment_8();
 
                     state._fsp--;
 
@@ -1788,7 +1782,7 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
             }
 
-             after(grammarAccess.getFXTableViewAccess().getGroup_8()); 
+             after(grammarAccess.getFXTableViewAccess().getFxEntityAssignment_8()); 
 
             }
 
@@ -2045,7 +2039,7 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
             // InternalFXDsl.g:651:1: ( rule__FXTableView__Group_7__0__Impl rule__FXTableView__Group_7__1 )
             // InternalFXDsl.g:652:2: rule__FXTableView__Group_7__0__Impl rule__FXTableView__Group_7__1
             {
-            pushFollow(FOLLOW_5);
+            pushFollow(FOLLOW_7);
             rule__FXTableView__Group_7__0__Impl();
 
             state._fsp--;
@@ -2074,21 +2068,31 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FXTableView__Group_7__0__Impl"
-    // InternalFXDsl.g:659:1: rule__FXTableView__Group_7__0__Impl : ( 'fxColumns' ) ;
+    // InternalFXDsl.g:659:1: rule__FXTableView__Group_7__0__Impl : ( ( rule__FXTableView__FxColumnsAssignment_7_0 ) ) ;
     public final void rule__FXTableView__Group_7__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:663:1: ( ( 'fxColumns' ) )
-            // InternalFXDsl.g:664:1: ( 'fxColumns' )
+            // InternalFXDsl.g:663:1: ( ( ( rule__FXTableView__FxColumnsAssignment_7_0 ) ) )
+            // InternalFXDsl.g:664:1: ( ( rule__FXTableView__FxColumnsAssignment_7_0 ) )
             {
-            // InternalFXDsl.g:664:1: ( 'fxColumns' )
-            // InternalFXDsl.g:665:2: 'fxColumns'
+            // InternalFXDsl.g:664:1: ( ( rule__FXTableView__FxColumnsAssignment_7_0 ) )
+            // InternalFXDsl.g:665:2: ( rule__FXTableView__FxColumnsAssignment_7_0 )
             {
-             before(grammarAccess.getFXTableViewAccess().getFxColumnsKeyword_7_0()); 
-            match(input,26,FOLLOW_2); 
-             after(grammarAccess.getFXTableViewAccess().getFxColumnsKeyword_7_0()); 
+             before(grammarAccess.getFXTableViewAccess().getFxColumnsAssignment_7_0()); 
+            // InternalFXDsl.g:666:2: ( rule__FXTableView__FxColumnsAssignment_7_0 )
+            // InternalFXDsl.g:666:3: rule__FXTableView__FxColumnsAssignment_7_0
+            {
+            pushFollow(FOLLOW_2);
+            rule__FXTableView__FxColumnsAssignment_7_0();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getFXTableViewAccess().getFxColumnsAssignment_7_0()); 
 
             }
 
@@ -2111,22 +2115,17 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FXTableView__Group_7__1"
-    // InternalFXDsl.g:674:1: rule__FXTableView__Group_7__1 : rule__FXTableView__Group_7__1__Impl rule__FXTableView__Group_7__2 ;
+    // InternalFXDsl.g:674:1: rule__FXTableView__Group_7__1 : rule__FXTableView__Group_7__1__Impl ;
     public final void rule__FXTableView__Group_7__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:678:1: ( rule__FXTableView__Group_7__1__Impl rule__FXTableView__Group_7__2 )
-            // InternalFXDsl.g:679:2: rule__FXTableView__Group_7__1__Impl rule__FXTableView__Group_7__2
+            // InternalFXDsl.g:678:1: ( rule__FXTableView__Group_7__1__Impl )
+            // InternalFXDsl.g:679:2: rule__FXTableView__Group_7__1__Impl
             {
-            pushFollow(FOLLOW_7);
-            rule__FXTableView__Group_7__1__Impl();
-
-            state._fsp--;
-
             pushFollow(FOLLOW_2);
-            rule__FXTableView__Group_7__2();
+            rule__FXTableView__Group_7__1__Impl();
 
             state._fsp--;
 
@@ -2149,21 +2148,49 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FXTableView__Group_7__1__Impl"
-    // InternalFXDsl.g:686:1: rule__FXTableView__Group_7__1__Impl : ( '{' ) ;
+    // InternalFXDsl.g:685:1: rule__FXTableView__Group_7__1__Impl : ( ( rule__FXTableView__FxColumnsAssignment_7_1 )* ) ;
     public final void rule__FXTableView__Group_7__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:690:1: ( ( '{' ) )
-            // InternalFXDsl.g:691:1: ( '{' )
+            // InternalFXDsl.g:689:1: ( ( ( rule__FXTableView__FxColumnsAssignment_7_1 )* ) )
+            // InternalFXDsl.g:690:1: ( ( rule__FXTableView__FxColumnsAssignment_7_1 )* )
             {
-            // InternalFXDsl.g:691:1: ( '{' )
-            // InternalFXDsl.g:692:2: '{'
+            // InternalFXDsl.g:690:1: ( ( rule__FXTableView__FxColumnsAssignment_7_1 )* )
+            // InternalFXDsl.g:691:2: ( rule__FXTableView__FxColumnsAssignment_7_1 )*
             {
-             before(grammarAccess.getFXTableViewAccess().getLeftCurlyBracketKeyword_7_1()); 
-            match(input,23,FOLLOW_2); 
-             after(grammarAccess.getFXTableViewAccess().getLeftCurlyBracketKeyword_7_1()); 
+             before(grammarAccess.getFXTableViewAccess().getFxColumnsAssignment_7_1()); 
+            // InternalFXDsl.g:692:2: ( rule__FXTableView__FxColumnsAssignment_7_1 )*
+            loop9:
+            do {
+                int alt9=2;
+                int LA9_0 = input.LA(1);
+
+                if ( (LA9_0==26||(LA9_0>=35 && LA9_0<=36)) ) {
+                    alt9=1;
+                }
+
+
+                switch (alt9) {
+            	case 1 :
+            	    // InternalFXDsl.g:692:3: rule__FXTableView__FxColumnsAssignment_7_1
+            	    {
+            	    pushFollow(FOLLOW_8);
+            	    rule__FXTableView__FxColumnsAssignment_7_1();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop9;
+                }
+            } while (true);
+
+             after(grammarAccess.getFXTableViewAccess().getFxColumnsAssignment_7_1()); 
 
             }
 
@@ -2185,583 +2212,15 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__FXTableView__Group_7__1__Impl"
 
 
-    // $ANTLR start "rule__FXTableView__Group_7__2"
-    // InternalFXDsl.g:701:1: rule__FXTableView__Group_7__2 : rule__FXTableView__Group_7__2__Impl rule__FXTableView__Group_7__3 ;
-    public final void rule__FXTableView__Group_7__2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalFXDsl.g:705:1: ( rule__FXTableView__Group_7__2__Impl rule__FXTableView__Group_7__3 )
-            // InternalFXDsl.g:706:2: rule__FXTableView__Group_7__2__Impl rule__FXTableView__Group_7__3
-            {
-            pushFollow(FOLLOW_8);
-            rule__FXTableView__Group_7__2__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__FXTableView__Group_7__3();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__FXTableView__Group_7__2"
-
-
-    // $ANTLR start "rule__FXTableView__Group_7__2__Impl"
-    // InternalFXDsl.g:713:1: rule__FXTableView__Group_7__2__Impl : ( ( rule__FXTableView__FxColumnsAssignment_7_2 ) ) ;
-    public final void rule__FXTableView__Group_7__2__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalFXDsl.g:717:1: ( ( ( rule__FXTableView__FxColumnsAssignment_7_2 ) ) )
-            // InternalFXDsl.g:718:1: ( ( rule__FXTableView__FxColumnsAssignment_7_2 ) )
-            {
-            // InternalFXDsl.g:718:1: ( ( rule__FXTableView__FxColumnsAssignment_7_2 ) )
-            // InternalFXDsl.g:719:2: ( rule__FXTableView__FxColumnsAssignment_7_2 )
-            {
-             before(grammarAccess.getFXTableViewAccess().getFxColumnsAssignment_7_2()); 
-            // InternalFXDsl.g:720:2: ( rule__FXTableView__FxColumnsAssignment_7_2 )
-            // InternalFXDsl.g:720:3: rule__FXTableView__FxColumnsAssignment_7_2
-            {
-            pushFollow(FOLLOW_2);
-            rule__FXTableView__FxColumnsAssignment_7_2();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getFXTableViewAccess().getFxColumnsAssignment_7_2()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__FXTableView__Group_7__2__Impl"
-
-
-    // $ANTLR start "rule__FXTableView__Group_7__3"
-    // InternalFXDsl.g:728:1: rule__FXTableView__Group_7__3 : rule__FXTableView__Group_7__3__Impl rule__FXTableView__Group_7__4 ;
-    public final void rule__FXTableView__Group_7__3() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalFXDsl.g:732:1: ( rule__FXTableView__Group_7__3__Impl rule__FXTableView__Group_7__4 )
-            // InternalFXDsl.g:733:2: rule__FXTableView__Group_7__3__Impl rule__FXTableView__Group_7__4
-            {
-            pushFollow(FOLLOW_8);
-            rule__FXTableView__Group_7__3__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__FXTableView__Group_7__4();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__FXTableView__Group_7__3"
-
-
-    // $ANTLR start "rule__FXTableView__Group_7__3__Impl"
-    // InternalFXDsl.g:740:1: rule__FXTableView__Group_7__3__Impl : ( ( rule__FXTableView__Group_7_3__0 )* ) ;
-    public final void rule__FXTableView__Group_7__3__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalFXDsl.g:744:1: ( ( ( rule__FXTableView__Group_7_3__0 )* ) )
-            // InternalFXDsl.g:745:1: ( ( rule__FXTableView__Group_7_3__0 )* )
-            {
-            // InternalFXDsl.g:745:1: ( ( rule__FXTableView__Group_7_3__0 )* )
-            // InternalFXDsl.g:746:2: ( rule__FXTableView__Group_7_3__0 )*
-            {
-             before(grammarAccess.getFXTableViewAccess().getGroup_7_3()); 
-            // InternalFXDsl.g:747:2: ( rule__FXTableView__Group_7_3__0 )*
-            loop9:
-            do {
-                int alt9=2;
-                int LA9_0 = input.LA(1);
-
-                if ( (LA9_0==27) ) {
-                    alt9=1;
-                }
-
-
-                switch (alt9) {
-            	case 1 :
-            	    // InternalFXDsl.g:747:3: rule__FXTableView__Group_7_3__0
-            	    {
-            	    pushFollow(FOLLOW_9);
-            	    rule__FXTableView__Group_7_3__0();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop9;
-                }
-            } while (true);
-
-             after(grammarAccess.getFXTableViewAccess().getGroup_7_3()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__FXTableView__Group_7__3__Impl"
-
-
-    // $ANTLR start "rule__FXTableView__Group_7__4"
-    // InternalFXDsl.g:755:1: rule__FXTableView__Group_7__4 : rule__FXTableView__Group_7__4__Impl ;
-    public final void rule__FXTableView__Group_7__4() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalFXDsl.g:759:1: ( rule__FXTableView__Group_7__4__Impl )
-            // InternalFXDsl.g:760:2: rule__FXTableView__Group_7__4__Impl
-            {
-            pushFollow(FOLLOW_2);
-            rule__FXTableView__Group_7__4__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__FXTableView__Group_7__4"
-
-
-    // $ANTLR start "rule__FXTableView__Group_7__4__Impl"
-    // InternalFXDsl.g:766:1: rule__FXTableView__Group_7__4__Impl : ( '}' ) ;
-    public final void rule__FXTableView__Group_7__4__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalFXDsl.g:770:1: ( ( '}' ) )
-            // InternalFXDsl.g:771:1: ( '}' )
-            {
-            // InternalFXDsl.g:771:1: ( '}' )
-            // InternalFXDsl.g:772:2: '}'
-            {
-             before(grammarAccess.getFXTableViewAccess().getRightCurlyBracketKeyword_7_4()); 
-            match(input,24,FOLLOW_2); 
-             after(grammarAccess.getFXTableViewAccess().getRightCurlyBracketKeyword_7_4()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__FXTableView__Group_7__4__Impl"
-
-
-    // $ANTLR start "rule__FXTableView__Group_7_3__0"
-    // InternalFXDsl.g:782:1: rule__FXTableView__Group_7_3__0 : rule__FXTableView__Group_7_3__0__Impl rule__FXTableView__Group_7_3__1 ;
-    public final void rule__FXTableView__Group_7_3__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalFXDsl.g:786:1: ( rule__FXTableView__Group_7_3__0__Impl rule__FXTableView__Group_7_3__1 )
-            // InternalFXDsl.g:787:2: rule__FXTableView__Group_7_3__0__Impl rule__FXTableView__Group_7_3__1
-            {
-            pushFollow(FOLLOW_7);
-            rule__FXTableView__Group_7_3__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__FXTableView__Group_7_3__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__FXTableView__Group_7_3__0"
-
-
-    // $ANTLR start "rule__FXTableView__Group_7_3__0__Impl"
-    // InternalFXDsl.g:794:1: rule__FXTableView__Group_7_3__0__Impl : ( ',' ) ;
-    public final void rule__FXTableView__Group_7_3__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalFXDsl.g:798:1: ( ( ',' ) )
-            // InternalFXDsl.g:799:1: ( ',' )
-            {
-            // InternalFXDsl.g:799:1: ( ',' )
-            // InternalFXDsl.g:800:2: ','
-            {
-             before(grammarAccess.getFXTableViewAccess().getCommaKeyword_7_3_0()); 
-            match(input,27,FOLLOW_2); 
-             after(grammarAccess.getFXTableViewAccess().getCommaKeyword_7_3_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__FXTableView__Group_7_3__0__Impl"
-
-
-    // $ANTLR start "rule__FXTableView__Group_7_3__1"
-    // InternalFXDsl.g:809:1: rule__FXTableView__Group_7_3__1 : rule__FXTableView__Group_7_3__1__Impl ;
-    public final void rule__FXTableView__Group_7_3__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalFXDsl.g:813:1: ( rule__FXTableView__Group_7_3__1__Impl )
-            // InternalFXDsl.g:814:2: rule__FXTableView__Group_7_3__1__Impl
-            {
-            pushFollow(FOLLOW_2);
-            rule__FXTableView__Group_7_3__1__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__FXTableView__Group_7_3__1"
-
-
-    // $ANTLR start "rule__FXTableView__Group_7_3__1__Impl"
-    // InternalFXDsl.g:820:1: rule__FXTableView__Group_7_3__1__Impl : ( ( rule__FXTableView__FxColumnsAssignment_7_3_1 ) ) ;
-    public final void rule__FXTableView__Group_7_3__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalFXDsl.g:824:1: ( ( ( rule__FXTableView__FxColumnsAssignment_7_3_1 ) ) )
-            // InternalFXDsl.g:825:1: ( ( rule__FXTableView__FxColumnsAssignment_7_3_1 ) )
-            {
-            // InternalFXDsl.g:825:1: ( ( rule__FXTableView__FxColumnsAssignment_7_3_1 ) )
-            // InternalFXDsl.g:826:2: ( rule__FXTableView__FxColumnsAssignment_7_3_1 )
-            {
-             before(grammarAccess.getFXTableViewAccess().getFxColumnsAssignment_7_3_1()); 
-            // InternalFXDsl.g:827:2: ( rule__FXTableView__FxColumnsAssignment_7_3_1 )
-            // InternalFXDsl.g:827:3: rule__FXTableView__FxColumnsAssignment_7_3_1
-            {
-            pushFollow(FOLLOW_2);
-            rule__FXTableView__FxColumnsAssignment_7_3_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getFXTableViewAccess().getFxColumnsAssignment_7_3_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__FXTableView__Group_7_3__1__Impl"
-
-
-    // $ANTLR start "rule__FXTableView__Group_8__0"
-    // InternalFXDsl.g:836:1: rule__FXTableView__Group_8__0 : rule__FXTableView__Group_8__0__Impl rule__FXTableView__Group_8__1 ;
-    public final void rule__FXTableView__Group_8__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalFXDsl.g:840:1: ( rule__FXTableView__Group_8__0__Impl rule__FXTableView__Group_8__1 )
-            // InternalFXDsl.g:841:2: rule__FXTableView__Group_8__0__Impl rule__FXTableView__Group_8__1
-            {
-            pushFollow(FOLLOW_10);
-            rule__FXTableView__Group_8__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__FXTableView__Group_8__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__FXTableView__Group_8__0"
-
-
-    // $ANTLR start "rule__FXTableView__Group_8__0__Impl"
-    // InternalFXDsl.g:848:1: rule__FXTableView__Group_8__0__Impl : ( 'fxEntity' ) ;
-    public final void rule__FXTableView__Group_8__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalFXDsl.g:852:1: ( ( 'fxEntity' ) )
-            // InternalFXDsl.g:853:1: ( 'fxEntity' )
-            {
-            // InternalFXDsl.g:853:1: ( 'fxEntity' )
-            // InternalFXDsl.g:854:2: 'fxEntity'
-            {
-             before(grammarAccess.getFXTableViewAccess().getFxEntityKeyword_8_0()); 
-            match(input,28,FOLLOW_2); 
-             after(grammarAccess.getFXTableViewAccess().getFxEntityKeyword_8_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__FXTableView__Group_8__0__Impl"
-
-
-    // $ANTLR start "rule__FXTableView__Group_8__1"
-    // InternalFXDsl.g:863:1: rule__FXTableView__Group_8__1 : rule__FXTableView__Group_8__1__Impl ;
-    public final void rule__FXTableView__Group_8__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalFXDsl.g:867:1: ( rule__FXTableView__Group_8__1__Impl )
-            // InternalFXDsl.g:868:2: rule__FXTableView__Group_8__1__Impl
-            {
-            pushFollow(FOLLOW_2);
-            rule__FXTableView__Group_8__1__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__FXTableView__Group_8__1"
-
-
-    // $ANTLR start "rule__FXTableView__Group_8__1__Impl"
-    // InternalFXDsl.g:874:1: rule__FXTableView__Group_8__1__Impl : ( ( rule__FXTableView__FxEntityAssignment_8_1 ) ) ;
-    public final void rule__FXTableView__Group_8__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalFXDsl.g:878:1: ( ( ( rule__FXTableView__FxEntityAssignment_8_1 ) ) )
-            // InternalFXDsl.g:879:1: ( ( rule__FXTableView__FxEntityAssignment_8_1 ) )
-            {
-            // InternalFXDsl.g:879:1: ( ( rule__FXTableView__FxEntityAssignment_8_1 ) )
-            // InternalFXDsl.g:880:2: ( rule__FXTableView__FxEntityAssignment_8_1 )
-            {
-             before(grammarAccess.getFXTableViewAccess().getFxEntityAssignment_8_1()); 
-            // InternalFXDsl.g:881:2: ( rule__FXTableView__FxEntityAssignment_8_1 )
-            // InternalFXDsl.g:881:3: rule__FXTableView__FxEntityAssignment_8_1
-            {
-            pushFollow(FOLLOW_2);
-            rule__FXTableView__FxEntityAssignment_8_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getFXTableViewAccess().getFxEntityAssignment_8_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__FXTableView__Group_8__1__Impl"
-
-
     // $ANTLR start "rule__FXColumn__Group__0"
-    // InternalFXDsl.g:890:1: rule__FXColumn__Group__0 : rule__FXColumn__Group__0__Impl rule__FXColumn__Group__1 ;
+    // InternalFXDsl.g:701:1: rule__FXColumn__Group__0 : rule__FXColumn__Group__0__Impl rule__FXColumn__Group__1 ;
     public final void rule__FXColumn__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:894:1: ( rule__FXColumn__Group__0__Impl rule__FXColumn__Group__1 )
-            // InternalFXDsl.g:895:2: rule__FXColumn__Group__0__Impl rule__FXColumn__Group__1
+            // InternalFXDsl.g:705:1: ( rule__FXColumn__Group__0__Impl rule__FXColumn__Group__1 )
+            // InternalFXDsl.g:706:2: rule__FXColumn__Group__0__Impl rule__FXColumn__Group__1
             {
             pushFollow(FOLLOW_7);
             rule__FXColumn__Group__0__Impl();
@@ -2792,21 +2251,21 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FXColumn__Group__0__Impl"
-    // InternalFXDsl.g:902:1: rule__FXColumn__Group__0__Impl : ( () ) ;
+    // InternalFXDsl.g:713:1: rule__FXColumn__Group__0__Impl : ( () ) ;
     public final void rule__FXColumn__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:906:1: ( ( () ) )
-            // InternalFXDsl.g:907:1: ( () )
+            // InternalFXDsl.g:717:1: ( ( () ) )
+            // InternalFXDsl.g:718:1: ( () )
             {
-            // InternalFXDsl.g:907:1: ( () )
-            // InternalFXDsl.g:908:2: ()
+            // InternalFXDsl.g:718:1: ( () )
+            // InternalFXDsl.g:719:2: ()
             {
              before(grammarAccess.getFXColumnAccess().getFXColumnAction_0()); 
-            // InternalFXDsl.g:909:2: ()
-            // InternalFXDsl.g:909:3: 
+            // InternalFXDsl.g:720:2: ()
+            // InternalFXDsl.g:720:3: 
             {
             }
 
@@ -2829,14 +2288,14 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FXColumn__Group__1"
-    // InternalFXDsl.g:917:1: rule__FXColumn__Group__1 : rule__FXColumn__Group__1__Impl rule__FXColumn__Group__2 ;
+    // InternalFXDsl.g:728:1: rule__FXColumn__Group__1 : rule__FXColumn__Group__1__Impl rule__FXColumn__Group__2 ;
     public final void rule__FXColumn__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:921:1: ( rule__FXColumn__Group__1__Impl rule__FXColumn__Group__2 )
-            // InternalFXDsl.g:922:2: rule__FXColumn__Group__1__Impl rule__FXColumn__Group__2
+            // InternalFXDsl.g:732:1: ( rule__FXColumn__Group__1__Impl rule__FXColumn__Group__2 )
+            // InternalFXDsl.g:733:2: rule__FXColumn__Group__1__Impl rule__FXColumn__Group__2
             {
             pushFollow(FOLLOW_7);
             rule__FXColumn__Group__1__Impl();
@@ -2867,29 +2326,29 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FXColumn__Group__1__Impl"
-    // InternalFXDsl.g:929:1: rule__FXColumn__Group__1__Impl : ( ( rule__FXColumn__EditableAssignment_1 )? ) ;
+    // InternalFXDsl.g:740:1: rule__FXColumn__Group__1__Impl : ( ( rule__FXColumn__EditableAssignment_1 )? ) ;
     public final void rule__FXColumn__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:933:1: ( ( ( rule__FXColumn__EditableAssignment_1 )? ) )
-            // InternalFXDsl.g:934:1: ( ( rule__FXColumn__EditableAssignment_1 )? )
+            // InternalFXDsl.g:744:1: ( ( ( rule__FXColumn__EditableAssignment_1 )? ) )
+            // InternalFXDsl.g:745:1: ( ( rule__FXColumn__EditableAssignment_1 )? )
             {
-            // InternalFXDsl.g:934:1: ( ( rule__FXColumn__EditableAssignment_1 )? )
-            // InternalFXDsl.g:935:2: ( rule__FXColumn__EditableAssignment_1 )?
+            // InternalFXDsl.g:745:1: ( ( rule__FXColumn__EditableAssignment_1 )? )
+            // InternalFXDsl.g:746:2: ( rule__FXColumn__EditableAssignment_1 )?
             {
              before(grammarAccess.getFXColumnAccess().getEditableAssignment_1()); 
-            // InternalFXDsl.g:936:2: ( rule__FXColumn__EditableAssignment_1 )?
+            // InternalFXDsl.g:747:2: ( rule__FXColumn__EditableAssignment_1 )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
-            if ( (LA10_0==41) ) {
+            if ( (LA10_0==35) ) {
                 alt10=1;
             }
             switch (alt10) {
                 case 1 :
-                    // InternalFXDsl.g:936:3: rule__FXColumn__EditableAssignment_1
+                    // InternalFXDsl.g:747:3: rule__FXColumn__EditableAssignment_1
                     {
                     pushFollow(FOLLOW_2);
                     rule__FXColumn__EditableAssignment_1();
@@ -2925,14 +2384,14 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FXColumn__Group__2"
-    // InternalFXDsl.g:944:1: rule__FXColumn__Group__2 : rule__FXColumn__Group__2__Impl rule__FXColumn__Group__3 ;
+    // InternalFXDsl.g:755:1: rule__FXColumn__Group__2 : rule__FXColumn__Group__2__Impl rule__FXColumn__Group__3 ;
     public final void rule__FXColumn__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:948:1: ( rule__FXColumn__Group__2__Impl rule__FXColumn__Group__3 )
-            // InternalFXDsl.g:949:2: rule__FXColumn__Group__2__Impl rule__FXColumn__Group__3
+            // InternalFXDsl.g:759:1: ( rule__FXColumn__Group__2__Impl rule__FXColumn__Group__3 )
+            // InternalFXDsl.g:760:2: rule__FXColumn__Group__2__Impl rule__FXColumn__Group__3
             {
             pushFollow(FOLLOW_7);
             rule__FXColumn__Group__2__Impl();
@@ -2963,29 +2422,29 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FXColumn__Group__2__Impl"
-    // InternalFXDsl.g:956:1: rule__FXColumn__Group__2__Impl : ( ( rule__FXColumn__UseCustomCellFactoryAssignment_2 )? ) ;
+    // InternalFXDsl.g:767:1: rule__FXColumn__Group__2__Impl : ( ( rule__FXColumn__UseCustomCellFactoryAssignment_2 )? ) ;
     public final void rule__FXColumn__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:960:1: ( ( ( rule__FXColumn__UseCustomCellFactoryAssignment_2 )? ) )
-            // InternalFXDsl.g:961:1: ( ( rule__FXColumn__UseCustomCellFactoryAssignment_2 )? )
+            // InternalFXDsl.g:771:1: ( ( ( rule__FXColumn__UseCustomCellFactoryAssignment_2 )? ) )
+            // InternalFXDsl.g:772:1: ( ( rule__FXColumn__UseCustomCellFactoryAssignment_2 )? )
             {
-            // InternalFXDsl.g:961:1: ( ( rule__FXColumn__UseCustomCellFactoryAssignment_2 )? )
-            // InternalFXDsl.g:962:2: ( rule__FXColumn__UseCustomCellFactoryAssignment_2 )?
+            // InternalFXDsl.g:772:1: ( ( rule__FXColumn__UseCustomCellFactoryAssignment_2 )? )
+            // InternalFXDsl.g:773:2: ( rule__FXColumn__UseCustomCellFactoryAssignment_2 )?
             {
              before(grammarAccess.getFXColumnAccess().getUseCustomCellFactoryAssignment_2()); 
-            // InternalFXDsl.g:963:2: ( rule__FXColumn__UseCustomCellFactoryAssignment_2 )?
+            // InternalFXDsl.g:774:2: ( rule__FXColumn__UseCustomCellFactoryAssignment_2 )?
             int alt11=2;
             int LA11_0 = input.LA(1);
 
-            if ( (LA11_0==42) ) {
+            if ( (LA11_0==36) ) {
                 alt11=1;
             }
             switch (alt11) {
                 case 1 :
-                    // InternalFXDsl.g:963:3: rule__FXColumn__UseCustomCellFactoryAssignment_2
+                    // InternalFXDsl.g:774:3: rule__FXColumn__UseCustomCellFactoryAssignment_2
                     {
                     pushFollow(FOLLOW_2);
                     rule__FXColumn__UseCustomCellFactoryAssignment_2();
@@ -3021,14 +2480,14 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FXColumn__Group__3"
-    // InternalFXDsl.g:971:1: rule__FXColumn__Group__3 : rule__FXColumn__Group__3__Impl rule__FXColumn__Group__4 ;
+    // InternalFXDsl.g:782:1: rule__FXColumn__Group__3 : rule__FXColumn__Group__3__Impl rule__FXColumn__Group__4 ;
     public final void rule__FXColumn__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:975:1: ( rule__FXColumn__Group__3__Impl rule__FXColumn__Group__4 )
-            // InternalFXDsl.g:976:2: rule__FXColumn__Group__3__Impl rule__FXColumn__Group__4
+            // InternalFXDsl.g:786:1: ( rule__FXColumn__Group__3__Impl rule__FXColumn__Group__4 )
+            // InternalFXDsl.g:787:2: rule__FXColumn__Group__3__Impl rule__FXColumn__Group__4
             {
             pushFollow(FOLLOW_4);
             rule__FXColumn__Group__3__Impl();
@@ -3059,20 +2518,20 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FXColumn__Group__3__Impl"
-    // InternalFXDsl.g:983:1: rule__FXColumn__Group__3__Impl : ( 'FXColumn' ) ;
+    // InternalFXDsl.g:794:1: rule__FXColumn__Group__3__Impl : ( 'FXColumn' ) ;
     public final void rule__FXColumn__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:987:1: ( ( 'FXColumn' ) )
-            // InternalFXDsl.g:988:1: ( 'FXColumn' )
+            // InternalFXDsl.g:798:1: ( ( 'FXColumn' ) )
+            // InternalFXDsl.g:799:1: ( 'FXColumn' )
             {
-            // InternalFXDsl.g:988:1: ( 'FXColumn' )
-            // InternalFXDsl.g:989:2: 'FXColumn'
+            // InternalFXDsl.g:799:1: ( 'FXColumn' )
+            // InternalFXDsl.g:800:2: 'FXColumn'
             {
              before(grammarAccess.getFXColumnAccess().getFXColumnKeyword_3()); 
-            match(input,29,FOLLOW_2); 
+            match(input,26,FOLLOW_2); 
              after(grammarAccess.getFXColumnAccess().getFXColumnKeyword_3()); 
 
             }
@@ -3096,14 +2555,14 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FXColumn__Group__4"
-    // InternalFXDsl.g:998:1: rule__FXColumn__Group__4 : rule__FXColumn__Group__4__Impl rule__FXColumn__Group__5 ;
+    // InternalFXDsl.g:809:1: rule__FXColumn__Group__4 : rule__FXColumn__Group__4__Impl rule__FXColumn__Group__5 ;
     public final void rule__FXColumn__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1002:1: ( rule__FXColumn__Group__4__Impl rule__FXColumn__Group__5 )
-            // InternalFXDsl.g:1003:2: rule__FXColumn__Group__4__Impl rule__FXColumn__Group__5
+            // InternalFXDsl.g:813:1: ( rule__FXColumn__Group__4__Impl rule__FXColumn__Group__5 )
+            // InternalFXDsl.g:814:2: rule__FXColumn__Group__4__Impl rule__FXColumn__Group__5
             {
             pushFollow(FOLLOW_5);
             rule__FXColumn__Group__4__Impl();
@@ -3134,21 +2593,21 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FXColumn__Group__4__Impl"
-    // InternalFXDsl.g:1010:1: rule__FXColumn__Group__4__Impl : ( ( rule__FXColumn__NameAssignment_4 ) ) ;
+    // InternalFXDsl.g:821:1: rule__FXColumn__Group__4__Impl : ( ( rule__FXColumn__NameAssignment_4 ) ) ;
     public final void rule__FXColumn__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1014:1: ( ( ( rule__FXColumn__NameAssignment_4 ) ) )
-            // InternalFXDsl.g:1015:1: ( ( rule__FXColumn__NameAssignment_4 ) )
+            // InternalFXDsl.g:825:1: ( ( ( rule__FXColumn__NameAssignment_4 ) ) )
+            // InternalFXDsl.g:826:1: ( ( rule__FXColumn__NameAssignment_4 ) )
             {
-            // InternalFXDsl.g:1015:1: ( ( rule__FXColumn__NameAssignment_4 ) )
-            // InternalFXDsl.g:1016:2: ( rule__FXColumn__NameAssignment_4 )
+            // InternalFXDsl.g:826:1: ( ( rule__FXColumn__NameAssignment_4 ) )
+            // InternalFXDsl.g:827:2: ( rule__FXColumn__NameAssignment_4 )
             {
              before(grammarAccess.getFXColumnAccess().getNameAssignment_4()); 
-            // InternalFXDsl.g:1017:2: ( rule__FXColumn__NameAssignment_4 )
-            // InternalFXDsl.g:1017:3: rule__FXColumn__NameAssignment_4
+            // InternalFXDsl.g:828:2: ( rule__FXColumn__NameAssignment_4 )
+            // InternalFXDsl.g:828:3: rule__FXColumn__NameAssignment_4
             {
             pushFollow(FOLLOW_2);
             rule__FXColumn__NameAssignment_4();
@@ -3181,22 +2640,17 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FXColumn__Group__5"
-    // InternalFXDsl.g:1025:1: rule__FXColumn__Group__5 : rule__FXColumn__Group__5__Impl rule__FXColumn__Group__6 ;
+    // InternalFXDsl.g:836:1: rule__FXColumn__Group__5 : rule__FXColumn__Group__5__Impl ;
     public final void rule__FXColumn__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1029:1: ( rule__FXColumn__Group__5__Impl rule__FXColumn__Group__6 )
-            // InternalFXDsl.g:1030:2: rule__FXColumn__Group__5__Impl rule__FXColumn__Group__6
+            // InternalFXDsl.g:840:1: ( rule__FXColumn__Group__5__Impl )
+            // InternalFXDsl.g:841:2: rule__FXColumn__Group__5__Impl
             {
-            pushFollow(FOLLOW_11);
-            rule__FXColumn__Group__5__Impl();
-
-            state._fsp--;
-
             pushFollow(FOLLOW_2);
-            rule__FXColumn__Group__6();
+            rule__FXColumn__Group__5__Impl();
 
             state._fsp--;
 
@@ -3219,21 +2673,42 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FXColumn__Group__5__Impl"
-    // InternalFXDsl.g:1037:1: rule__FXColumn__Group__5__Impl : ( '{' ) ;
+    // InternalFXDsl.g:847:1: rule__FXColumn__Group__5__Impl : ( ( rule__FXColumn__Group_5__0 )? ) ;
     public final void rule__FXColumn__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1041:1: ( ( '{' ) )
-            // InternalFXDsl.g:1042:1: ( '{' )
+            // InternalFXDsl.g:851:1: ( ( ( rule__FXColumn__Group_5__0 )? ) )
+            // InternalFXDsl.g:852:1: ( ( rule__FXColumn__Group_5__0 )? )
             {
-            // InternalFXDsl.g:1042:1: ( '{' )
-            // InternalFXDsl.g:1043:2: '{'
+            // InternalFXDsl.g:852:1: ( ( rule__FXColumn__Group_5__0 )? )
+            // InternalFXDsl.g:853:2: ( rule__FXColumn__Group_5__0 )?
             {
-             before(grammarAccess.getFXColumnAccess().getLeftCurlyBracketKeyword_5()); 
-            match(input,23,FOLLOW_2); 
-             after(grammarAccess.getFXColumnAccess().getLeftCurlyBracketKeyword_5()); 
+             before(grammarAccess.getFXColumnAccess().getGroup_5()); 
+            // InternalFXDsl.g:854:2: ( rule__FXColumn__Group_5__0 )?
+            int alt12=2;
+            int LA12_0 = input.LA(1);
+
+            if ( (LA12_0==23) ) {
+                alt12=1;
+            }
+            switch (alt12) {
+                case 1 :
+                    // InternalFXDsl.g:854:3: rule__FXColumn__Group_5__0
+                    {
+                    pushFollow(FOLLOW_2);
+                    rule__FXColumn__Group_5__0();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+
+             after(grammarAccess.getFXColumnAccess().getGroup_5()); 
 
             }
 
@@ -3255,23 +2730,23 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__FXColumn__Group__5__Impl"
 
 
-    // $ANTLR start "rule__FXColumn__Group__6"
-    // InternalFXDsl.g:1052:1: rule__FXColumn__Group__6 : rule__FXColumn__Group__6__Impl rule__FXColumn__Group__7 ;
-    public final void rule__FXColumn__Group__6() throws RecognitionException {
+    // $ANTLR start "rule__FXColumn__Group_5__0"
+    // InternalFXDsl.g:863:1: rule__FXColumn__Group_5__0 : rule__FXColumn__Group_5__0__Impl rule__FXColumn__Group_5__1 ;
+    public final void rule__FXColumn__Group_5__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1056:1: ( rule__FXColumn__Group__6__Impl rule__FXColumn__Group__7 )
-            // InternalFXDsl.g:1057:2: rule__FXColumn__Group__6__Impl rule__FXColumn__Group__7
+            // InternalFXDsl.g:867:1: ( rule__FXColumn__Group_5__0__Impl rule__FXColumn__Group_5__1 )
+            // InternalFXDsl.g:868:2: rule__FXColumn__Group_5__0__Impl rule__FXColumn__Group_5__1
             {
-            pushFollow(FOLLOW_11);
-            rule__FXColumn__Group__6__Impl();
+            pushFollow(FOLLOW_9);
+            rule__FXColumn__Group_5__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__FXColumn__Group__7();
+            rule__FXColumn__Group_5__1();
 
             state._fsp--;
 
@@ -3290,46 +2765,25 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__FXColumn__Group__6"
+    // $ANTLR end "rule__FXColumn__Group_5__0"
 
 
-    // $ANTLR start "rule__FXColumn__Group__6__Impl"
-    // InternalFXDsl.g:1064:1: rule__FXColumn__Group__6__Impl : ( ( rule__FXColumn__Group_6__0 )? ) ;
-    public final void rule__FXColumn__Group__6__Impl() throws RecognitionException {
+    // $ANTLR start "rule__FXColumn__Group_5__0__Impl"
+    // InternalFXDsl.g:875:1: rule__FXColumn__Group_5__0__Impl : ( '{' ) ;
+    public final void rule__FXColumn__Group_5__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1068:1: ( ( ( rule__FXColumn__Group_6__0 )? ) )
-            // InternalFXDsl.g:1069:1: ( ( rule__FXColumn__Group_6__0 )? )
+            // InternalFXDsl.g:879:1: ( ( '{' ) )
+            // InternalFXDsl.g:880:1: ( '{' )
             {
-            // InternalFXDsl.g:1069:1: ( ( rule__FXColumn__Group_6__0 )? )
-            // InternalFXDsl.g:1070:2: ( rule__FXColumn__Group_6__0 )?
+            // InternalFXDsl.g:880:1: ( '{' )
+            // InternalFXDsl.g:881:2: '{'
             {
-             before(grammarAccess.getFXColumnAccess().getGroup_6()); 
-            // InternalFXDsl.g:1071:2: ( rule__FXColumn__Group_6__0 )?
-            int alt12=2;
-            int LA12_0 = input.LA(1);
-
-            if ( (LA12_0==30) ) {
-                alt12=1;
-            }
-            switch (alt12) {
-                case 1 :
-                    // InternalFXDsl.g:1071:3: rule__FXColumn__Group_6__0
-                    {
-                    pushFollow(FOLLOW_2);
-                    rule__FXColumn__Group_6__0();
-
-                    state._fsp--;
-
-
-                    }
-                    break;
-
-            }
-
-             after(grammarAccess.getFXColumnAccess().getGroup_6()); 
+             before(grammarAccess.getFXColumnAccess().getLeftCurlyBracketKeyword_5_0()); 
+            match(input,23,FOLLOW_2); 
+             after(grammarAccess.getFXColumnAccess().getLeftCurlyBracketKeyword_5_0()); 
 
             }
 
@@ -3348,26 +2802,26 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__FXColumn__Group__6__Impl"
+    // $ANTLR end "rule__FXColumn__Group_5__0__Impl"
 
 
-    // $ANTLR start "rule__FXColumn__Group__7"
-    // InternalFXDsl.g:1079:1: rule__FXColumn__Group__7 : rule__FXColumn__Group__7__Impl rule__FXColumn__Group__8 ;
-    public final void rule__FXColumn__Group__7() throws RecognitionException {
+    // $ANTLR start "rule__FXColumn__Group_5__1"
+    // InternalFXDsl.g:890:1: rule__FXColumn__Group_5__1 : rule__FXColumn__Group_5__1__Impl rule__FXColumn__Group_5__2 ;
+    public final void rule__FXColumn__Group_5__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1083:1: ( rule__FXColumn__Group__7__Impl rule__FXColumn__Group__8 )
-            // InternalFXDsl.g:1084:2: rule__FXColumn__Group__7__Impl rule__FXColumn__Group__8
+            // InternalFXDsl.g:894:1: ( rule__FXColumn__Group_5__1__Impl rule__FXColumn__Group_5__2 )
+            // InternalFXDsl.g:895:2: rule__FXColumn__Group_5__1__Impl rule__FXColumn__Group_5__2
             {
-            pushFollow(FOLLOW_11);
-            rule__FXColumn__Group__7__Impl();
+            pushFollow(FOLLOW_9);
+            rule__FXColumn__Group_5__1__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__FXColumn__Group__8();
+            rule__FXColumn__Group_5__2();
 
             state._fsp--;
 
@@ -3386,36 +2840,36 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__FXColumn__Group__7"
+    // $ANTLR end "rule__FXColumn__Group_5__1"
 
 
-    // $ANTLR start "rule__FXColumn__Group__7__Impl"
-    // InternalFXDsl.g:1091:1: rule__FXColumn__Group__7__Impl : ( ( rule__FXColumn__Group_7__0 )? ) ;
-    public final void rule__FXColumn__Group__7__Impl() throws RecognitionException {
+    // $ANTLR start "rule__FXColumn__Group_5__1__Impl"
+    // InternalFXDsl.g:902:1: rule__FXColumn__Group_5__1__Impl : ( ( rule__FXColumn__Group_5_1__0 )? ) ;
+    public final void rule__FXColumn__Group_5__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1095:1: ( ( ( rule__FXColumn__Group_7__0 )? ) )
-            // InternalFXDsl.g:1096:1: ( ( rule__FXColumn__Group_7__0 )? )
+            // InternalFXDsl.g:906:1: ( ( ( rule__FXColumn__Group_5_1__0 )? ) )
+            // InternalFXDsl.g:907:1: ( ( rule__FXColumn__Group_5_1__0 )? )
             {
-            // InternalFXDsl.g:1096:1: ( ( rule__FXColumn__Group_7__0 )? )
-            // InternalFXDsl.g:1097:2: ( rule__FXColumn__Group_7__0 )?
+            // InternalFXDsl.g:907:1: ( ( rule__FXColumn__Group_5_1__0 )? )
+            // InternalFXDsl.g:908:2: ( rule__FXColumn__Group_5_1__0 )?
             {
-             before(grammarAccess.getFXColumnAccess().getGroup_7()); 
-            // InternalFXDsl.g:1098:2: ( rule__FXColumn__Group_7__0 )?
+             before(grammarAccess.getFXColumnAccess().getGroup_5_1()); 
+            // InternalFXDsl.g:909:2: ( rule__FXColumn__Group_5_1__0 )?
             int alt13=2;
             int LA13_0 = input.LA(1);
 
-            if ( (LA13_0==31) ) {
+            if ( (LA13_0==27) ) {
                 alt13=1;
             }
             switch (alt13) {
                 case 1 :
-                    // InternalFXDsl.g:1098:3: rule__FXColumn__Group_7__0
+                    // InternalFXDsl.g:909:3: rule__FXColumn__Group_5_1__0
                     {
                     pushFollow(FOLLOW_2);
-                    rule__FXColumn__Group_7__0();
+                    rule__FXColumn__Group_5_1__0();
 
                     state._fsp--;
 
@@ -3425,7 +2879,7 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
             }
 
-             after(grammarAccess.getFXColumnAccess().getGroup_7()); 
+             after(grammarAccess.getFXColumnAccess().getGroup_5_1()); 
 
             }
 
@@ -3444,26 +2898,26 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__FXColumn__Group__7__Impl"
+    // $ANTLR end "rule__FXColumn__Group_5__1__Impl"
 
 
-    // $ANTLR start "rule__FXColumn__Group__8"
-    // InternalFXDsl.g:1106:1: rule__FXColumn__Group__8 : rule__FXColumn__Group__8__Impl rule__FXColumn__Group__9 ;
-    public final void rule__FXColumn__Group__8() throws RecognitionException {
+    // $ANTLR start "rule__FXColumn__Group_5__2"
+    // InternalFXDsl.g:917:1: rule__FXColumn__Group_5__2 : rule__FXColumn__Group_5__2__Impl rule__FXColumn__Group_5__3 ;
+    public final void rule__FXColumn__Group_5__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1110:1: ( rule__FXColumn__Group__8__Impl rule__FXColumn__Group__9 )
-            // InternalFXDsl.g:1111:2: rule__FXColumn__Group__8__Impl rule__FXColumn__Group__9
+            // InternalFXDsl.g:921:1: ( rule__FXColumn__Group_5__2__Impl rule__FXColumn__Group_5__3 )
+            // InternalFXDsl.g:922:2: rule__FXColumn__Group_5__2__Impl rule__FXColumn__Group_5__3
             {
-            pushFollow(FOLLOW_11);
-            rule__FXColumn__Group__8__Impl();
+            pushFollow(FOLLOW_9);
+            rule__FXColumn__Group_5__2__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__FXColumn__Group__9();
+            rule__FXColumn__Group_5__3();
 
             state._fsp--;
 
@@ -3482,36 +2936,36 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__FXColumn__Group__8"
+    // $ANTLR end "rule__FXColumn__Group_5__2"
 
 
-    // $ANTLR start "rule__FXColumn__Group__8__Impl"
-    // InternalFXDsl.g:1118:1: rule__FXColumn__Group__8__Impl : ( ( rule__FXColumn__Group_8__0 )? ) ;
-    public final void rule__FXColumn__Group__8__Impl() throws RecognitionException {
+    // $ANTLR start "rule__FXColumn__Group_5__2__Impl"
+    // InternalFXDsl.g:929:1: rule__FXColumn__Group_5__2__Impl : ( ( rule__FXColumn__Group_5_2__0 )? ) ;
+    public final void rule__FXColumn__Group_5__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1122:1: ( ( ( rule__FXColumn__Group_8__0 )? ) )
-            // InternalFXDsl.g:1123:1: ( ( rule__FXColumn__Group_8__0 )? )
+            // InternalFXDsl.g:933:1: ( ( ( rule__FXColumn__Group_5_2__0 )? ) )
+            // InternalFXDsl.g:934:1: ( ( rule__FXColumn__Group_5_2__0 )? )
             {
-            // InternalFXDsl.g:1123:1: ( ( rule__FXColumn__Group_8__0 )? )
-            // InternalFXDsl.g:1124:2: ( rule__FXColumn__Group_8__0 )?
+            // InternalFXDsl.g:934:1: ( ( rule__FXColumn__Group_5_2__0 )? )
+            // InternalFXDsl.g:935:2: ( rule__FXColumn__Group_5_2__0 )?
             {
-             before(grammarAccess.getFXColumnAccess().getGroup_8()); 
-            // InternalFXDsl.g:1125:2: ( rule__FXColumn__Group_8__0 )?
+             before(grammarAccess.getFXColumnAccess().getGroup_5_2()); 
+            // InternalFXDsl.g:936:2: ( rule__FXColumn__Group_5_2__0 )?
             int alt14=2;
             int LA14_0 = input.LA(1);
 
-            if ( (LA14_0==32) ) {
+            if ( (LA14_0==28) ) {
                 alt14=1;
             }
             switch (alt14) {
                 case 1 :
-                    // InternalFXDsl.g:1125:3: rule__FXColumn__Group_8__0
+                    // InternalFXDsl.g:936:3: rule__FXColumn__Group_5_2__0
                     {
                     pushFollow(FOLLOW_2);
-                    rule__FXColumn__Group_8__0();
+                    rule__FXColumn__Group_5_2__0();
 
                     state._fsp--;
 
@@ -3521,7 +2975,7 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
             }
 
-             after(grammarAccess.getFXColumnAccess().getGroup_8()); 
+             after(grammarAccess.getFXColumnAccess().getGroup_5_2()); 
 
             }
 
@@ -3540,21 +2994,26 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__FXColumn__Group__8__Impl"
+    // $ANTLR end "rule__FXColumn__Group_5__2__Impl"
 
 
-    // $ANTLR start "rule__FXColumn__Group__9"
-    // InternalFXDsl.g:1133:1: rule__FXColumn__Group__9 : rule__FXColumn__Group__9__Impl ;
-    public final void rule__FXColumn__Group__9() throws RecognitionException {
+    // $ANTLR start "rule__FXColumn__Group_5__3"
+    // InternalFXDsl.g:944:1: rule__FXColumn__Group_5__3 : rule__FXColumn__Group_5__3__Impl rule__FXColumn__Group_5__4 ;
+    public final void rule__FXColumn__Group_5__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1137:1: ( rule__FXColumn__Group__9__Impl )
-            // InternalFXDsl.g:1138:2: rule__FXColumn__Group__9__Impl
+            // InternalFXDsl.g:948:1: ( rule__FXColumn__Group_5__3__Impl rule__FXColumn__Group_5__4 )
+            // InternalFXDsl.g:949:2: rule__FXColumn__Group_5__3__Impl rule__FXColumn__Group_5__4
             {
+            pushFollow(FOLLOW_9);
+            rule__FXColumn__Group_5__3__Impl();
+
+            state._fsp--;
+
             pushFollow(FOLLOW_2);
-            rule__FXColumn__Group__9__Impl();
+            rule__FXColumn__Group_5__4();
 
             state._fsp--;
 
@@ -3573,25 +3032,116 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__FXColumn__Group__9"
+    // $ANTLR end "rule__FXColumn__Group_5__3"
 
 
-    // $ANTLR start "rule__FXColumn__Group__9__Impl"
-    // InternalFXDsl.g:1144:1: rule__FXColumn__Group__9__Impl : ( '}' ) ;
-    public final void rule__FXColumn__Group__9__Impl() throws RecognitionException {
+    // $ANTLR start "rule__FXColumn__Group_5__3__Impl"
+    // InternalFXDsl.g:956:1: rule__FXColumn__Group_5__3__Impl : ( ( rule__FXColumn__Group_5_3__0 )? ) ;
+    public final void rule__FXColumn__Group_5__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1148:1: ( ( '}' ) )
-            // InternalFXDsl.g:1149:1: ( '}' )
+            // InternalFXDsl.g:960:1: ( ( ( rule__FXColumn__Group_5_3__0 )? ) )
+            // InternalFXDsl.g:961:1: ( ( rule__FXColumn__Group_5_3__0 )? )
             {
-            // InternalFXDsl.g:1149:1: ( '}' )
-            // InternalFXDsl.g:1150:2: '}'
+            // InternalFXDsl.g:961:1: ( ( rule__FXColumn__Group_5_3__0 )? )
+            // InternalFXDsl.g:962:2: ( rule__FXColumn__Group_5_3__0 )?
             {
-             before(grammarAccess.getFXColumnAccess().getRightCurlyBracketKeyword_9()); 
+             before(grammarAccess.getFXColumnAccess().getGroup_5_3()); 
+            // InternalFXDsl.g:963:2: ( rule__FXColumn__Group_5_3__0 )?
+            int alt15=2;
+            int LA15_0 = input.LA(1);
+
+            if ( (LA15_0==29) ) {
+                alt15=1;
+            }
+            switch (alt15) {
+                case 1 :
+                    // InternalFXDsl.g:963:3: rule__FXColumn__Group_5_3__0
+                    {
+                    pushFollow(FOLLOW_2);
+                    rule__FXColumn__Group_5_3__0();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+
+             after(grammarAccess.getFXColumnAccess().getGroup_5_3()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__FXColumn__Group_5__3__Impl"
+
+
+    // $ANTLR start "rule__FXColumn__Group_5__4"
+    // InternalFXDsl.g:971:1: rule__FXColumn__Group_5__4 : rule__FXColumn__Group_5__4__Impl ;
+    public final void rule__FXColumn__Group_5__4() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalFXDsl.g:975:1: ( rule__FXColumn__Group_5__4__Impl )
+            // InternalFXDsl.g:976:2: rule__FXColumn__Group_5__4__Impl
+            {
+            pushFollow(FOLLOW_2);
+            rule__FXColumn__Group_5__4__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__FXColumn__Group_5__4"
+
+
+    // $ANTLR start "rule__FXColumn__Group_5__4__Impl"
+    // InternalFXDsl.g:982:1: rule__FXColumn__Group_5__4__Impl : ( '}' ) ;
+    public final void rule__FXColumn__Group_5__4__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalFXDsl.g:986:1: ( ( '}' ) )
+            // InternalFXDsl.g:987:1: ( '}' )
+            {
+            // InternalFXDsl.g:987:1: ( '}' )
+            // InternalFXDsl.g:988:2: '}'
+            {
+             before(grammarAccess.getFXColumnAccess().getRightCurlyBracketKeyword_5_4()); 
             match(input,24,FOLLOW_2); 
-             after(grammarAccess.getFXColumnAccess().getRightCurlyBracketKeyword_9()); 
+             after(grammarAccess.getFXColumnAccess().getRightCurlyBracketKeyword_5_4()); 
 
             }
 
@@ -3610,26 +3160,26 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__FXColumn__Group__9__Impl"
+    // $ANTLR end "rule__FXColumn__Group_5__4__Impl"
 
 
-    // $ANTLR start "rule__FXColumn__Group_6__0"
-    // InternalFXDsl.g:1160:1: rule__FXColumn__Group_6__0 : rule__FXColumn__Group_6__0__Impl rule__FXColumn__Group_6__1 ;
-    public final void rule__FXColumn__Group_6__0() throws RecognitionException {
+    // $ANTLR start "rule__FXColumn__Group_5_1__0"
+    // InternalFXDsl.g:998:1: rule__FXColumn__Group_5_1__0 : rule__FXColumn__Group_5_1__0__Impl rule__FXColumn__Group_5_1__1 ;
+    public final void rule__FXColumn__Group_5_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1164:1: ( rule__FXColumn__Group_6__0__Impl rule__FXColumn__Group_6__1 )
-            // InternalFXDsl.g:1165:2: rule__FXColumn__Group_6__0__Impl rule__FXColumn__Group_6__1
+            // InternalFXDsl.g:1002:1: ( rule__FXColumn__Group_5_1__0__Impl rule__FXColumn__Group_5_1__1 )
+            // InternalFXDsl.g:1003:2: rule__FXColumn__Group_5_1__0__Impl rule__FXColumn__Group_5_1__1
             {
-            pushFollow(FOLLOW_12);
-            rule__FXColumn__Group_6__0__Impl();
+            pushFollow(FOLLOW_10);
+            rule__FXColumn__Group_5_1__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__FXColumn__Group_6__1();
+            rule__FXColumn__Group_5_1__1();
 
             state._fsp--;
 
@@ -3648,25 +3198,25 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__FXColumn__Group_6__0"
+    // $ANTLR end "rule__FXColumn__Group_5_1__0"
 
 
-    // $ANTLR start "rule__FXColumn__Group_6__0__Impl"
-    // InternalFXDsl.g:1172:1: rule__FXColumn__Group_6__0__Impl : ( 'width' ) ;
-    public final void rule__FXColumn__Group_6__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__FXColumn__Group_5_1__0__Impl"
+    // InternalFXDsl.g:1010:1: rule__FXColumn__Group_5_1__0__Impl : ( 'width' ) ;
+    public final void rule__FXColumn__Group_5_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1176:1: ( ( 'width' ) )
-            // InternalFXDsl.g:1177:1: ( 'width' )
+            // InternalFXDsl.g:1014:1: ( ( 'width' ) )
+            // InternalFXDsl.g:1015:1: ( 'width' )
             {
-            // InternalFXDsl.g:1177:1: ( 'width' )
-            // InternalFXDsl.g:1178:2: 'width'
+            // InternalFXDsl.g:1015:1: ( 'width' )
+            // InternalFXDsl.g:1016:2: 'width'
             {
-             before(grammarAccess.getFXColumnAccess().getWidthKeyword_6_0()); 
-            match(input,30,FOLLOW_2); 
-             after(grammarAccess.getFXColumnAccess().getWidthKeyword_6_0()); 
+             before(grammarAccess.getFXColumnAccess().getWidthKeyword_5_1_0()); 
+            match(input,27,FOLLOW_2); 
+             after(grammarAccess.getFXColumnAccess().getWidthKeyword_5_1_0()); 
 
             }
 
@@ -3685,21 +3235,21 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__FXColumn__Group_6__0__Impl"
+    // $ANTLR end "rule__FXColumn__Group_5_1__0__Impl"
 
 
-    // $ANTLR start "rule__FXColumn__Group_6__1"
-    // InternalFXDsl.g:1187:1: rule__FXColumn__Group_6__1 : rule__FXColumn__Group_6__1__Impl ;
-    public final void rule__FXColumn__Group_6__1() throws RecognitionException {
+    // $ANTLR start "rule__FXColumn__Group_5_1__1"
+    // InternalFXDsl.g:1025:1: rule__FXColumn__Group_5_1__1 : rule__FXColumn__Group_5_1__1__Impl ;
+    public final void rule__FXColumn__Group_5_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1191:1: ( rule__FXColumn__Group_6__1__Impl )
-            // InternalFXDsl.g:1192:2: rule__FXColumn__Group_6__1__Impl
+            // InternalFXDsl.g:1029:1: ( rule__FXColumn__Group_5_1__1__Impl )
+            // InternalFXDsl.g:1030:2: rule__FXColumn__Group_5_1__1__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__FXColumn__Group_6__1__Impl();
+            rule__FXColumn__Group_5_1__1__Impl();
 
             state._fsp--;
 
@@ -3718,35 +3268,35 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__FXColumn__Group_6__1"
+    // $ANTLR end "rule__FXColumn__Group_5_1__1"
 
 
-    // $ANTLR start "rule__FXColumn__Group_6__1__Impl"
-    // InternalFXDsl.g:1198:1: rule__FXColumn__Group_6__1__Impl : ( ( rule__FXColumn__WidthAssignment_6_1 ) ) ;
-    public final void rule__FXColumn__Group_6__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__FXColumn__Group_5_1__1__Impl"
+    // InternalFXDsl.g:1036:1: rule__FXColumn__Group_5_1__1__Impl : ( ( rule__FXColumn__WidthAssignment_5_1_1 ) ) ;
+    public final void rule__FXColumn__Group_5_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1202:1: ( ( ( rule__FXColumn__WidthAssignment_6_1 ) ) )
-            // InternalFXDsl.g:1203:1: ( ( rule__FXColumn__WidthAssignment_6_1 ) )
+            // InternalFXDsl.g:1040:1: ( ( ( rule__FXColumn__WidthAssignment_5_1_1 ) ) )
+            // InternalFXDsl.g:1041:1: ( ( rule__FXColumn__WidthAssignment_5_1_1 ) )
             {
-            // InternalFXDsl.g:1203:1: ( ( rule__FXColumn__WidthAssignment_6_1 ) )
-            // InternalFXDsl.g:1204:2: ( rule__FXColumn__WidthAssignment_6_1 )
+            // InternalFXDsl.g:1041:1: ( ( rule__FXColumn__WidthAssignment_5_1_1 ) )
+            // InternalFXDsl.g:1042:2: ( rule__FXColumn__WidthAssignment_5_1_1 )
             {
-             before(grammarAccess.getFXColumnAccess().getWidthAssignment_6_1()); 
-            // InternalFXDsl.g:1205:2: ( rule__FXColumn__WidthAssignment_6_1 )
-            // InternalFXDsl.g:1205:3: rule__FXColumn__WidthAssignment_6_1
+             before(grammarAccess.getFXColumnAccess().getWidthAssignment_5_1_1()); 
+            // InternalFXDsl.g:1043:2: ( rule__FXColumn__WidthAssignment_5_1_1 )
+            // InternalFXDsl.g:1043:3: rule__FXColumn__WidthAssignment_5_1_1
             {
             pushFollow(FOLLOW_2);
-            rule__FXColumn__WidthAssignment_6_1();
+            rule__FXColumn__WidthAssignment_5_1_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getFXColumnAccess().getWidthAssignment_6_1()); 
+             after(grammarAccess.getFXColumnAccess().getWidthAssignment_5_1_1()); 
 
             }
 
@@ -3765,26 +3315,26 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__FXColumn__Group_6__1__Impl"
+    // $ANTLR end "rule__FXColumn__Group_5_1__1__Impl"
 
 
-    // $ANTLR start "rule__FXColumn__Group_7__0"
-    // InternalFXDsl.g:1214:1: rule__FXColumn__Group_7__0 : rule__FXColumn__Group_7__0__Impl rule__FXColumn__Group_7__1 ;
-    public final void rule__FXColumn__Group_7__0() throws RecognitionException {
+    // $ANTLR start "rule__FXColumn__Group_5_2__0"
+    // InternalFXDsl.g:1052:1: rule__FXColumn__Group_5_2__0 : rule__FXColumn__Group_5_2__0__Impl rule__FXColumn__Group_5_2__1 ;
+    public final void rule__FXColumn__Group_5_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1218:1: ( rule__FXColumn__Group_7__0__Impl rule__FXColumn__Group_7__1 )
-            // InternalFXDsl.g:1219:2: rule__FXColumn__Group_7__0__Impl rule__FXColumn__Group_7__1
+            // InternalFXDsl.g:1056:1: ( rule__FXColumn__Group_5_2__0__Impl rule__FXColumn__Group_5_2__1 )
+            // InternalFXDsl.g:1057:2: rule__FXColumn__Group_5_2__0__Impl rule__FXColumn__Group_5_2__1
             {
-            pushFollow(FOLLOW_13);
-            rule__FXColumn__Group_7__0__Impl();
+            pushFollow(FOLLOW_11);
+            rule__FXColumn__Group_5_2__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__FXColumn__Group_7__1();
+            rule__FXColumn__Group_5_2__1();
 
             state._fsp--;
 
@@ -3803,25 +3353,25 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__FXColumn__Group_7__0"
+    // $ANTLR end "rule__FXColumn__Group_5_2__0"
 
 
-    // $ANTLR start "rule__FXColumn__Group_7__0__Impl"
-    // InternalFXDsl.g:1226:1: rule__FXColumn__Group_7__0__Impl : ( 'alignment' ) ;
-    public final void rule__FXColumn__Group_7__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__FXColumn__Group_5_2__0__Impl"
+    // InternalFXDsl.g:1064:1: rule__FXColumn__Group_5_2__0__Impl : ( 'alignment' ) ;
+    public final void rule__FXColumn__Group_5_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1230:1: ( ( 'alignment' ) )
-            // InternalFXDsl.g:1231:1: ( 'alignment' )
+            // InternalFXDsl.g:1068:1: ( ( 'alignment' ) )
+            // InternalFXDsl.g:1069:1: ( 'alignment' )
             {
-            // InternalFXDsl.g:1231:1: ( 'alignment' )
-            // InternalFXDsl.g:1232:2: 'alignment'
+            // InternalFXDsl.g:1069:1: ( 'alignment' )
+            // InternalFXDsl.g:1070:2: 'alignment'
             {
-             before(grammarAccess.getFXColumnAccess().getAlignmentKeyword_7_0()); 
-            match(input,31,FOLLOW_2); 
-             after(grammarAccess.getFXColumnAccess().getAlignmentKeyword_7_0()); 
+             before(grammarAccess.getFXColumnAccess().getAlignmentKeyword_5_2_0()); 
+            match(input,28,FOLLOW_2); 
+             after(grammarAccess.getFXColumnAccess().getAlignmentKeyword_5_2_0()); 
 
             }
 
@@ -3840,21 +3390,21 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__FXColumn__Group_7__0__Impl"
+    // $ANTLR end "rule__FXColumn__Group_5_2__0__Impl"
 
 
-    // $ANTLR start "rule__FXColumn__Group_7__1"
-    // InternalFXDsl.g:1241:1: rule__FXColumn__Group_7__1 : rule__FXColumn__Group_7__1__Impl ;
-    public final void rule__FXColumn__Group_7__1() throws RecognitionException {
+    // $ANTLR start "rule__FXColumn__Group_5_2__1"
+    // InternalFXDsl.g:1079:1: rule__FXColumn__Group_5_2__1 : rule__FXColumn__Group_5_2__1__Impl ;
+    public final void rule__FXColumn__Group_5_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1245:1: ( rule__FXColumn__Group_7__1__Impl )
-            // InternalFXDsl.g:1246:2: rule__FXColumn__Group_7__1__Impl
+            // InternalFXDsl.g:1083:1: ( rule__FXColumn__Group_5_2__1__Impl )
+            // InternalFXDsl.g:1084:2: rule__FXColumn__Group_5_2__1__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__FXColumn__Group_7__1__Impl();
+            rule__FXColumn__Group_5_2__1__Impl();
 
             state._fsp--;
 
@@ -3873,35 +3423,35 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__FXColumn__Group_7__1"
+    // $ANTLR end "rule__FXColumn__Group_5_2__1"
 
 
-    // $ANTLR start "rule__FXColumn__Group_7__1__Impl"
-    // InternalFXDsl.g:1252:1: rule__FXColumn__Group_7__1__Impl : ( ( rule__FXColumn__AlignmentAssignment_7_1 ) ) ;
-    public final void rule__FXColumn__Group_7__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__FXColumn__Group_5_2__1__Impl"
+    // InternalFXDsl.g:1090:1: rule__FXColumn__Group_5_2__1__Impl : ( ( rule__FXColumn__AlignmentAssignment_5_2_1 ) ) ;
+    public final void rule__FXColumn__Group_5_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1256:1: ( ( ( rule__FXColumn__AlignmentAssignment_7_1 ) ) )
-            // InternalFXDsl.g:1257:1: ( ( rule__FXColumn__AlignmentAssignment_7_1 ) )
+            // InternalFXDsl.g:1094:1: ( ( ( rule__FXColumn__AlignmentAssignment_5_2_1 ) ) )
+            // InternalFXDsl.g:1095:1: ( ( rule__FXColumn__AlignmentAssignment_5_2_1 ) )
             {
-            // InternalFXDsl.g:1257:1: ( ( rule__FXColumn__AlignmentAssignment_7_1 ) )
-            // InternalFXDsl.g:1258:2: ( rule__FXColumn__AlignmentAssignment_7_1 )
+            // InternalFXDsl.g:1095:1: ( ( rule__FXColumn__AlignmentAssignment_5_2_1 ) )
+            // InternalFXDsl.g:1096:2: ( rule__FXColumn__AlignmentAssignment_5_2_1 )
             {
-             before(grammarAccess.getFXColumnAccess().getAlignmentAssignment_7_1()); 
-            // InternalFXDsl.g:1259:2: ( rule__FXColumn__AlignmentAssignment_7_1 )
-            // InternalFXDsl.g:1259:3: rule__FXColumn__AlignmentAssignment_7_1
+             before(grammarAccess.getFXColumnAccess().getAlignmentAssignment_5_2_1()); 
+            // InternalFXDsl.g:1097:2: ( rule__FXColumn__AlignmentAssignment_5_2_1 )
+            // InternalFXDsl.g:1097:3: rule__FXColumn__AlignmentAssignment_5_2_1
             {
             pushFollow(FOLLOW_2);
-            rule__FXColumn__AlignmentAssignment_7_1();
+            rule__FXColumn__AlignmentAssignment_5_2_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getFXColumnAccess().getAlignmentAssignment_7_1()); 
+             after(grammarAccess.getFXColumnAccess().getAlignmentAssignment_5_2_1()); 
 
             }
 
@@ -3920,26 +3470,26 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__FXColumn__Group_7__1__Impl"
+    // $ANTLR end "rule__FXColumn__Group_5_2__1__Impl"
 
 
-    // $ANTLR start "rule__FXColumn__Group_8__0"
-    // InternalFXDsl.g:1268:1: rule__FXColumn__Group_8__0 : rule__FXColumn__Group_8__0__Impl rule__FXColumn__Group_8__1 ;
-    public final void rule__FXColumn__Group_8__0() throws RecognitionException {
+    // $ANTLR start "rule__FXColumn__Group_5_3__0"
+    // InternalFXDsl.g:1106:1: rule__FXColumn__Group_5_3__0 : rule__FXColumn__Group_5_3__0__Impl rule__FXColumn__Group_5_3__1 ;
+    public final void rule__FXColumn__Group_5_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1272:1: ( rule__FXColumn__Group_8__0__Impl rule__FXColumn__Group_8__1 )
-            // InternalFXDsl.g:1273:2: rule__FXColumn__Group_8__0__Impl rule__FXColumn__Group_8__1
+            // InternalFXDsl.g:1110:1: ( rule__FXColumn__Group_5_3__0__Impl rule__FXColumn__Group_5_3__1 )
+            // InternalFXDsl.g:1111:2: rule__FXColumn__Group_5_3__0__Impl rule__FXColumn__Group_5_3__1
             {
             pushFollow(FOLLOW_4);
-            rule__FXColumn__Group_8__0__Impl();
+            rule__FXColumn__Group_5_3__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__FXColumn__Group_8__1();
+            rule__FXColumn__Group_5_3__1();
 
             state._fsp--;
 
@@ -3958,25 +3508,25 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__FXColumn__Group_8__0"
+    // $ANTLR end "rule__FXColumn__Group_5_3__0"
 
 
-    // $ANTLR start "rule__FXColumn__Group_8__0__Impl"
-    // InternalFXDsl.g:1280:1: rule__FXColumn__Group_8__0__Impl : ( 'associatedFXProperty' ) ;
-    public final void rule__FXColumn__Group_8__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__FXColumn__Group_5_3__0__Impl"
+    // InternalFXDsl.g:1118:1: rule__FXColumn__Group_5_3__0__Impl : ( 'associatedFXProperty' ) ;
+    public final void rule__FXColumn__Group_5_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1284:1: ( ( 'associatedFXProperty' ) )
-            // InternalFXDsl.g:1285:1: ( 'associatedFXProperty' )
+            // InternalFXDsl.g:1122:1: ( ( 'associatedFXProperty' ) )
+            // InternalFXDsl.g:1123:1: ( 'associatedFXProperty' )
             {
-            // InternalFXDsl.g:1285:1: ( 'associatedFXProperty' )
-            // InternalFXDsl.g:1286:2: 'associatedFXProperty'
+            // InternalFXDsl.g:1123:1: ( 'associatedFXProperty' )
+            // InternalFXDsl.g:1124:2: 'associatedFXProperty'
             {
-             before(grammarAccess.getFXColumnAccess().getAssociatedFXPropertyKeyword_8_0()); 
-            match(input,32,FOLLOW_2); 
-             after(grammarAccess.getFXColumnAccess().getAssociatedFXPropertyKeyword_8_0()); 
+             before(grammarAccess.getFXColumnAccess().getAssociatedFXPropertyKeyword_5_3_0()); 
+            match(input,29,FOLLOW_2); 
+             after(grammarAccess.getFXColumnAccess().getAssociatedFXPropertyKeyword_5_3_0()); 
 
             }
 
@@ -3995,21 +3545,21 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__FXColumn__Group_8__0__Impl"
+    // $ANTLR end "rule__FXColumn__Group_5_3__0__Impl"
 
 
-    // $ANTLR start "rule__FXColumn__Group_8__1"
-    // InternalFXDsl.g:1295:1: rule__FXColumn__Group_8__1 : rule__FXColumn__Group_8__1__Impl ;
-    public final void rule__FXColumn__Group_8__1() throws RecognitionException {
+    // $ANTLR start "rule__FXColumn__Group_5_3__1"
+    // InternalFXDsl.g:1133:1: rule__FXColumn__Group_5_3__1 : rule__FXColumn__Group_5_3__1__Impl ;
+    public final void rule__FXColumn__Group_5_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1299:1: ( rule__FXColumn__Group_8__1__Impl )
-            // InternalFXDsl.g:1300:2: rule__FXColumn__Group_8__1__Impl
+            // InternalFXDsl.g:1137:1: ( rule__FXColumn__Group_5_3__1__Impl )
+            // InternalFXDsl.g:1138:2: rule__FXColumn__Group_5_3__1__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__FXColumn__Group_8__1__Impl();
+            rule__FXColumn__Group_5_3__1__Impl();
 
             state._fsp--;
 
@@ -4028,35 +3578,35 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__FXColumn__Group_8__1"
+    // $ANTLR end "rule__FXColumn__Group_5_3__1"
 
 
-    // $ANTLR start "rule__FXColumn__Group_8__1__Impl"
-    // InternalFXDsl.g:1306:1: rule__FXColumn__Group_8__1__Impl : ( ( rule__FXColumn__AssociatedFXPropertyAssignment_8_1 ) ) ;
-    public final void rule__FXColumn__Group_8__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__FXColumn__Group_5_3__1__Impl"
+    // InternalFXDsl.g:1144:1: rule__FXColumn__Group_5_3__1__Impl : ( ( rule__FXColumn__AssociatedFXPropertyAssignment_5_3_1 ) ) ;
+    public final void rule__FXColumn__Group_5_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1310:1: ( ( ( rule__FXColumn__AssociatedFXPropertyAssignment_8_1 ) ) )
-            // InternalFXDsl.g:1311:1: ( ( rule__FXColumn__AssociatedFXPropertyAssignment_8_1 ) )
+            // InternalFXDsl.g:1148:1: ( ( ( rule__FXColumn__AssociatedFXPropertyAssignment_5_3_1 ) ) )
+            // InternalFXDsl.g:1149:1: ( ( rule__FXColumn__AssociatedFXPropertyAssignment_5_3_1 ) )
             {
-            // InternalFXDsl.g:1311:1: ( ( rule__FXColumn__AssociatedFXPropertyAssignment_8_1 ) )
-            // InternalFXDsl.g:1312:2: ( rule__FXColumn__AssociatedFXPropertyAssignment_8_1 )
+            // InternalFXDsl.g:1149:1: ( ( rule__FXColumn__AssociatedFXPropertyAssignment_5_3_1 ) )
+            // InternalFXDsl.g:1150:2: ( rule__FXColumn__AssociatedFXPropertyAssignment_5_3_1 )
             {
-             before(grammarAccess.getFXColumnAccess().getAssociatedFXPropertyAssignment_8_1()); 
-            // InternalFXDsl.g:1313:2: ( rule__FXColumn__AssociatedFXPropertyAssignment_8_1 )
-            // InternalFXDsl.g:1313:3: rule__FXColumn__AssociatedFXPropertyAssignment_8_1
+             before(grammarAccess.getFXColumnAccess().getAssociatedFXPropertyAssignment_5_3_1()); 
+            // InternalFXDsl.g:1151:2: ( rule__FXColumn__AssociatedFXPropertyAssignment_5_3_1 )
+            // InternalFXDsl.g:1151:3: rule__FXColumn__AssociatedFXPropertyAssignment_5_3_1
             {
             pushFollow(FOLLOW_2);
-            rule__FXColumn__AssociatedFXPropertyAssignment_8_1();
+            rule__FXColumn__AssociatedFXPropertyAssignment_5_3_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getFXColumnAccess().getAssociatedFXPropertyAssignment_8_1()); 
+             after(grammarAccess.getFXColumnAccess().getAssociatedFXPropertyAssignment_5_3_1()); 
 
             }
 
@@ -4075,20 +3625,20 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__FXColumn__Group_8__1__Impl"
+    // $ANTLR end "rule__FXColumn__Group_5_3__1__Impl"
 
 
     // $ANTLR start "rule__FXModel__Group__0"
-    // InternalFXDsl.g:1322:1: rule__FXModel__Group__0 : rule__FXModel__Group__0__Impl rule__FXModel__Group__1 ;
+    // InternalFXDsl.g:1160:1: rule__FXModel__Group__0 : rule__FXModel__Group__0__Impl rule__FXModel__Group__1 ;
     public final void rule__FXModel__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1326:1: ( rule__FXModel__Group__0__Impl rule__FXModel__Group__1 )
-            // InternalFXDsl.g:1327:2: rule__FXModel__Group__0__Impl rule__FXModel__Group__1
+            // InternalFXDsl.g:1164:1: ( rule__FXModel__Group__0__Impl rule__FXModel__Group__1 )
+            // InternalFXDsl.g:1165:2: rule__FXModel__Group__0__Impl rule__FXModel__Group__1
             {
-            pushFollow(FOLLOW_10);
+            pushFollow(FOLLOW_12);
             rule__FXModel__Group__0__Impl();
 
             state._fsp--;
@@ -4117,21 +3667,21 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FXModel__Group__0__Impl"
-    // InternalFXDsl.g:1334:1: rule__FXModel__Group__0__Impl : ( () ) ;
+    // InternalFXDsl.g:1172:1: rule__FXModel__Group__0__Impl : ( () ) ;
     public final void rule__FXModel__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1338:1: ( ( () ) )
-            // InternalFXDsl.g:1339:1: ( () )
+            // InternalFXDsl.g:1176:1: ( ( () ) )
+            // InternalFXDsl.g:1177:1: ( () )
             {
-            // InternalFXDsl.g:1339:1: ( () )
-            // InternalFXDsl.g:1340:2: ()
+            // InternalFXDsl.g:1177:1: ( () )
+            // InternalFXDsl.g:1178:2: ()
             {
              before(grammarAccess.getFXModelAccess().getFXModelAction_0()); 
-            // InternalFXDsl.g:1341:2: ()
-            // InternalFXDsl.g:1341:3: 
+            // InternalFXDsl.g:1179:2: ()
+            // InternalFXDsl.g:1179:3: 
             {
             }
 
@@ -4154,14 +3704,14 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FXModel__Group__1"
-    // InternalFXDsl.g:1349:1: rule__FXModel__Group__1 : rule__FXModel__Group__1__Impl rule__FXModel__Group__2 ;
+    // InternalFXDsl.g:1187:1: rule__FXModel__Group__1 : rule__FXModel__Group__1__Impl rule__FXModel__Group__2 ;
     public final void rule__FXModel__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1353:1: ( rule__FXModel__Group__1__Impl rule__FXModel__Group__2 )
-            // InternalFXDsl.g:1354:2: rule__FXModel__Group__1__Impl rule__FXModel__Group__2
+            // InternalFXDsl.g:1191:1: ( rule__FXModel__Group__1__Impl rule__FXModel__Group__2 )
+            // InternalFXDsl.g:1192:2: rule__FXModel__Group__1__Impl rule__FXModel__Group__2
             {
             pushFollow(FOLLOW_4);
             rule__FXModel__Group__1__Impl();
@@ -4192,20 +3742,20 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FXModel__Group__1__Impl"
-    // InternalFXDsl.g:1361:1: rule__FXModel__Group__1__Impl : ( 'FXModel' ) ;
+    // InternalFXDsl.g:1199:1: rule__FXModel__Group__1__Impl : ( 'FXModel' ) ;
     public final void rule__FXModel__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1365:1: ( ( 'FXModel' ) )
-            // InternalFXDsl.g:1366:1: ( 'FXModel' )
+            // InternalFXDsl.g:1203:1: ( ( 'FXModel' ) )
+            // InternalFXDsl.g:1204:1: ( 'FXModel' )
             {
-            // InternalFXDsl.g:1366:1: ( 'FXModel' )
-            // InternalFXDsl.g:1367:2: 'FXModel'
+            // InternalFXDsl.g:1204:1: ( 'FXModel' )
+            // InternalFXDsl.g:1205:2: 'FXModel'
             {
              before(grammarAccess.getFXModelAccess().getFXModelKeyword_1()); 
-            match(input,33,FOLLOW_2); 
+            match(input,30,FOLLOW_2); 
              after(grammarAccess.getFXModelAccess().getFXModelKeyword_1()); 
 
             }
@@ -4229,14 +3779,14 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FXModel__Group__2"
-    // InternalFXDsl.g:1376:1: rule__FXModel__Group__2 : rule__FXModel__Group__2__Impl rule__FXModel__Group__3 ;
+    // InternalFXDsl.g:1214:1: rule__FXModel__Group__2 : rule__FXModel__Group__2__Impl rule__FXModel__Group__3 ;
     public final void rule__FXModel__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1380:1: ( rule__FXModel__Group__2__Impl rule__FXModel__Group__3 )
-            // InternalFXDsl.g:1381:2: rule__FXModel__Group__2__Impl rule__FXModel__Group__3
+            // InternalFXDsl.g:1218:1: ( rule__FXModel__Group__2__Impl rule__FXModel__Group__3 )
+            // InternalFXDsl.g:1219:2: rule__FXModel__Group__2__Impl rule__FXModel__Group__3
             {
             pushFollow(FOLLOW_5);
             rule__FXModel__Group__2__Impl();
@@ -4267,21 +3817,21 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FXModel__Group__2__Impl"
-    // InternalFXDsl.g:1388:1: rule__FXModel__Group__2__Impl : ( ( rule__FXModel__NameAssignment_2 ) ) ;
+    // InternalFXDsl.g:1226:1: rule__FXModel__Group__2__Impl : ( ( rule__FXModel__NameAssignment_2 ) ) ;
     public final void rule__FXModel__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1392:1: ( ( ( rule__FXModel__NameAssignment_2 ) ) )
-            // InternalFXDsl.g:1393:1: ( ( rule__FXModel__NameAssignment_2 ) )
+            // InternalFXDsl.g:1230:1: ( ( ( rule__FXModel__NameAssignment_2 ) ) )
+            // InternalFXDsl.g:1231:1: ( ( rule__FXModel__NameAssignment_2 ) )
             {
-            // InternalFXDsl.g:1393:1: ( ( rule__FXModel__NameAssignment_2 ) )
-            // InternalFXDsl.g:1394:2: ( rule__FXModel__NameAssignment_2 )
+            // InternalFXDsl.g:1231:1: ( ( rule__FXModel__NameAssignment_2 ) )
+            // InternalFXDsl.g:1232:2: ( rule__FXModel__NameAssignment_2 )
             {
              before(grammarAccess.getFXModelAccess().getNameAssignment_2()); 
-            // InternalFXDsl.g:1395:2: ( rule__FXModel__NameAssignment_2 )
-            // InternalFXDsl.g:1395:3: rule__FXModel__NameAssignment_2
+            // InternalFXDsl.g:1233:2: ( rule__FXModel__NameAssignment_2 )
+            // InternalFXDsl.g:1233:3: rule__FXModel__NameAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__FXModel__NameAssignment_2();
@@ -4314,16 +3864,16 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FXModel__Group__3"
-    // InternalFXDsl.g:1403:1: rule__FXModel__Group__3 : rule__FXModel__Group__3__Impl rule__FXModel__Group__4 ;
+    // InternalFXDsl.g:1241:1: rule__FXModel__Group__3 : rule__FXModel__Group__3__Impl rule__FXModel__Group__4 ;
     public final void rule__FXModel__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1407:1: ( rule__FXModel__Group__3__Impl rule__FXModel__Group__4 )
-            // InternalFXDsl.g:1408:2: rule__FXModel__Group__3__Impl rule__FXModel__Group__4
+            // InternalFXDsl.g:1245:1: ( rule__FXModel__Group__3__Impl rule__FXModel__Group__4 )
+            // InternalFXDsl.g:1246:2: rule__FXModel__Group__3__Impl rule__FXModel__Group__4
             {
-            pushFollow(FOLLOW_14);
+            pushFollow(FOLLOW_4);
             rule__FXModel__Group__3__Impl();
 
             state._fsp--;
@@ -4352,17 +3902,17 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FXModel__Group__3__Impl"
-    // InternalFXDsl.g:1415:1: rule__FXModel__Group__3__Impl : ( '{' ) ;
+    // InternalFXDsl.g:1253:1: rule__FXModel__Group__3__Impl : ( '{' ) ;
     public final void rule__FXModel__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1419:1: ( ( '{' ) )
-            // InternalFXDsl.g:1420:1: ( '{' )
+            // InternalFXDsl.g:1257:1: ( ( '{' ) )
+            // InternalFXDsl.g:1258:1: ( '{' )
             {
-            // InternalFXDsl.g:1420:1: ( '{' )
-            // InternalFXDsl.g:1421:2: '{'
+            // InternalFXDsl.g:1258:1: ( '{' )
+            // InternalFXDsl.g:1259:2: '{'
             {
              before(grammarAccess.getFXModelAccess().getLeftCurlyBracketKeyword_3()); 
             match(input,23,FOLLOW_2); 
@@ -4389,16 +3939,16 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FXModel__Group__4"
-    // InternalFXDsl.g:1430:1: rule__FXModel__Group__4 : rule__FXModel__Group__4__Impl rule__FXModel__Group__5 ;
+    // InternalFXDsl.g:1268:1: rule__FXModel__Group__4 : rule__FXModel__Group__4__Impl rule__FXModel__Group__5 ;
     public final void rule__FXModel__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1434:1: ( rule__FXModel__Group__4__Impl rule__FXModel__Group__5 )
-            // InternalFXDsl.g:1435:2: rule__FXModel__Group__4__Impl rule__FXModel__Group__5
+            // InternalFXDsl.g:1272:1: ( rule__FXModel__Group__4__Impl rule__FXModel__Group__5 )
+            // InternalFXDsl.g:1273:2: rule__FXModel__Group__4__Impl rule__FXModel__Group__5
             {
-            pushFollow(FOLLOW_14);
+            pushFollow(FOLLOW_13);
             rule__FXModel__Group__4__Impl();
 
             state._fsp--;
@@ -4427,42 +3977,31 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FXModel__Group__4__Impl"
-    // InternalFXDsl.g:1442:1: rule__FXModel__Group__4__Impl : ( ( rule__FXModel__Group_4__0 )? ) ;
+    // InternalFXDsl.g:1280:1: rule__FXModel__Group__4__Impl : ( ( rule__FXModel__FxPropertiesAssignment_4 ) ) ;
     public final void rule__FXModel__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1446:1: ( ( ( rule__FXModel__Group_4__0 )? ) )
-            // InternalFXDsl.g:1447:1: ( ( rule__FXModel__Group_4__0 )? )
+            // InternalFXDsl.g:1284:1: ( ( ( rule__FXModel__FxPropertiesAssignment_4 ) ) )
+            // InternalFXDsl.g:1285:1: ( ( rule__FXModel__FxPropertiesAssignment_4 ) )
             {
-            // InternalFXDsl.g:1447:1: ( ( rule__FXModel__Group_4__0 )? )
-            // InternalFXDsl.g:1448:2: ( rule__FXModel__Group_4__0 )?
+            // InternalFXDsl.g:1285:1: ( ( rule__FXModel__FxPropertiesAssignment_4 ) )
+            // InternalFXDsl.g:1286:2: ( rule__FXModel__FxPropertiesAssignment_4 )
             {
-             before(grammarAccess.getFXModelAccess().getGroup_4()); 
-            // InternalFXDsl.g:1449:2: ( rule__FXModel__Group_4__0 )?
-            int alt15=2;
-            int LA15_0 = input.LA(1);
+             before(grammarAccess.getFXModelAccess().getFxPropertiesAssignment_4()); 
+            // InternalFXDsl.g:1287:2: ( rule__FXModel__FxPropertiesAssignment_4 )
+            // InternalFXDsl.g:1287:3: rule__FXModel__FxPropertiesAssignment_4
+            {
+            pushFollow(FOLLOW_2);
+            rule__FXModel__FxPropertiesAssignment_4();
 
-            if ( (LA15_0==34) ) {
-                alt15=1;
-            }
-            switch (alt15) {
-                case 1 :
-                    // InternalFXDsl.g:1449:3: rule__FXModel__Group_4__0
-                    {
-                    pushFollow(FOLLOW_2);
-                    rule__FXModel__Group_4__0();
+            state._fsp--;
 
-                    state._fsp--;
-
-
-                    }
-                    break;
 
             }
 
-             after(grammarAccess.getFXModelAccess().getGroup_4()); 
+             after(grammarAccess.getFXModelAccess().getFxPropertiesAssignment_4()); 
 
             }
 
@@ -4485,17 +4024,22 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FXModel__Group__5"
-    // InternalFXDsl.g:1457:1: rule__FXModel__Group__5 : rule__FXModel__Group__5__Impl ;
+    // InternalFXDsl.g:1295:1: rule__FXModel__Group__5 : rule__FXModel__Group__5__Impl rule__FXModel__Group__6 ;
     public final void rule__FXModel__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1461:1: ( rule__FXModel__Group__5__Impl )
-            // InternalFXDsl.g:1462:2: rule__FXModel__Group__5__Impl
+            // InternalFXDsl.g:1299:1: ( rule__FXModel__Group__5__Impl rule__FXModel__Group__6 )
+            // InternalFXDsl.g:1300:2: rule__FXModel__Group__5__Impl rule__FXModel__Group__6
             {
-            pushFollow(FOLLOW_2);
+            pushFollow(FOLLOW_13);
             rule__FXModel__Group__5__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__FXModel__Group__6();
 
             state._fsp--;
 
@@ -4518,21 +4062,49 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FXModel__Group__5__Impl"
-    // InternalFXDsl.g:1468:1: rule__FXModel__Group__5__Impl : ( '}' ) ;
+    // InternalFXDsl.g:1307:1: rule__FXModel__Group__5__Impl : ( ( rule__FXModel__FxPropertiesAssignment_5 )* ) ;
     public final void rule__FXModel__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1472:1: ( ( '}' ) )
-            // InternalFXDsl.g:1473:1: ( '}' )
+            // InternalFXDsl.g:1311:1: ( ( ( rule__FXModel__FxPropertiesAssignment_5 )* ) )
+            // InternalFXDsl.g:1312:1: ( ( rule__FXModel__FxPropertiesAssignment_5 )* )
             {
-            // InternalFXDsl.g:1473:1: ( '}' )
-            // InternalFXDsl.g:1474:2: '}'
+            // InternalFXDsl.g:1312:1: ( ( rule__FXModel__FxPropertiesAssignment_5 )* )
+            // InternalFXDsl.g:1313:2: ( rule__FXModel__FxPropertiesAssignment_5 )*
             {
-             before(grammarAccess.getFXModelAccess().getRightCurlyBracketKeyword_5()); 
-            match(input,24,FOLLOW_2); 
-             after(grammarAccess.getFXModelAccess().getRightCurlyBracketKeyword_5()); 
+             before(grammarAccess.getFXModelAccess().getFxPropertiesAssignment_5()); 
+            // InternalFXDsl.g:1314:2: ( rule__FXModel__FxPropertiesAssignment_5 )*
+            loop16:
+            do {
+                int alt16=2;
+                int LA16_0 = input.LA(1);
+
+                if ( ((LA16_0>=RULE_STRING && LA16_0<=RULE_ID)) ) {
+                    alt16=1;
+                }
+
+
+                switch (alt16) {
+            	case 1 :
+            	    // InternalFXDsl.g:1314:3: rule__FXModel__FxPropertiesAssignment_5
+            	    {
+            	    pushFollow(FOLLOW_14);
+            	    rule__FXModel__FxPropertiesAssignment_5();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop16;
+                }
+            } while (true);
+
+             after(grammarAccess.getFXModelAccess().getFxPropertiesAssignment_5()); 
 
             }
 
@@ -4554,258 +4126,18 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__FXModel__Group__5__Impl"
 
 
-    // $ANTLR start "rule__FXModel__Group_4__0"
-    // InternalFXDsl.g:1484:1: rule__FXModel__Group_4__0 : rule__FXModel__Group_4__0__Impl rule__FXModel__Group_4__1 ;
-    public final void rule__FXModel__Group_4__0() throws RecognitionException {
+    // $ANTLR start "rule__FXModel__Group__6"
+    // InternalFXDsl.g:1322:1: rule__FXModel__Group__6 : rule__FXModel__Group__6__Impl ;
+    public final void rule__FXModel__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1488:1: ( rule__FXModel__Group_4__0__Impl rule__FXModel__Group_4__1 )
-            // InternalFXDsl.g:1489:2: rule__FXModel__Group_4__0__Impl rule__FXModel__Group_4__1
-            {
-            pushFollow(FOLLOW_5);
-            rule__FXModel__Group_4__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__FXModel__Group_4__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__FXModel__Group_4__0"
-
-
-    // $ANTLR start "rule__FXModel__Group_4__0__Impl"
-    // InternalFXDsl.g:1496:1: rule__FXModel__Group_4__0__Impl : ( 'fxProperties' ) ;
-    public final void rule__FXModel__Group_4__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalFXDsl.g:1500:1: ( ( 'fxProperties' ) )
-            // InternalFXDsl.g:1501:1: ( 'fxProperties' )
-            {
-            // InternalFXDsl.g:1501:1: ( 'fxProperties' )
-            // InternalFXDsl.g:1502:2: 'fxProperties'
-            {
-             before(grammarAccess.getFXModelAccess().getFxPropertiesKeyword_4_0()); 
-            match(input,34,FOLLOW_2); 
-             after(grammarAccess.getFXModelAccess().getFxPropertiesKeyword_4_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__FXModel__Group_4__0__Impl"
-
-
-    // $ANTLR start "rule__FXModel__Group_4__1"
-    // InternalFXDsl.g:1511:1: rule__FXModel__Group_4__1 : rule__FXModel__Group_4__1__Impl rule__FXModel__Group_4__2 ;
-    public final void rule__FXModel__Group_4__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalFXDsl.g:1515:1: ( rule__FXModel__Group_4__1__Impl rule__FXModel__Group_4__2 )
-            // InternalFXDsl.g:1516:2: rule__FXModel__Group_4__1__Impl rule__FXModel__Group_4__2
-            {
-            pushFollow(FOLLOW_15);
-            rule__FXModel__Group_4__1__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__FXModel__Group_4__2();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__FXModel__Group_4__1"
-
-
-    // $ANTLR start "rule__FXModel__Group_4__1__Impl"
-    // InternalFXDsl.g:1523:1: rule__FXModel__Group_4__1__Impl : ( '{' ) ;
-    public final void rule__FXModel__Group_4__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalFXDsl.g:1527:1: ( ( '{' ) )
-            // InternalFXDsl.g:1528:1: ( '{' )
-            {
-            // InternalFXDsl.g:1528:1: ( '{' )
-            // InternalFXDsl.g:1529:2: '{'
-            {
-             before(grammarAccess.getFXModelAccess().getLeftCurlyBracketKeyword_4_1()); 
-            match(input,23,FOLLOW_2); 
-             after(grammarAccess.getFXModelAccess().getLeftCurlyBracketKeyword_4_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__FXModel__Group_4__1__Impl"
-
-
-    // $ANTLR start "rule__FXModel__Group_4__2"
-    // InternalFXDsl.g:1538:1: rule__FXModel__Group_4__2 : rule__FXModel__Group_4__2__Impl rule__FXModel__Group_4__3 ;
-    public final void rule__FXModel__Group_4__2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalFXDsl.g:1542:1: ( rule__FXModel__Group_4__2__Impl rule__FXModel__Group_4__3 )
-            // InternalFXDsl.g:1543:2: rule__FXModel__Group_4__2__Impl rule__FXModel__Group_4__3
-            {
-            pushFollow(FOLLOW_8);
-            rule__FXModel__Group_4__2__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__FXModel__Group_4__3();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__FXModel__Group_4__2"
-
-
-    // $ANTLR start "rule__FXModel__Group_4__2__Impl"
-    // InternalFXDsl.g:1550:1: rule__FXModel__Group_4__2__Impl : ( ( rule__FXModel__FxPropertiesAssignment_4_2 ) ) ;
-    public final void rule__FXModel__Group_4__2__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalFXDsl.g:1554:1: ( ( ( rule__FXModel__FxPropertiesAssignment_4_2 ) ) )
-            // InternalFXDsl.g:1555:1: ( ( rule__FXModel__FxPropertiesAssignment_4_2 ) )
-            {
-            // InternalFXDsl.g:1555:1: ( ( rule__FXModel__FxPropertiesAssignment_4_2 ) )
-            // InternalFXDsl.g:1556:2: ( rule__FXModel__FxPropertiesAssignment_4_2 )
-            {
-             before(grammarAccess.getFXModelAccess().getFxPropertiesAssignment_4_2()); 
-            // InternalFXDsl.g:1557:2: ( rule__FXModel__FxPropertiesAssignment_4_2 )
-            // InternalFXDsl.g:1557:3: rule__FXModel__FxPropertiesAssignment_4_2
+            // InternalFXDsl.g:1326:1: ( rule__FXModel__Group__6__Impl )
+            // InternalFXDsl.g:1327:2: rule__FXModel__Group__6__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__FXModel__FxPropertiesAssignment_4_2();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getFXModelAccess().getFxPropertiesAssignment_4_2()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__FXModel__Group_4__2__Impl"
-
-
-    // $ANTLR start "rule__FXModel__Group_4__3"
-    // InternalFXDsl.g:1565:1: rule__FXModel__Group_4__3 : rule__FXModel__Group_4__3__Impl rule__FXModel__Group_4__4 ;
-    public final void rule__FXModel__Group_4__3() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalFXDsl.g:1569:1: ( rule__FXModel__Group_4__3__Impl rule__FXModel__Group_4__4 )
-            // InternalFXDsl.g:1570:2: rule__FXModel__Group_4__3__Impl rule__FXModel__Group_4__4
-            {
-            pushFollow(FOLLOW_8);
-            rule__FXModel__Group_4__3__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__FXModel__Group_4__4();
+            rule__FXModel__Group__6__Impl();
 
             state._fsp--;
 
@@ -4824,123 +4156,25 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__FXModel__Group_4__3"
+    // $ANTLR end "rule__FXModel__Group__6"
 
 
-    // $ANTLR start "rule__FXModel__Group_4__3__Impl"
-    // InternalFXDsl.g:1577:1: rule__FXModel__Group_4__3__Impl : ( ( rule__FXModel__Group_4_3__0 )* ) ;
-    public final void rule__FXModel__Group_4__3__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalFXDsl.g:1581:1: ( ( ( rule__FXModel__Group_4_3__0 )* ) )
-            // InternalFXDsl.g:1582:1: ( ( rule__FXModel__Group_4_3__0 )* )
-            {
-            // InternalFXDsl.g:1582:1: ( ( rule__FXModel__Group_4_3__0 )* )
-            // InternalFXDsl.g:1583:2: ( rule__FXModel__Group_4_3__0 )*
-            {
-             before(grammarAccess.getFXModelAccess().getGroup_4_3()); 
-            // InternalFXDsl.g:1584:2: ( rule__FXModel__Group_4_3__0 )*
-            loop16:
-            do {
-                int alt16=2;
-                int LA16_0 = input.LA(1);
-
-                if ( (LA16_0==27) ) {
-                    alt16=1;
-                }
-
-
-                switch (alt16) {
-            	case 1 :
-            	    // InternalFXDsl.g:1584:3: rule__FXModel__Group_4_3__0
-            	    {
-            	    pushFollow(FOLLOW_9);
-            	    rule__FXModel__Group_4_3__0();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop16;
-                }
-            } while (true);
-
-             after(grammarAccess.getFXModelAccess().getGroup_4_3()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__FXModel__Group_4__3__Impl"
-
-
-    // $ANTLR start "rule__FXModel__Group_4__4"
-    // InternalFXDsl.g:1592:1: rule__FXModel__Group_4__4 : rule__FXModel__Group_4__4__Impl ;
-    public final void rule__FXModel__Group_4__4() throws RecognitionException {
+    // $ANTLR start "rule__FXModel__Group__6__Impl"
+    // InternalFXDsl.g:1333:1: rule__FXModel__Group__6__Impl : ( '}' ) ;
+    public final void rule__FXModel__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1596:1: ( rule__FXModel__Group_4__4__Impl )
-            // InternalFXDsl.g:1597:2: rule__FXModel__Group_4__4__Impl
+            // InternalFXDsl.g:1337:1: ( ( '}' ) )
+            // InternalFXDsl.g:1338:1: ( '}' )
             {
-            pushFollow(FOLLOW_2);
-            rule__FXModel__Group_4__4__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__FXModel__Group_4__4"
-
-
-    // $ANTLR start "rule__FXModel__Group_4__4__Impl"
-    // InternalFXDsl.g:1603:1: rule__FXModel__Group_4__4__Impl : ( '}' ) ;
-    public final void rule__FXModel__Group_4__4__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalFXDsl.g:1607:1: ( ( '}' ) )
-            // InternalFXDsl.g:1608:1: ( '}' )
+            // InternalFXDsl.g:1338:1: ( '}' )
+            // InternalFXDsl.g:1339:2: '}'
             {
-            // InternalFXDsl.g:1608:1: ( '}' )
-            // InternalFXDsl.g:1609:2: '}'
-            {
-             before(grammarAccess.getFXModelAccess().getRightCurlyBracketKeyword_4_4()); 
+             before(grammarAccess.getFXModelAccess().getRightCurlyBracketKeyword_6()); 
             match(input,24,FOLLOW_2); 
-             after(grammarAccess.getFXModelAccess().getRightCurlyBracketKeyword_4_4()); 
+             after(grammarAccess.getFXModelAccess().getRightCurlyBracketKeyword_6()); 
 
             }
 
@@ -4959,175 +4193,20 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__FXModel__Group_4__4__Impl"
-
-
-    // $ANTLR start "rule__FXModel__Group_4_3__0"
-    // InternalFXDsl.g:1619:1: rule__FXModel__Group_4_3__0 : rule__FXModel__Group_4_3__0__Impl rule__FXModel__Group_4_3__1 ;
-    public final void rule__FXModel__Group_4_3__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalFXDsl.g:1623:1: ( rule__FXModel__Group_4_3__0__Impl rule__FXModel__Group_4_3__1 )
-            // InternalFXDsl.g:1624:2: rule__FXModel__Group_4_3__0__Impl rule__FXModel__Group_4_3__1
-            {
-            pushFollow(FOLLOW_15);
-            rule__FXModel__Group_4_3__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__FXModel__Group_4_3__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__FXModel__Group_4_3__0"
-
-
-    // $ANTLR start "rule__FXModel__Group_4_3__0__Impl"
-    // InternalFXDsl.g:1631:1: rule__FXModel__Group_4_3__0__Impl : ( ',' ) ;
-    public final void rule__FXModel__Group_4_3__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalFXDsl.g:1635:1: ( ( ',' ) )
-            // InternalFXDsl.g:1636:1: ( ',' )
-            {
-            // InternalFXDsl.g:1636:1: ( ',' )
-            // InternalFXDsl.g:1637:2: ','
-            {
-             before(grammarAccess.getFXModelAccess().getCommaKeyword_4_3_0()); 
-            match(input,27,FOLLOW_2); 
-             after(grammarAccess.getFXModelAccess().getCommaKeyword_4_3_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__FXModel__Group_4_3__0__Impl"
-
-
-    // $ANTLR start "rule__FXModel__Group_4_3__1"
-    // InternalFXDsl.g:1646:1: rule__FXModel__Group_4_3__1 : rule__FXModel__Group_4_3__1__Impl ;
-    public final void rule__FXModel__Group_4_3__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalFXDsl.g:1650:1: ( rule__FXModel__Group_4_3__1__Impl )
-            // InternalFXDsl.g:1651:2: rule__FXModel__Group_4_3__1__Impl
-            {
-            pushFollow(FOLLOW_2);
-            rule__FXModel__Group_4_3__1__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__FXModel__Group_4_3__1"
-
-
-    // $ANTLR start "rule__FXModel__Group_4_3__1__Impl"
-    // InternalFXDsl.g:1657:1: rule__FXModel__Group_4_3__1__Impl : ( ( rule__FXModel__FxPropertiesAssignment_4_3_1 ) ) ;
-    public final void rule__FXModel__Group_4_3__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalFXDsl.g:1661:1: ( ( ( rule__FXModel__FxPropertiesAssignment_4_3_1 ) ) )
-            // InternalFXDsl.g:1662:1: ( ( rule__FXModel__FxPropertiesAssignment_4_3_1 ) )
-            {
-            // InternalFXDsl.g:1662:1: ( ( rule__FXModel__FxPropertiesAssignment_4_3_1 ) )
-            // InternalFXDsl.g:1663:2: ( rule__FXModel__FxPropertiesAssignment_4_3_1 )
-            {
-             before(grammarAccess.getFXModelAccess().getFxPropertiesAssignment_4_3_1()); 
-            // InternalFXDsl.g:1664:2: ( rule__FXModel__FxPropertiesAssignment_4_3_1 )
-            // InternalFXDsl.g:1664:3: rule__FXModel__FxPropertiesAssignment_4_3_1
-            {
-            pushFollow(FOLLOW_2);
-            rule__FXModel__FxPropertiesAssignment_4_3_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getFXModelAccess().getFxPropertiesAssignment_4_3_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__FXModel__Group_4_3__1__Impl"
+    // $ANTLR end "rule__FXModel__Group__6__Impl"
 
 
     // $ANTLR start "rule__FXProperty__Group__0"
-    // InternalFXDsl.g:1673:1: rule__FXProperty__Group__0 : rule__FXProperty__Group__0__Impl rule__FXProperty__Group__1 ;
+    // InternalFXDsl.g:1349:1: rule__FXProperty__Group__0 : rule__FXProperty__Group__0__Impl rule__FXProperty__Group__1 ;
     public final void rule__FXProperty__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1677:1: ( rule__FXProperty__Group__0__Impl rule__FXProperty__Group__1 )
-            // InternalFXDsl.g:1678:2: rule__FXProperty__Group__0__Impl rule__FXProperty__Group__1
+            // InternalFXDsl.g:1353:1: ( rule__FXProperty__Group__0__Impl rule__FXProperty__Group__1 )
+            // InternalFXDsl.g:1354:2: rule__FXProperty__Group__0__Impl rule__FXProperty__Group__1
             {
-            pushFollow(FOLLOW_15);
+            pushFollow(FOLLOW_4);
             rule__FXProperty__Group__0__Impl();
 
             state._fsp--;
@@ -5156,21 +4235,21 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FXProperty__Group__0__Impl"
-    // InternalFXDsl.g:1685:1: rule__FXProperty__Group__0__Impl : ( () ) ;
+    // InternalFXDsl.g:1361:1: rule__FXProperty__Group__0__Impl : ( () ) ;
     public final void rule__FXProperty__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1689:1: ( ( () ) )
-            // InternalFXDsl.g:1690:1: ( () )
+            // InternalFXDsl.g:1365:1: ( ( () ) )
+            // InternalFXDsl.g:1366:1: ( () )
             {
-            // InternalFXDsl.g:1690:1: ( () )
-            // InternalFXDsl.g:1691:2: ()
+            // InternalFXDsl.g:1366:1: ( () )
+            // InternalFXDsl.g:1367:2: ()
             {
              before(grammarAccess.getFXPropertyAccess().getFXPropertyAction_0()); 
-            // InternalFXDsl.g:1692:2: ()
-            // InternalFXDsl.g:1692:3: 
+            // InternalFXDsl.g:1368:2: ()
+            // InternalFXDsl.g:1368:3: 
             {
             }
 
@@ -5193,14 +4272,14 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FXProperty__Group__1"
-    // InternalFXDsl.g:1700:1: rule__FXProperty__Group__1 : rule__FXProperty__Group__1__Impl rule__FXProperty__Group__2 ;
+    // InternalFXDsl.g:1376:1: rule__FXProperty__Group__1 : rule__FXProperty__Group__1__Impl rule__FXProperty__Group__2 ;
     public final void rule__FXProperty__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1704:1: ( rule__FXProperty__Group__1__Impl rule__FXProperty__Group__2 )
-            // InternalFXDsl.g:1705:2: rule__FXProperty__Group__1__Impl rule__FXProperty__Group__2
+            // InternalFXDsl.g:1380:1: ( rule__FXProperty__Group__1__Impl rule__FXProperty__Group__2 )
+            // InternalFXDsl.g:1381:2: rule__FXProperty__Group__1__Impl rule__FXProperty__Group__2
             {
             pushFollow(FOLLOW_4);
             rule__FXProperty__Group__1__Impl();
@@ -5231,21 +4310,31 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FXProperty__Group__1__Impl"
-    // InternalFXDsl.g:1712:1: rule__FXProperty__Group__1__Impl : ( 'FXProperty' ) ;
+    // InternalFXDsl.g:1388:1: rule__FXProperty__Group__1__Impl : ( ( rule__FXProperty__TypeAssignment_1 ) ) ;
     public final void rule__FXProperty__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1716:1: ( ( 'FXProperty' ) )
-            // InternalFXDsl.g:1717:1: ( 'FXProperty' )
+            // InternalFXDsl.g:1392:1: ( ( ( rule__FXProperty__TypeAssignment_1 ) ) )
+            // InternalFXDsl.g:1393:1: ( ( rule__FXProperty__TypeAssignment_1 ) )
             {
-            // InternalFXDsl.g:1717:1: ( 'FXProperty' )
-            // InternalFXDsl.g:1718:2: 'FXProperty'
+            // InternalFXDsl.g:1393:1: ( ( rule__FXProperty__TypeAssignment_1 ) )
+            // InternalFXDsl.g:1394:2: ( rule__FXProperty__TypeAssignment_1 )
             {
-             before(grammarAccess.getFXPropertyAccess().getFXPropertyKeyword_1()); 
-            match(input,35,FOLLOW_2); 
-             after(grammarAccess.getFXPropertyAccess().getFXPropertyKeyword_1()); 
+             before(grammarAccess.getFXPropertyAccess().getTypeAssignment_1()); 
+            // InternalFXDsl.g:1395:2: ( rule__FXProperty__TypeAssignment_1 )
+            // InternalFXDsl.g:1395:3: rule__FXProperty__TypeAssignment_1
+            {
+            pushFollow(FOLLOW_2);
+            rule__FXProperty__TypeAssignment_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getFXPropertyAccess().getTypeAssignment_1()); 
 
             }
 
@@ -5268,22 +4357,17 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FXProperty__Group__2"
-    // InternalFXDsl.g:1727:1: rule__FXProperty__Group__2 : rule__FXProperty__Group__2__Impl rule__FXProperty__Group__3 ;
+    // InternalFXDsl.g:1403:1: rule__FXProperty__Group__2 : rule__FXProperty__Group__2__Impl ;
     public final void rule__FXProperty__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1731:1: ( rule__FXProperty__Group__2__Impl rule__FXProperty__Group__3 )
-            // InternalFXDsl.g:1732:2: rule__FXProperty__Group__2__Impl rule__FXProperty__Group__3
+            // InternalFXDsl.g:1407:1: ( rule__FXProperty__Group__2__Impl )
+            // InternalFXDsl.g:1408:2: rule__FXProperty__Group__2__Impl
             {
-            pushFollow(FOLLOW_5);
-            rule__FXProperty__Group__2__Impl();
-
-            state._fsp--;
-
             pushFollow(FOLLOW_2);
-            rule__FXProperty__Group__3();
+            rule__FXProperty__Group__2__Impl();
 
             state._fsp--;
 
@@ -5306,21 +4390,21 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FXProperty__Group__2__Impl"
-    // InternalFXDsl.g:1739:1: rule__FXProperty__Group__2__Impl : ( ( rule__FXProperty__NameAssignment_2 ) ) ;
+    // InternalFXDsl.g:1414:1: rule__FXProperty__Group__2__Impl : ( ( rule__FXProperty__NameAssignment_2 ) ) ;
     public final void rule__FXProperty__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1743:1: ( ( ( rule__FXProperty__NameAssignment_2 ) ) )
-            // InternalFXDsl.g:1744:1: ( ( rule__FXProperty__NameAssignment_2 ) )
+            // InternalFXDsl.g:1418:1: ( ( ( rule__FXProperty__NameAssignment_2 ) ) )
+            // InternalFXDsl.g:1419:1: ( ( rule__FXProperty__NameAssignment_2 ) )
             {
-            // InternalFXDsl.g:1744:1: ( ( rule__FXProperty__NameAssignment_2 ) )
-            // InternalFXDsl.g:1745:2: ( rule__FXProperty__NameAssignment_2 )
+            // InternalFXDsl.g:1419:1: ( ( rule__FXProperty__NameAssignment_2 ) )
+            // InternalFXDsl.g:1420:2: ( rule__FXProperty__NameAssignment_2 )
             {
              before(grammarAccess.getFXPropertyAccess().getNameAssignment_2()); 
-            // InternalFXDsl.g:1746:2: ( rule__FXProperty__NameAssignment_2 )
-            // InternalFXDsl.g:1746:3: rule__FXProperty__NameAssignment_2
+            // InternalFXDsl.g:1421:2: ( rule__FXProperty__NameAssignment_2 )
+            // InternalFXDsl.g:1421:3: rule__FXProperty__NameAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__FXProperty__NameAssignment_2();
@@ -5352,413 +4436,17 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__FXProperty__Group__2__Impl"
 
 
-    // $ANTLR start "rule__FXProperty__Group__3"
-    // InternalFXDsl.g:1754:1: rule__FXProperty__Group__3 : rule__FXProperty__Group__3__Impl rule__FXProperty__Group__4 ;
-    public final void rule__FXProperty__Group__3() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalFXDsl.g:1758:1: ( rule__FXProperty__Group__3__Impl rule__FXProperty__Group__4 )
-            // InternalFXDsl.g:1759:2: rule__FXProperty__Group__3__Impl rule__FXProperty__Group__4
-            {
-            pushFollow(FOLLOW_16);
-            rule__FXProperty__Group__3__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__FXProperty__Group__4();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__FXProperty__Group__3"
-
-
-    // $ANTLR start "rule__FXProperty__Group__3__Impl"
-    // InternalFXDsl.g:1766:1: rule__FXProperty__Group__3__Impl : ( '{' ) ;
-    public final void rule__FXProperty__Group__3__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalFXDsl.g:1770:1: ( ( '{' ) )
-            // InternalFXDsl.g:1771:1: ( '{' )
-            {
-            // InternalFXDsl.g:1771:1: ( '{' )
-            // InternalFXDsl.g:1772:2: '{'
-            {
-             before(grammarAccess.getFXPropertyAccess().getLeftCurlyBracketKeyword_3()); 
-            match(input,23,FOLLOW_2); 
-             after(grammarAccess.getFXPropertyAccess().getLeftCurlyBracketKeyword_3()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__FXProperty__Group__3__Impl"
-
-
-    // $ANTLR start "rule__FXProperty__Group__4"
-    // InternalFXDsl.g:1781:1: rule__FXProperty__Group__4 : rule__FXProperty__Group__4__Impl rule__FXProperty__Group__5 ;
-    public final void rule__FXProperty__Group__4() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalFXDsl.g:1785:1: ( rule__FXProperty__Group__4__Impl rule__FXProperty__Group__5 )
-            // InternalFXDsl.g:1786:2: rule__FXProperty__Group__4__Impl rule__FXProperty__Group__5
-            {
-            pushFollow(FOLLOW_16);
-            rule__FXProperty__Group__4__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__FXProperty__Group__5();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__FXProperty__Group__4"
-
-
-    // $ANTLR start "rule__FXProperty__Group__4__Impl"
-    // InternalFXDsl.g:1793:1: rule__FXProperty__Group__4__Impl : ( ( rule__FXProperty__Group_4__0 )? ) ;
-    public final void rule__FXProperty__Group__4__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalFXDsl.g:1797:1: ( ( ( rule__FXProperty__Group_4__0 )? ) )
-            // InternalFXDsl.g:1798:1: ( ( rule__FXProperty__Group_4__0 )? )
-            {
-            // InternalFXDsl.g:1798:1: ( ( rule__FXProperty__Group_4__0 )? )
-            // InternalFXDsl.g:1799:2: ( rule__FXProperty__Group_4__0 )?
-            {
-             before(grammarAccess.getFXPropertyAccess().getGroup_4()); 
-            // InternalFXDsl.g:1800:2: ( rule__FXProperty__Group_4__0 )?
-            int alt17=2;
-            int LA17_0 = input.LA(1);
-
-            if ( (LA17_0==36) ) {
-                alt17=1;
-            }
-            switch (alt17) {
-                case 1 :
-                    // InternalFXDsl.g:1800:3: rule__FXProperty__Group_4__0
-                    {
-                    pushFollow(FOLLOW_2);
-                    rule__FXProperty__Group_4__0();
-
-                    state._fsp--;
-
-
-                    }
-                    break;
-
-            }
-
-             after(grammarAccess.getFXPropertyAccess().getGroup_4()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__FXProperty__Group__4__Impl"
-
-
-    // $ANTLR start "rule__FXProperty__Group__5"
-    // InternalFXDsl.g:1808:1: rule__FXProperty__Group__5 : rule__FXProperty__Group__5__Impl ;
-    public final void rule__FXProperty__Group__5() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalFXDsl.g:1812:1: ( rule__FXProperty__Group__5__Impl )
-            // InternalFXDsl.g:1813:2: rule__FXProperty__Group__5__Impl
-            {
-            pushFollow(FOLLOW_2);
-            rule__FXProperty__Group__5__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__FXProperty__Group__5"
-
-
-    // $ANTLR start "rule__FXProperty__Group__5__Impl"
-    // InternalFXDsl.g:1819:1: rule__FXProperty__Group__5__Impl : ( '}' ) ;
-    public final void rule__FXProperty__Group__5__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalFXDsl.g:1823:1: ( ( '}' ) )
-            // InternalFXDsl.g:1824:1: ( '}' )
-            {
-            // InternalFXDsl.g:1824:1: ( '}' )
-            // InternalFXDsl.g:1825:2: '}'
-            {
-             before(grammarAccess.getFXPropertyAccess().getRightCurlyBracketKeyword_5()); 
-            match(input,24,FOLLOW_2); 
-             after(grammarAccess.getFXPropertyAccess().getRightCurlyBracketKeyword_5()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__FXProperty__Group__5__Impl"
-
-
-    // $ANTLR start "rule__FXProperty__Group_4__0"
-    // InternalFXDsl.g:1835:1: rule__FXProperty__Group_4__0 : rule__FXProperty__Group_4__0__Impl rule__FXProperty__Group_4__1 ;
-    public final void rule__FXProperty__Group_4__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalFXDsl.g:1839:1: ( rule__FXProperty__Group_4__0__Impl rule__FXProperty__Group_4__1 )
-            // InternalFXDsl.g:1840:2: rule__FXProperty__Group_4__0__Impl rule__FXProperty__Group_4__1
-            {
-            pushFollow(FOLLOW_4);
-            rule__FXProperty__Group_4__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__FXProperty__Group_4__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__FXProperty__Group_4__0"
-
-
-    // $ANTLR start "rule__FXProperty__Group_4__0__Impl"
-    // InternalFXDsl.g:1847:1: rule__FXProperty__Group_4__0__Impl : ( 'type' ) ;
-    public final void rule__FXProperty__Group_4__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalFXDsl.g:1851:1: ( ( 'type' ) )
-            // InternalFXDsl.g:1852:1: ( 'type' )
-            {
-            // InternalFXDsl.g:1852:1: ( 'type' )
-            // InternalFXDsl.g:1853:2: 'type'
-            {
-             before(grammarAccess.getFXPropertyAccess().getTypeKeyword_4_0()); 
-            match(input,36,FOLLOW_2); 
-             after(grammarAccess.getFXPropertyAccess().getTypeKeyword_4_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__FXProperty__Group_4__0__Impl"
-
-
-    // $ANTLR start "rule__FXProperty__Group_4__1"
-    // InternalFXDsl.g:1862:1: rule__FXProperty__Group_4__1 : rule__FXProperty__Group_4__1__Impl ;
-    public final void rule__FXProperty__Group_4__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalFXDsl.g:1866:1: ( rule__FXProperty__Group_4__1__Impl )
-            // InternalFXDsl.g:1867:2: rule__FXProperty__Group_4__1__Impl
-            {
-            pushFollow(FOLLOW_2);
-            rule__FXProperty__Group_4__1__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__FXProperty__Group_4__1"
-
-
-    // $ANTLR start "rule__FXProperty__Group_4__1__Impl"
-    // InternalFXDsl.g:1873:1: rule__FXProperty__Group_4__1__Impl : ( ( rule__FXProperty__TypeAssignment_4_1 ) ) ;
-    public final void rule__FXProperty__Group_4__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalFXDsl.g:1877:1: ( ( ( rule__FXProperty__TypeAssignment_4_1 ) ) )
-            // InternalFXDsl.g:1878:1: ( ( rule__FXProperty__TypeAssignment_4_1 ) )
-            {
-            // InternalFXDsl.g:1878:1: ( ( rule__FXProperty__TypeAssignment_4_1 ) )
-            // InternalFXDsl.g:1879:2: ( rule__FXProperty__TypeAssignment_4_1 )
-            {
-             before(grammarAccess.getFXPropertyAccess().getTypeAssignment_4_1()); 
-            // InternalFXDsl.g:1880:2: ( rule__FXProperty__TypeAssignment_4_1 )
-            // InternalFXDsl.g:1880:3: rule__FXProperty__TypeAssignment_4_1
-            {
-            pushFollow(FOLLOW_2);
-            rule__FXProperty__TypeAssignment_4_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getFXPropertyAccess().getTypeAssignment_4_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__FXProperty__Group_4__1__Impl"
-
-
     // $ANTLR start "rule__EDouble__Group__0"
-    // InternalFXDsl.g:1889:1: rule__EDouble__Group__0 : rule__EDouble__Group__0__Impl rule__EDouble__Group__1 ;
+    // InternalFXDsl.g:1430:1: rule__EDouble__Group__0 : rule__EDouble__Group__0__Impl rule__EDouble__Group__1 ;
     public final void rule__EDouble__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1893:1: ( rule__EDouble__Group__0__Impl rule__EDouble__Group__1 )
-            // InternalFXDsl.g:1894:2: rule__EDouble__Group__0__Impl rule__EDouble__Group__1
+            // InternalFXDsl.g:1434:1: ( rule__EDouble__Group__0__Impl rule__EDouble__Group__1 )
+            // InternalFXDsl.g:1435:2: rule__EDouble__Group__0__Impl rule__EDouble__Group__1
             {
-            pushFollow(FOLLOW_12);
+            pushFollow(FOLLOW_10);
             rule__EDouble__Group__0__Impl();
 
             state._fsp--;
@@ -5787,31 +4475,31 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group__0__Impl"
-    // InternalFXDsl.g:1901:1: rule__EDouble__Group__0__Impl : ( ( '-' )? ) ;
+    // InternalFXDsl.g:1442:1: rule__EDouble__Group__0__Impl : ( ( '-' )? ) ;
     public final void rule__EDouble__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1905:1: ( ( ( '-' )? ) )
-            // InternalFXDsl.g:1906:1: ( ( '-' )? )
+            // InternalFXDsl.g:1446:1: ( ( ( '-' )? ) )
+            // InternalFXDsl.g:1447:1: ( ( '-' )? )
             {
-            // InternalFXDsl.g:1906:1: ( ( '-' )? )
-            // InternalFXDsl.g:1907:2: ( '-' )?
+            // InternalFXDsl.g:1447:1: ( ( '-' )? )
+            // InternalFXDsl.g:1448:2: ( '-' )?
             {
              before(grammarAccess.getEDoubleAccess().getHyphenMinusKeyword_0()); 
-            // InternalFXDsl.g:1908:2: ( '-' )?
-            int alt18=2;
-            int LA18_0 = input.LA(1);
+            // InternalFXDsl.g:1449:2: ( '-' )?
+            int alt17=2;
+            int LA17_0 = input.LA(1);
 
-            if ( (LA18_0==37) ) {
-                alt18=1;
+            if ( (LA17_0==31) ) {
+                alt17=1;
             }
-            switch (alt18) {
+            switch (alt17) {
                 case 1 :
-                    // InternalFXDsl.g:1908:3: '-'
+                    // InternalFXDsl.g:1449:3: '-'
                     {
-                    match(input,37,FOLLOW_2); 
+                    match(input,31,FOLLOW_2); 
 
                     }
                     break;
@@ -5841,16 +4529,16 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group__1"
-    // InternalFXDsl.g:1916:1: rule__EDouble__Group__1 : rule__EDouble__Group__1__Impl rule__EDouble__Group__2 ;
+    // InternalFXDsl.g:1457:1: rule__EDouble__Group__1 : rule__EDouble__Group__1__Impl rule__EDouble__Group__2 ;
     public final void rule__EDouble__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1920:1: ( rule__EDouble__Group__1__Impl rule__EDouble__Group__2 )
-            // InternalFXDsl.g:1921:2: rule__EDouble__Group__1__Impl rule__EDouble__Group__2
+            // InternalFXDsl.g:1461:1: ( rule__EDouble__Group__1__Impl rule__EDouble__Group__2 )
+            // InternalFXDsl.g:1462:2: rule__EDouble__Group__1__Impl rule__EDouble__Group__2
             {
-            pushFollow(FOLLOW_12);
+            pushFollow(FOLLOW_10);
             rule__EDouble__Group__1__Impl();
 
             state._fsp--;
@@ -5879,29 +4567,29 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group__1__Impl"
-    // InternalFXDsl.g:1928:1: rule__EDouble__Group__1__Impl : ( ( RULE_INT )? ) ;
+    // InternalFXDsl.g:1469:1: rule__EDouble__Group__1__Impl : ( ( RULE_INT )? ) ;
     public final void rule__EDouble__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1932:1: ( ( ( RULE_INT )? ) )
-            // InternalFXDsl.g:1933:1: ( ( RULE_INT )? )
+            // InternalFXDsl.g:1473:1: ( ( ( RULE_INT )? ) )
+            // InternalFXDsl.g:1474:1: ( ( RULE_INT )? )
             {
-            // InternalFXDsl.g:1933:1: ( ( RULE_INT )? )
-            // InternalFXDsl.g:1934:2: ( RULE_INT )?
+            // InternalFXDsl.g:1474:1: ( ( RULE_INT )? )
+            // InternalFXDsl.g:1475:2: ( RULE_INT )?
             {
              before(grammarAccess.getEDoubleAccess().getINTTerminalRuleCall_1()); 
-            // InternalFXDsl.g:1935:2: ( RULE_INT )?
-            int alt19=2;
-            int LA19_0 = input.LA(1);
+            // InternalFXDsl.g:1476:2: ( RULE_INT )?
+            int alt18=2;
+            int LA18_0 = input.LA(1);
 
-            if ( (LA19_0==RULE_INT) ) {
-                alt19=1;
+            if ( (LA18_0==RULE_INT) ) {
+                alt18=1;
             }
-            switch (alt19) {
+            switch (alt18) {
                 case 1 :
-                    // InternalFXDsl.g:1935:3: RULE_INT
+                    // InternalFXDsl.g:1476:3: RULE_INT
                     {
                     match(input,RULE_INT,FOLLOW_2); 
 
@@ -5933,16 +4621,16 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group__2"
-    // InternalFXDsl.g:1943:1: rule__EDouble__Group__2 : rule__EDouble__Group__2__Impl rule__EDouble__Group__3 ;
+    // InternalFXDsl.g:1484:1: rule__EDouble__Group__2 : rule__EDouble__Group__2__Impl rule__EDouble__Group__3 ;
     public final void rule__EDouble__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1947:1: ( rule__EDouble__Group__2__Impl rule__EDouble__Group__3 )
-            // InternalFXDsl.g:1948:2: rule__EDouble__Group__2__Impl rule__EDouble__Group__3
+            // InternalFXDsl.g:1488:1: ( rule__EDouble__Group__2__Impl rule__EDouble__Group__3 )
+            // InternalFXDsl.g:1489:2: rule__EDouble__Group__2__Impl rule__EDouble__Group__3
             {
-            pushFollow(FOLLOW_17);
+            pushFollow(FOLLOW_15);
             rule__EDouble__Group__2__Impl();
 
             state._fsp--;
@@ -5971,20 +4659,20 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group__2__Impl"
-    // InternalFXDsl.g:1955:1: rule__EDouble__Group__2__Impl : ( '.' ) ;
+    // InternalFXDsl.g:1496:1: rule__EDouble__Group__2__Impl : ( '.' ) ;
     public final void rule__EDouble__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1959:1: ( ( '.' ) )
-            // InternalFXDsl.g:1960:1: ( '.' )
+            // InternalFXDsl.g:1500:1: ( ( '.' ) )
+            // InternalFXDsl.g:1501:1: ( '.' )
             {
-            // InternalFXDsl.g:1960:1: ( '.' )
-            // InternalFXDsl.g:1961:2: '.'
+            // InternalFXDsl.g:1501:1: ( '.' )
+            // InternalFXDsl.g:1502:2: '.'
             {
              before(grammarAccess.getEDoubleAccess().getFullStopKeyword_2()); 
-            match(input,38,FOLLOW_2); 
+            match(input,32,FOLLOW_2); 
              after(grammarAccess.getEDoubleAccess().getFullStopKeyword_2()); 
 
             }
@@ -6008,16 +4696,16 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group__3"
-    // InternalFXDsl.g:1970:1: rule__EDouble__Group__3 : rule__EDouble__Group__3__Impl rule__EDouble__Group__4 ;
+    // InternalFXDsl.g:1511:1: rule__EDouble__Group__3 : rule__EDouble__Group__3__Impl rule__EDouble__Group__4 ;
     public final void rule__EDouble__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1974:1: ( rule__EDouble__Group__3__Impl rule__EDouble__Group__4 )
-            // InternalFXDsl.g:1975:2: rule__EDouble__Group__3__Impl rule__EDouble__Group__4
+            // InternalFXDsl.g:1515:1: ( rule__EDouble__Group__3__Impl rule__EDouble__Group__4 )
+            // InternalFXDsl.g:1516:2: rule__EDouble__Group__3__Impl rule__EDouble__Group__4
             {
-            pushFollow(FOLLOW_18);
+            pushFollow(FOLLOW_16);
             rule__EDouble__Group__3__Impl();
 
             state._fsp--;
@@ -6046,17 +4734,17 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group__3__Impl"
-    // InternalFXDsl.g:1982:1: rule__EDouble__Group__3__Impl : ( RULE_INT ) ;
+    // InternalFXDsl.g:1523:1: rule__EDouble__Group__3__Impl : ( RULE_INT ) ;
     public final void rule__EDouble__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:1986:1: ( ( RULE_INT ) )
-            // InternalFXDsl.g:1987:1: ( RULE_INT )
+            // InternalFXDsl.g:1527:1: ( ( RULE_INT ) )
+            // InternalFXDsl.g:1528:1: ( RULE_INT )
             {
-            // InternalFXDsl.g:1987:1: ( RULE_INT )
-            // InternalFXDsl.g:1988:2: RULE_INT
+            // InternalFXDsl.g:1528:1: ( RULE_INT )
+            // InternalFXDsl.g:1529:2: RULE_INT
             {
              before(grammarAccess.getEDoubleAccess().getINTTerminalRuleCall_3()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -6083,14 +4771,14 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group__4"
-    // InternalFXDsl.g:1997:1: rule__EDouble__Group__4 : rule__EDouble__Group__4__Impl ;
+    // InternalFXDsl.g:1538:1: rule__EDouble__Group__4 : rule__EDouble__Group__4__Impl ;
     public final void rule__EDouble__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:2001:1: ( rule__EDouble__Group__4__Impl )
-            // InternalFXDsl.g:2002:2: rule__EDouble__Group__4__Impl
+            // InternalFXDsl.g:1542:1: ( rule__EDouble__Group__4__Impl )
+            // InternalFXDsl.g:1543:2: rule__EDouble__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__EDouble__Group__4__Impl();
@@ -6116,29 +4804,29 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group__4__Impl"
-    // InternalFXDsl.g:2008:1: rule__EDouble__Group__4__Impl : ( ( rule__EDouble__Group_4__0 )? ) ;
+    // InternalFXDsl.g:1549:1: rule__EDouble__Group__4__Impl : ( ( rule__EDouble__Group_4__0 )? ) ;
     public final void rule__EDouble__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:2012:1: ( ( ( rule__EDouble__Group_4__0 )? ) )
-            // InternalFXDsl.g:2013:1: ( ( rule__EDouble__Group_4__0 )? )
+            // InternalFXDsl.g:1553:1: ( ( ( rule__EDouble__Group_4__0 )? ) )
+            // InternalFXDsl.g:1554:1: ( ( rule__EDouble__Group_4__0 )? )
             {
-            // InternalFXDsl.g:2013:1: ( ( rule__EDouble__Group_4__0 )? )
-            // InternalFXDsl.g:2014:2: ( rule__EDouble__Group_4__0 )?
+            // InternalFXDsl.g:1554:1: ( ( rule__EDouble__Group_4__0 )? )
+            // InternalFXDsl.g:1555:2: ( rule__EDouble__Group_4__0 )?
             {
              before(grammarAccess.getEDoubleAccess().getGroup_4()); 
-            // InternalFXDsl.g:2015:2: ( rule__EDouble__Group_4__0 )?
-            int alt20=2;
-            int LA20_0 = input.LA(1);
+            // InternalFXDsl.g:1556:2: ( rule__EDouble__Group_4__0 )?
+            int alt19=2;
+            int LA19_0 = input.LA(1);
 
-            if ( ((LA20_0>=11 && LA20_0<=12)) ) {
-                alt20=1;
+            if ( ((LA19_0>=11 && LA19_0<=12)) ) {
+                alt19=1;
             }
-            switch (alt20) {
+            switch (alt19) {
                 case 1 :
-                    // InternalFXDsl.g:2015:3: rule__EDouble__Group_4__0
+                    // InternalFXDsl.g:1556:3: rule__EDouble__Group_4__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__EDouble__Group_4__0();
@@ -6174,16 +4862,16 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group_4__0"
-    // InternalFXDsl.g:2024:1: rule__EDouble__Group_4__0 : rule__EDouble__Group_4__0__Impl rule__EDouble__Group_4__1 ;
+    // InternalFXDsl.g:1565:1: rule__EDouble__Group_4__0 : rule__EDouble__Group_4__0__Impl rule__EDouble__Group_4__1 ;
     public final void rule__EDouble__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:2028:1: ( rule__EDouble__Group_4__0__Impl rule__EDouble__Group_4__1 )
-            // InternalFXDsl.g:2029:2: rule__EDouble__Group_4__0__Impl rule__EDouble__Group_4__1
+            // InternalFXDsl.g:1569:1: ( rule__EDouble__Group_4__0__Impl rule__EDouble__Group_4__1 )
+            // InternalFXDsl.g:1570:2: rule__EDouble__Group_4__0__Impl rule__EDouble__Group_4__1
             {
-            pushFollow(FOLLOW_19);
+            pushFollow(FOLLOW_17);
             rule__EDouble__Group_4__0__Impl();
 
             state._fsp--;
@@ -6212,21 +4900,21 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group_4__0__Impl"
-    // InternalFXDsl.g:2036:1: rule__EDouble__Group_4__0__Impl : ( ( rule__EDouble__Alternatives_4_0 ) ) ;
+    // InternalFXDsl.g:1577:1: rule__EDouble__Group_4__0__Impl : ( ( rule__EDouble__Alternatives_4_0 ) ) ;
     public final void rule__EDouble__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:2040:1: ( ( ( rule__EDouble__Alternatives_4_0 ) ) )
-            // InternalFXDsl.g:2041:1: ( ( rule__EDouble__Alternatives_4_0 ) )
+            // InternalFXDsl.g:1581:1: ( ( ( rule__EDouble__Alternatives_4_0 ) ) )
+            // InternalFXDsl.g:1582:1: ( ( rule__EDouble__Alternatives_4_0 ) )
             {
-            // InternalFXDsl.g:2041:1: ( ( rule__EDouble__Alternatives_4_0 ) )
-            // InternalFXDsl.g:2042:2: ( rule__EDouble__Alternatives_4_0 )
+            // InternalFXDsl.g:1582:1: ( ( rule__EDouble__Alternatives_4_0 ) )
+            // InternalFXDsl.g:1583:2: ( rule__EDouble__Alternatives_4_0 )
             {
              before(grammarAccess.getEDoubleAccess().getAlternatives_4_0()); 
-            // InternalFXDsl.g:2043:2: ( rule__EDouble__Alternatives_4_0 )
-            // InternalFXDsl.g:2043:3: rule__EDouble__Alternatives_4_0
+            // InternalFXDsl.g:1584:2: ( rule__EDouble__Alternatives_4_0 )
+            // InternalFXDsl.g:1584:3: rule__EDouble__Alternatives_4_0
             {
             pushFollow(FOLLOW_2);
             rule__EDouble__Alternatives_4_0();
@@ -6259,16 +4947,16 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group_4__1"
-    // InternalFXDsl.g:2051:1: rule__EDouble__Group_4__1 : rule__EDouble__Group_4__1__Impl rule__EDouble__Group_4__2 ;
+    // InternalFXDsl.g:1592:1: rule__EDouble__Group_4__1 : rule__EDouble__Group_4__1__Impl rule__EDouble__Group_4__2 ;
     public final void rule__EDouble__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:2055:1: ( rule__EDouble__Group_4__1__Impl rule__EDouble__Group_4__2 )
-            // InternalFXDsl.g:2056:2: rule__EDouble__Group_4__1__Impl rule__EDouble__Group_4__2
+            // InternalFXDsl.g:1596:1: ( rule__EDouble__Group_4__1__Impl rule__EDouble__Group_4__2 )
+            // InternalFXDsl.g:1597:2: rule__EDouble__Group_4__1__Impl rule__EDouble__Group_4__2
             {
-            pushFollow(FOLLOW_19);
+            pushFollow(FOLLOW_17);
             rule__EDouble__Group_4__1__Impl();
 
             state._fsp--;
@@ -6297,31 +4985,31 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group_4__1__Impl"
-    // InternalFXDsl.g:2063:1: rule__EDouble__Group_4__1__Impl : ( ( '-' )? ) ;
+    // InternalFXDsl.g:1604:1: rule__EDouble__Group_4__1__Impl : ( ( '-' )? ) ;
     public final void rule__EDouble__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:2067:1: ( ( ( '-' )? ) )
-            // InternalFXDsl.g:2068:1: ( ( '-' )? )
+            // InternalFXDsl.g:1608:1: ( ( ( '-' )? ) )
+            // InternalFXDsl.g:1609:1: ( ( '-' )? )
             {
-            // InternalFXDsl.g:2068:1: ( ( '-' )? )
-            // InternalFXDsl.g:2069:2: ( '-' )?
+            // InternalFXDsl.g:1609:1: ( ( '-' )? )
+            // InternalFXDsl.g:1610:2: ( '-' )?
             {
              before(grammarAccess.getEDoubleAccess().getHyphenMinusKeyword_4_1()); 
-            // InternalFXDsl.g:2070:2: ( '-' )?
-            int alt21=2;
-            int LA21_0 = input.LA(1);
+            // InternalFXDsl.g:1611:2: ( '-' )?
+            int alt20=2;
+            int LA20_0 = input.LA(1);
 
-            if ( (LA21_0==37) ) {
-                alt21=1;
+            if ( (LA20_0==31) ) {
+                alt20=1;
             }
-            switch (alt21) {
+            switch (alt20) {
                 case 1 :
-                    // InternalFXDsl.g:2070:3: '-'
+                    // InternalFXDsl.g:1611:3: '-'
                     {
-                    match(input,37,FOLLOW_2); 
+                    match(input,31,FOLLOW_2); 
 
                     }
                     break;
@@ -6351,14 +5039,14 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group_4__2"
-    // InternalFXDsl.g:2078:1: rule__EDouble__Group_4__2 : rule__EDouble__Group_4__2__Impl ;
+    // InternalFXDsl.g:1619:1: rule__EDouble__Group_4__2 : rule__EDouble__Group_4__2__Impl ;
     public final void rule__EDouble__Group_4__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:2082:1: ( rule__EDouble__Group_4__2__Impl )
-            // InternalFXDsl.g:2083:2: rule__EDouble__Group_4__2__Impl
+            // InternalFXDsl.g:1623:1: ( rule__EDouble__Group_4__2__Impl )
+            // InternalFXDsl.g:1624:2: rule__EDouble__Group_4__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__EDouble__Group_4__2__Impl();
@@ -6384,17 +5072,17 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EDouble__Group_4__2__Impl"
-    // InternalFXDsl.g:2089:1: rule__EDouble__Group_4__2__Impl : ( RULE_INT ) ;
+    // InternalFXDsl.g:1630:1: rule__EDouble__Group_4__2__Impl : ( RULE_INT ) ;
     public final void rule__EDouble__Group_4__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:2093:1: ( ( RULE_INT ) )
-            // InternalFXDsl.g:2094:1: ( RULE_INT )
+            // InternalFXDsl.g:1634:1: ( ( RULE_INT ) )
+            // InternalFXDsl.g:1635:1: ( RULE_INT )
             {
-            // InternalFXDsl.g:2094:1: ( RULE_INT )
-            // InternalFXDsl.g:2095:2: RULE_INT
+            // InternalFXDsl.g:1635:1: ( RULE_INT )
+            // InternalFXDsl.g:1636:2: RULE_INT
             {
              before(grammarAccess.getEDoubleAccess().getINTTerminalRuleCall_4_2()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -6421,24 +5109,24 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FXTableView__HasFilterAssignment_1"
-    // InternalFXDsl.g:2105:1: rule__FXTableView__HasFilterAssignment_1 : ( ( 'hasFilter' ) ) ;
+    // InternalFXDsl.g:1646:1: rule__FXTableView__HasFilterAssignment_1 : ( ( 'hasFilter' ) ) ;
     public final void rule__FXTableView__HasFilterAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:2109:1: ( ( ( 'hasFilter' ) ) )
-            // InternalFXDsl.g:2110:2: ( ( 'hasFilter' ) )
+            // InternalFXDsl.g:1650:1: ( ( ( 'hasFilter' ) ) )
+            // InternalFXDsl.g:1651:2: ( ( 'hasFilter' ) )
             {
-            // InternalFXDsl.g:2110:2: ( ( 'hasFilter' ) )
-            // InternalFXDsl.g:2111:3: ( 'hasFilter' )
-            {
-             before(grammarAccess.getFXTableViewAccess().getHasFilterHasFilterKeyword_1_0()); 
-            // InternalFXDsl.g:2112:3: ( 'hasFilter' )
-            // InternalFXDsl.g:2113:4: 'hasFilter'
+            // InternalFXDsl.g:1651:2: ( ( 'hasFilter' ) )
+            // InternalFXDsl.g:1652:3: ( 'hasFilter' )
             {
              before(grammarAccess.getFXTableViewAccess().getHasFilterHasFilterKeyword_1_0()); 
-            match(input,39,FOLLOW_2); 
+            // InternalFXDsl.g:1653:3: ( 'hasFilter' )
+            // InternalFXDsl.g:1654:4: 'hasFilter'
+            {
+             before(grammarAccess.getFXTableViewAccess().getHasFilterHasFilterKeyword_1_0()); 
+            match(input,33,FOLLOW_2); 
              after(grammarAccess.getFXTableViewAccess().getHasFilterHasFilterKeyword_1_0()); 
 
             }
@@ -6466,24 +5154,24 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FXTableView__HasSorterAssignment_2"
-    // InternalFXDsl.g:2124:1: rule__FXTableView__HasSorterAssignment_2 : ( ( 'hasSorter' ) ) ;
+    // InternalFXDsl.g:1665:1: rule__FXTableView__HasSorterAssignment_2 : ( ( 'hasSorter' ) ) ;
     public final void rule__FXTableView__HasSorterAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:2128:1: ( ( ( 'hasSorter' ) ) )
-            // InternalFXDsl.g:2129:2: ( ( 'hasSorter' ) )
+            // InternalFXDsl.g:1669:1: ( ( ( 'hasSorter' ) ) )
+            // InternalFXDsl.g:1670:2: ( ( 'hasSorter' ) )
             {
-            // InternalFXDsl.g:2129:2: ( ( 'hasSorter' ) )
-            // InternalFXDsl.g:2130:3: ( 'hasSorter' )
-            {
-             before(grammarAccess.getFXTableViewAccess().getHasSorterHasSorterKeyword_2_0()); 
-            // InternalFXDsl.g:2131:3: ( 'hasSorter' )
-            // InternalFXDsl.g:2132:4: 'hasSorter'
+            // InternalFXDsl.g:1670:2: ( ( 'hasSorter' ) )
+            // InternalFXDsl.g:1671:3: ( 'hasSorter' )
             {
              before(grammarAccess.getFXTableViewAccess().getHasSorterHasSorterKeyword_2_0()); 
-            match(input,40,FOLLOW_2); 
+            // InternalFXDsl.g:1672:3: ( 'hasSorter' )
+            // InternalFXDsl.g:1673:4: 'hasSorter'
+            {
+             before(grammarAccess.getFXTableViewAccess().getHasSorterHasSorterKeyword_2_0()); 
+            match(input,34,FOLLOW_2); 
              after(grammarAccess.getFXTableViewAccess().getHasSorterHasSorterKeyword_2_0()); 
 
             }
@@ -6511,17 +5199,17 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FXTableView__NameAssignment_4"
-    // InternalFXDsl.g:2143:1: rule__FXTableView__NameAssignment_4 : ( ruleEString ) ;
+    // InternalFXDsl.g:1684:1: rule__FXTableView__NameAssignment_4 : ( ruleEString ) ;
     public final void rule__FXTableView__NameAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:2147:1: ( ( ruleEString ) )
-            // InternalFXDsl.g:2148:2: ( ruleEString )
+            // InternalFXDsl.g:1688:1: ( ( ruleEString ) )
+            // InternalFXDsl.g:1689:2: ( ruleEString )
             {
-            // InternalFXDsl.g:2148:2: ( ruleEString )
-            // InternalFXDsl.g:2149:3: ruleEString
+            // InternalFXDsl.g:1689:2: ( ruleEString )
+            // InternalFXDsl.g:1690:3: ruleEString
             {
              before(grammarAccess.getFXTableViewAccess().getNameEStringParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
@@ -6552,17 +5240,17 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FXTableView__PackagePathAssignment_6_1"
-    // InternalFXDsl.g:2158:1: rule__FXTableView__PackagePathAssignment_6_1 : ( ruleEString ) ;
+    // InternalFXDsl.g:1699:1: rule__FXTableView__PackagePathAssignment_6_1 : ( ruleEString ) ;
     public final void rule__FXTableView__PackagePathAssignment_6_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:2162:1: ( ( ruleEString ) )
-            // InternalFXDsl.g:2163:2: ( ruleEString )
+            // InternalFXDsl.g:1703:1: ( ( ruleEString ) )
+            // InternalFXDsl.g:1704:2: ( ruleEString )
             {
-            // InternalFXDsl.g:2163:2: ( ruleEString )
-            // InternalFXDsl.g:2164:3: ruleEString
+            // InternalFXDsl.g:1704:2: ( ruleEString )
+            // InternalFXDsl.g:1705:3: ruleEString
             {
              before(grammarAccess.getFXTableViewAccess().getPackagePathEStringParserRuleCall_6_1_0()); 
             pushFollow(FOLLOW_2);
@@ -6592,26 +5280,26 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__FXTableView__PackagePathAssignment_6_1"
 
 
-    // $ANTLR start "rule__FXTableView__FxColumnsAssignment_7_2"
-    // InternalFXDsl.g:2173:1: rule__FXTableView__FxColumnsAssignment_7_2 : ( ruleFXColumn ) ;
-    public final void rule__FXTableView__FxColumnsAssignment_7_2() throws RecognitionException {
+    // $ANTLR start "rule__FXTableView__FxColumnsAssignment_7_0"
+    // InternalFXDsl.g:1714:1: rule__FXTableView__FxColumnsAssignment_7_0 : ( ruleFXColumn ) ;
+    public final void rule__FXTableView__FxColumnsAssignment_7_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:2177:1: ( ( ruleFXColumn ) )
-            // InternalFXDsl.g:2178:2: ( ruleFXColumn )
+            // InternalFXDsl.g:1718:1: ( ( ruleFXColumn ) )
+            // InternalFXDsl.g:1719:2: ( ruleFXColumn )
             {
-            // InternalFXDsl.g:2178:2: ( ruleFXColumn )
-            // InternalFXDsl.g:2179:3: ruleFXColumn
+            // InternalFXDsl.g:1719:2: ( ruleFXColumn )
+            // InternalFXDsl.g:1720:3: ruleFXColumn
             {
-             before(grammarAccess.getFXTableViewAccess().getFxColumnsFXColumnParserRuleCall_7_2_0()); 
+             before(grammarAccess.getFXTableViewAccess().getFxColumnsFXColumnParserRuleCall_7_0_0()); 
             pushFollow(FOLLOW_2);
             ruleFXColumn();
 
             state._fsp--;
 
-             after(grammarAccess.getFXTableViewAccess().getFxColumnsFXColumnParserRuleCall_7_2_0()); 
+             after(grammarAccess.getFXTableViewAccess().getFxColumnsFXColumnParserRuleCall_7_0_0()); 
 
             }
 
@@ -6630,29 +5318,29 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__FXTableView__FxColumnsAssignment_7_2"
+    // $ANTLR end "rule__FXTableView__FxColumnsAssignment_7_0"
 
 
-    // $ANTLR start "rule__FXTableView__FxColumnsAssignment_7_3_1"
-    // InternalFXDsl.g:2188:1: rule__FXTableView__FxColumnsAssignment_7_3_1 : ( ruleFXColumn ) ;
-    public final void rule__FXTableView__FxColumnsAssignment_7_3_1() throws RecognitionException {
+    // $ANTLR start "rule__FXTableView__FxColumnsAssignment_7_1"
+    // InternalFXDsl.g:1729:1: rule__FXTableView__FxColumnsAssignment_7_1 : ( ruleFXColumn ) ;
+    public final void rule__FXTableView__FxColumnsAssignment_7_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:2192:1: ( ( ruleFXColumn ) )
-            // InternalFXDsl.g:2193:2: ( ruleFXColumn )
+            // InternalFXDsl.g:1733:1: ( ( ruleFXColumn ) )
+            // InternalFXDsl.g:1734:2: ( ruleFXColumn )
             {
-            // InternalFXDsl.g:2193:2: ( ruleFXColumn )
-            // InternalFXDsl.g:2194:3: ruleFXColumn
+            // InternalFXDsl.g:1734:2: ( ruleFXColumn )
+            // InternalFXDsl.g:1735:3: ruleFXColumn
             {
-             before(grammarAccess.getFXTableViewAccess().getFxColumnsFXColumnParserRuleCall_7_3_1_0()); 
+             before(grammarAccess.getFXTableViewAccess().getFxColumnsFXColumnParserRuleCall_7_1_0()); 
             pushFollow(FOLLOW_2);
             ruleFXColumn();
 
             state._fsp--;
 
-             after(grammarAccess.getFXTableViewAccess().getFxColumnsFXColumnParserRuleCall_7_3_1_0()); 
+             after(grammarAccess.getFXTableViewAccess().getFxColumnsFXColumnParserRuleCall_7_1_0()); 
 
             }
 
@@ -6671,29 +5359,29 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__FXTableView__FxColumnsAssignment_7_3_1"
+    // $ANTLR end "rule__FXTableView__FxColumnsAssignment_7_1"
 
 
-    // $ANTLR start "rule__FXTableView__FxEntityAssignment_8_1"
-    // InternalFXDsl.g:2203:1: rule__FXTableView__FxEntityAssignment_8_1 : ( ruleFXModel ) ;
-    public final void rule__FXTableView__FxEntityAssignment_8_1() throws RecognitionException {
+    // $ANTLR start "rule__FXTableView__FxEntityAssignment_8"
+    // InternalFXDsl.g:1744:1: rule__FXTableView__FxEntityAssignment_8 : ( ruleFXModel ) ;
+    public final void rule__FXTableView__FxEntityAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:2207:1: ( ( ruleFXModel ) )
-            // InternalFXDsl.g:2208:2: ( ruleFXModel )
+            // InternalFXDsl.g:1748:1: ( ( ruleFXModel ) )
+            // InternalFXDsl.g:1749:2: ( ruleFXModel )
             {
-            // InternalFXDsl.g:2208:2: ( ruleFXModel )
-            // InternalFXDsl.g:2209:3: ruleFXModel
+            // InternalFXDsl.g:1749:2: ( ruleFXModel )
+            // InternalFXDsl.g:1750:3: ruleFXModel
             {
-             before(grammarAccess.getFXTableViewAccess().getFxEntityFXModelParserRuleCall_8_1_0()); 
+             before(grammarAccess.getFXTableViewAccess().getFxEntityFXModelParserRuleCall_8_0()); 
             pushFollow(FOLLOW_2);
             ruleFXModel();
 
             state._fsp--;
 
-             after(grammarAccess.getFXTableViewAccess().getFxEntityFXModelParserRuleCall_8_1_0()); 
+             after(grammarAccess.getFXTableViewAccess().getFxEntityFXModelParserRuleCall_8_0()); 
 
             }
 
@@ -6712,28 +5400,28 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__FXTableView__FxEntityAssignment_8_1"
+    // $ANTLR end "rule__FXTableView__FxEntityAssignment_8"
 
 
     // $ANTLR start "rule__FXColumn__EditableAssignment_1"
-    // InternalFXDsl.g:2218:1: rule__FXColumn__EditableAssignment_1 : ( ( 'editable' ) ) ;
+    // InternalFXDsl.g:1759:1: rule__FXColumn__EditableAssignment_1 : ( ( 'editable' ) ) ;
     public final void rule__FXColumn__EditableAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:2222:1: ( ( ( 'editable' ) ) )
-            // InternalFXDsl.g:2223:2: ( ( 'editable' ) )
+            // InternalFXDsl.g:1763:1: ( ( ( 'editable' ) ) )
+            // InternalFXDsl.g:1764:2: ( ( 'editable' ) )
             {
-            // InternalFXDsl.g:2223:2: ( ( 'editable' ) )
-            // InternalFXDsl.g:2224:3: ( 'editable' )
-            {
-             before(grammarAccess.getFXColumnAccess().getEditableEditableKeyword_1_0()); 
-            // InternalFXDsl.g:2225:3: ( 'editable' )
-            // InternalFXDsl.g:2226:4: 'editable'
+            // InternalFXDsl.g:1764:2: ( ( 'editable' ) )
+            // InternalFXDsl.g:1765:3: ( 'editable' )
             {
              before(grammarAccess.getFXColumnAccess().getEditableEditableKeyword_1_0()); 
-            match(input,41,FOLLOW_2); 
+            // InternalFXDsl.g:1766:3: ( 'editable' )
+            // InternalFXDsl.g:1767:4: 'editable'
+            {
+             before(grammarAccess.getFXColumnAccess().getEditableEditableKeyword_1_0()); 
+            match(input,35,FOLLOW_2); 
              after(grammarAccess.getFXColumnAccess().getEditableEditableKeyword_1_0()); 
 
             }
@@ -6761,24 +5449,24 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FXColumn__UseCustomCellFactoryAssignment_2"
-    // InternalFXDsl.g:2237:1: rule__FXColumn__UseCustomCellFactoryAssignment_2 : ( ( 'useCustomCellFactory' ) ) ;
+    // InternalFXDsl.g:1778:1: rule__FXColumn__UseCustomCellFactoryAssignment_2 : ( ( 'useCustomCellFactory' ) ) ;
     public final void rule__FXColumn__UseCustomCellFactoryAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:2241:1: ( ( ( 'useCustomCellFactory' ) ) )
-            // InternalFXDsl.g:2242:2: ( ( 'useCustomCellFactory' ) )
+            // InternalFXDsl.g:1782:1: ( ( ( 'useCustomCellFactory' ) ) )
+            // InternalFXDsl.g:1783:2: ( ( 'useCustomCellFactory' ) )
             {
-            // InternalFXDsl.g:2242:2: ( ( 'useCustomCellFactory' ) )
-            // InternalFXDsl.g:2243:3: ( 'useCustomCellFactory' )
-            {
-             before(grammarAccess.getFXColumnAccess().getUseCustomCellFactoryUseCustomCellFactoryKeyword_2_0()); 
-            // InternalFXDsl.g:2244:3: ( 'useCustomCellFactory' )
-            // InternalFXDsl.g:2245:4: 'useCustomCellFactory'
+            // InternalFXDsl.g:1783:2: ( ( 'useCustomCellFactory' ) )
+            // InternalFXDsl.g:1784:3: ( 'useCustomCellFactory' )
             {
              before(grammarAccess.getFXColumnAccess().getUseCustomCellFactoryUseCustomCellFactoryKeyword_2_0()); 
-            match(input,42,FOLLOW_2); 
+            // InternalFXDsl.g:1785:3: ( 'useCustomCellFactory' )
+            // InternalFXDsl.g:1786:4: 'useCustomCellFactory'
+            {
+             before(grammarAccess.getFXColumnAccess().getUseCustomCellFactoryUseCustomCellFactoryKeyword_2_0()); 
+            match(input,36,FOLLOW_2); 
              after(grammarAccess.getFXColumnAccess().getUseCustomCellFactoryUseCustomCellFactoryKeyword_2_0()); 
 
             }
@@ -6806,17 +5494,17 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FXColumn__NameAssignment_4"
-    // InternalFXDsl.g:2256:1: rule__FXColumn__NameAssignment_4 : ( ruleEString ) ;
+    // InternalFXDsl.g:1797:1: rule__FXColumn__NameAssignment_4 : ( ruleEString ) ;
     public final void rule__FXColumn__NameAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:2260:1: ( ( ruleEString ) )
-            // InternalFXDsl.g:2261:2: ( ruleEString )
+            // InternalFXDsl.g:1801:1: ( ( ruleEString ) )
+            // InternalFXDsl.g:1802:2: ( ruleEString )
             {
-            // InternalFXDsl.g:2261:2: ( ruleEString )
-            // InternalFXDsl.g:2262:3: ruleEString
+            // InternalFXDsl.g:1802:2: ( ruleEString )
+            // InternalFXDsl.g:1803:3: ruleEString
             {
              before(grammarAccess.getFXColumnAccess().getNameEStringParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
@@ -6846,26 +5534,26 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__FXColumn__NameAssignment_4"
 
 
-    // $ANTLR start "rule__FXColumn__WidthAssignment_6_1"
-    // InternalFXDsl.g:2271:1: rule__FXColumn__WidthAssignment_6_1 : ( ruleEDouble ) ;
-    public final void rule__FXColumn__WidthAssignment_6_1() throws RecognitionException {
+    // $ANTLR start "rule__FXColumn__WidthAssignment_5_1_1"
+    // InternalFXDsl.g:1812:1: rule__FXColumn__WidthAssignment_5_1_1 : ( ruleEDouble ) ;
+    public final void rule__FXColumn__WidthAssignment_5_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:2275:1: ( ( ruleEDouble ) )
-            // InternalFXDsl.g:2276:2: ( ruleEDouble )
+            // InternalFXDsl.g:1816:1: ( ( ruleEDouble ) )
+            // InternalFXDsl.g:1817:2: ( ruleEDouble )
             {
-            // InternalFXDsl.g:2276:2: ( ruleEDouble )
-            // InternalFXDsl.g:2277:3: ruleEDouble
+            // InternalFXDsl.g:1817:2: ( ruleEDouble )
+            // InternalFXDsl.g:1818:3: ruleEDouble
             {
-             before(grammarAccess.getFXColumnAccess().getWidthEDoubleParserRuleCall_6_1_0()); 
+             before(grammarAccess.getFXColumnAccess().getWidthEDoubleParserRuleCall_5_1_1_0()); 
             pushFollow(FOLLOW_2);
             ruleEDouble();
 
             state._fsp--;
 
-             after(grammarAccess.getFXColumnAccess().getWidthEDoubleParserRuleCall_6_1_0()); 
+             after(grammarAccess.getFXColumnAccess().getWidthEDoubleParserRuleCall_5_1_1_0()); 
 
             }
 
@@ -6884,29 +5572,29 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__FXColumn__WidthAssignment_6_1"
+    // $ANTLR end "rule__FXColumn__WidthAssignment_5_1_1"
 
 
-    // $ANTLR start "rule__FXColumn__AlignmentAssignment_7_1"
-    // InternalFXDsl.g:2286:1: rule__FXColumn__AlignmentAssignment_7_1 : ( rulePos ) ;
-    public final void rule__FXColumn__AlignmentAssignment_7_1() throws RecognitionException {
+    // $ANTLR start "rule__FXColumn__AlignmentAssignment_5_2_1"
+    // InternalFXDsl.g:1827:1: rule__FXColumn__AlignmentAssignment_5_2_1 : ( rulePos ) ;
+    public final void rule__FXColumn__AlignmentAssignment_5_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:2290:1: ( ( rulePos ) )
-            // InternalFXDsl.g:2291:2: ( rulePos )
+            // InternalFXDsl.g:1831:1: ( ( rulePos ) )
+            // InternalFXDsl.g:1832:2: ( rulePos )
             {
-            // InternalFXDsl.g:2291:2: ( rulePos )
-            // InternalFXDsl.g:2292:3: rulePos
+            // InternalFXDsl.g:1832:2: ( rulePos )
+            // InternalFXDsl.g:1833:3: rulePos
             {
-             before(grammarAccess.getFXColumnAccess().getAlignmentPosEnumRuleCall_7_1_0()); 
+             before(grammarAccess.getFXColumnAccess().getAlignmentPosEnumRuleCall_5_2_1_0()); 
             pushFollow(FOLLOW_2);
             rulePos();
 
             state._fsp--;
 
-             after(grammarAccess.getFXColumnAccess().getAlignmentPosEnumRuleCall_7_1_0()); 
+             after(grammarAccess.getFXColumnAccess().getAlignmentPosEnumRuleCall_5_2_1_0()); 
 
             }
 
@@ -6925,37 +5613,37 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__FXColumn__AlignmentAssignment_7_1"
+    // $ANTLR end "rule__FXColumn__AlignmentAssignment_5_2_1"
 
 
-    // $ANTLR start "rule__FXColumn__AssociatedFXPropertyAssignment_8_1"
-    // InternalFXDsl.g:2301:1: rule__FXColumn__AssociatedFXPropertyAssignment_8_1 : ( ( ruleEString ) ) ;
-    public final void rule__FXColumn__AssociatedFXPropertyAssignment_8_1() throws RecognitionException {
+    // $ANTLR start "rule__FXColumn__AssociatedFXPropertyAssignment_5_3_1"
+    // InternalFXDsl.g:1842:1: rule__FXColumn__AssociatedFXPropertyAssignment_5_3_1 : ( ( ruleEString ) ) ;
+    public final void rule__FXColumn__AssociatedFXPropertyAssignment_5_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:2305:1: ( ( ( ruleEString ) ) )
-            // InternalFXDsl.g:2306:2: ( ( ruleEString ) )
+            // InternalFXDsl.g:1846:1: ( ( ( ruleEString ) ) )
+            // InternalFXDsl.g:1847:2: ( ( ruleEString ) )
             {
-            // InternalFXDsl.g:2306:2: ( ( ruleEString ) )
-            // InternalFXDsl.g:2307:3: ( ruleEString )
+            // InternalFXDsl.g:1847:2: ( ( ruleEString ) )
+            // InternalFXDsl.g:1848:3: ( ruleEString )
             {
-             before(grammarAccess.getFXColumnAccess().getAssociatedFXPropertyFXPropertyCrossReference_8_1_0()); 
-            // InternalFXDsl.g:2308:3: ( ruleEString )
-            // InternalFXDsl.g:2309:4: ruleEString
+             before(grammarAccess.getFXColumnAccess().getAssociatedFXPropertyFXPropertyCrossReference_5_3_1_0()); 
+            // InternalFXDsl.g:1849:3: ( ruleEString )
+            // InternalFXDsl.g:1850:4: ruleEString
             {
-             before(grammarAccess.getFXColumnAccess().getAssociatedFXPropertyFXPropertyEStringParserRuleCall_8_1_0_1()); 
+             before(grammarAccess.getFXColumnAccess().getAssociatedFXPropertyFXPropertyEStringParserRuleCall_5_3_1_0_1()); 
             pushFollow(FOLLOW_2);
             ruleEString();
 
             state._fsp--;
 
-             after(grammarAccess.getFXColumnAccess().getAssociatedFXPropertyFXPropertyEStringParserRuleCall_8_1_0_1()); 
+             after(grammarAccess.getFXColumnAccess().getAssociatedFXPropertyFXPropertyEStringParserRuleCall_5_3_1_0_1()); 
 
             }
 
-             after(grammarAccess.getFXColumnAccess().getAssociatedFXPropertyFXPropertyCrossReference_8_1_0()); 
+             after(grammarAccess.getFXColumnAccess().getAssociatedFXPropertyFXPropertyCrossReference_5_3_1_0()); 
 
             }
 
@@ -6974,21 +5662,21 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__FXColumn__AssociatedFXPropertyAssignment_8_1"
+    // $ANTLR end "rule__FXColumn__AssociatedFXPropertyAssignment_5_3_1"
 
 
     // $ANTLR start "rule__FXModel__NameAssignment_2"
-    // InternalFXDsl.g:2320:1: rule__FXModel__NameAssignment_2 : ( ruleEString ) ;
+    // InternalFXDsl.g:1861:1: rule__FXModel__NameAssignment_2 : ( ruleEString ) ;
     public final void rule__FXModel__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:2324:1: ( ( ruleEString ) )
-            // InternalFXDsl.g:2325:2: ( ruleEString )
+            // InternalFXDsl.g:1865:1: ( ( ruleEString ) )
+            // InternalFXDsl.g:1866:2: ( ruleEString )
             {
-            // InternalFXDsl.g:2325:2: ( ruleEString )
-            // InternalFXDsl.g:2326:3: ruleEString
+            // InternalFXDsl.g:1866:2: ( ruleEString )
+            // InternalFXDsl.g:1867:3: ruleEString
             {
              before(grammarAccess.getFXModelAccess().getNameEStringParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -7018,26 +5706,26 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__FXModel__NameAssignment_2"
 
 
-    // $ANTLR start "rule__FXModel__FxPropertiesAssignment_4_2"
-    // InternalFXDsl.g:2335:1: rule__FXModel__FxPropertiesAssignment_4_2 : ( ruleFXProperty ) ;
-    public final void rule__FXModel__FxPropertiesAssignment_4_2() throws RecognitionException {
+    // $ANTLR start "rule__FXModel__FxPropertiesAssignment_4"
+    // InternalFXDsl.g:1876:1: rule__FXModel__FxPropertiesAssignment_4 : ( ruleFXProperty ) ;
+    public final void rule__FXModel__FxPropertiesAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:2339:1: ( ( ruleFXProperty ) )
-            // InternalFXDsl.g:2340:2: ( ruleFXProperty )
+            // InternalFXDsl.g:1880:1: ( ( ruleFXProperty ) )
+            // InternalFXDsl.g:1881:2: ( ruleFXProperty )
             {
-            // InternalFXDsl.g:2340:2: ( ruleFXProperty )
-            // InternalFXDsl.g:2341:3: ruleFXProperty
+            // InternalFXDsl.g:1881:2: ( ruleFXProperty )
+            // InternalFXDsl.g:1882:3: ruleFXProperty
             {
-             before(grammarAccess.getFXModelAccess().getFxPropertiesFXPropertyParserRuleCall_4_2_0()); 
+             before(grammarAccess.getFXModelAccess().getFxPropertiesFXPropertyParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
             ruleFXProperty();
 
             state._fsp--;
 
-             after(grammarAccess.getFXModelAccess().getFxPropertiesFXPropertyParserRuleCall_4_2_0()); 
+             after(grammarAccess.getFXModelAccess().getFxPropertiesFXPropertyParserRuleCall_4_0()); 
 
             }
 
@@ -7056,29 +5744,29 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__FXModel__FxPropertiesAssignment_4_2"
+    // $ANTLR end "rule__FXModel__FxPropertiesAssignment_4"
 
 
-    // $ANTLR start "rule__FXModel__FxPropertiesAssignment_4_3_1"
-    // InternalFXDsl.g:2350:1: rule__FXModel__FxPropertiesAssignment_4_3_1 : ( ruleFXProperty ) ;
-    public final void rule__FXModel__FxPropertiesAssignment_4_3_1() throws RecognitionException {
+    // $ANTLR start "rule__FXModel__FxPropertiesAssignment_5"
+    // InternalFXDsl.g:1891:1: rule__FXModel__FxPropertiesAssignment_5 : ( ruleFXProperty ) ;
+    public final void rule__FXModel__FxPropertiesAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:2354:1: ( ( ruleFXProperty ) )
-            // InternalFXDsl.g:2355:2: ( ruleFXProperty )
+            // InternalFXDsl.g:1895:1: ( ( ruleFXProperty ) )
+            // InternalFXDsl.g:1896:2: ( ruleFXProperty )
             {
-            // InternalFXDsl.g:2355:2: ( ruleFXProperty )
-            // InternalFXDsl.g:2356:3: ruleFXProperty
+            // InternalFXDsl.g:1896:2: ( ruleFXProperty )
+            // InternalFXDsl.g:1897:3: ruleFXProperty
             {
-             before(grammarAccess.getFXModelAccess().getFxPropertiesFXPropertyParserRuleCall_4_3_1_0()); 
+             before(grammarAccess.getFXModelAccess().getFxPropertiesFXPropertyParserRuleCall_5_0()); 
             pushFollow(FOLLOW_2);
             ruleFXProperty();
 
             state._fsp--;
 
-             after(grammarAccess.getFXModelAccess().getFxPropertiesFXPropertyParserRuleCall_4_3_1_0()); 
+             after(grammarAccess.getFXModelAccess().getFxPropertiesFXPropertyParserRuleCall_5_0()); 
 
             }
 
@@ -7097,21 +5785,62 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__FXModel__FxPropertiesAssignment_4_3_1"
+    // $ANTLR end "rule__FXModel__FxPropertiesAssignment_5"
+
+
+    // $ANTLR start "rule__FXProperty__TypeAssignment_1"
+    // InternalFXDsl.g:1906:1: rule__FXProperty__TypeAssignment_1 : ( ruleEString ) ;
+    public final void rule__FXProperty__TypeAssignment_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalFXDsl.g:1910:1: ( ( ruleEString ) )
+            // InternalFXDsl.g:1911:2: ( ruleEString )
+            {
+            // InternalFXDsl.g:1911:2: ( ruleEString )
+            // InternalFXDsl.g:1912:3: ruleEString
+            {
+             before(grammarAccess.getFXPropertyAccess().getTypeEStringParserRuleCall_1_0()); 
+            pushFollow(FOLLOW_2);
+            ruleEString();
+
+            state._fsp--;
+
+             after(grammarAccess.getFXPropertyAccess().getTypeEStringParserRuleCall_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__FXProperty__TypeAssignment_1"
 
 
     // $ANTLR start "rule__FXProperty__NameAssignment_2"
-    // InternalFXDsl.g:2365:1: rule__FXProperty__NameAssignment_2 : ( ruleEString ) ;
+    // InternalFXDsl.g:1921:1: rule__FXProperty__NameAssignment_2 : ( ruleEString ) ;
     public final void rule__FXProperty__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalFXDsl.g:2369:1: ( ( ruleEString ) )
-            // InternalFXDsl.g:2370:2: ( ruleEString )
+            // InternalFXDsl.g:1925:1: ( ( ruleEString ) )
+            // InternalFXDsl.g:1926:2: ( ruleEString )
             {
-            // InternalFXDsl.g:2370:2: ( ruleEString )
-            // InternalFXDsl.g:2371:3: ruleEString
+            // InternalFXDsl.g:1926:2: ( ruleEString )
+            // InternalFXDsl.g:1927:3: ruleEString
             {
              before(grammarAccess.getFXPropertyAccess().getNameEStringParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -7140,47 +5869,6 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
     }
     // $ANTLR end "rule__FXProperty__NameAssignment_2"
 
-
-    // $ANTLR start "rule__FXProperty__TypeAssignment_4_1"
-    // InternalFXDsl.g:2380:1: rule__FXProperty__TypeAssignment_4_1 : ( ruleEString ) ;
-    public final void rule__FXProperty__TypeAssignment_4_1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalFXDsl.g:2384:1: ( ( ruleEString ) )
-            // InternalFXDsl.g:2385:2: ( ruleEString )
-            {
-            // InternalFXDsl.g:2385:2: ( ruleEString )
-            // InternalFXDsl.g:2386:3: ruleEString
-            {
-             before(grammarAccess.getFXPropertyAccess().getTypeEStringParserRuleCall_4_1_0()); 
-            pushFollow(FOLLOW_2);
-            ruleEString();
-
-            state._fsp--;
-
-             after(grammarAccess.getFXPropertyAccess().getTypeEStringParserRuleCall_4_1_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__FXProperty__TypeAssignment_4_1"
-
     // Delegated rules
 
 
@@ -7188,22 +5876,20 @@ public class InternalFXDslParser extends AbstractInternalContentAssistParser {
 
     public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000018000400000L});
+    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000600400000L});
     public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000000030L});
     public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000017000000L});
-    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000060020000000L});
-    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000009000000L});
-    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000008000002L});
-    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x00000001C1000000L});
-    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000006000000040L});
-    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x00000000003FE000L});
-    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000401000000L});
-    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000800000000L});
-    public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000001001000000L});
-    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000000001800L});
-    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000002000000040L});
+    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000001847000000L});
+    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000001804000000L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000001804000002L});
+    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000039000000L});
+    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000180000040L});
+    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x00000000003FE000L});
+    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000001000030L});
+    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000000032L});
+    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000001800L});
+    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000080000040L});
 
 }

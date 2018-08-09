@@ -17,7 +17,9 @@ import org.eclipse.xtext.Action;
 import org.eclipse.xtext.Parameter;
 import org.eclipse.xtext.ParserRule;
 import org.eclipse.xtext.serializer.ISerializationContext;
+import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
 import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequencer;
+import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 
 @SuppressWarnings("all")
 public class FXDslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
@@ -74,7 +76,7 @@ public class FXDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     FXModel returns FXModel
 	 *
 	 * Constraint:
-	 *     (name=EString (fxProperties+=FXProperty fxProperties+=FXProperty*)?)
+	 *     (name=EString fxProperties+=FXProperty fxProperties+=FXProperty*)
 	 */
 	protected void sequence_FXModel(ISerializationContext context, FXModel semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -86,10 +88,19 @@ public class FXDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     FXProperty returns FXProperty
 	 *
 	 * Constraint:
-	 *     (name=EString type=EString?)
+	 *     (type=EString name=EString)
 	 */
 	protected void sequence_FXProperty(ISerializationContext context, FXProperty semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, FxuiPackage.Literals.FX_PROPERTY__TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FxuiPackage.Literals.FX_PROPERTY__TYPE));
+			if (transientValues.isValueTransient(semanticObject, FxuiPackage.Literals.FX_NAMED_ELEMENT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FxuiPackage.Literals.FX_NAMED_ELEMENT__NAME));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getFXPropertyAccess().getTypeEStringParserRuleCall_1_0(), semanticObject.getType());
+		feeder.accept(grammarAccess.getFXPropertyAccess().getNameEStringParserRuleCall_2_0(), semanticObject.getName());
+		feeder.finish();
 	}
 	
 	
