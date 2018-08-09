@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: de.dc.fx.ui.model.fxdsl.ui
+Bundle-ManifestVersion: 2
+Bundle-Name: de.dc.fx.ui.model.fxdsl.ui
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: de.dc.fx.ui.model.fxdsl.ui; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: de.dc.fx.ui.model.fxdsl,
+ de.dc.fx.ui.model.fxdsl.ide,
+ de.dc.fx.ui.model,
+ org.eclipse.xtext.ui,
+ org.eclipse.xtext.ui.shared,
+ org.eclipse.xtext.ui.codetemplates.ui,
+ org.eclipse.ui.editors;bundle-version="3.5.0",
+ org.eclipse.ui.ide;bundle-version="3.5.0",
+ org.eclipse.ui,
+ org.eclipse.compare,
+ org.eclipse.xtext.builder,
+ org.eclipse.xtext.xbase.lib;bundle-version="2.14.0",
+ org.eclipse.xtend.lib;resolution:=optional
+Import-Package: org.apache.log4j
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: de.dc.fx.ui.model.fxdsl.ui.internal,
+ de.dc.fx.ui.model.ui.contentassist,
+ de.dc.fx.ui.model.ui.quickfix
+Bundle-Activator: de.dc.fx.ui.model.fxdsl.ui.internal.FxdslActivator

@@ -8,11 +8,16 @@ import java.nio.file.Paths;
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
+import org.eclipse.core.resources.IFile;
+import org.eclipse.core.resources.IProject;
 import org.eclipse.jface.viewers.IStructuredSelection;
+import org.eclipse.ui.IEditorInput;
+import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.ISelectionService;
 import org.eclipse.ui.PlatformUI;
 
 import de.dc.fx.ui.model.fxui.FXTableView;
+import de.dc.fx.ui.model.fxui.presentation.FxuiEditor;
 import de.dc.fx.ui.model.template.ApplicationTemplate;
 
 public class GenerateSourceHandler extends AbstractHandler {
@@ -38,6 +43,21 @@ public class GenerateSourceHandler extends AbstractHandler {
 				}
 
 			}
+		}
+		return null;
+	}
+	
+	public static IProject getCurrentProject() {
+		IEditorPart editorPart = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().getActiveEditor();
+
+		if (editorPart != null && editorPart instanceof FxuiEditor) {
+			FxuiEditor editor = (FxuiEditor) editorPart;
+			
+			
+			//			IEditorInput input = editorPart.getEditorInput();
+//			IFile file = input.
+//			IProject activeProject = file.getProject();
+//			return activeProject;
 		}
 		return null;
 	}
