@@ -7,7 +7,6 @@ import com.google.inject.Binder;
 import com.google.inject.name.Names;
 import de.dc.fx.ui.model.ide.contentassist.antlr.FXDslParser;
 import de.dc.fx.ui.model.ide.contentassist.antlr.internal.InternalFXDslLexer;
-import org.eclipse.xtext.ide.DefaultIdeModule;
 import org.eclipse.xtext.ide.LexerIdeBindings;
 import org.eclipse.xtext.ide.editor.contentassist.FQNPrefixMatcher;
 import org.eclipse.xtext.ide.editor.contentassist.IPrefixMatcher;
@@ -18,12 +17,13 @@ import org.eclipse.xtext.ide.editor.contentassist.antlr.internal.Lexer;
 import org.eclipse.xtext.ide.refactoring.IRenameStrategy2;
 import org.eclipse.xtext.ide.server.rename.IRenameService;
 import org.eclipse.xtext.ide.server.rename.RenameService;
+import org.eclipse.xtext.xbase.ide.DefaultXbaseIdeModule;
 
 /**
  * Manual modifications go to {@link FXDslIdeModule}.
  */
 @SuppressWarnings("all")
-public abstract class AbstractFXDslIdeModule extends DefaultIdeModule {
+public abstract class AbstractFXDslIdeModule extends DefaultXbaseIdeModule {
 
 	// contributed by org.eclipse.xtext.xtext.generator.parser.antlr.XtextAntlrGeneratorFragment2
 	public void configureContentAssistLexer(Binder binder) {

@@ -3,7 +3,7 @@
  */
 package de.dc.fx.ui.model.scoping;
 
-import org.eclipse.xtext.scoping.impl.DelegatingScopeProvider;
+import org.eclipse.xtext.xbase.scoping.batch.XbaseBatchScopeProvider;
 
-public abstract class AbstractFXDslScopeProvider extends DelegatingScopeProvider {
+public abstract class AbstractFXDslScopeProvider extends XbaseBatchScopeProvider {
 }

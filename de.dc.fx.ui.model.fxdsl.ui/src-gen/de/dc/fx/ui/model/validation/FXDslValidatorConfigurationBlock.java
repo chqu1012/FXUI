@@ -10,15 +10,16 @@ import org.eclipse.jface.dialogs.IDialogSettings;
 import org.eclipse.swt.widgets.Combo;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.xtext.ui.preferences.OptionsConfigurationBlock;
-import org.eclipse.xtext.ui.validation.AbstractValidatorConfigurationBlock;
 import org.eclipse.xtext.validation.SeverityConverter;
+import org.eclipse.xtext.xbase.ui.validation.XbaseValidationConfigurationBlock;
 
 @SuppressWarnings("restriction")
-public class FXDslValidatorConfigurationBlock extends AbstractValidatorConfigurationBlock {
+public class FXDslValidatorConfigurationBlock extends XbaseValidationConfigurationBlock {
 
 	@Override
 	protected void fillSettingsPage(Composite composite, int nColumns, int defaultIndent) {
 		addComboBox(FXDslConfigurableIssueCodesProvider.DEPRECATED_MODEL_PART, "Deprecated Model Part", composite, defaultIndent);
+		super.fillSettingsPage(composite, nColumns, defaultIndent);
 	}
 
 	@Override
@@ -37,6 +38,7 @@ public class FXDslValidatorConfigurationBlock extends AbstractValidatorConfigura
 
 	@Override
 	protected void validateSettings(String changedKey, String oldValue, String newValue) {
+		super.validateSettings(changedKey, oldValue, newValue);
 	}
 
 	protected Combo addComboBox(String prefKey, String label, Composite parent, int indent) {
