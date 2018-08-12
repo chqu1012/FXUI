@@ -82,11 +82,11 @@ public class ModelProviderTemplate implements IGenerator<FXModel> {
       int _minus = (_size - 1);
       IntegerRange _upTo = new IntegerRange(0, _minus);
       for(final Integer n : _upTo) {
-        _builder.append("\t\t\t");
+        _builder.append("\t\t");
         CharSequence _type = this.getType(data.getFxProperties().get((n).intValue()), (n).intValue());
-        _builder.append(_type, "\t\t\t");
+        _builder.append(_type, "\t\t");
         _builder.newLineIfNotEmpty();
-        _builder.append("\t\t\t");
+        _builder.append("\t\t");
       }
     }
     final Function1<FXProperty, String> _function = (FXProperty it) -> {
@@ -97,14 +97,14 @@ public class ModelProviderTemplate implements IGenerator<FXModel> {
     };
     final String parameter = IterableExtensions.<String>reduce(ListExtensions.<FXProperty, String>map(data.getFxProperties(), _function), _function_1);
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t\t");
+    _builder.append("\t\t");
     String _firstLower_1 = StringExtensions.toFirstLower(data.getName());
-    _builder.append(_firstLower_1, "\t\t\t");
+    _builder.append(_firstLower_1, "\t\t");
     _builder.append("s.add(new ");
     String _firstUpper_4 = StringExtensions.toFirstUpper(data.getName());
-    _builder.append(_firstUpper_4, "\t\t\t");
+    _builder.append(_firstUpper_4, "\t\t");
     _builder.append("(");
-    _builder.append(parameter, "\t\t\t");
+    _builder.append(parameter, "\t\t");
     _builder.append("));");
     _builder.newLineIfNotEmpty();
     _builder.append("\t\t");

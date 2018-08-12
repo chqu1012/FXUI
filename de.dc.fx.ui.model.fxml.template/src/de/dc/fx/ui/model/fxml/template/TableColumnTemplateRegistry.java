@@ -6,7 +6,9 @@ import de.dc.fx.ui.model.fxui.FXColumn;
 
 public enum TableColumnTemplateRegistry {
 	BaseCellFactory(new BaseCellFactoryTemplate(),"/cell/", "BaseCellFactory.java", true, SrcType.SrcGen),
-	CellFactory(new CellFactoryTemplate(),"/cell/", ".java");
+	BaseEditingSupport(new BaseEditingSupportTemplate(), "/cell/edit/", "BaseEditingSupport.java", true, SrcType.SrcGen),
+	CellFactory(new CellFactoryTemplate(),"/cell/", "CellFactory.java"),
+	EditingSupport(new EditingSupportTemplate(), "/cell/edit/","EditingSupport.java");
 	
 	private IGenerator<FXColumn> template;
 	private String fileExtension;

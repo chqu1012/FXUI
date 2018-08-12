@@ -13,6 +13,7 @@ class BaseControllerTemplate implements IGenerator<FXTableView>{
 	import javafx.collections.transformation.*;
 	import javafx.fxml.*;
 	import javafx.scene.control.*;
+	import java.time.*;
 	
 	public abstract class «view.name»BaseTableViewer<T> extends TableView<T>{
 		
@@ -25,7 +26,7 @@ class BaseControllerTemplate implements IGenerator<FXTableView>{
 	
 		«FOR col : view.fxColumns»
 		@FXML
-		protected TableColumn<T, T> «col.associatedFXProperty.name.toFirstLower»Column;
+		protected TableColumn<T, «col.associatedFXProperty.type»> «col.associatedFXProperty.name.toFirstLower»Column;
 		«ENDFOR»
 	
 		public «view.name»BaseTableViewer() {
@@ -61,5 +62,4 @@ class BaseControllerTemplate implements IGenerator<FXTableView>{
 		}
 	}
 	'''
-	
 }

@@ -56,7 +56,7 @@ public class GenerateSourceHandler extends AbstractHandler {
 								for (TableColumnTemplateRegistry template : TableColumnTemplateRegistry.values()) {
 									String srcPath = getLocation(template.getSrcType(), project, view);
 									String content = template.getTemplate().gen(column);
-									String name = view.getName()+"TableCell"+column.getAssociatedFXProperty().getName()+"Factory"; 
+									String name = view.getName()+column.getAssociatedFXProperty().getName(); 
 									String genFilePath = template.getGenFilePath(srcPath, name);
 									writeFile(genFilePath, content);
 								}

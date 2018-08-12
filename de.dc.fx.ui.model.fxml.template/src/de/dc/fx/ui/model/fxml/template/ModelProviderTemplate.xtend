@@ -24,10 +24,10 @@ class ModelProviderTemplate implements IGenerator<FXModel>{
 	
 		private «data.name.toFirstUpper»ModelProvider() {
 			for (int j = 0; j < 100; j++) {
-				«FOR n : 0..data.fxProperties.size-1»
-				«data.fxProperties.get(n).getType(n)»
-				«ENDFOR»«val parameter = data.fxProperties.map[it.name.toFirstLower].reduce[p1, p2|p1+', '+p2]»
-				«data.name.toFirstLower»s.add(new «data.name.toFirstUpper»(«parameter»));
+			«FOR n : 0..data.fxProperties.size-1»
+			«data.fxProperties.get(n).getType(n)»
+			«ENDFOR»«val parameter = data.fxProperties.map[it.name.toFirstLower].reduce[p1, p2|p1+', '+p2]»
+			«data.name.toFirstLower»s.add(new «data.name.toFirstUpper»(«parameter»));
 			}
 		}
 		

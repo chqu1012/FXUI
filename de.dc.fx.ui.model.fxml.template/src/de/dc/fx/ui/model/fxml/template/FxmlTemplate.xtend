@@ -11,17 +11,17 @@ class FxmlTemplate implements IGenerator<FXTableView>{
 	<?import javafx.scene.control.TableView?>
 	<?import javafx.scene.control.cell.PropertyValueFactory?>
 	«FOR col : view.fxColumns»
-	<?import «view.packagePath».cell.«view.name»TableCell«col.associatedFXProperty.name»Factory?>
+	<?import «view.packagePath».cell.«view.name»«col.associatedFXProperty.name»CellFactory?>
 	«ENDFOR»
-	<fx:root type="TableView" fx:id="tableView" stylesheets="@css/«view.name»TableViewer.css" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.162">
+	<fx:root type="TableView" fx:id="tableView" editable="true" stylesheets="@css/«view.name»TableViewer.css" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.162">
 	  <columns>
-		«FOR col : view.fxColumns»
-		<TableColumn fx:id="«col.name»Column" prefWidth="«col.width»" text="«col.associatedFXProperty.name»">
+		«FOR col : view.fxColumns»«val propertyName = col.associatedFXProperty.name»
+		<TableColumn fx:id="«propertyName.toFirstLower»Column" prefWidth="«col.width»" text="«propertyName»">
 			<cellValueFactory>
-			    <PropertyValueFactory property="«col.associatedFXProperty.name»"/>
+			    <PropertyValueFactory property="«propertyName.toFirstLower»"/>
 			</cellValueFactory>
 			<cellFactory>
-				<«view.name»TableCell«col.associatedFXProperty.name»Factory/>
+				<«view.name»«propertyName»CellFactory/>
 			</cellFactory>
 		</TableColumn>
 		«ENDFOR»
