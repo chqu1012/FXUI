@@ -5,7 +5,8 @@ import java.io.File;
 import de.dc.fx.ui.model.fxui.FXModel;
 
 public enum TableEntityRegistry {
-	Entity(new EntityTemplate(), "/model/", ".java");
+	Entity(new EntityTemplate(), "/model/", ".java"),
+	ModelProvider(new ModelProviderTemplate(), "/provider/", "ModelProvider.java");
 	
 	private IGenerator<FXModel> template;
 	private String fileExtension;

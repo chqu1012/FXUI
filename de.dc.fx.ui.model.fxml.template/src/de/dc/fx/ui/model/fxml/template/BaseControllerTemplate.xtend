@@ -7,9 +7,11 @@ class BaseControllerTemplate implements IGenerator<FXTableView>{
 	override gen(FXTableView view)'''
 	package «view.packagePath».ui;
 	
+	import java.io.IOException;
+	
 	import javafx.collections.*;
 	import javafx.collections.transformation.*;
-	import javafx.fxml.FXML;
+	import javafx.fxml.*;
 	import javafx.scene.control.*;
 	
 	public abstract class «view.name»BaseTableViewer<T> extends TableView<T>{

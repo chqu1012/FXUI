@@ -7,7 +7,8 @@ class ApplicationTemplate implements IGenerator<FXTableView>{
 	override gen(FXTableView data)'''
 	package «data.packagePath»;
 	
-	import «data.packagePath».ui.«data.name.toFirstUpper»TableViewer;
+	import «data.packagePath».ui.*;
+	import «data.packagePath».provider.*;
 	import javafx.application.Application;
 	import javafx.scene.Scene;
 	import javafx.stage.Stage;
@@ -22,6 +23,7 @@ class ApplicationTemplate implements IGenerator<FXTableView>{
 		@Override
 		public void start(Stage primaryStage) throws Exception {
 			«data.name.toFirstUpper»TableViewer «data.name.toFirstLower»TableViewer = new «data.name.toFirstUpper»TableViewer();
+			«data.name.toFirstLower»TableViewer.setItems(«data.name.toFirstUpper»ModelProvider.Instance.get«data.name.toFirstUpper»s());
 			Scene scene = new Scene(«data.name.toFirstLower»TableViewer, 1400, 800);
 			primaryStage.setScene(scene);
 			primaryStage.initStyle(StageStyle.DECORATED);
