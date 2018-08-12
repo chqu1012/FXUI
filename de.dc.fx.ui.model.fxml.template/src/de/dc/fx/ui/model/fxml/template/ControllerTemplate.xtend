@@ -14,21 +14,9 @@ class ControllerTemplate implements IGenerator<FXTableView>{
 	import «view.packagePath».model.*;
 	
 	public class «view.name»TableViewer extends «view.name»BaseTableViewer<«view.fxEntity.name.toFirstUpper»>{
-		
-		public «view.name»TableViewer(){
-			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("«view.name»TableViewer.fxml"));
-			fxmlLoader.setRoot(this);
-			fxmlLoader.setController(this);
 	
-			try {
-				fxmlLoader.load();
-			} catch (IOException exception) {
-				throw new RuntimeException(exception);
-			}
-		}
-		
-		public void initialize(){
-		}
+		@Override
+		protected void init() {}
 	}
 	'''
 	

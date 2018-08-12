@@ -5,6 +5,7 @@ import java.io.File;
 import de.dc.fx.ui.model.fxui.FXTableView;
 
 public enum TableViewTemplateRegistry {
+	Application(new ApplicationTemplate(), "/", "Application.java"),
 	BaseController(new BaseControllerTemplate(), "/ui/", "BaseTableViewer.java", false, SrcType.SrcGen),
 	Controller(new ControllerTemplate(), "/ui/", "TableViewer.java"),
 	Fxml(new FxmlTemplate(),"/ui/", "TableViewer.fxml"),

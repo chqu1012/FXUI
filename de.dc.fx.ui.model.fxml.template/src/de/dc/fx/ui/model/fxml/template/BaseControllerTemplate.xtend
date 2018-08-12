@@ -26,7 +26,25 @@ class BaseControllerTemplate implements IGenerator<FXTableView>{
 		protected TableColumn<T, T> «col.associatedFXProperty.name.toFirstLower»Column;
 		«ENDFOR»
 	
-		public abstract void initialize();
+		public «view.name»BaseTableViewer() {
+			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(getClass().getSimpleName()+".fxml"));
+			fxmlLoader.setRoot(this);
+			fxmlLoader.setController(this);
+			
+			try {
+				fxmlLoader.load();
+			} catch (IOException exception) {
+				throw new RuntimeException(exception);
+			}
+		}	
+	
+		public void initialize() {
+			sortedInput.comparatorProperty().bind(tableView.comparatorProperty());
+			tableView.setItems(sortedInput);
+			init();
+		}
+	
+		protected abstract void init();
 	
 		public SortedList<T> getSortedInput(){
 			return sortedInput;
