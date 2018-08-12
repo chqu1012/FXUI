@@ -12,17 +12,17 @@ class CellFactoryTemplate implements IGenerator<FXColumn>{
 	import «view.packagePath».cell.BaseCellFactory;
 	import «view.packagePath».model.«view.fxEntity.name»;
 	import javafx.geometry.Pos;
-	
-	public class «view.fxEntity.name»TableCellAgeFactory extends BaseCellFactory<«view.fxEntity.name»> {
+	«val fieldName = data.associatedFXProperty.name.toFirstUpper»
+	public class «view.fxEntity.name»TableCell«fieldName»Factory extends BaseCellFactory<«view.fxEntity.name»> {
 	
 		@Override
 		protected String extractValue(«view.fxEntity.name» data) {
-			return String.valueOf(data.get«data.name.toFirstUpper»());
+			return String.valueOf(data.get«fieldName»());
 		}
 		
 		@Override
 		protected Pos getAlignment() {
-			return Pos.valueOf(«data.alignment»);
+			return Pos.valueOf("«data.alignment»");
 		}
 	}
 	

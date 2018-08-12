@@ -13,23 +13,23 @@ class EntityTemplate implements IGenerator<FXModel>{
 	«val name = data.name.toFirstUpper»
 	public class «name»{
 		«FOR property : data.fxProperties»
-		private «property.type» «property.name»;
+		private «property.type» «property.name.toFirstLower»;
 		«ENDFOR»
 	
 		public «name»() {
 		}
-		«val fields = data.fxProperties.map[type+" "+name].reduce[p1, p2|p1+', '+p2]»
+		«val fields = data.fxProperties.map[it.type+" "+it.name.toFirstLower].reduce[p1, p2|p1+', '+p2]»
 		public «name»(«fields») {
 			«FOR property : data.fxProperties»
-			this.«property.name» = «property.name»;
+			this.«property.name.toFirstLower» = «property.name.toFirstLower»;
 			«ENDFOR»
 		}
 		«FOR property : data.fxProperties»
-		public String get«property.name.toFirstUpper»() {
+		public «property.type» get«property.name.toFirstUpper»() {
 			return «property.name.toFirstLower»;
 		}
 		
-		public void set«property.name.toFirstUpper»(String «property.name.toFirstLower») {
+		public void set«property.name.toFirstUpper»(«property.type» «property.name.toFirstLower») {
 			this.«property.name.toFirstLower» = «property.name.toFirstLower»;
 		}
 		«ENDFOR»

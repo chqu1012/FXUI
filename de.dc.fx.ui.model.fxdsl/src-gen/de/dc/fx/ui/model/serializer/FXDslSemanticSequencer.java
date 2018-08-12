@@ -347,7 +347,7 @@ public class FXDslSemanticSequencer extends XbaseSemanticSequencer {
 	 *         name=EString 
 	 *         width=EDouble? 
 	 *         alignment=Pos? 
-	 *         associatedFXProperty=[FXProperty|EString]?
+	 *         associatedFXProperty=[FXProperty|ID]?
 	 *     )
 	 */
 	protected void sequence_FXColumn(ISerializationContext context, FXColumn semanticObject) {
@@ -378,8 +378,8 @@ public class FXDslSemanticSequencer extends XbaseSemanticSequencer {
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, FxuiPackage.Literals.FX_PROPERTY__TYPE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FxuiPackage.Literals.FX_PROPERTY__TYPE));
-			if (transientValues.isValueTransient(semanticObject, FxuiPackage.Literals.FX_NAMED_ELEMENT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FxuiPackage.Literals.FX_NAMED_ELEMENT__NAME));
+			if (transientValues.isValueTransient(semanticObject, FxuiPackage.Literals.FX_PROPERTY__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FxuiPackage.Literals.FX_PROPERTY__NAME));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getFXPropertyAccess().getTypeEStringParserRuleCall_1_0(), semanticObject.getType());

@@ -5,39 +5,38 @@ import de.dc.fx.ui.model.fxui.FXTableView
 class BaseControllerTemplate implements IGenerator<FXTableView>{
 	
 	override gen(FXTableView view)'''
-	package «view.packagePath».controller;
+	package «view.packagePath».ui;
 	
-	import javafx.collections.FXCollections;
-	import javafx.collections.ObservableList;
-	import javafx.collections.transformation.FilteredList;
+	import javafx.collections.*;
+	import javafx.collections.transformation.*;
 	import javafx.fxml.FXML;
-	import javafx.scene.control.TableView;
+	import javafx.scene.control.*;
 	
-	public abstract class «view.name»BaseController {
+	public abstract class «view.name»BaseTableViewer<T> extends TableView<T>{
 		
-		protected ObservableList<«view.fxEntity.name»> input = FXCollections.observableArrayList();
-		protected FilteredList<«view.fxEntity.name»> filteredInput = new FilteredList<>(inputData, p->true);
-		protected SortedList<«view.fxEntity.name»> sortedInput = new SortedList<>(filteredInput);
+		protected ObservableList<T> input = FXCollections.observableArrayList();
+		protected FilteredList<T> filteredInput = new FilteredList<>(input, p->true);
+		protected SortedList<T> sortedInput = new SortedList<>(filteredInput);
 		
 	    @FXML
-	    protected TableView<«view.fxEntity.name»> tableView;
+	    protected TableView<T> tableView;
 	
 		«FOR col : view.fxColumns»
 		@FXML
-		protected TableColumn<«view.fxEntity.name», «view.fxEntity.name»> «col.name»Column;
+		protected TableColumn<T, T> «col.associatedFXProperty.name.toFirstLower»Column;
 		«ENDFOR»
 	
 		public abstract void initialize();
 	
-		public SortedList<«view.fxEntity.name»> getSortedInput(){
+		public SortedList<T> getSortedInput(){
 			return sortedInput;
 		}
 	
-		public FilteredList<«view.fxEntity.name»> getFilteredInput(){
+		public FilteredList<T> getFilteredInput(){
 			return filteredInput;
 		}
 	
-		public FilteredList<«view.fxEntity.name»> getInput(){
+		public ObservableList<T> getInput(){
 			return input;
 		}
 	}

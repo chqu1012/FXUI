@@ -31,30 +31,29 @@ public class FXDslGrammarAccess extends AbstractGrammarElementFinder {
 	public class FXTableViewElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.dc.fx.ui.model.FXDsl.FXTableView");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cFXTableViewAction_0 = (Action)cGroup.eContents().get(0);
-		private final Assignment cHasFilterAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final Keyword cHasFilterHasFilterKeyword_1_0 = (Keyword)cHasFilterAssignment_1.eContents().get(0);
-		private final Assignment cHasSorterAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final Keyword cHasSorterHasSorterKeyword_2_0 = (Keyword)cHasSorterAssignment_2.eContents().get(0);
-		private final Keyword cFXTableViewKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cNameAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cNameEStringParserRuleCall_4_0 = (RuleCall)cNameAssignment_4.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cHasFilterAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cHasFilterHasFilterKeyword_0_0 = (Keyword)cHasFilterAssignment_0.eContents().get(0);
+		private final Assignment cHasSorterAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cHasSorterHasSorterKeyword_1_0 = (Keyword)cHasSorterAssignment_1.eContents().get(0);
+		private final Keyword cFXTableViewKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cNameAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cNameEStringParserRuleCall_3_0 = (RuleCall)cNameAssignment_3.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
+		private final Keyword cPackagePathKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
+		private final Assignment cPackagePathAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
+		private final RuleCall cPackagePathEStringParserRuleCall_5_1_0 = (RuleCall)cPackagePathAssignment_5_1.eContents().get(0);
 		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
-		private final Keyword cPackagePathKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
-		private final Assignment cPackagePathAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
-		private final RuleCall cPackagePathEStringParserRuleCall_6_1_0 = (RuleCall)cPackagePathAssignment_6_1.eContents().get(0);
-		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
-		private final Assignment cFxColumnsAssignment_7_0 = (Assignment)cGroup_7.eContents().get(0);
-		private final RuleCall cFxColumnsFXColumnParserRuleCall_7_0_0 = (RuleCall)cFxColumnsAssignment_7_0.eContents().get(0);
-		private final Assignment cFxColumnsAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
-		private final RuleCall cFxColumnsFXColumnParserRuleCall_7_1_0 = (RuleCall)cFxColumnsAssignment_7_1.eContents().get(0);
-		private final Assignment cFxEntityAssignment_8 = (Assignment)cGroup.eContents().get(8);
-		private final RuleCall cFxEntityFXModelParserRuleCall_8_0 = (RuleCall)cFxEntityAssignment_8.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
+		private final Assignment cFxColumnsAssignment_6_0 = (Assignment)cGroup_6.eContents().get(0);
+		private final RuleCall cFxColumnsFXColumnParserRuleCall_6_0_0 = (RuleCall)cFxColumnsAssignment_6_0.eContents().get(0);
+		private final Assignment cFxColumnsAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
+		private final RuleCall cFxColumnsFXColumnParserRuleCall_6_1_0 = (RuleCall)cFxColumnsAssignment_6_1.eContents().get(0);
+		private final Assignment cFxEntityAssignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final RuleCall cFxEntityFXModelParserRuleCall_7_0 = (RuleCall)cFxEntityAssignment_7.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
 		//FXTableView:
-		//	{FXTableView} hasFilter?='hasFilter'?
+		//	hasFilter?='hasFilter'?
 		//	hasSorter?='hasSorter'?
 		//	'FXTableView'
 		//	name=EString
@@ -63,72 +62,69 @@ public class FXDslGrammarAccess extends AbstractGrammarElementFinder {
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{FXTableView} hasFilter?='hasFilter'? hasSorter?='hasSorter'? 'FXTableView' name=EString '{' ('packagePath'
-		//packagePath=EString)? (fxColumns+=FXColumn fxColumns+=FXColumn*)? fxEntity=FXModel? '}'
+		//hasFilter?='hasFilter'? hasSorter?='hasSorter'? 'FXTableView' name=EString '{' ('packagePath' packagePath=EString)?
+		//(fxColumns+=FXColumn fxColumns+=FXColumn*)? fxEntity=FXModel? '}'
 		public Group getGroup() { return cGroup; }
 		
-		//{FXTableView}
-		public Action getFXTableViewAction_0() { return cFXTableViewAction_0; }
-		
 		//hasFilter?='hasFilter'?
-		public Assignment getHasFilterAssignment_1() { return cHasFilterAssignment_1; }
+		public Assignment getHasFilterAssignment_0() { return cHasFilterAssignment_0; }
 		
 		//'hasFilter'
-		public Keyword getHasFilterHasFilterKeyword_1_0() { return cHasFilterHasFilterKeyword_1_0; }
+		public Keyword getHasFilterHasFilterKeyword_0_0() { return cHasFilterHasFilterKeyword_0_0; }
 		
 		//hasSorter?='hasSorter'?
-		public Assignment getHasSorterAssignment_2() { return cHasSorterAssignment_2; }
+		public Assignment getHasSorterAssignment_1() { return cHasSorterAssignment_1; }
 		
 		//'hasSorter'
-		public Keyword getHasSorterHasSorterKeyword_2_0() { return cHasSorterHasSorterKeyword_2_0; }
+		public Keyword getHasSorterHasSorterKeyword_1_0() { return cHasSorterHasSorterKeyword_1_0; }
 		
 		//'FXTableView'
-		public Keyword getFXTableViewKeyword_3() { return cFXTableViewKeyword_3; }
+		public Keyword getFXTableViewKeyword_2() { return cFXTableViewKeyword_2; }
 		
 		//name=EString
-		public Assignment getNameAssignment_4() { return cNameAssignment_4; }
+		public Assignment getNameAssignment_3() { return cNameAssignment_3; }
 		
 		//EString
-		public RuleCall getNameEStringParserRuleCall_4_0() { return cNameEStringParserRuleCall_4_0; }
+		public RuleCall getNameEStringParserRuleCall_3_0() { return cNameEStringParserRuleCall_3_0; }
 		
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_5() { return cLeftCurlyBracketKeyword_5; }
+		public Keyword getLeftCurlyBracketKeyword_4() { return cLeftCurlyBracketKeyword_4; }
 		
 		//('packagePath' packagePath=EString)?
-		public Group getGroup_6() { return cGroup_6; }
+		public Group getGroup_5() { return cGroup_5; }
 		
 		//'packagePath'
-		public Keyword getPackagePathKeyword_6_0() { return cPackagePathKeyword_6_0; }
+		public Keyword getPackagePathKeyword_5_0() { return cPackagePathKeyword_5_0; }
 		
 		//packagePath=EString
-		public Assignment getPackagePathAssignment_6_1() { return cPackagePathAssignment_6_1; }
+		public Assignment getPackagePathAssignment_5_1() { return cPackagePathAssignment_5_1; }
 		
 		//EString
-		public RuleCall getPackagePathEStringParserRuleCall_6_1_0() { return cPackagePathEStringParserRuleCall_6_1_0; }
+		public RuleCall getPackagePathEStringParserRuleCall_5_1_0() { return cPackagePathEStringParserRuleCall_5_1_0; }
 		
 		//(fxColumns+=FXColumn fxColumns+=FXColumn*)?
-		public Group getGroup_7() { return cGroup_7; }
+		public Group getGroup_6() { return cGroup_6; }
 		
 		//fxColumns+=FXColumn
-		public Assignment getFxColumnsAssignment_7_0() { return cFxColumnsAssignment_7_0; }
+		public Assignment getFxColumnsAssignment_6_0() { return cFxColumnsAssignment_6_0; }
 		
 		//FXColumn
-		public RuleCall getFxColumnsFXColumnParserRuleCall_7_0_0() { return cFxColumnsFXColumnParserRuleCall_7_0_0; }
+		public RuleCall getFxColumnsFXColumnParserRuleCall_6_0_0() { return cFxColumnsFXColumnParserRuleCall_6_0_0; }
 		
 		//fxColumns+=FXColumn*
-		public Assignment getFxColumnsAssignment_7_1() { return cFxColumnsAssignment_7_1; }
+		public Assignment getFxColumnsAssignment_6_1() { return cFxColumnsAssignment_6_1; }
 		
 		//FXColumn
-		public RuleCall getFxColumnsFXColumnParserRuleCall_7_1_0() { return cFxColumnsFXColumnParserRuleCall_7_1_0; }
+		public RuleCall getFxColumnsFXColumnParserRuleCall_6_1_0() { return cFxColumnsFXColumnParserRuleCall_6_1_0; }
 		
 		//fxEntity=FXModel?
-		public Assignment getFxEntityAssignment_8() { return cFxEntityAssignment_8; }
+		public Assignment getFxEntityAssignment_7() { return cFxEntityAssignment_7; }
 		
 		//FXModel
-		public RuleCall getFxEntityFXModelParserRuleCall_8_0() { return cFxEntityFXModelParserRuleCall_8_0; }
+		public RuleCall getFxEntityFXModelParserRuleCall_7_0() { return cFxEntityFXModelParserRuleCall_7_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_9() { return cRightCurlyBracketKeyword_9; }
+		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
 	}
 	public class EStringElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.dc.fx.ui.model.FXDsl.EString");
@@ -161,33 +157,38 @@ public class FXDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cNameAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cNameEStringParserRuleCall_4_0 = (RuleCall)cNameAssignment_4.eContents().get(0);
 		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
-		private final Keyword cLeftCurlyBracketKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
 		private final Group cGroup_5_1 = (Group)cGroup_5.eContents().get(1);
 		private final Keyword cWidthKeyword_5_1_0 = (Keyword)cGroup_5_1.eContents().get(0);
-		private final Assignment cWidthAssignment_5_1_1 = (Assignment)cGroup_5_1.eContents().get(1);
-		private final RuleCall cWidthEDoubleParserRuleCall_5_1_1_0 = (RuleCall)cWidthAssignment_5_1_1.eContents().get(0);
+		private final Keyword cColonKeyword_5_1_1 = (Keyword)cGroup_5_1.eContents().get(1);
+		private final Assignment cWidthAssignment_5_1_2 = (Assignment)cGroup_5_1.eContents().get(2);
+		private final RuleCall cWidthEDoubleParserRuleCall_5_1_2_0 = (RuleCall)cWidthAssignment_5_1_2.eContents().get(0);
+		private final Keyword cCommaKeyword_5_1_3 = (Keyword)cGroup_5_1.eContents().get(3);
 		private final Group cGroup_5_2 = (Group)cGroup_5.eContents().get(2);
 		private final Keyword cAlignmentKeyword_5_2_0 = (Keyword)cGroup_5_2.eContents().get(0);
-		private final Assignment cAlignmentAssignment_5_2_1 = (Assignment)cGroup_5_2.eContents().get(1);
-		private final RuleCall cAlignmentPosEnumRuleCall_5_2_1_0 = (RuleCall)cAlignmentAssignment_5_2_1.eContents().get(0);
+		private final Keyword cColonKeyword_5_2_1 = (Keyword)cGroup_5_2.eContents().get(1);
+		private final Assignment cAlignmentAssignment_5_2_2 = (Assignment)cGroup_5_2.eContents().get(2);
+		private final RuleCall cAlignmentPosEnumRuleCall_5_2_2_0 = (RuleCall)cAlignmentAssignment_5_2_2.eContents().get(0);
+		private final Keyword cCommaKeyword_5_2_3 = (Keyword)cGroup_5_2.eContents().get(3);
 		private final Group cGroup_5_3 = (Group)cGroup_5.eContents().get(3);
-		private final Keyword cAssociatedFXPropertyKeyword_5_3_0 = (Keyword)cGroup_5_3.eContents().get(0);
-		private final Assignment cAssociatedFXPropertyAssignment_5_3_1 = (Assignment)cGroup_5_3.eContents().get(1);
-		private final CrossReference cAssociatedFXPropertyFXPropertyCrossReference_5_3_1_0 = (CrossReference)cAssociatedFXPropertyAssignment_5_3_1.eContents().get(0);
-		private final RuleCall cAssociatedFXPropertyFXPropertyEStringParserRuleCall_5_3_1_0_1 = (RuleCall)cAssociatedFXPropertyFXPropertyCrossReference_5_3_1_0.eContents().get(1);
-		private final Keyword cRightCurlyBracketKeyword_5_4 = (Keyword)cGroup_5.eContents().get(4);
+		private final Keyword cShowKeyword_5_3_0 = (Keyword)cGroup_5_3.eContents().get(0);
+		private final Keyword cColonKeyword_5_3_1 = (Keyword)cGroup_5_3.eContents().get(1);
+		private final Assignment cAssociatedFXPropertyAssignment_5_3_2 = (Assignment)cGroup_5_3.eContents().get(2);
+		private final CrossReference cAssociatedFXPropertyFXPropertyCrossReference_5_3_2_0 = (CrossReference)cAssociatedFXPropertyAssignment_5_3_2.eContents().get(0);
+		private final RuleCall cAssociatedFXPropertyFXPropertyIDTerminalRuleCall_5_3_2_0_1 = (RuleCall)cAssociatedFXPropertyFXPropertyCrossReference_5_3_2_0.eContents().get(1);
+		private final Keyword cRightParenthesisKeyword_5_4 = (Keyword)cGroup_5.eContents().get(4);
 		
 		//FXColumn:
 		//	{FXColumn} editable?='editable'?
 		//	useCustomCellFactory?='useCustomCellFactory'?
 		//	'FXColumn'
-		//	name=EString ('{' ('width' width=EDouble)? ('alignment' alignment=Pos)? ('associatedFXProperty'
-		//	associatedFXProperty=[FXProperty|EString])?
-		//	'}')?;
+		//	name=EString ('(' ('width' ':' width=EDouble ','?)? ('alignment' ':' alignment=Pos ','?)? ('show' ':'
+		//	associatedFXProperty=[FXProperty])?
+		//	')')?;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{FXColumn} editable?='editable'? useCustomCellFactory?='useCustomCellFactory'? 'FXColumn' name=EString ('{' ('width'
-		//width=EDouble)? ('alignment' alignment=Pos)? ('associatedFXProperty' associatedFXProperty=[FXProperty|EString])? '}')?
+		//{FXColumn} editable?='editable'? useCustomCellFactory?='useCustomCellFactory'? 'FXColumn' name=EString ('(' ('width' ':'
+		//width=EDouble ','?)? ('alignment' ':' alignment=Pos ','?)? ('show' ':' associatedFXProperty=[FXProperty])? ')')?
 		public Group getGroup() { return cGroup; }
 		
 		//{FXColumn}
@@ -214,54 +215,69 @@ public class FXDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getNameEStringParserRuleCall_4_0() { return cNameEStringParserRuleCall_4_0; }
 		
-		//('{' ('width' width=EDouble)? ('alignment' alignment=Pos)? ('associatedFXProperty'
-		//associatedFXProperty=[FXProperty|EString])? '}')?
+		//('(' ('width' ':' width=EDouble ','?)? ('alignment' ':' alignment=Pos ','?)? ('show' ':'
+		//associatedFXProperty=[FXProperty])? ')')?
 		public Group getGroup_5() { return cGroup_5; }
 		
-		//'{'
-		public Keyword getLeftCurlyBracketKeyword_5_0() { return cLeftCurlyBracketKeyword_5_0; }
+		//'('
+		public Keyword getLeftParenthesisKeyword_5_0() { return cLeftParenthesisKeyword_5_0; }
 		
-		//('width' width=EDouble)?
+		//('width' ':' width=EDouble ','?)?
 		public Group getGroup_5_1() { return cGroup_5_1; }
 		
 		//'width'
 		public Keyword getWidthKeyword_5_1_0() { return cWidthKeyword_5_1_0; }
 		
+		//':'
+		public Keyword getColonKeyword_5_1_1() { return cColonKeyword_5_1_1; }
+		
 		//width=EDouble
-		public Assignment getWidthAssignment_5_1_1() { return cWidthAssignment_5_1_1; }
+		public Assignment getWidthAssignment_5_1_2() { return cWidthAssignment_5_1_2; }
 		
 		//EDouble
-		public RuleCall getWidthEDoubleParserRuleCall_5_1_1_0() { return cWidthEDoubleParserRuleCall_5_1_1_0; }
+		public RuleCall getWidthEDoubleParserRuleCall_5_1_2_0() { return cWidthEDoubleParserRuleCall_5_1_2_0; }
 		
-		//('alignment' alignment=Pos)?
+		//','?
+		public Keyword getCommaKeyword_5_1_3() { return cCommaKeyword_5_1_3; }
+		
+		//('alignment' ':' alignment=Pos ','?)?
 		public Group getGroup_5_2() { return cGroup_5_2; }
 		
 		//'alignment'
 		public Keyword getAlignmentKeyword_5_2_0() { return cAlignmentKeyword_5_2_0; }
 		
+		//':'
+		public Keyword getColonKeyword_5_2_1() { return cColonKeyword_5_2_1; }
+		
 		//alignment=Pos
-		public Assignment getAlignmentAssignment_5_2_1() { return cAlignmentAssignment_5_2_1; }
+		public Assignment getAlignmentAssignment_5_2_2() { return cAlignmentAssignment_5_2_2; }
 		
 		//Pos
-		public RuleCall getAlignmentPosEnumRuleCall_5_2_1_0() { return cAlignmentPosEnumRuleCall_5_2_1_0; }
+		public RuleCall getAlignmentPosEnumRuleCall_5_2_2_0() { return cAlignmentPosEnumRuleCall_5_2_2_0; }
 		
-		//('associatedFXProperty' associatedFXProperty=[FXProperty|EString])?
+		//','?
+		public Keyword getCommaKeyword_5_2_3() { return cCommaKeyword_5_2_3; }
+		
+		//('show' ':' associatedFXProperty=[FXProperty])?
 		public Group getGroup_5_3() { return cGroup_5_3; }
 		
-		//'associatedFXProperty'
-		public Keyword getAssociatedFXPropertyKeyword_5_3_0() { return cAssociatedFXPropertyKeyword_5_3_0; }
+		//'show'
+		public Keyword getShowKeyword_5_3_0() { return cShowKeyword_5_3_0; }
 		
-		//associatedFXProperty=[FXProperty|EString]
-		public Assignment getAssociatedFXPropertyAssignment_5_3_1() { return cAssociatedFXPropertyAssignment_5_3_1; }
+		//':'
+		public Keyword getColonKeyword_5_3_1() { return cColonKeyword_5_3_1; }
 		
-		//[FXProperty|EString]
-		public CrossReference getAssociatedFXPropertyFXPropertyCrossReference_5_3_1_0() { return cAssociatedFXPropertyFXPropertyCrossReference_5_3_1_0; }
+		//associatedFXProperty=[FXProperty]
+		public Assignment getAssociatedFXPropertyAssignment_5_3_2() { return cAssociatedFXPropertyAssignment_5_3_2; }
 		
-		//EString
-		public RuleCall getAssociatedFXPropertyFXPropertyEStringParserRuleCall_5_3_1_0_1() { return cAssociatedFXPropertyFXPropertyEStringParserRuleCall_5_3_1_0_1; }
+		//[FXProperty]
+		public CrossReference getAssociatedFXPropertyFXPropertyCrossReference_5_3_2_0() { return cAssociatedFXPropertyFXPropertyCrossReference_5_3_2_0; }
 		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_5_4() { return cRightCurlyBracketKeyword_5_4; }
+		//ID
+		public RuleCall getAssociatedFXPropertyFXPropertyIDTerminalRuleCall_5_3_2_0_1() { return cAssociatedFXPropertyFXPropertyIDTerminalRuleCall_5_3_2_0_1; }
+		
+		//')'
+		public Keyword getRightParenthesisKeyword_5_4() { return cRightParenthesisKeyword_5_4; }
 	}
 	public class FXModelElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.dc.fx.ui.model.FXDsl.FXModel");
@@ -569,7 +585,7 @@ public class FXDslGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//FXTableView:
-	//	{FXTableView} hasFilter?='hasFilter'?
+	//	hasFilter?='hasFilter'?
 	//	hasSorter?='hasSorter'?
 	//	'FXTableView'
 	//	name=EString
@@ -598,9 +614,9 @@ public class FXDslGrammarAccess extends AbstractGrammarElementFinder {
 	//	{FXColumn} editable?='editable'?
 	//	useCustomCellFactory?='useCustomCellFactory'?
 	//	'FXColumn'
-	//	name=EString ('{' ('width' width=EDouble)? ('alignment' alignment=Pos)? ('associatedFXProperty'
-	//	associatedFXProperty=[FXProperty|EString])?
-	//	'}')?;
+	//	name=EString ('(' ('width' ':' width=EDouble ','?)? ('alignment' ':' alignment=Pos ','?)? ('show' ':'
+	//	associatedFXProperty=[FXProperty])?
+	//	')')?;
 	public FXColumnElements getFXColumnAccess() {
 		return pFXColumn;
 	}

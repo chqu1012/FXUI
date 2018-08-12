@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="fxui" nsURI="http://www.example.org/fxui" nsPrefix="fxui">
+  <eClassifiers xsi:type="ecore:EClass" name="FXTableView">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="hasFilter" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="hasSorter" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="packagePath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fxColumns" upperBound="-1"
+        eType="#//FXColumn" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fxEntity" eType="#//FXModel"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FXColumn">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="editable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="useCustomCellFactory" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="alignment" eType="#//Pos"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="associatedFXProperty" eType="#//FXProperty"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FXModel">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fxProperties" upperBound="-1"
+        eType="#//FXProperty" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FXProperty">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Pos">
+    <eLiterals name="TOP_LEFT" literal="TOP_LEFT"/>
+    <eLiterals name="TOP_CENTER" value="1" literal="TOP_CENTER"/>
+    <eLiterals name="TOP_RIGHT" value="2" literal="TOP_RIGHT"/>
+    <eLiterals name="CENTER_LEFT" value="3" literal="CENTER_LEFT"/>
+    <eLiterals name="CENTER" value="4" literal="CENTER"/>
+    <eLiterals name="CENTER_RIGHT" value="5" literal="CENTER_RIGHT"/>
+    <eLiterals name="BOTTOM_LEFT" value="6" literal="BOTTOM_LEFT"/>
+    <eLiterals name="BOTTOM_CENTER" value="7" literal="BOTTOM_CENTER"/>
+    <eLiterals name="BOTTOM_RIGHT" value="8" literal="BOTTOM_RIGHT"/>
+  </eClassifiers>
+</ecore:EPackage>

@@ -5,29 +5,37 @@ import java.io.File;
 import de.dc.fx.ui.model.fxui.FXTableView;
 
 public enum TableViewTemplateRegistry {
-	BaseController(new BaseControllerTemplate(), "/controller/", "BaseController.java"),
-	Controller(new ControllerTemplate(), "/controller/", "Controller.java"),
-	Fxml(new FxmlTemplate(),"/", "TableViewer.fxml");
+	BaseController(new BaseControllerTemplate(), "/ui/", "BaseTableViewer.java", false, SrcType.SrcGen),
+	Controller(new ControllerTemplate(), "/ui/", "TableViewer.java"),
+	Fxml(new FxmlTemplate(),"/ui/", "TableViewer.fxml"),
+	Css(new CssTemplate(), "/ui/css/", "TableViewer.css");
 	
 	private IGenerator<FXTableView> template;
 	private String genPath;
 	private String fileExtension;
 	private boolean useDefinedName;
-
+	private SrcType srcType;
+	
 	private TableViewTemplateRegistry(IGenerator<FXTableView> template, String genPath, String fileExtension) {
 		this.template = template;
 		this.genPath = genPath;
 		this.fileExtension = fileExtension;
 		this.useDefinedName =false;
+		this.srcType=SrcType.Src;
 	}
 	
-	private TableViewTemplateRegistry(IGenerator<FXTableView> template, String genPath, String fileExtension, boolean useDefinedName) {
+	private TableViewTemplateRegistry(IGenerator<FXTableView> template, String genPath, String fileExtension, boolean useDefinedName, SrcType srcType) {
 		this.template = template;
 		this.genPath = genPath;
 		this.fileExtension=fileExtension;
 		this.useDefinedName = useDefinedName;
+		this.srcType = srcType;
 	}
 
+	public SrcType getSrcType() {
+		return srcType;
+	}
+	
 	public String getFileExtension() {
 		return fileExtension;
 	}

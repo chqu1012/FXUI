@@ -30,5 +30,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources,
  de.dc.fx.ui.model.fxdsl;bundle-version="1.0.0",
  de.dc.fx.ui.model.fxdsl.ide;bundle-version="1.0.0",
- de.dc.fx.ui.model.fxdsl.ui;bundle-version="1.0.0"
+ de.dc.fx.ui.model.fxdsl.ui;bundle-version="1.0.0",
+ de.dc.fx.ui.model.fxml.template;bundle-version="1.0.0",
+ org.eclipse.ui.ide;bundle-version="3.14.0"
 Bundle-ActivationPolicy: lazy

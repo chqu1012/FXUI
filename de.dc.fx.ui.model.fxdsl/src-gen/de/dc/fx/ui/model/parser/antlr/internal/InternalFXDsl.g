@@ -78,17 +78,10 @@ ruleFXTableView returns [EObject current=null]
 }:
 	(
 		(
-			{
-				$current = forceCreateModelElement(
-					grammarAccess.getFXTableViewAccess().getFXTableViewAction_0(),
-					$current);
-			}
-		)
-		(
 			(
-				lv_hasFilter_1_0='hasFilter'
+				lv_hasFilter_0_0='hasFilter'
 				{
-					newLeafNode(lv_hasFilter_1_0, grammarAccess.getFXTableViewAccess().getHasFilterHasFilterKeyword_1_0());
+					newLeafNode(lv_hasFilter_0_0, grammarAccess.getFXTableViewAccess().getHasFilterHasFilterKeyword_0_0());
 				}
 				{
 					if ($current==null) {
@@ -100,9 +93,9 @@ ruleFXTableView returns [EObject current=null]
 		)?
 		(
 			(
-				lv_hasSorter_2_0='hasSorter'
+				lv_hasSorter_1_0='hasSorter'
 				{
-					newLeafNode(lv_hasSorter_2_0, grammarAccess.getFXTableViewAccess().getHasSorterHasSorterKeyword_2_0());
+					newLeafNode(lv_hasSorter_1_0, grammarAccess.getFXTableViewAccess().getHasSorterHasSorterKeyword_1_0());
 				}
 				{
 					if ($current==null) {
@@ -112,16 +105,16 @@ ruleFXTableView returns [EObject current=null]
 				}
 			)
 		)?
-		otherlv_3='FXTableView'
+		otherlv_2='FXTableView'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getFXTableViewAccess().getFXTableViewKeyword_3());
+			newLeafNode(otherlv_2, grammarAccess.getFXTableViewAccess().getFXTableViewKeyword_2());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getFXTableViewAccess().getNameEStringParserRuleCall_4_0());
+					newCompositeNode(grammarAccess.getFXTableViewAccess().getNameEStringParserRuleCall_3_0());
 				}
-				lv_name_4_0=ruleEString
+				lv_name_3_0=ruleEString
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getFXTableViewRule());
@@ -129,27 +122,27 @@ ruleFXTableView returns [EObject current=null]
 					set(
 						$current,
 						"name",
-						lv_name_4_0,
+						lv_name_3_0,
 						"de.dc.fx.ui.model.FXDsl.EString");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_5='{'
+		otherlv_4='{'
 		{
-			newLeafNode(otherlv_5, grammarAccess.getFXTableViewAccess().getLeftCurlyBracketKeyword_5());
+			newLeafNode(otherlv_4, grammarAccess.getFXTableViewAccess().getLeftCurlyBracketKeyword_4());
 		}
 		(
-			otherlv_6='packagePath'
+			otherlv_5='packagePath'
 			{
-				newLeafNode(otherlv_6, grammarAccess.getFXTableViewAccess().getPackagePathKeyword_6_0());
+				newLeafNode(otherlv_5, grammarAccess.getFXTableViewAccess().getPackagePathKeyword_5_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getFXTableViewAccess().getPackagePathEStringParserRuleCall_6_1_0());
+						newCompositeNode(grammarAccess.getFXTableViewAccess().getPackagePathEStringParserRuleCall_5_1_0());
 					}
-					lv_packagePath_7_0=ruleEString
+					lv_packagePath_6_0=ruleEString
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getFXTableViewRule());
@@ -157,7 +150,7 @@ ruleFXTableView returns [EObject current=null]
 						set(
 							$current,
 							"packagePath",
-							lv_packagePath_7_0,
+							lv_packagePath_6_0,
 							"de.dc.fx.ui.model.FXDsl.EString");
 						afterParserOrEnumRuleCall();
 					}
@@ -168,7 +161,26 @@ ruleFXTableView returns [EObject current=null]
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getFXTableViewAccess().getFxColumnsFXColumnParserRuleCall_7_0_0());
+						newCompositeNode(grammarAccess.getFXTableViewAccess().getFxColumnsFXColumnParserRuleCall_6_0_0());
+					}
+					lv_fxColumns_7_0=ruleFXColumn
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getFXTableViewRule());
+						}
+						add(
+							$current,
+							"fxColumns",
+							lv_fxColumns_7_0,
+							"de.dc.fx.ui.model.FXDsl.FXColumn");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getFXTableViewAccess().getFxColumnsFXColumnParserRuleCall_6_1_0());
 					}
 					lv_fxColumns_8_0=ruleFXColumn
 					{
@@ -183,33 +195,14 @@ ruleFXTableView returns [EObject current=null]
 						afterParserOrEnumRuleCall();
 					}
 				)
-			)
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getFXTableViewAccess().getFxColumnsFXColumnParserRuleCall_7_1_0());
-					}
-					lv_fxColumns_9_0=ruleFXColumn
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getFXTableViewRule());
-						}
-						add(
-							$current,
-							"fxColumns",
-							lv_fxColumns_9_0,
-							"de.dc.fx.ui.model.FXDsl.FXColumn");
-						afterParserOrEnumRuleCall();
-					}
-				)
 			)*
 		)?
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getFXTableViewAccess().getFxEntityFXModelParserRuleCall_8_0());
+					newCompositeNode(grammarAccess.getFXTableViewAccess().getFxEntityFXModelParserRuleCall_7_0());
 				}
-				lv_fxEntity_10_0=ruleFXModel
+				lv_fxEntity_9_0=ruleFXModel
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getFXTableViewRule());
@@ -217,15 +210,15 @@ ruleFXTableView returns [EObject current=null]
 					set(
 						$current,
 						"fxEntity",
-						lv_fxEntity_10_0,
+						lv_fxEntity_9_0,
 						"de.dc.fx.ui.model.FXDsl.FXModel");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)?
-		otherlv_11='}'
+		otherlv_10='}'
 		{
-			newLeafNode(otherlv_11, grammarAccess.getFXTableViewAccess().getRightCurlyBracketKeyword_9());
+			newLeafNode(otherlv_10, grammarAccess.getFXTableViewAccess().getRightCurlyBracketKeyword_8());
 		}
 	)
 ;
@@ -339,21 +332,25 @@ ruleFXColumn returns [EObject current=null]
 			)
 		)
 		(
-			otherlv_5='{'
+			otherlv_5='('
 			{
-				newLeafNode(otherlv_5, grammarAccess.getFXColumnAccess().getLeftCurlyBracketKeyword_5_0());
+				newLeafNode(otherlv_5, grammarAccess.getFXColumnAccess().getLeftParenthesisKeyword_5_0());
 			}
 			(
 				otherlv_6='width'
 				{
 					newLeafNode(otherlv_6, grammarAccess.getFXColumnAccess().getWidthKeyword_5_1_0());
 				}
+				otherlv_7=':'
+				{
+					newLeafNode(otherlv_7, grammarAccess.getFXColumnAccess().getColonKeyword_5_1_1());
+				}
 				(
 					(
 						{
-							newCompositeNode(grammarAccess.getFXColumnAccess().getWidthEDoubleParserRuleCall_5_1_1_0());
+							newCompositeNode(grammarAccess.getFXColumnAccess().getWidthEDoubleParserRuleCall_5_1_2_0());
 						}
-						lv_width_7_0=ruleEDouble
+						lv_width_8_0=ruleEDouble
 						{
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getFXColumnRule());
@@ -361,24 +358,34 @@ ruleFXColumn returns [EObject current=null]
 							set(
 								$current,
 								"width",
-								lv_width_7_0,
+								lv_width_8_0,
 								"de.dc.fx.ui.model.FXDsl.EDouble");
 							afterParserOrEnumRuleCall();
 						}
 					)
 				)
+				(
+					otherlv_9=','
+					{
+						newLeafNode(otherlv_9, grammarAccess.getFXColumnAccess().getCommaKeyword_5_1_3());
+					}
+				)?
 			)?
 			(
-				otherlv_8='alignment'
+				otherlv_10='alignment'
 				{
-					newLeafNode(otherlv_8, grammarAccess.getFXColumnAccess().getAlignmentKeyword_5_2_0());
+					newLeafNode(otherlv_10, grammarAccess.getFXColumnAccess().getAlignmentKeyword_5_2_0());
+				}
+				otherlv_11=':'
+				{
+					newLeafNode(otherlv_11, grammarAccess.getFXColumnAccess().getColonKeyword_5_2_1());
 				}
 				(
 					(
 						{
-							newCompositeNode(grammarAccess.getFXColumnAccess().getAlignmentPosEnumRuleCall_5_2_1_0());
+							newCompositeNode(grammarAccess.getFXColumnAccess().getAlignmentPosEnumRuleCall_5_2_2_0());
 						}
-						lv_alignment_9_0=rulePos
+						lv_alignment_12_0=rulePos
 						{
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getFXColumnRule());
@@ -386,17 +393,27 @@ ruleFXColumn returns [EObject current=null]
 							set(
 								$current,
 								"alignment",
-								lv_alignment_9_0,
+								lv_alignment_12_0,
 								"de.dc.fx.ui.model.FXDsl.Pos");
 							afterParserOrEnumRuleCall();
 						}
 					)
 				)
+				(
+					otherlv_13=','
+					{
+						newLeafNode(otherlv_13, grammarAccess.getFXColumnAccess().getCommaKeyword_5_2_3());
+					}
+				)?
 			)?
 			(
-				otherlv_10='associatedFXProperty'
+				otherlv_14='show'
 				{
-					newLeafNode(otherlv_10, grammarAccess.getFXColumnAccess().getAssociatedFXPropertyKeyword_5_3_0());
+					newLeafNode(otherlv_14, grammarAccess.getFXColumnAccess().getShowKeyword_5_3_0());
+				}
+				otherlv_15=':'
+				{
+					newLeafNode(otherlv_15, grammarAccess.getFXColumnAccess().getColonKeyword_5_3_1());
 				}
 				(
 					(
@@ -405,19 +422,16 @@ ruleFXColumn returns [EObject current=null]
 								$current = createModelElement(grammarAccess.getFXColumnRule());
 							}
 						}
+						otherlv_16=RULE_ID
 						{
-							newCompositeNode(grammarAccess.getFXColumnAccess().getAssociatedFXPropertyFXPropertyCrossReference_5_3_1_0());
-						}
-						ruleEString
-						{
-							afterParserOrEnumRuleCall();
+							newLeafNode(otherlv_16, grammarAccess.getFXColumnAccess().getAssociatedFXPropertyFXPropertyCrossReference_5_3_2_0());
 						}
 					)
 				)
 			)?
-			otherlv_12='}'
+			otherlv_17=')'
 			{
-				newLeafNode(otherlv_12, grammarAccess.getFXColumnAccess().getRightCurlyBracketKeyword_5_4());
+				newLeafNode(otherlv_17, grammarAccess.getFXColumnAccess().getRightParenthesisKeyword_5_4());
 			}
 		)?
 	)

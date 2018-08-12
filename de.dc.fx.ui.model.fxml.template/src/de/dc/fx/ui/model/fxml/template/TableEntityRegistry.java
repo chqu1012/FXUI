@@ -11,19 +11,26 @@ public enum TableEntityRegistry {
 	private String fileExtension;
 	private String genPath;
 	private boolean useDefinedName;
-
+	private SrcType srcType;
+	
 	private TableEntityRegistry(IGenerator<FXModel> template, String genPath, String fileExtension) {
 		this.template = template;
 		this.genPath = genPath;
 		this.fileExtension = fileExtension;
 		this.setUseDefinedName(false);
+		this.srcType = SrcType.Src;
 	}
 	
-	private TableEntityRegistry(IGenerator<FXModel> template, String genPath, String fileExtension, boolean useDefinedName) {
+	private TableEntityRegistry(IGenerator<FXModel> template, String genPath, String fileExtension, boolean useDefinedName, SrcType srcType) {
 		this.template = template;
 		this.genPath = genPath;
 		this.fileExtension = fileExtension;
+		this.srcType = srcType;
 		this.setUseDefinedName(useDefinedName);
+	}
+	
+	public SrcType getSrcType() {
+		return srcType;
 	}
 
 	public String getFileExtension() {

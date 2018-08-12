@@ -5,28 +5,35 @@ import java.io.File;
 import de.dc.fx.ui.model.fxui.FXColumn;
 
 public enum TableColumnTemplateRegistry {
-	BaseCellFactory(new BaseCellFactoryTemplate(),"/cell/", "BaseCellFactory.java", true),
+	BaseCellFactory(new BaseCellFactoryTemplate(),"/cell/", "BaseCellFactory.java", true, SrcType.SrcGen),
 	CellFactory(new CellFactoryTemplate(),"/cell/", ".java");
 	
 	private IGenerator<FXColumn> template;
 	private String fileExtension;
 	private String genPath;
 	private boolean useDefinedName;
+	private SrcType srcType;
 
 	private TableColumnTemplateRegistry(IGenerator<FXColumn> template, String genPath, String fileExtension) {
 		this.template = template;
 		this.genPath = genPath;
 		this.fileExtension = fileExtension;
 		this.setUseDefinedName(false);
+		this.srcType=SrcType.Src;
 	}
 	
-	private TableColumnTemplateRegistry(IGenerator<FXColumn> template, String genPath, String fileExtension, boolean useDefinedName) {
+	private TableColumnTemplateRegistry(IGenerator<FXColumn> template, String genPath, String fileExtension, boolean useDefinedName, SrcType srcType) {
 		this.template = template;
 		this.genPath = genPath;
 		this.fileExtension = fileExtension;
+		this.srcType = srcType;
 		this.setUseDefinedName(useDefinedName);
 	}
 
+	public SrcType getSrcType() {
+		return srcType;
+	}
+	
 	public String getFileExtension() {
 		return fileExtension;
 	}

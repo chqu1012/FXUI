@@ -13,7 +13,7 @@ public abstract class AbstractFXDslValidator extends XbaseValidator {
 	@Override
 	protected List<EPackage> getEPackages() {
 		List<EPackage> result = new ArrayList<EPackage>(super.getEPackages());
-		result.add(EPackage.Registry.INSTANCE.getEPackage("http://www.example.org/fxui"));
+		result.add(de.dc.fx.ui.model.fxui.FxuiPackage.eINSTANCE);
 		result.add(EPackage.Registry.INSTANCE.getEPackage("http://www.eclipse.org/xtext/xbase/Xbase"));
 		result.add(EPackage.Registry.INSTANCE.getEPackage("http://www.eclipse.org/xtext/common/JavaVMTypes"));
 		result.add(EPackage.Registry.INSTANCE.getEPackage("http://www.eclipse.org/xtext/xbase/Xtype"));

@@ -21,7 +21,9 @@ import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 public class FXDslSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected FXDslGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_FXColumn___LeftCurlyBracketKeyword_5_0_RightCurlyBracketKeyword_5_4__q;
+	protected AbstractElementAlias match_FXColumn_CommaKeyword_5_1_3_q;
+	protected AbstractElementAlias match_FXColumn_CommaKeyword_5_2_3_q;
+	protected AbstractElementAlias match_FXColumn___LeftParenthesisKeyword_5_0_RightParenthesisKeyword_5_4__q;
 	protected AbstractElementAlias match_XBlockExpression_SemicolonKeyword_2_1_q;
 	protected AbstractElementAlias match_XExpressionInClosure_SemicolonKeyword_1_1_q;
 	protected AbstractElementAlias match_XFunctionTypeRef___LeftParenthesisKeyword_0_0_RightParenthesisKeyword_0_2__q;
@@ -32,7 +34,9 @@ public class FXDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (FXDslGrammarAccess) access;
-		match_FXColumn___LeftCurlyBracketKeyword_5_0_RightCurlyBracketKeyword_5_4__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getFXColumnAccess().getLeftCurlyBracketKeyword_5_0()), new TokenAlias(false, false, grammarAccess.getFXColumnAccess().getRightCurlyBracketKeyword_5_4()));
+		match_FXColumn_CommaKeyword_5_1_3_q = new TokenAlias(false, true, grammarAccess.getFXColumnAccess().getCommaKeyword_5_1_3());
+		match_FXColumn_CommaKeyword_5_2_3_q = new TokenAlias(false, true, grammarAccess.getFXColumnAccess().getCommaKeyword_5_2_3());
+		match_FXColumn___LeftParenthesisKeyword_5_0_RightParenthesisKeyword_5_4__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getFXColumnAccess().getLeftParenthesisKeyword_5_0()), new TokenAlias(false, false, grammarAccess.getFXColumnAccess().getRightParenthesisKeyword_5_4()));
 		match_XBlockExpression_SemicolonKeyword_2_1_q = new TokenAlias(false, true, grammarAccess.getXBlockExpressionAccess().getSemicolonKeyword_2_1());
 		match_XExpressionInClosure_SemicolonKeyword_1_1_q = new TokenAlias(false, true, grammarAccess.getXExpressionInClosureAccess().getSemicolonKeyword_1_1());
 		match_XFunctionTypeRef___LeftParenthesisKeyword_0_0_RightParenthesisKeyword_0_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getXFunctionTypeRefAccess().getLeftParenthesisKeyword_0_0()), new TokenAlias(false, false, grammarAccess.getXFunctionTypeRefAccess().getRightParenthesisKeyword_0_2()));
@@ -78,8 +82,12 @@ public class FXDslSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if (match_FXColumn___LeftCurlyBracketKeyword_5_0_RightCurlyBracketKeyword_5_4__q.equals(syntax))
-				emit_FXColumn___LeftCurlyBracketKeyword_5_0_RightCurlyBracketKeyword_5_4__q(semanticObject, getLastNavigableState(), syntaxNodes);
+			if (match_FXColumn_CommaKeyword_5_1_3_q.equals(syntax))
+				emit_FXColumn_CommaKeyword_5_1_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_FXColumn_CommaKeyword_5_2_3_q.equals(syntax))
+				emit_FXColumn_CommaKeyword_5_2_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_FXColumn___LeftParenthesisKeyword_5_0_RightParenthesisKeyword_5_4__q.equals(syntax))
+				emit_FXColumn___LeftParenthesisKeyword_5_0_RightParenthesisKeyword_5_4__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_XBlockExpression_SemicolonKeyword_2_1_q.equals(syntax))
 				emit_XBlockExpression_SemicolonKeyword_2_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_XExpressionInClosure_SemicolonKeyword_1_1_q.equals(syntax))
@@ -98,12 +106,37 @@ public class FXDslSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	/**
 	 * Ambiguous syntax:
-	 *     ('{' '}')?
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     width=EDouble (ambiguity) ')' (rule end)
+	 *     width=EDouble (ambiguity) 'alignment' ':' alignment=Pos
+	 *     width=EDouble (ambiguity) 'show' ':' associatedFXProperty=[FXProperty|ID]
+	 */
+	protected void emit_FXColumn_CommaKeyword_5_1_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     alignment=Pos (ambiguity) ')' (rule end)
+	 *     alignment=Pos (ambiguity) 'show' ':' associatedFXProperty=[FXProperty|ID]
+	 */
+	protected void emit_FXColumn_CommaKeyword_5_2_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ('(' ')')?
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     name=EString (ambiguity) (rule end)
 	 */
-	protected void emit_FXColumn___LeftCurlyBracketKeyword_5_0_RightCurlyBracketKeyword_5_4__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_FXColumn___LeftParenthesisKeyword_5_0_RightParenthesisKeyword_5_4__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
