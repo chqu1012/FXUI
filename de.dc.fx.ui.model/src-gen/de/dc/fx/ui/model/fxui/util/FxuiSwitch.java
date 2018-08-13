@@ -109,6 +109,101 @@ public class FxuiSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case FxuiPackage.FX_FORM: {
+			FXForm fxForm = (FXForm) theEObject;
+			T result = caseFXForm(fxForm);
+			if (result == null)
+				result = caseFXNamedElement(fxForm);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case FxuiPackage.FX_CONTROL: {
+			FXControl fxControl = (FXControl) theEObject;
+			T result = caseFXControl(fxControl);
+			if (result == null)
+				result = caseFXNamedElement(fxControl);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case FxuiPackage.FX_TEXT_FIELD: {
+			FXTextField fxTextField = (FXTextField) theEObject;
+			T result = caseFXTextField(fxTextField);
+			if (result == null)
+				result = caseFXControl(fxTextField);
+			if (result == null)
+				result = caseFXNamedElement(fxTextField);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case FxuiPackage.FX_BUTTON: {
+			FXButton fxButton = (FXButton) theEObject;
+			T result = caseFXButton(fxButton);
+			if (result == null)
+				result = caseFXControl(fxButton);
+			if (result == null)
+				result = caseFXNamedElement(fxButton);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case FxuiPackage.FX_TOGGLE_BUTTON: {
+			FXToggleButton fxToggleButton = (FXToggleButton) theEObject;
+			T result = caseFXToggleButton(fxToggleButton);
+			if (result == null)
+				result = caseFXControl(fxToggleButton);
+			if (result == null)
+				result = caseFXNamedElement(fxToggleButton);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case FxuiPackage.FX_CHECKBOX: {
+			FXCheckbox fxCheckbox = (FXCheckbox) theEObject;
+			T result = caseFXCheckbox(fxCheckbox);
+			if (result == null)
+				result = caseFXControl(fxCheckbox);
+			if (result == null)
+				result = caseFXNamedElement(fxCheckbox);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case FxuiPackage.FX_CHOICE_BOX: {
+			FXChoiceBox fxChoiceBox = (FXChoiceBox) theEObject;
+			T result = caseFXChoiceBox(fxChoiceBox);
+			if (result == null)
+				result = caseFXControl(fxChoiceBox);
+			if (result == null)
+				result = caseFXNamedElement(fxChoiceBox);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case FxuiPackage.FX_RADIO_BUTTON: {
+			FXRadioButton fxRadioButton = (FXRadioButton) theEObject;
+			T result = caseFXRadioButton(fxRadioButton);
+			if (result == null)
+				result = caseFXControl(fxRadioButton);
+			if (result == null)
+				result = caseFXNamedElement(fxRadioButton);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case FxuiPackage.FX_COMBO_BOX: {
+			FXComboBox fxComboBox = (FXComboBox) theEObject;
+			T result = caseFXComboBox(fxComboBox);
+			if (result == null)
+				result = caseFXControl(fxComboBox);
+			if (result == null)
+				result = caseFXNamedElement(fxComboBox);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
@@ -186,6 +281,141 @@ public class FxuiSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseFXProperty(FXProperty object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>FX Form</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>FX Form</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFXForm(FXForm object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>FX Control</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>FX Control</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFXControl(FXControl object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>FX Text Field</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>FX Text Field</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFXTextField(FXTextField object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>FX Button</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>FX Button</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFXButton(FXButton object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>FX Toggle Button</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>FX Toggle Button</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFXToggleButton(FXToggleButton object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>FX Checkbox</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>FX Checkbox</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFXCheckbox(FXCheckbox object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>FX Choice Box</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>FX Choice Box</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFXChoiceBox(FXChoiceBox object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>FX Radio Button</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>FX Radio Button</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFXRadioButton(FXRadioButton object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>FX Combo Box</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>FX Combo Box</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFXComboBox(FXComboBox object) {
 		return null;
 	}
 

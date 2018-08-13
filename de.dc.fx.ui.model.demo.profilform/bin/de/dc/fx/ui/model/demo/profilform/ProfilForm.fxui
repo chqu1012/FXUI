@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fxui:FXForm xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fxui="http://www.example.org/fxui" name="Profil" packagePath="de.dc.fx.ui.model.demo.profil">
+  <fxcontrols xsi:type="fxui:FXTextField" name="Name"/>
+  <fxcontrols xsi:type="fxui:FXTextField" name="Vorname"/>
+  <fxcontrols xsi:type="fxui:FXTextField" name="Alter"/>
+  <fxcontrols xsi:type="fxui:FXTextField" name="Straße"/>
+  <fxcontrols xsi:type="fxui:FXTextField" name="PLZ"/>
+  <fxcontrols xsi:type="fxui:FXTextField" name="Stadt"/>
+  <fxcontrols xsi:type="fxui:FXButton" name="Hello World"/>
+  <fxcontrols xsi:type="fxui:FXToggleButton" name="Helllo Toggle"/>
+  <fxcontrols xsi:type="fxui:FXToggleButton" name="Männlich"/>
+  <fxcontrols xsi:type="fxui:FXToggleButton" name="weiblich"/>
+</fxui:FXForm>

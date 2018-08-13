@@ -2,15 +2,24 @@
  */
 package de.dc.fx.ui.model.fxui.impl;
 
+import de.dc.fx.ui.model.fxui.FXButton;
+import de.dc.fx.ui.model.fxui.FXCheckbox;
+import de.dc.fx.ui.model.fxui.FXChoiceBox;
 import de.dc.fx.ui.model.fxui.FXColumn;
+import de.dc.fx.ui.model.fxui.FXComboBox;
+import de.dc.fx.ui.model.fxui.FXControl;
+import de.dc.fx.ui.model.fxui.FXForm;
 import de.dc.fx.ui.model.fxui.FXModel;
 import de.dc.fx.ui.model.fxui.FXNamedElement;
 import de.dc.fx.ui.model.fxui.FXProperty;
+import de.dc.fx.ui.model.fxui.FXRadioButton;
 import de.dc.fx.ui.model.fxui.FXTableView;
+import de.dc.fx.ui.model.fxui.FXTextField;
+import de.dc.fx.ui.model.fxui.FXToggleButton;
 import de.dc.fx.ui.model.fxui.FxuiFactory;
 import de.dc.fx.ui.model.fxui.FxuiPackage;
-
 import de.dc.fx.ui.model.fxui.Pos;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -60,6 +69,69 @@ public class FxuiPackageImpl extends EPackageImpl implements FxuiPackage {
 	 * @generated
 	 */
 	private EClass fxPropertyEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass fxFormEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass fxControlEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass fxTextFieldEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass fxButtonEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass fxToggleButtonEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass fxCheckboxEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass fxChoiceBoxEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass fxRadioButtonEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass fxComboBoxEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -299,6 +371,132 @@ public class FxuiPackageImpl extends EPackageImpl implements FxuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getFXForm() {
+		return fxFormEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFXForm_NumOfGrid() {
+		return (EAttribute) fxFormEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFXForm_Fxcontrols() {
+		return (EReference) fxFormEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFXForm_PackagePath() {
+		return (EAttribute) fxFormEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getFXControl() {
+		return fxControlEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFXControl_ShowLabel() {
+		return (EAttribute) fxControlEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getFXTextField() {
+		return fxTextFieldEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFXTextField_Prompt() {
+		return (EAttribute) fxTextFieldEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getFXButton() {
+		return fxButtonEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getFXToggleButton() {
+		return fxToggleButtonEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getFXCheckbox() {
+		return fxCheckboxEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getFXChoiceBox() {
+		return fxChoiceBoxEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getFXRadioButton() {
+		return fxRadioButtonEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getFXComboBox() {
+		return fxComboBoxEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getPos() {
 		return posEEnum;
 	}
@@ -355,6 +553,29 @@ public class FxuiPackageImpl extends EPackageImpl implements FxuiPackage {
 		fxPropertyEClass = createEClass(FX_PROPERTY);
 		createEAttribute(fxPropertyEClass, FX_PROPERTY__TYPE);
 
+		fxFormEClass = createEClass(FX_FORM);
+		createEAttribute(fxFormEClass, FX_FORM__NUM_OF_GRID);
+		createEReference(fxFormEClass, FX_FORM__FXCONTROLS);
+		createEAttribute(fxFormEClass, FX_FORM__PACKAGE_PATH);
+
+		fxControlEClass = createEClass(FX_CONTROL);
+		createEAttribute(fxControlEClass, FX_CONTROL__SHOW_LABEL);
+
+		fxTextFieldEClass = createEClass(FX_TEXT_FIELD);
+		createEAttribute(fxTextFieldEClass, FX_TEXT_FIELD__PROMPT);
+
+		fxButtonEClass = createEClass(FX_BUTTON);
+
+		fxToggleButtonEClass = createEClass(FX_TOGGLE_BUTTON);
+
+		fxCheckboxEClass = createEClass(FX_CHECKBOX);
+
+		fxChoiceBoxEClass = createEClass(FX_CHOICE_BOX);
+
+		fxRadioButtonEClass = createEClass(FX_RADIO_BUTTON);
+
+		fxComboBoxEClass = createEClass(FX_COMBO_BOX);
+
 		// Create enums
 		posEEnum = createEEnum(POS);
 	}
@@ -392,6 +613,15 @@ public class FxuiPackageImpl extends EPackageImpl implements FxuiPackage {
 		fxColumnEClass.getESuperTypes().add(this.getFXNamedElement());
 		fxModelEClass.getESuperTypes().add(this.getFXNamedElement());
 		fxPropertyEClass.getESuperTypes().add(this.getFXNamedElement());
+		fxFormEClass.getESuperTypes().add(this.getFXNamedElement());
+		fxControlEClass.getESuperTypes().add(this.getFXNamedElement());
+		fxTextFieldEClass.getESuperTypes().add(this.getFXControl());
+		fxButtonEClass.getESuperTypes().add(this.getFXControl());
+		fxToggleButtonEClass.getESuperTypes().add(this.getFXControl());
+		fxCheckboxEClass.getESuperTypes().add(this.getFXControl());
+		fxChoiceBoxEClass.getESuperTypes().add(this.getFXControl());
+		fxRadioButtonEClass.getESuperTypes().add(this.getFXControl());
+		fxComboBoxEClass.getESuperTypes().add(this.getFXControl());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(fxTableViewEClass, FXTableView.class, "FXTableView", !IS_ABSTRACT, !IS_INTERFACE,
@@ -441,6 +671,43 @@ public class FxuiPackageImpl extends EPackageImpl implements FxuiPackage {
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFXProperty_Type(), ecorePackage.getEString(), "type", null, 0, 1, FXProperty.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(fxFormEClass, FXForm.class, "FXForm", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getFXForm_NumOfGrid(), ecorePackage.getEInt(), "numOfGrid", null, 0, 1, FXForm.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFXForm_Fxcontrols(), this.getFXControl(), null, "fxcontrols", null, 0, -1, FXForm.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFXForm_PackagePath(), ecorePackage.getEString(), "packagePath", null, 0, 1, FXForm.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(fxControlEClass, FXControl.class, "FXControl", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getFXControl_ShowLabel(), ecorePackage.getEBoolean(), "showLabel", "true", 0, 1, FXControl.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(fxTextFieldEClass, FXTextField.class, "FXTextField", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getFXTextField_Prompt(), ecorePackage.getEString(), "prompt", null, 0, 1, FXTextField.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(fxButtonEClass, FXButton.class, "FXButton", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(fxToggleButtonEClass, FXToggleButton.class, "FXToggleButton", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(fxCheckboxEClass, FXCheckbox.class, "FXCheckbox", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(fxChoiceBoxEClass, FXChoiceBox.class, "FXChoiceBox", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(fxRadioButtonEClass, FXRadioButton.class, "FXRadioButton", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(fxComboBoxEClass, FXComboBox.class, "FXComboBox", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(posEEnum, Pos.class, "Pos");

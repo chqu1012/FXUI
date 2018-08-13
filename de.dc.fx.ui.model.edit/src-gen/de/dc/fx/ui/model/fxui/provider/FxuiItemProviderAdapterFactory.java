@@ -188,6 +188,190 @@ public class FxuiItemProviderAdapterFactory extends FxuiAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.fx.ui.model.fxui.FXForm} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FXFormItemProvider fxFormItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.fx.ui.model.fxui.FXForm}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFXFormAdapter() {
+		if (fxFormItemProvider == null) {
+			fxFormItemProvider = new FXFormItemProvider(this);
+		}
+
+		return fxFormItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.fx.ui.model.fxui.FXTextField} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FXTextFieldItemProvider fxTextFieldItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.fx.ui.model.fxui.FXTextField}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFXTextFieldAdapter() {
+		if (fxTextFieldItemProvider == null) {
+			fxTextFieldItemProvider = new FXTextFieldItemProvider(this);
+		}
+
+		return fxTextFieldItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.fx.ui.model.fxui.FXButton} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FXButtonItemProvider fxButtonItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.fx.ui.model.fxui.FXButton}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFXButtonAdapter() {
+		if (fxButtonItemProvider == null) {
+			fxButtonItemProvider = new FXButtonItemProvider(this);
+		}
+
+		return fxButtonItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.fx.ui.model.fxui.FXToggleButton} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FXToggleButtonItemProvider fxToggleButtonItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.fx.ui.model.fxui.FXToggleButton}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFXToggleButtonAdapter() {
+		if (fxToggleButtonItemProvider == null) {
+			fxToggleButtonItemProvider = new FXToggleButtonItemProvider(this);
+		}
+
+		return fxToggleButtonItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.fx.ui.model.fxui.FXCheckbox} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FXCheckboxItemProvider fxCheckboxItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.fx.ui.model.fxui.FXCheckbox}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFXCheckboxAdapter() {
+		if (fxCheckboxItemProvider == null) {
+			fxCheckboxItemProvider = new FXCheckboxItemProvider(this);
+		}
+
+		return fxCheckboxItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.fx.ui.model.fxui.FXChoiceBox} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FXChoiceBoxItemProvider fxChoiceBoxItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.fx.ui.model.fxui.FXChoiceBox}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFXChoiceBoxAdapter() {
+		if (fxChoiceBoxItemProvider == null) {
+			fxChoiceBoxItemProvider = new FXChoiceBoxItemProvider(this);
+		}
+
+		return fxChoiceBoxItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.fx.ui.model.fxui.FXRadioButton} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FXRadioButtonItemProvider fxRadioButtonItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.fx.ui.model.fxui.FXRadioButton}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFXRadioButtonAdapter() {
+		if (fxRadioButtonItemProvider == null) {
+			fxRadioButtonItemProvider = new FXRadioButtonItemProvider(this);
+		}
+
+		return fxRadioButtonItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.fx.ui.model.fxui.FXComboBox} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FXComboBoxItemProvider fxComboBoxItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.fx.ui.model.fxui.FXComboBox}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFXComboBoxAdapter() {
+		if (fxComboBoxItemProvider == null) {
+			fxComboBoxItemProvider = new FXComboBoxItemProvider(this);
+		}
+
+		return fxComboBoxItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -296,6 +480,22 @@ public class FxuiItemProviderAdapterFactory extends FxuiAdapterFactory
 			fxModelItemProvider.dispose();
 		if (fxPropertyItemProvider != null)
 			fxPropertyItemProvider.dispose();
+		if (fxFormItemProvider != null)
+			fxFormItemProvider.dispose();
+		if (fxTextFieldItemProvider != null)
+			fxTextFieldItemProvider.dispose();
+		if (fxButtonItemProvider != null)
+			fxButtonItemProvider.dispose();
+		if (fxToggleButtonItemProvider != null)
+			fxToggleButtonItemProvider.dispose();
+		if (fxCheckboxItemProvider != null)
+			fxCheckboxItemProvider.dispose();
+		if (fxChoiceBoxItemProvider != null)
+			fxChoiceBoxItemProvider.dispose();
+		if (fxRadioButtonItemProvider != null)
+			fxRadioButtonItemProvider.dispose();
+		if (fxComboBoxItemProvider != null)
+			fxComboBoxItemProvider.dispose();
 	}
 
 }

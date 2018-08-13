@@ -5,8 +5,8 @@ package de.dc.fx.ui.model.fxui.impl;
 import de.dc.fx.ui.model.fxui.FXColumn;
 import de.dc.fx.ui.model.fxui.FXProperty;
 import de.dc.fx.ui.model.fxui.FxuiPackage;
-
 import de.dc.fx.ui.model.fxui.Pos;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;

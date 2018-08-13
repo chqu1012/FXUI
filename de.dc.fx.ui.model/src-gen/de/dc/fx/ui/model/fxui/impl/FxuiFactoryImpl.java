@@ -66,6 +66,22 @@ public class FxuiFactoryImpl extends EFactoryImpl implements FxuiFactory {
 			return createFXModel();
 		case FxuiPackage.FX_PROPERTY:
 			return createFXProperty();
+		case FxuiPackage.FX_FORM:
+			return createFXForm();
+		case FxuiPackage.FX_TEXT_FIELD:
+			return createFXTextField();
+		case FxuiPackage.FX_BUTTON:
+			return createFXButton();
+		case FxuiPackage.FX_TOGGLE_BUTTON:
+			return createFXToggleButton();
+		case FxuiPackage.FX_CHECKBOX:
+			return createFXCheckbox();
+		case FxuiPackage.FX_CHOICE_BOX:
+			return createFXChoiceBox();
+		case FxuiPackage.FX_RADIO_BUTTON:
+			return createFXRadioButton();
+		case FxuiPackage.FX_COMBO_BOX:
+			return createFXComboBox();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -149,6 +165,86 @@ public class FxuiFactoryImpl extends EFactoryImpl implements FxuiFactory {
 	public FXProperty createFXProperty() {
 		FXPropertyImpl fxProperty = new FXPropertyImpl();
 		return fxProperty;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FXForm createFXForm() {
+		FXFormImpl fxForm = new FXFormImpl();
+		return fxForm;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FXTextField createFXTextField() {
+		FXTextFieldImpl fxTextField = new FXTextFieldImpl();
+		return fxTextField;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FXButton createFXButton() {
+		FXButtonImpl fxButton = new FXButtonImpl();
+		return fxButton;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FXToggleButton createFXToggleButton() {
+		FXToggleButtonImpl fxToggleButton = new FXToggleButtonImpl();
+		return fxToggleButton;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FXCheckbox createFXCheckbox() {
+		FXCheckboxImpl fxCheckbox = new FXCheckboxImpl();
+		return fxCheckbox;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FXChoiceBox createFXChoiceBox() {
+		FXChoiceBoxImpl fxChoiceBox = new FXChoiceBoxImpl();
+		return fxChoiceBox;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FXRadioButton createFXRadioButton() {
+		FXRadioButtonImpl fxRadioButton = new FXRadioButtonImpl();
+		return fxRadioButton;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FXComboBox createFXComboBox() {
+		FXComboBoxImpl fxComboBox = new FXComboBoxImpl();
+		return fxComboBox;
 	}
 
 	/**

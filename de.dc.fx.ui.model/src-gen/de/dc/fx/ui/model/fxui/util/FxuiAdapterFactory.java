@@ -92,6 +92,51 @@ public class FxuiAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseFXForm(FXForm object) {
+			return createFXFormAdapter();
+		}
+
+		@Override
+		public Adapter caseFXControl(FXControl object) {
+			return createFXControlAdapter();
+		}
+
+		@Override
+		public Adapter caseFXTextField(FXTextField object) {
+			return createFXTextFieldAdapter();
+		}
+
+		@Override
+		public Adapter caseFXButton(FXButton object) {
+			return createFXButtonAdapter();
+		}
+
+		@Override
+		public Adapter caseFXToggleButton(FXToggleButton object) {
+			return createFXToggleButtonAdapter();
+		}
+
+		@Override
+		public Adapter caseFXCheckbox(FXCheckbox object) {
+			return createFXCheckboxAdapter();
+		}
+
+		@Override
+		public Adapter caseFXChoiceBox(FXChoiceBox object) {
+			return createFXChoiceBoxAdapter();
+		}
+
+		@Override
+		public Adapter caseFXRadioButton(FXRadioButton object) {
+			return createFXRadioButtonAdapter();
+		}
+
+		@Override
+		public Adapter caseFXComboBox(FXComboBox object) {
+			return createFXComboBoxAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -177,6 +222,132 @@ public class FxuiAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createFXPropertyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.fx.ui.model.fxui.FXForm <em>FX Form</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.fx.ui.model.fxui.FXForm
+	 * @generated
+	 */
+	public Adapter createFXFormAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.fx.ui.model.fxui.FXControl <em>FX Control</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.fx.ui.model.fxui.FXControl
+	 * @generated
+	 */
+	public Adapter createFXControlAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.fx.ui.model.fxui.FXTextField <em>FX Text Field</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.fx.ui.model.fxui.FXTextField
+	 * @generated
+	 */
+	public Adapter createFXTextFieldAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.fx.ui.model.fxui.FXButton <em>FX Button</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.fx.ui.model.fxui.FXButton
+	 * @generated
+	 */
+	public Adapter createFXButtonAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.fx.ui.model.fxui.FXToggleButton <em>FX Toggle Button</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.fx.ui.model.fxui.FXToggleButton
+	 * @generated
+	 */
+	public Adapter createFXToggleButtonAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.fx.ui.model.fxui.FXCheckbox <em>FX Checkbox</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.fx.ui.model.fxui.FXCheckbox
+	 * @generated
+	 */
+	public Adapter createFXCheckboxAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.fx.ui.model.fxui.FXChoiceBox <em>FX Choice Box</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.fx.ui.model.fxui.FXChoiceBox
+	 * @generated
+	 */
+	public Adapter createFXChoiceBoxAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.fx.ui.model.fxui.FXRadioButton <em>FX Radio Button</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.fx.ui.model.fxui.FXRadioButton
+	 * @generated
+	 */
+	public Adapter createFXRadioButtonAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.fx.ui.model.fxui.FXComboBox <em>FX Combo Box</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.fx.ui.model.fxui.FXComboBox
+	 * @generated
+	 */
+	public Adapter createFXComboBoxAdapter() {
 		return null;
 	}
 

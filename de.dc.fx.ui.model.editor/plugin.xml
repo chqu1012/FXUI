@@ -36,11 +36,6 @@
             description="%_UI_Menu_Open_description"
             categoryId="org.eclipse.ui.category.file"
             id="de.dc.fx.ui.model.fxui.presentation.FxuiEditorAdvisorOpenCommand"/>
-      <command
-            defaultHandler="de.dc.fx.ui.model.editor.command.GenerateSourceHandler"
-            id="de.dc.fx.ui.model.editor.GenerateSource"
-            name="Generate Source">
-      </command>
    </extension>
 
    <extension point="org.eclipse.ui.bindings">
@@ -123,6 +118,17 @@
     <action  id="de.dc.fx.ui.model.editor.GenerateSource"
       label="Generate Source" menubarPath="additions"    class="de.dc.fx.ui.model.editor.command.GenerateSourceAction"
       enablesFor="1"/>
+  </objectContribution>
+  <objectContribution
+        id="de.dc.fx.ui.model.editor.menu"
+        objectClass="de.dc.fx.ui.model.fxui.FXForm">
+     <action
+           class="de.dc.fx.ui.model.editor.command.GenerateSourceAction"
+           enablesFor="1"
+           id="de.dc.fx.ui.model.editor.GenerateSource"
+           label="Generate Source"
+           menubarPath="additions">
+     </action>
   </objectContribution>
 </extension>
 <extension

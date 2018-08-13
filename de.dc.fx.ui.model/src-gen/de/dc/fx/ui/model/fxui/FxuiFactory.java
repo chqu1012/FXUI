@@ -67,6 +67,78 @@ public interface FxuiFactory extends EFactory {
 	FXProperty createFXProperty();
 
 	/**
+	 * Returns a new object of class '<em>FX Form</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>FX Form</em>'.
+	 * @generated
+	 */
+	FXForm createFXForm();
+
+	/**
+	 * Returns a new object of class '<em>FX Text Field</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>FX Text Field</em>'.
+	 * @generated
+	 */
+	FXTextField createFXTextField();
+
+	/**
+	 * Returns a new object of class '<em>FX Button</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>FX Button</em>'.
+	 * @generated
+	 */
+	FXButton createFXButton();
+
+	/**
+	 * Returns a new object of class '<em>FX Toggle Button</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>FX Toggle Button</em>'.
+	 * @generated
+	 */
+	FXToggleButton createFXToggleButton();
+
+	/**
+	 * Returns a new object of class '<em>FX Checkbox</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>FX Checkbox</em>'.
+	 * @generated
+	 */
+	FXCheckbox createFXCheckbox();
+
+	/**
+	 * Returns a new object of class '<em>FX Choice Box</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>FX Choice Box</em>'.
+	 * @generated
+	 */
+	FXChoiceBox createFXChoiceBox();
+
+	/**
+	 * Returns a new object of class '<em>FX Radio Button</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>FX Radio Button</em>'.
+	 * @generated
+	 */
+	FXRadioButton createFXRadioButton();
+
+	/**
+	 * Returns a new object of class '<em>FX Combo Box</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>FX Combo Box</em>'.
+	 * @generated
+	 */
+	FXComboBox createFXComboBox();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

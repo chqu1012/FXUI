@@ -351,6 +351,447 @@ public interface FxuiPackage extends EPackage {
 	int FX_PROPERTY_OPERATION_COUNT = FX_NAMED_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link de.dc.fx.ui.model.fxui.impl.FXFormImpl <em>FX Form</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.fx.ui.model.fxui.impl.FXFormImpl
+	 * @see de.dc.fx.ui.model.fxui.impl.FxuiPackageImpl#getFXForm()
+	 * @generated
+	 */
+	int FX_FORM = 5;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_FORM__NAME = FX_NAMED_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Num Of Grid</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_FORM__NUM_OF_GRID = FX_NAMED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Fxcontrols</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_FORM__FXCONTROLS = FX_NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Package Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_FORM__PACKAGE_PATH = FX_NAMED_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>FX Form</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_FORM_FEATURE_COUNT = FX_NAMED_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of operations of the '<em>FX Form</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_FORM_OPERATION_COUNT = FX_NAMED_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.dc.fx.ui.model.fxui.impl.FXControlImpl <em>FX Control</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.fx.ui.model.fxui.impl.FXControlImpl
+	 * @see de.dc.fx.ui.model.fxui.impl.FxuiPackageImpl#getFXControl()
+	 * @generated
+	 */
+	int FX_CONTROL = 6;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_CONTROL__NAME = FX_NAMED_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Show Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_CONTROL__SHOW_LABEL = FX_NAMED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>FX Control</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_CONTROL_FEATURE_COUNT = FX_NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>FX Control</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_CONTROL_OPERATION_COUNT = FX_NAMED_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.dc.fx.ui.model.fxui.impl.FXTextFieldImpl <em>FX Text Field</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.fx.ui.model.fxui.impl.FXTextFieldImpl
+	 * @see de.dc.fx.ui.model.fxui.impl.FxuiPackageImpl#getFXTextField()
+	 * @generated
+	 */
+	int FX_TEXT_FIELD = 7;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TEXT_FIELD__NAME = FX_CONTROL__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Show Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TEXT_FIELD__SHOW_LABEL = FX_CONTROL__SHOW_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Prompt</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TEXT_FIELD__PROMPT = FX_CONTROL_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>FX Text Field</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TEXT_FIELD_FEATURE_COUNT = FX_CONTROL_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>FX Text Field</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TEXT_FIELD_OPERATION_COUNT = FX_CONTROL_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.dc.fx.ui.model.fxui.impl.FXButtonImpl <em>FX Button</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.fx.ui.model.fxui.impl.FXButtonImpl
+	 * @see de.dc.fx.ui.model.fxui.impl.FxuiPackageImpl#getFXButton()
+	 * @generated
+	 */
+	int FX_BUTTON = 8;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_BUTTON__NAME = FX_CONTROL__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Show Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_BUTTON__SHOW_LABEL = FX_CONTROL__SHOW_LABEL;
+
+	/**
+	 * The number of structural features of the '<em>FX Button</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_BUTTON_FEATURE_COUNT = FX_CONTROL_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>FX Button</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_BUTTON_OPERATION_COUNT = FX_CONTROL_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.dc.fx.ui.model.fxui.impl.FXToggleButtonImpl <em>FX Toggle Button</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.fx.ui.model.fxui.impl.FXToggleButtonImpl
+	 * @see de.dc.fx.ui.model.fxui.impl.FxuiPackageImpl#getFXToggleButton()
+	 * @generated
+	 */
+	int FX_TOGGLE_BUTTON = 9;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TOGGLE_BUTTON__NAME = FX_CONTROL__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Show Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TOGGLE_BUTTON__SHOW_LABEL = FX_CONTROL__SHOW_LABEL;
+
+	/**
+	 * The number of structural features of the '<em>FX Toggle Button</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TOGGLE_BUTTON_FEATURE_COUNT = FX_CONTROL_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>FX Toggle Button</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TOGGLE_BUTTON_OPERATION_COUNT = FX_CONTROL_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.dc.fx.ui.model.fxui.impl.FXCheckboxImpl <em>FX Checkbox</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.fx.ui.model.fxui.impl.FXCheckboxImpl
+	 * @see de.dc.fx.ui.model.fxui.impl.FxuiPackageImpl#getFXCheckbox()
+	 * @generated
+	 */
+	int FX_CHECKBOX = 10;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_CHECKBOX__NAME = FX_CONTROL__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Show Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_CHECKBOX__SHOW_LABEL = FX_CONTROL__SHOW_LABEL;
+
+	/**
+	 * The number of structural features of the '<em>FX Checkbox</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_CHECKBOX_FEATURE_COUNT = FX_CONTROL_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>FX Checkbox</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_CHECKBOX_OPERATION_COUNT = FX_CONTROL_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.dc.fx.ui.model.fxui.impl.FXChoiceBoxImpl <em>FX Choice Box</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.fx.ui.model.fxui.impl.FXChoiceBoxImpl
+	 * @see de.dc.fx.ui.model.fxui.impl.FxuiPackageImpl#getFXChoiceBox()
+	 * @generated
+	 */
+	int FX_CHOICE_BOX = 11;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_CHOICE_BOX__NAME = FX_CONTROL__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Show Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_CHOICE_BOX__SHOW_LABEL = FX_CONTROL__SHOW_LABEL;
+
+	/**
+	 * The number of structural features of the '<em>FX Choice Box</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_CHOICE_BOX_FEATURE_COUNT = FX_CONTROL_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>FX Choice Box</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_CHOICE_BOX_OPERATION_COUNT = FX_CONTROL_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.dc.fx.ui.model.fxui.impl.FXRadioButtonImpl <em>FX Radio Button</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.fx.ui.model.fxui.impl.FXRadioButtonImpl
+	 * @see de.dc.fx.ui.model.fxui.impl.FxuiPackageImpl#getFXRadioButton()
+	 * @generated
+	 */
+	int FX_RADIO_BUTTON = 12;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_RADIO_BUTTON__NAME = FX_CONTROL__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Show Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_RADIO_BUTTON__SHOW_LABEL = FX_CONTROL__SHOW_LABEL;
+
+	/**
+	 * The number of structural features of the '<em>FX Radio Button</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_RADIO_BUTTON_FEATURE_COUNT = FX_CONTROL_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>FX Radio Button</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_RADIO_BUTTON_OPERATION_COUNT = FX_CONTROL_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link de.dc.fx.ui.model.fxui.impl.FXComboBoxImpl <em>FX Combo Box</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.fx.ui.model.fxui.impl.FXComboBoxImpl
+	 * @see de.dc.fx.ui.model.fxui.impl.FxuiPackageImpl#getFXComboBox()
+	 * @generated
+	 */
+	int FX_COMBO_BOX = 13;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_COMBO_BOX__NAME = FX_CONTROL__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Show Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_COMBO_BOX__SHOW_LABEL = FX_CONTROL__SHOW_LABEL;
+
+	/**
+	 * The number of structural features of the '<em>FX Combo Box</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_COMBO_BOX_FEATURE_COUNT = FX_CONTROL_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>FX Combo Box</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_COMBO_BOX_OPERATION_COUNT = FX_CONTROL_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link de.dc.fx.ui.model.fxui.Pos <em>Pos</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -358,7 +799,7 @@ public interface FxuiPackage extends EPackage {
 	 * @see de.dc.fx.ui.model.fxui.impl.FxuiPackageImpl#getPos()
 	 * @generated
 	 */
-	int POS = 5;
+	int POS = 14;
 
 	/**
 	 * Returns the meta object for class '{@link de.dc.fx.ui.model.fxui.FXTableView <em>FX Table View</em>}'.
@@ -554,6 +995,151 @@ public interface FxuiPackage extends EPackage {
 	EAttribute getFXProperty_Type();
 
 	/**
+	 * Returns the meta object for class '{@link de.dc.fx.ui.model.fxui.FXForm <em>FX Form</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>FX Form</em>'.
+	 * @see de.dc.fx.ui.model.fxui.FXForm
+	 * @generated
+	 */
+	EClass getFXForm();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.model.fxui.FXForm#getNumOfGrid <em>Num Of Grid</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Num Of Grid</em>'.
+	 * @see de.dc.fx.ui.model.fxui.FXForm#getNumOfGrid()
+	 * @see #getFXForm()
+	 * @generated
+	 */
+	EAttribute getFXForm_NumOfGrid();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.dc.fx.ui.model.fxui.FXForm#getFxcontrols <em>Fxcontrols</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Fxcontrols</em>'.
+	 * @see de.dc.fx.ui.model.fxui.FXForm#getFxcontrols()
+	 * @see #getFXForm()
+	 * @generated
+	 */
+	EReference getFXForm_Fxcontrols();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.model.fxui.FXForm#getPackagePath <em>Package Path</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Package Path</em>'.
+	 * @see de.dc.fx.ui.model.fxui.FXForm#getPackagePath()
+	 * @see #getFXForm()
+	 * @generated
+	 */
+	EAttribute getFXForm_PackagePath();
+
+	/**
+	 * Returns the meta object for class '{@link de.dc.fx.ui.model.fxui.FXControl <em>FX Control</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>FX Control</em>'.
+	 * @see de.dc.fx.ui.model.fxui.FXControl
+	 * @generated
+	 */
+	EClass getFXControl();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.model.fxui.FXControl#isShowLabel <em>Show Label</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Show Label</em>'.
+	 * @see de.dc.fx.ui.model.fxui.FXControl#isShowLabel()
+	 * @see #getFXControl()
+	 * @generated
+	 */
+	EAttribute getFXControl_ShowLabel();
+
+	/**
+	 * Returns the meta object for class '{@link de.dc.fx.ui.model.fxui.FXTextField <em>FX Text Field</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>FX Text Field</em>'.
+	 * @see de.dc.fx.ui.model.fxui.FXTextField
+	 * @generated
+	 */
+	EClass getFXTextField();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.model.fxui.FXTextField#getPrompt <em>Prompt</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Prompt</em>'.
+	 * @see de.dc.fx.ui.model.fxui.FXTextField#getPrompt()
+	 * @see #getFXTextField()
+	 * @generated
+	 */
+	EAttribute getFXTextField_Prompt();
+
+	/**
+	 * Returns the meta object for class '{@link de.dc.fx.ui.model.fxui.FXButton <em>FX Button</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>FX Button</em>'.
+	 * @see de.dc.fx.ui.model.fxui.FXButton
+	 * @generated
+	 */
+	EClass getFXButton();
+
+	/**
+	 * Returns the meta object for class '{@link de.dc.fx.ui.model.fxui.FXToggleButton <em>FX Toggle Button</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>FX Toggle Button</em>'.
+	 * @see de.dc.fx.ui.model.fxui.FXToggleButton
+	 * @generated
+	 */
+	EClass getFXToggleButton();
+
+	/**
+	 * Returns the meta object for class '{@link de.dc.fx.ui.model.fxui.FXCheckbox <em>FX Checkbox</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>FX Checkbox</em>'.
+	 * @see de.dc.fx.ui.model.fxui.FXCheckbox
+	 * @generated
+	 */
+	EClass getFXCheckbox();
+
+	/**
+	 * Returns the meta object for class '{@link de.dc.fx.ui.model.fxui.FXChoiceBox <em>FX Choice Box</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>FX Choice Box</em>'.
+	 * @see de.dc.fx.ui.model.fxui.FXChoiceBox
+	 * @generated
+	 */
+	EClass getFXChoiceBox();
+
+	/**
+	 * Returns the meta object for class '{@link de.dc.fx.ui.model.fxui.FXRadioButton <em>FX Radio Button</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>FX Radio Button</em>'.
+	 * @see de.dc.fx.ui.model.fxui.FXRadioButton
+	 * @generated
+	 */
+	EClass getFXRadioButton();
+
+	/**
+	 * Returns the meta object for class '{@link de.dc.fx.ui.model.fxui.FXComboBox <em>FX Combo Box</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>FX Combo Box</em>'.
+	 * @see de.dc.fx.ui.model.fxui.FXComboBox
+	 * @generated
+	 */
+	EClass getFXComboBox();
+
+	/**
 	 * Returns the meta object for enum '{@link de.dc.fx.ui.model.fxui.Pos <em>Pos</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -739,6 +1325,136 @@ public interface FxuiPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute FX_PROPERTY__TYPE = eINSTANCE.getFXProperty_Type();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.fx.ui.model.fxui.impl.FXFormImpl <em>FX Form</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.fx.ui.model.fxui.impl.FXFormImpl
+		 * @see de.dc.fx.ui.model.fxui.impl.FxuiPackageImpl#getFXForm()
+		 * @generated
+		 */
+		EClass FX_FORM = eINSTANCE.getFXForm();
+
+		/**
+		 * The meta object literal for the '<em><b>Num Of Grid</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FX_FORM__NUM_OF_GRID = eINSTANCE.getFXForm_NumOfGrid();
+
+		/**
+		 * The meta object literal for the '<em><b>Fxcontrols</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FX_FORM__FXCONTROLS = eINSTANCE.getFXForm_Fxcontrols();
+
+		/**
+		 * The meta object literal for the '<em><b>Package Path</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FX_FORM__PACKAGE_PATH = eINSTANCE.getFXForm_PackagePath();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.fx.ui.model.fxui.impl.FXControlImpl <em>FX Control</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.fx.ui.model.fxui.impl.FXControlImpl
+		 * @see de.dc.fx.ui.model.fxui.impl.FxuiPackageImpl#getFXControl()
+		 * @generated
+		 */
+		EClass FX_CONTROL = eINSTANCE.getFXControl();
+
+		/**
+		 * The meta object literal for the '<em><b>Show Label</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FX_CONTROL__SHOW_LABEL = eINSTANCE.getFXControl_ShowLabel();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.fx.ui.model.fxui.impl.FXTextFieldImpl <em>FX Text Field</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.fx.ui.model.fxui.impl.FXTextFieldImpl
+		 * @see de.dc.fx.ui.model.fxui.impl.FxuiPackageImpl#getFXTextField()
+		 * @generated
+		 */
+		EClass FX_TEXT_FIELD = eINSTANCE.getFXTextField();
+
+		/**
+		 * The meta object literal for the '<em><b>Prompt</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FX_TEXT_FIELD__PROMPT = eINSTANCE.getFXTextField_Prompt();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.fx.ui.model.fxui.impl.FXButtonImpl <em>FX Button</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.fx.ui.model.fxui.impl.FXButtonImpl
+		 * @see de.dc.fx.ui.model.fxui.impl.FxuiPackageImpl#getFXButton()
+		 * @generated
+		 */
+		EClass FX_BUTTON = eINSTANCE.getFXButton();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.fx.ui.model.fxui.impl.FXToggleButtonImpl <em>FX Toggle Button</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.fx.ui.model.fxui.impl.FXToggleButtonImpl
+		 * @see de.dc.fx.ui.model.fxui.impl.FxuiPackageImpl#getFXToggleButton()
+		 * @generated
+		 */
+		EClass FX_TOGGLE_BUTTON = eINSTANCE.getFXToggleButton();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.fx.ui.model.fxui.impl.FXCheckboxImpl <em>FX Checkbox</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.fx.ui.model.fxui.impl.FXCheckboxImpl
+		 * @see de.dc.fx.ui.model.fxui.impl.FxuiPackageImpl#getFXCheckbox()
+		 * @generated
+		 */
+		EClass FX_CHECKBOX = eINSTANCE.getFXCheckbox();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.fx.ui.model.fxui.impl.FXChoiceBoxImpl <em>FX Choice Box</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.fx.ui.model.fxui.impl.FXChoiceBoxImpl
+		 * @see de.dc.fx.ui.model.fxui.impl.FxuiPackageImpl#getFXChoiceBox()
+		 * @generated
+		 */
+		EClass FX_CHOICE_BOX = eINSTANCE.getFXChoiceBox();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.fx.ui.model.fxui.impl.FXRadioButtonImpl <em>FX Radio Button</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.fx.ui.model.fxui.impl.FXRadioButtonImpl
+		 * @see de.dc.fx.ui.model.fxui.impl.FxuiPackageImpl#getFXRadioButton()
+		 * @generated
+		 */
+		EClass FX_RADIO_BUTTON = eINSTANCE.getFXRadioButton();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.fx.ui.model.fxui.impl.FXComboBoxImpl <em>FX Combo Box</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.fx.ui.model.fxui.impl.FXComboBoxImpl
+		 * @see de.dc.fx.ui.model.fxui.impl.FxuiPackageImpl#getFXComboBox()
+		 * @generated
+		 */
+		EClass FX_COMBO_BOX = eINSTANCE.getFXComboBox();
 
 		/**
 		 * The meta object literal for the '{@link de.dc.fx.ui.model.fxui.Pos <em>Pos</em>}' enum.

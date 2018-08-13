@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="de.dc.fx.ui.model.feature"
+      label="Feature"
+      version="1.0.0.qualifier">
+
+   <description url="http://www.example.com/description">
+      [Enter Feature Description here.]
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <requires>
+      <import plugin="org.eclipse.emf.ecore"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.emf.edit"/>
+      <import plugin="org.eclipse.emf.ecore.xmi"/>
+      <import plugin="org.eclipse.emf.edit.ui"/>
+      <import plugin="org.eclipse.jdt.ui"/>
+      <import plugin="org.eclipse.jdt.annotation"/>
+      <import plugin="org.eclipse.jdt.apt.core"/>
+      <import plugin="org.eclipse.jdt.apt.ui"/>
+      <import plugin="org.eclipse.jdt.core"/>
+      <import plugin="org.eclipse.jdt.launching"/>
+      <import plugin="org.eclipse.jdt"/>
+      <import plugin="org.eclipse.jdt.apt.pluggable.core"/>
+      <import plugin="org.eclipse.jdt.core.manipulation"/>
+      <import plugin="org.eclipse.jdt.debug"/>
+      <import plugin="org.eclipse.ui.themes" version="1.2.100" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui.workbench"/>
+      <import plugin="org.eclipse.core.resources"/>
+      <import plugin="de.dc.fx.ui.model.fxml.template" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui.ide" version="3.14.0" match="greaterOrEqual"/>
+      <import plugin="de.dc.fx.ui.model" version="0.1.0" match="greaterOrEqual"/>
+      <import plugin="com.google.guava"/>
+      <import plugin="org.eclipse.xtext.xbase.lib"/>
+      <import plugin="org.eclipse.xtend.lib"/>
+      <import plugin="org.eclipse.xtend.lib.macro"/>
+   </requires>
+
+   <plugin
+         id="de.dc.fx.ui.model"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="de.dc.fx.ui.model.edit"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="de.dc.fx.ui.model.editor"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="de.dc.fx.ui.model.fxml.template"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

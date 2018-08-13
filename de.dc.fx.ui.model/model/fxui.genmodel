@@ -44,5 +44,22 @@
     <genClasses ecoreClass="fxui.ecore#//FXProperty">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fxui.ecore#//FXProperty/type"/>
     </genClasses>
+    <genClasses ecoreClass="fxui.ecore#//FXForm">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fxui.ecore#//FXForm/numOfGrid"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fxui.ecore#//FXForm/fxcontrols"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fxui.ecore#//FXForm/packagePath"/>
+    </genClasses>
+    <genClasses ecoreClass="fxui.ecore#//FXControl">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fxui.ecore#//FXControl/showLabel"/>
+    </genClasses>
+    <genClasses ecoreClass="fxui.ecore#//FXTextField">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fxui.ecore#//FXTextField/prompt"/>
+    </genClasses>
+    <genClasses ecoreClass="fxui.ecore#//FXButton"/>
+    <genClasses ecoreClass="fxui.ecore#//FXToggleButton"/>
+    <genClasses ecoreClass="fxui.ecore#//FXCheckbox"/>
+    <genClasses ecoreClass="fxui.ecore#//FXChoiceBox"/>
+    <genClasses ecoreClass="fxui.ecore#//FXRadioButton"/>
+    <genClasses ecoreClass="fxui.ecore#//FXComboBox"/>
   </genPackages>
 </genmodel:GenModel>

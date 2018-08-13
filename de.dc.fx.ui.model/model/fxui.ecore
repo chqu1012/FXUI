@@ -40,4 +40,23 @@
     <eLiterals name="BOTTOM_CENTER" value="7"/>
     <eLiterals name="BOTTOM_RIGHT" value="8"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FXForm" eSuperTypes="#//FXNamedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numOfGrid" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fxcontrols" upperBound="-1"
+        eType="#//FXControl" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="packagePath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FXControl" abstract="true" eSuperTypes="#//FXNamedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="showLabel" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FXTextField" eSuperTypes="#//FXControl">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="prompt" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FXButton" eSuperTypes="#//FXControl"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FXToggleButton" eSuperTypes="#//FXControl"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FXCheckbox" eSuperTypes="#//FXControl"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FXChoiceBox" eSuperTypes="#//FXControl"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FXRadioButton" eSuperTypes="#//FXControl"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FXComboBox" eSuperTypes="#//FXControl"/>
 </ecore:EPackage>
