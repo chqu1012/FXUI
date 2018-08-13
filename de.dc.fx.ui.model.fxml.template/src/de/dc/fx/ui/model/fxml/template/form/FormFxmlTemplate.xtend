@@ -12,7 +12,7 @@ class FormFxmlTemplate implements IGenerator<FXForm>{
 	<?import javafx.scene.control.*?>
 	<?import javafx.scene.layout.*?>
 
-	<GridPane hgap="20.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" vgap="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.162">
+	<fx:root type="GridPane" fx:id="root" hgap="20.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" vgap="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.162">
 	  <columnConstraints>
 	    <ColumnConstraints hgrow="NEVER" maxWidth="1.7976931348623157E308" />
 	    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -24,15 +24,15 @@ class FormFxmlTemplate implements IGenerator<FXForm>{
 	  </rowConstraints>
 	   <children>
 	   		«FOR n: 1..data.fxcontrols.size»
-	   		«val c = data.fxcontrols.get(n-1)»
+	   		«val c = data.fxcontrols.get(n-1)»«val controlName = c.class.simpleName.replaceFirst("FX", "").replace("Impl", "")»
 	   		<Label text="«c.name»:" GridPane.rowIndex="«n»" />
-	   		<«c.class.simpleName.replaceFirst("FX", "").replace("Impl", "")» text="«c.name»" GridPane.columnIndex="1" GridPane.rowIndex="«n»" />
+	   		<«controlName» fx:id="«c.name.toFirstLower»«controlName»" text="«c.name»" GridPane.columnIndex="1" GridPane.rowIndex="«n»" />
 	   		«ENDFOR»	
 	   </children>
 	   <padding>
 	      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
 	   </padding>
-	</GridPane>
+	</fx:root>
 	'''
 	
 }

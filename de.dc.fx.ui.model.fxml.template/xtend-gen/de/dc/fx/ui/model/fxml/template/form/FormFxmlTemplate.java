@@ -6,6 +6,7 @@ import de.dc.fx.ui.model.fxui.FXForm;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.xbase.lib.IntegerRange;
+import org.eclipse.xtext.xbase.lib.StringExtensions;
 
 @SuppressWarnings("all")
 public class FormFxmlTemplate implements IGenerator<FXForm> {
@@ -22,7 +23,7 @@ public class FormFxmlTemplate implements IGenerator<FXForm> {
     _builder.append("<?import javafx.scene.layout.*?>");
     _builder.newLine();
     _builder.newLine();
-    _builder.append("<GridPane hgap=\"20.0\" maxHeight=\"1.7976931348623157E308\" maxWidth=\"1.7976931348623157E308\" minHeight=\"-Infinity\" minWidth=\"-Infinity\" vgap=\"10.0\" xmlns:fx=\"http://javafx.com/fxml/1\" xmlns=\"http://javafx.com/javafx/8.0.162\">");
+    _builder.append("<fx:root type=\"GridPane\" fx:id=\"root\" hgap=\"20.0\" maxHeight=\"1.7976931348623157E308\" maxWidth=\"1.7976931348623157E308\" minHeight=\"-Infinity\" minWidth=\"-Infinity\" vgap=\"10.0\" xmlns:fx=\"http://javafx.com/fxml/1\" xmlns=\"http://javafx.com/javafx/8.0.162\">");
     _builder.newLine();
     _builder.append("  ");
     _builder.append("<columnConstraints>");
@@ -59,6 +60,7 @@ public class FormFxmlTemplate implements IGenerator<FXForm> {
       for(final Integer n : _upTo) {
         _builder.append("   \t\t");
         final FXControl c = data.getFxcontrols().get(((n).intValue() - 1));
+        final String controlName = c.getClass().getSimpleName().replaceFirst("FX", "").replace("Impl", "");
         _builder.newLineIfNotEmpty();
         _builder.append("   \t\t");
         _builder.append("<Label text=\"");
@@ -70,9 +72,12 @@ public class FormFxmlTemplate implements IGenerator<FXForm> {
         _builder.newLineIfNotEmpty();
         _builder.append("   \t\t");
         _builder.append("<");
-        String _replace = c.getClass().getSimpleName().replaceFirst("FX", "").replace("Impl", "");
-        _builder.append(_replace, "   \t\t");
-        _builder.append(" text=\"");
+        _builder.append(controlName, "   \t\t");
+        _builder.append(" fx:id=\"");
+        String _firstLower = StringExtensions.toFirstLower(c.getName());
+        _builder.append(_firstLower, "   \t\t");
+        _builder.append(controlName, "   \t\t");
+        _builder.append("\" text=\"");
         String _name_1 = c.getName();
         _builder.append(_name_1, "   \t\t");
         _builder.append("\" GridPane.columnIndex=\"1\" GridPane.rowIndex=\"");
@@ -93,7 +98,7 @@ public class FormFxmlTemplate implements IGenerator<FXForm> {
     _builder.append("   ");
     _builder.append("</padding>");
     _builder.newLine();
-    _builder.append("</GridPane>");
+    _builder.append("</fx:root>");
     _builder.newLine();
     return _builder.toString();
   }
