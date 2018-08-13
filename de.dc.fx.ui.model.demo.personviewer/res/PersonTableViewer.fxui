@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fxui:FXTableView xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:fxui="http://www.example.org/fxui" name="Person" packagePath="de.dc.fx.ui.model.personviewer">
+  <fxColumns associatedFXProperty="//@fxEntity/@fxProperties.0" editable="true"/>
+  <fxColumns associatedFXProperty="//@fxEntity/@fxProperties.1" editable="true" width="200.0"/>
+  <fxColumns associatedFXProperty="//@fxEntity/@fxProperties.2" editable="true"/>
+  <fxColumns associatedFXProperty="//@fxEntity/@fxProperties.3" editable="true"/>
+  <fxColumns associatedFXProperty="//@fxEntity/@fxProperties.4" editable="true" alignment="CENTER_RIGHT"/>
+  <fxEntity name="Person">
+    <fxProperties name="Name" type="String"/>
+    <fxProperties name="Surname" type="String"/>
+    <fxProperties name="Age" type="Integer"/>
+    <fxProperties name="Gender" type="Boolean"/>
+    <fxProperties name="Birthday" type="LocalDate"/>
+  </fxEntity>
+</fxui:FXTableView>

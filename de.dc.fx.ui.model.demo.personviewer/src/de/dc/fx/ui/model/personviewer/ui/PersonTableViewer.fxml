@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import de.dc.fx.ui.model.personviewer.cell.PersonNameCellFactory?>
+<?import de.dc.fx.ui.model.personviewer.cell.PersonSurnameCellFactory?>
+<?import de.dc.fx.ui.model.personviewer.cell.PersonAgeCellFactory?>
+<?import de.dc.fx.ui.model.personviewer.cell.PersonGenderCellFactory?>
+<?import de.dc.fx.ui.model.personviewer.cell.PersonBirthdayCellFactory?>
+<fx:root type="TableView" fx:id="tableView" editable="true" stylesheets="@css/PersonTableViewer.css" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.162">
+  <columns>
+	<TableColumn fx:id="nameColumn" prefWidth="100.0" text="Name">
+		<cellValueFactory>
+		    <PropertyValueFactory property="name"/>
+		</cellValueFactory>
+		<cellFactory>
+			<PersonNameCellFactory/>
+		</cellFactory>
+	</TableColumn>
+	<TableColumn fx:id="surnameColumn" prefWidth="200.0" text="Surname">
+		<cellValueFactory>
+		    <PropertyValueFactory property="surname"/>
+		</cellValueFactory>
+		<cellFactory>
+			<PersonSurnameCellFactory/>
+		</cellFactory>
+	</TableColumn>
+	<TableColumn fx:id="ageColumn" prefWidth="100.0" text="Age">
+		<cellValueFactory>
+		    <PropertyValueFactory property="age"/>
+		</cellValueFactory>
+		<cellFactory>
+			<PersonAgeCellFactory/>
+		</cellFactory>
+	</TableColumn>
+	<TableColumn fx:id="genderColumn" prefWidth="100.0" text="Gender">
+		<cellValueFactory>
+		    <PropertyValueFactory property="gender"/>
+		</cellValueFactory>
+		<cellFactory>
+			<PersonGenderCellFactory/>
+		</cellFactory>
+	</TableColumn>
+	<TableColumn fx:id="birthdayColumn" prefWidth="100.0" text="Birthday">
+		<cellValueFactory>
+		    <PropertyValueFactory property="birthday"/>
+		</cellValueFactory>
+		<cellFactory>
+			<PersonBirthdayCellFactory/>
+		</cellFactory>
+	</TableColumn>
+  </columns>
+</fx:root>

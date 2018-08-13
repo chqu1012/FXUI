@@ -3,22 +3,8 @@
  */
 package de.dc.fx.ui.model.jvmmodel;
 
-import com.google.inject.Inject;
 import de.dc.fx.ui.model.fxui.FXTableView;
 import java.util.Arrays;
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.xtend2.lib.StringConcatenationClient;
-import org.eclipse.xtext.common.types.JvmDeclaredType;
-import org.eclipse.xtext.common.types.JvmGenericType;
-import org.eclipse.xtext.common.types.JvmMember;
-import org.eclipse.xtext.common.types.JvmOperation;
-import org.eclipse.xtext.common.types.JvmVisibility;
-import org.eclipse.xtext.xbase.jvmmodel.AbstractModelInferrer;
-import org.eclipse.xtext.xbase.jvmmodel.IJvmDeclaredTypeAcceptor;
-import org.eclipse.xtext.xbase.jvmmodel.JvmTypesBuilder;
-import org.eclipse.xtext.xbase.lib.Extension;
-import org.eclipse.xtext.xbase.lib.Procedures.Procedure1;
 
 /**
  * <p>Infers a JVM model from the source model.</p>
@@ -27,13 +13,12 @@ import org.eclipse.xtext.xbase.lib.Procedures.Procedure1;
  * which is generated from the source model. Other models link against the JVM model rather than the source model.</p>
  */
 @SuppressWarnings("all")
-public class FXDslJvmModelInferrer extends AbstractModelInferrer {
+public class FXDslJvmModelInferrer /* implements AbstractModelInferrer  */{
   /**
    * convenience API to build and initialize JVM types and their members.
    */
-  @Inject
-  @Extension
-  private JvmTypesBuilder _jvmTypesBuilder;
+  /* @Inject
+   */private /* JvmTypesBuilder */Object _jvmTypesBuilder;
   
   /**
    * The dispatch method {@code infer} is called for each instance of the
@@ -58,38 +43,29 @@ public class FXDslJvmModelInferrer extends AbstractModelInferrer {
    *            rely on linking using the index if isPreIndexingPhase is
    *            <code>true</code>.
    */
-  protected void _infer(final FXTableView element, final IJvmDeclaredTypeAcceptor acceptor, final boolean isPreIndexingPhase) {
-    String _packagePath = element.getPackagePath();
-    String _plus = (_packagePath + ".");
-    String _name = element.getName();
-    String _plus_1 = (_plus + _name);
-    final Procedure1<JvmGenericType> _function = (JvmGenericType it) -> {
-      EList<JvmMember> _members = it.getMembers();
-      final Procedure1<JvmOperation> _function_1 = (JvmOperation it_1) -> {
-        it_1.setVisibility(JvmVisibility.PROTECTED);
-        StringConcatenationClient _client = new StringConcatenationClient() {
-          @Override
-          protected void appendTo(StringConcatenationClient.TargetStringConcatenation _builder) {
-          }
-        };
-        this._jvmTypesBuilder.setBody(it_1, _client);
-      };
-      JvmOperation _method = this._jvmTypesBuilder.toMethod(element, "initTableColumns", this._typeReferenceBuilder.typeRef(void.class), _function_1);
-      this._jvmTypesBuilder.<JvmOperation>operator_add(_members, _method);
-    };
-    acceptor.<JvmGenericType>accept(this._jvmTypesBuilder.toClass(element, _plus_1), _function);
+  protected void _infer(final FXTableView element, final /* IJvmDeclaredTypeAcceptor */Object acceptor, final boolean isPreIndexingPhase) {
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method toClass(Object) is undefined for the type FXTableView"
+      + "\n+ cannot be resolved."
+      + "\nThe method or field members is undefined"
+      + "\nThe method toMethod(FXTableView, String, Object, Object) is undefined"
+      + "\nThe method or field typeRef is undefined for the type Class<Void>"
+      + "\nThe method visibility(Object) is undefined"
+      + "\nJvmVisibility cannot be resolved to a type."
+      + "\nThe method body(String) is undefined"
+      + "\naccept cannot be resolved"
+      + "\n+ cannot be resolved"
+      + "\n+= cannot be resolved"
+      + "\nPROTECTED cannot be resolved");
   }
   
-  public void infer(final EObject element, final IJvmDeclaredTypeAcceptor acceptor, final boolean isPreIndexingPhase) {
-    if (element instanceof FXTableView) {
-      _infer((FXTableView)element, acceptor, isPreIndexingPhase);
-      return;
-    } else if (element != null) {
+  public void infer(final FXTableView element, final IJvmDeclaredTypeAcceptor acceptor, final boolean isPreIndexingPhase) {
+    if (acceptor != null) {
       _infer(element, acceptor, isPreIndexingPhase);
-      return;
-    } else {
-      throw new IllegalArgumentException("Unhandled parameter types: " +
-        Arrays.<Object>asList(element, acceptor, isPreIndexingPhase).toString());
+      return; else {
+        throw new IllegalArgumentException("Unhandled parameter types: " +
+          Arrays.<Object>asList(element, acceptor, isPreIndexingPhase).toString());
+      }
     }
   }
-}
+  

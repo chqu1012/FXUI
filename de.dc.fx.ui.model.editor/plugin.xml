@@ -125,4 +125,40 @@
       enablesFor="1"/>
   </objectContribution>
 </extension>
+<extension
+      id="product"
+      point="org.eclipse.core.runtime.products">
+   <product
+         application="de.dc.fx.ui.model.editor.FxuiEditorAdvisorApplication"
+         name="FXUIEditor">
+      <property
+            name="appName"
+            value="FXUIEditor">
+      </property>
+   </product>
+</extension>
+<extension
+      id="product1"
+      point="org.eclipse.core.runtime.products">
+   <product
+         application="de.dc.fx.ui.model.editor.FxuiEditorAdvisorApplication"
+         name="FXUIEditor">
+      <property
+            name="appName"
+            value="FXUIEditor">
+      </property>
+   </product>
+</extension>
+<extension
+      id="product2"
+      point="org.eclipse.core.runtime.products">
+   <product
+         application="de.dc.fx.ui.model.editor.FxuiEditorAdvisorApplication"
+         name="FXUIEditor">
+      <property
+            name="appName"
+            value="FXUIEditor">
+      </property>
+   </product>
+</extension>
 </plugin>
