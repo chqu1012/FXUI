@@ -1,13 +1,12 @@
 package de.dc.fx.ui.model.demo.profil.form.controller;
 
-import javafx.collections.*;
-import javafx.collections.transformation.*;
-import javafx.fxml.*;
-import javafx.scene.control.*;
-import java.time.*;
-import javafx.scene.layout.*;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleButton;
+import javafx.scene.layout.GridPane;
 
-public abstract class ProfilBaseFormController<T> extends GridPane{
+public abstract class ProfilBaseFormController extends GridPane{
 	@FXML 
 	protected TextField nameTextField;
 	@FXML 
@@ -21,11 +20,13 @@ public abstract class ProfilBaseFormController<T> extends GridPane{
 	@FXML 
 	protected TextField stadtTextField;
 	@FXML 
-	protected Button hello WorldButton;
+	protected Button helloWorldButton;
 	@FXML 
-	protected ToggleButton helllo ToggleToggleButton;
+	protected ToggleButton hellloToggleToggleButton;
 	@FXML 
 	protected ToggleButton männlichToggleButton;
 	@FXML 
 	protected ToggleButton weiblichToggleButton;
+	
+	protected abstract void initialize();
 }

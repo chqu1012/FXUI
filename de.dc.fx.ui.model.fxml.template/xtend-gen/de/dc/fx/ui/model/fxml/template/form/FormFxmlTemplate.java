@@ -63,10 +63,17 @@ public class FormFxmlTemplate implements IGenerator<FXForm> {
         final String controlName = c.getClass().getSimpleName().replaceFirst("FX", "").replace("Impl", "");
         _builder.newLineIfNotEmpty();
         _builder.append("   \t\t");
-        _builder.append("<Label text=\"");
-        String _name = c.getName();
-        _builder.append(_name, "   \t\t");
-        _builder.append(":\" GridPane.rowIndex=\"");
+        _builder.append("<Label ");
+        {
+          boolean _isShowLabel = c.isShowLabel();
+          if (_isShowLabel) {
+            _builder.append("text=\"");
+            String _name = c.getName();
+            _builder.append(_name, "   \t\t");
+            _builder.append(":\" ");
+          }
+        }
+        _builder.append("GridPane.rowIndex=\"");
         _builder.append(n, "   \t\t");
         _builder.append("\" />");
         _builder.newLineIfNotEmpty();

@@ -8,6 +8,7 @@ import de.dc.fx.ui.model.fxui.FXForm;
 
 public enum FormTemplateRegistry {
 	BaseFormController(new BaseFormControllerTemplate(), "/form/controller/", "BaseFormController.java"),
+	FormController(new FormControllerTemplate(), "/form/controller/", "FormController.java"),
 	FormFxml(new FormFxmlTemplate(), "/form/","Form.fxml");
 	
 	private IGenerator<FXForm> template;
