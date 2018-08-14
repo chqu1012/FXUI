@@ -6,9 +6,9 @@ import de.dc.fx.ui.model.fxui.FXForm
 class FormControllerTemplate implements IGenerator<FXForm>{
 	
 	override gen(FXForm data)'''
-	package «data.packagePath».form.controller;
+	package «data.packagePath».form;
 	
-	public class «data.name»FormController extends «data.name»BaseFormController{
+	public class «data.name»Form extends «data.name»BaseForm{
 	
 		@Override
 		protected void initialize() {

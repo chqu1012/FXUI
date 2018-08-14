@@ -38,9 +38,9 @@
    		<Button fx:id="helloWorldButton" text="Hello World" GridPane.columnIndex="1" GridPane.rowIndex="7" />
    		<Label text="Helllo Toggle:" GridPane.rowIndex="8" />
    		<ToggleButton fx:id="hellloToggleToggleButton" text="Helllo Toggle" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-   		<Label  GridPane.rowIndex="9" />
+   		<Label GridPane.rowIndex="9" />
    		<ToggleButton fx:id="männlichToggleButton" text="Männlich" GridPane.columnIndex="1" GridPane.rowIndex="9" />
-   		<Label  GridPane.rowIndex="10" />
+   		<Label GridPane.rowIndex="10" />
    		<ToggleButton fx:id="weiblichToggleButton" text="weiblich" GridPane.columnIndex="1" GridPane.rowIndex="10" />
    </children>
    <padding>

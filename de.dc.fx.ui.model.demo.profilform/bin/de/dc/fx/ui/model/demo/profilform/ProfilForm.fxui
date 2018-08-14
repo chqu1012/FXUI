@@ -8,6 +8,6 @@
   <fxcontrols xsi:type="fxui:FXTextField" name="Stadt"/>
   <fxcontrols xsi:type="fxui:FXButton" name="Hello World"/>
   <fxcontrols xsi:type="fxui:FXToggleButton" name="Helllo Toggle"/>
-  <fxcontrols xsi:type="fxui:FXToggleButton" name="Männlich"/>
-  <fxcontrols xsi:type="fxui:FXToggleButton" name="weiblich"/>
+  <fxcontrols xsi:type="fxui:FXToggleButton" name="Männlich" showLabel="false"/>
+  <fxcontrols xsi:type="fxui:FXToggleButton" name="weiblich" showLabel="false"/>
 </fxui:FXForm>
