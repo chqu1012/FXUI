@@ -2,7 +2,7 @@
  */
 package de.dc.fx.ui.model.fxui.provider;
 
-import de.dc.fx.ui.model.fxui.FXCheckbox;
+import de.dc.fx.ui.model.fxui.FXCheckBox;
 
 import java.util.Collection;
 import java.util.List;
@@ -13,19 +13,19 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**
- * This is the item provider adapter for a {@link de.dc.fx.ui.model.fxui.FXCheckbox} object.
+ * This is the item provider adapter for a {@link de.dc.fx.ui.model.fxui.FXCheckBox} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class FXCheckboxItemProvider extends FXControlItemProvider {
+public class FXCheckBoxItemProvider extends FXSelectedControlItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FXCheckboxItemProvider(AdapterFactory adapterFactory) {
+	public FXCheckBoxItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -45,14 +45,14 @@ public class FXCheckboxItemProvider extends FXControlItemProvider {
 	}
 
 	/**
-	 * This returns FXCheckbox.gif.
+	 * This returns FXCheckBox.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/FXCheckbox"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/FXCheckBox"));
 	}
 
 	/**
@@ -73,9 +73,9 @@ public class FXCheckboxItemProvider extends FXControlItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((FXCheckbox) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_FXCheckbox_type")
-				: getString("_UI_FXCheckbox_type") + " " + label;
+		String label = ((FXCheckBox) object).getName();
+		return label == null || label.length() == 0 ? getString("_UI_FXCheckBox_type")
+				: getString("_UI_FXCheckBox_type") + " " + label;
 	}
 
 	/**

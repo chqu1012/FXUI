@@ -37,6 +37,15 @@ public abstract class ProfilBaseForm extends GridPane{
 	
 	@FXML 
 	protected ToggleButton weiblichToggleButton;
+	
+	@FXML 
+	protected CheckBox maennlichCheckbox;
+	
+	@FXML 
+	protected ChoiceBox asdChoiceBox;
+	
+	@FXML 
+	protected RadioButton weckerRadioButton;
     
     public ProfilBaseForm() {
 		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(getClass().getSimpleName()+".fxml"));

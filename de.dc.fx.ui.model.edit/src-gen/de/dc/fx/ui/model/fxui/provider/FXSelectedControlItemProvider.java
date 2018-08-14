@@ -2,7 +2,8 @@
  */
 package de.dc.fx.ui.model.fxui.provider;
 
-import de.dc.fx.ui.model.fxui.FXChoiceBox;
+import de.dc.fx.ui.model.fxui.FXSelectedControl;
+import de.dc.fx.ui.model.fxui.FxuiPackage;
 
 import java.util.Collection;
 import java.util.List;
@@ -10,22 +11,25 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link de.dc.fx.ui.model.fxui.FXChoiceBox} object.
+ * This is the item provider adapter for a {@link de.dc.fx.ui.model.fxui.FXSelectedControl} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class FXChoiceBoxItemProvider extends FXSelectedControlItemProvider {
+public class FXSelectedControlItemProvider extends FXControlItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FXChoiceBoxItemProvider(AdapterFactory adapterFactory) {
+	public FXSelectedControlItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -40,19 +44,36 @@ public class FXChoiceBoxItemProvider extends FXSelectedControlItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addSelectedPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This returns FXChoiceBox.gif.
+	 * This adds a property descriptor for the Selected feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSelectedPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_FXSelectedControl_selected_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_FXSelectedControl_selected_feature",
+								"_UI_FXSelectedControl_type"),
+						FxuiPackage.Literals.FX_SELECTED_CONTROL__SELECTED, true, false, false,
+						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This returns FXSelectedControl.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/FXChoiceBox"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/FXSelectedControl"));
 	}
 
 	/**
@@ -73,9 +94,9 @@ public class FXChoiceBoxItemProvider extends FXSelectedControlItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((FXChoiceBox) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_FXChoiceBox_type")
-				: getString("_UI_FXChoiceBox_type") + " " + label;
+		String label = ((FXSelectedControl) object).getName();
+		return label == null || label.length() == 0 ? getString("_UI_FXSelectedControl_type")
+				: getString("_UI_FXSelectedControl_type") + " " + label;
 	}
 
 	/**
@@ -88,6 +109,12 @@ public class FXChoiceBoxItemProvider extends FXSelectedControlItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(FXSelectedControl.class)) {
+		case FxuiPackage.FX_SELECTED_CONTROL__SELECTED:
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+			return;
+		}
 		super.notifyChanged(notification);
 	}
 

@@ -153,6 +153,8 @@ public class FxuiSwitch<T> extends Switch<T> {
 			FXToggleButton fxToggleButton = (FXToggleButton) theEObject;
 			T result = caseFXToggleButton(fxToggleButton);
 			if (result == null)
+				result = caseFXSelectedControl(fxToggleButton);
+			if (result == null)
 				result = caseFXControl(fxToggleButton);
 			if (result == null)
 				result = caseFXNamedElement(fxToggleButton);
@@ -160,13 +162,15 @@ public class FxuiSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case FxuiPackage.FX_CHECKBOX: {
-			FXCheckbox fxCheckbox = (FXCheckbox) theEObject;
-			T result = caseFXCheckbox(fxCheckbox);
+		case FxuiPackage.FX_CHECK_BOX: {
+			FXCheckBox fxCheckBox = (FXCheckBox) theEObject;
+			T result = caseFXCheckBox(fxCheckBox);
 			if (result == null)
-				result = caseFXControl(fxCheckbox);
+				result = caseFXSelectedControl(fxCheckBox);
 			if (result == null)
-				result = caseFXNamedElement(fxCheckbox);
+				result = caseFXControl(fxCheckBox);
+			if (result == null)
+				result = caseFXNamedElement(fxCheckBox);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -174,6 +178,8 @@ public class FxuiSwitch<T> extends Switch<T> {
 		case FxuiPackage.FX_CHOICE_BOX: {
 			FXChoiceBox fxChoiceBox = (FXChoiceBox) theEObject;
 			T result = caseFXChoiceBox(fxChoiceBox);
+			if (result == null)
+				result = caseFXSelectedControl(fxChoiceBox);
 			if (result == null)
 				result = caseFXControl(fxChoiceBox);
 			if (result == null)
@@ -185,6 +191,8 @@ public class FxuiSwitch<T> extends Switch<T> {
 		case FxuiPackage.FX_RADIO_BUTTON: {
 			FXRadioButton fxRadioButton = (FXRadioButton) theEObject;
 			T result = caseFXRadioButton(fxRadioButton);
+			if (result == null)
+				result = caseFXSelectedControl(fxRadioButton);
 			if (result == null)
 				result = caseFXControl(fxRadioButton);
 			if (result == null)
@@ -200,6 +208,17 @@ public class FxuiSwitch<T> extends Switch<T> {
 				result = caseFXControl(fxComboBox);
 			if (result == null)
 				result = caseFXNamedElement(fxComboBox);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case FxuiPackage.FX_SELECTED_CONTROL: {
+			FXSelectedControl fxSelectedControl = (FXSelectedControl) theEObject;
+			T result = caseFXSelectedControl(fxSelectedControl);
+			if (result == null)
+				result = caseFXControl(fxSelectedControl);
+			if (result == null)
+				result = caseFXNamedElement(fxSelectedControl);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -360,17 +379,17 @@ public class FxuiSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>FX Checkbox</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>FX Check Box</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>FX Checkbox</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>FX Check Box</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseFXCheckbox(FXCheckbox object) {
+	public T caseFXCheckBox(FXCheckBox object) {
 		return null;
 	}
 
@@ -416,6 +435,21 @@ public class FxuiSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseFXComboBox(FXComboBox object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>FX Selected Control</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>FX Selected Control</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFXSelectedControl(FXSelectedControl object) {
 		return null;
 	}
 

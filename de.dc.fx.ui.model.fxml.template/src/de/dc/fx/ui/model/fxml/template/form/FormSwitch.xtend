@@ -1,12 +1,14 @@
 package de.dc.fx.ui.model.fxml.template.form
 
-import de.dc.fx.ui.model.fxui.util.FxuiSwitch
 import de.dc.fx.ui.model.fxui.FXButton
-import de.dc.fx.ui.model.fxui.FXCheckbox
 import de.dc.fx.ui.model.fxui.FXComboBox
 import de.dc.fx.ui.model.fxui.FXRadioButton
+import de.dc.fx.ui.model.fxui.FXSelectedControl
 import de.dc.fx.ui.model.fxui.FXTextField
 import de.dc.fx.ui.model.fxui.FXToggleButton
+import de.dc.fx.ui.model.fxui.util.FxuiSwitch
+import de.dc.fx.ui.model.fxui.FXChoiceBox
+import de.dc.fx.ui.model.fxui.FXCheckBox
 
 class FormSwitch extends FxuiSwitch<String>{
 	
@@ -15,9 +17,8 @@ class FormSwitch extends FxuiSwitch<String>{
 		'Button'.init(name)
 	}
 	
-	override caseFXCheckbox(FXCheckbox c) {
-		val name = c.name.toFirstLower.replace(" ","")
-		'CheckBox'.init(name)
+	override caseFXCheckBox(FXCheckBox c) {
+		c.initSelectedControl
 	}
 	
 	override caseFXComboBox(FXComboBox c) {
@@ -26,8 +27,7 @@ class FormSwitch extends FxuiSwitch<String>{
 	}
 	
 	override caseFXRadioButton(FXRadioButton c) {
-		val name = c.name.toFirstLower.replace(" ","")
-		'RadioButton'.init(name)
+		c.initSelectedControl
 	}
 	
 	override caseFXTextField(FXTextField c) {
@@ -36,9 +36,15 @@ class FormSwitch extends FxuiSwitch<String>{
 	}
 	
 	override caseFXToggleButton(FXToggleButton c) {
-		val name = c.name.toFirstLower.replace(" ","")
-		'ToggleButton'.init(name)
+		c.initSelectedControl
 	}
+	
+	override caseFXChoiceBox(FXChoiceBox c) {
+		c.initSelectedControl
+	}
+	
+	
+	def String initSelectedControl(FXSelectedControl c)'''«init(c.class.simpleName.replace("FX","").replace("Impl", ""), c.name.toFirstLower.replace(" ",""))» mnemonicParsing="false" selected="«c.selected»"'''
 	
 	def String init(String control, String name)'''<«control» fx:id="«name»«control»" text="«name.toFirstUpper»"'''
 }

@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class FXToggleButtonImpl extends FXControlImpl implements FXToggleButton {
+public class FXToggleButtonImpl extends FXSelectedControlImpl implements FXToggleButton {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

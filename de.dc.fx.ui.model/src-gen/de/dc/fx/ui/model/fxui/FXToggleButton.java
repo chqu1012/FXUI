@@ -12,5 +12,5 @@ package de.dc.fx.ui.model.fxui;
  * @model
  * @generated
  */
-public interface FXToggleButton extends FXControl {
+public interface FXToggleButton extends FXSelectedControl {
 } // FXToggleButton

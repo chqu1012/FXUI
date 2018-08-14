@@ -103,13 +103,13 @@ public interface FxuiFactory extends EFactory {
 	FXToggleButton createFXToggleButton();
 
 	/**
-	 * Returns a new object of class '<em>FX Checkbox</em>'.
+	 * Returns a new object of class '<em>FX Check Box</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>FX Checkbox</em>'.
+	 * @return a new object of class '<em>FX Check Box</em>'.
 	 * @generated
 	 */
-	FXCheckbox createFXCheckbox();
+	FXCheckBox createFXCheckBox();
 
 	/**
 	 * Returns a new object of class '<em>FX Choice Box</em>'.

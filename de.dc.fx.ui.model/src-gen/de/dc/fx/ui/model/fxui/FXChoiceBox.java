@@ -12,5 +12,5 @@ package de.dc.fx.ui.model.fxui;
  * @model
  * @generated
  */
-public interface FXChoiceBox extends FXControl {
+public interface FXChoiceBox extends FXSelectedControl {
 } // FXChoiceBox

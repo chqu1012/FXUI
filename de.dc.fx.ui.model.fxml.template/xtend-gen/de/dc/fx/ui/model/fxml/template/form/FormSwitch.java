@@ -1,9 +1,11 @@
 package de.dc.fx.ui.model.fxml.template.form;
 
 import de.dc.fx.ui.model.fxui.FXButton;
-import de.dc.fx.ui.model.fxui.FXCheckbox;
+import de.dc.fx.ui.model.fxui.FXCheckBox;
+import de.dc.fx.ui.model.fxui.FXChoiceBox;
 import de.dc.fx.ui.model.fxui.FXComboBox;
 import de.dc.fx.ui.model.fxui.FXRadioButton;
+import de.dc.fx.ui.model.fxui.FXSelectedControl;
 import de.dc.fx.ui.model.fxui.FXTextField;
 import de.dc.fx.ui.model.fxui.FXToggleButton;
 import de.dc.fx.ui.model.fxui.util.FxuiSwitch;
@@ -23,13 +25,8 @@ public class FormSwitch extends FxuiSwitch<String> {
   }
   
   @Override
-  public String caseFXCheckbox(final FXCheckbox c) {
-    String _xblockexpression = null;
-    {
-      final String name = StringExtensions.toFirstLower(c.getName()).replace(" ", "");
-      _xblockexpression = this.init("CheckBox", name);
-    }
-    return _xblockexpression;
+  public String caseFXCheckBox(final FXCheckBox c) {
+    return this.initSelectedControl(c);
   }
   
   @Override
@@ -44,12 +41,7 @@ public class FormSwitch extends FxuiSwitch<String> {
   
   @Override
   public String caseFXRadioButton(final FXRadioButton c) {
-    String _xblockexpression = null;
-    {
-      final String name = StringExtensions.toFirstLower(c.getName()).replace(" ", "");
-      _xblockexpression = this.init("RadioButton", name);
-    }
-    return _xblockexpression;
+    return this.initSelectedControl(c);
   }
   
   @Override
@@ -71,12 +63,23 @@ public class FormSwitch extends FxuiSwitch<String> {
   
   @Override
   public String caseFXToggleButton(final FXToggleButton c) {
-    String _xblockexpression = null;
-    {
-      final String name = StringExtensions.toFirstLower(c.getName()).replace(" ", "");
-      _xblockexpression = this.init("ToggleButton", name);
-    }
-    return _xblockexpression;
+    return this.initSelectedControl(c);
+  }
+  
+  @Override
+  public String caseFXChoiceBox(final FXChoiceBox c) {
+    return this.initSelectedControl(c);
+  }
+  
+  public String initSelectedControl(final FXSelectedControl c) {
+    StringConcatenation _builder = new StringConcatenation();
+    String _init = this.init(c.getClass().getSimpleName().replace("FX", "").replace("Impl", ""), StringExtensions.toFirstLower(c.getName()).replace(" ", ""));
+    _builder.append(_init);
+    _builder.append(" mnemonicParsing=\"false\" selected=\"");
+    boolean _isSelected = c.isSelected();
+    _builder.append(_isSelected);
+    _builder.append("\"");
+    return _builder.toString();
   }
   
   public String init(final String control, final String name) {

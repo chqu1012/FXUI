@@ -562,6 +562,61 @@ public interface FxuiPackage extends EPackage {
 	int FX_BUTTON_OPERATION_COUNT = FX_CONTROL_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link de.dc.fx.ui.model.fxui.impl.FXSelectedControlImpl <em>FX Selected Control</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.fx.ui.model.fxui.impl.FXSelectedControlImpl
+	 * @see de.dc.fx.ui.model.fxui.impl.FxuiPackageImpl#getFXSelectedControl()
+	 * @generated
+	 */
+	int FX_SELECTED_CONTROL = 14;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_SELECTED_CONTROL__NAME = FX_CONTROL__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Show Label</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_SELECTED_CONTROL__SHOW_LABEL = FX_CONTROL__SHOW_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Selected</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_SELECTED_CONTROL__SELECTED = FX_CONTROL_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>FX Selected Control</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_SELECTED_CONTROL_FEATURE_COUNT = FX_CONTROL_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>FX Selected Control</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_SELECTED_CONTROL_OPERATION_COUNT = FX_CONTROL_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link de.dc.fx.ui.model.fxui.impl.FXToggleButtonImpl <em>FX Toggle Button</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -578,7 +633,7 @@ public interface FxuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FX_TOGGLE_BUTTON__NAME = FX_CONTROL__NAME;
+	int FX_TOGGLE_BUTTON__NAME = FX_SELECTED_CONTROL__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Show Label</b></em>' attribute.
@@ -587,7 +642,16 @@ public interface FxuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FX_TOGGLE_BUTTON__SHOW_LABEL = FX_CONTROL__SHOW_LABEL;
+	int FX_TOGGLE_BUTTON__SHOW_LABEL = FX_SELECTED_CONTROL__SHOW_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Selected</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TOGGLE_BUTTON__SELECTED = FX_SELECTED_CONTROL__SELECTED;
 
 	/**
 	 * The number of structural features of the '<em>FX Toggle Button</em>' class.
@@ -596,7 +660,7 @@ public interface FxuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FX_TOGGLE_BUTTON_FEATURE_COUNT = FX_CONTROL_FEATURE_COUNT + 0;
+	int FX_TOGGLE_BUTTON_FEATURE_COUNT = FX_SELECTED_CONTROL_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>FX Toggle Button</em>' class.
@@ -605,17 +669,17 @@ public interface FxuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FX_TOGGLE_BUTTON_OPERATION_COUNT = FX_CONTROL_OPERATION_COUNT + 0;
+	int FX_TOGGLE_BUTTON_OPERATION_COUNT = FX_SELECTED_CONTROL_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link de.dc.fx.ui.model.fxui.impl.FXCheckboxImpl <em>FX Checkbox</em>}' class.
+	 * The meta object id for the '{@link de.dc.fx.ui.model.fxui.impl.FXCheckBoxImpl <em>FX Check Box</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.dc.fx.ui.model.fxui.impl.FXCheckboxImpl
-	 * @see de.dc.fx.ui.model.fxui.impl.FxuiPackageImpl#getFXCheckbox()
+	 * @see de.dc.fx.ui.model.fxui.impl.FXCheckBoxImpl
+	 * @see de.dc.fx.ui.model.fxui.impl.FxuiPackageImpl#getFXCheckBox()
 	 * @generated
 	 */
-	int FX_CHECKBOX = 10;
+	int FX_CHECK_BOX = 10;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -624,7 +688,7 @@ public interface FxuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FX_CHECKBOX__NAME = FX_CONTROL__NAME;
+	int FX_CHECK_BOX__NAME = FX_SELECTED_CONTROL__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Show Label</b></em>' attribute.
@@ -633,25 +697,34 @@ public interface FxuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FX_CHECKBOX__SHOW_LABEL = FX_CONTROL__SHOW_LABEL;
+	int FX_CHECK_BOX__SHOW_LABEL = FX_SELECTED_CONTROL__SHOW_LABEL;
 
 	/**
-	 * The number of structural features of the '<em>FX Checkbox</em>' class.
+	 * The feature id for the '<em><b>Selected</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FX_CHECKBOX_FEATURE_COUNT = FX_CONTROL_FEATURE_COUNT + 0;
+	int FX_CHECK_BOX__SELECTED = FX_SELECTED_CONTROL__SELECTED;
 
 	/**
-	 * The number of operations of the '<em>FX Checkbox</em>' class.
+	 * The number of structural features of the '<em>FX Check Box</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FX_CHECKBOX_OPERATION_COUNT = FX_CONTROL_OPERATION_COUNT + 0;
+	int FX_CHECK_BOX_FEATURE_COUNT = FX_SELECTED_CONTROL_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>FX Check Box</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_CHECK_BOX_OPERATION_COUNT = FX_SELECTED_CONTROL_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.dc.fx.ui.model.fxui.impl.FXChoiceBoxImpl <em>FX Choice Box</em>}' class.
@@ -670,7 +743,7 @@ public interface FxuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FX_CHOICE_BOX__NAME = FX_CONTROL__NAME;
+	int FX_CHOICE_BOX__NAME = FX_SELECTED_CONTROL__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Show Label</b></em>' attribute.
@@ -679,7 +752,16 @@ public interface FxuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FX_CHOICE_BOX__SHOW_LABEL = FX_CONTROL__SHOW_LABEL;
+	int FX_CHOICE_BOX__SHOW_LABEL = FX_SELECTED_CONTROL__SHOW_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Selected</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_CHOICE_BOX__SELECTED = FX_SELECTED_CONTROL__SELECTED;
 
 	/**
 	 * The number of structural features of the '<em>FX Choice Box</em>' class.
@@ -688,7 +770,7 @@ public interface FxuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FX_CHOICE_BOX_FEATURE_COUNT = FX_CONTROL_FEATURE_COUNT + 0;
+	int FX_CHOICE_BOX_FEATURE_COUNT = FX_SELECTED_CONTROL_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>FX Choice Box</em>' class.
@@ -697,7 +779,7 @@ public interface FxuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FX_CHOICE_BOX_OPERATION_COUNT = FX_CONTROL_OPERATION_COUNT + 0;
+	int FX_CHOICE_BOX_OPERATION_COUNT = FX_SELECTED_CONTROL_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.dc.fx.ui.model.fxui.impl.FXRadioButtonImpl <em>FX Radio Button</em>}' class.
@@ -716,7 +798,7 @@ public interface FxuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FX_RADIO_BUTTON__NAME = FX_CONTROL__NAME;
+	int FX_RADIO_BUTTON__NAME = FX_SELECTED_CONTROL__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Show Label</b></em>' attribute.
@@ -725,7 +807,16 @@ public interface FxuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FX_RADIO_BUTTON__SHOW_LABEL = FX_CONTROL__SHOW_LABEL;
+	int FX_RADIO_BUTTON__SHOW_LABEL = FX_SELECTED_CONTROL__SHOW_LABEL;
+
+	/**
+	 * The feature id for the '<em><b>Selected</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_RADIO_BUTTON__SELECTED = FX_SELECTED_CONTROL__SELECTED;
 
 	/**
 	 * The number of structural features of the '<em>FX Radio Button</em>' class.
@@ -734,7 +825,7 @@ public interface FxuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FX_RADIO_BUTTON_FEATURE_COUNT = FX_CONTROL_FEATURE_COUNT + 0;
+	int FX_RADIO_BUTTON_FEATURE_COUNT = FX_SELECTED_CONTROL_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>FX Radio Button</em>' class.
@@ -743,7 +834,7 @@ public interface FxuiPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FX_RADIO_BUTTON_OPERATION_COUNT = FX_CONTROL_OPERATION_COUNT + 0;
+	int FX_RADIO_BUTTON_OPERATION_COUNT = FX_SELECTED_CONTROL_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.dc.fx.ui.model.fxui.impl.FXComboBoxImpl <em>FX Combo Box</em>}' class.
@@ -799,7 +890,7 @@ public interface FxuiPackage extends EPackage {
 	 * @see de.dc.fx.ui.model.fxui.impl.FxuiPackageImpl#getPos()
 	 * @generated
 	 */
-	int POS = 14;
+	int POS = 15;
 
 	/**
 	 * Returns the meta object for class '{@link de.dc.fx.ui.model.fxui.FXTableView <em>FX Table View</em>}'.
@@ -1100,14 +1191,14 @@ public interface FxuiPackage extends EPackage {
 	EClass getFXToggleButton();
 
 	/**
-	 * Returns the meta object for class '{@link de.dc.fx.ui.model.fxui.FXCheckbox <em>FX Checkbox</em>}'.
+	 * Returns the meta object for class '{@link de.dc.fx.ui.model.fxui.FXCheckBox <em>FX Check Box</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>FX Checkbox</em>'.
-	 * @see de.dc.fx.ui.model.fxui.FXCheckbox
+	 * @return the meta object for class '<em>FX Check Box</em>'.
+	 * @see de.dc.fx.ui.model.fxui.FXCheckBox
 	 * @generated
 	 */
-	EClass getFXCheckbox();
+	EClass getFXCheckBox();
 
 	/**
 	 * Returns the meta object for class '{@link de.dc.fx.ui.model.fxui.FXChoiceBox <em>FX Choice Box</em>}'.
@@ -1138,6 +1229,27 @@ public interface FxuiPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getFXComboBox();
+
+	/**
+	 * Returns the meta object for class '{@link de.dc.fx.ui.model.fxui.FXSelectedControl <em>FX Selected Control</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>FX Selected Control</em>'.
+	 * @see de.dc.fx.ui.model.fxui.FXSelectedControl
+	 * @generated
+	 */
+	EClass getFXSelectedControl();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.model.fxui.FXSelectedControl#isSelected <em>Selected</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Selected</em>'.
+	 * @see de.dc.fx.ui.model.fxui.FXSelectedControl#isSelected()
+	 * @see #getFXSelectedControl()
+	 * @generated
+	 */
+	EAttribute getFXSelectedControl_Selected();
 
 	/**
 	 * Returns the meta object for enum '{@link de.dc.fx.ui.model.fxui.Pos <em>Pos</em>}'.
@@ -1417,14 +1529,14 @@ public interface FxuiPackage extends EPackage {
 		EClass FX_TOGGLE_BUTTON = eINSTANCE.getFXToggleButton();
 
 		/**
-		 * The meta object literal for the '{@link de.dc.fx.ui.model.fxui.impl.FXCheckboxImpl <em>FX Checkbox</em>}' class.
+		 * The meta object literal for the '{@link de.dc.fx.ui.model.fxui.impl.FXCheckBoxImpl <em>FX Check Box</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see de.dc.fx.ui.model.fxui.impl.FXCheckboxImpl
-		 * @see de.dc.fx.ui.model.fxui.impl.FxuiPackageImpl#getFXCheckbox()
+		 * @see de.dc.fx.ui.model.fxui.impl.FXCheckBoxImpl
+		 * @see de.dc.fx.ui.model.fxui.impl.FxuiPackageImpl#getFXCheckBox()
 		 * @generated
 		 */
-		EClass FX_CHECKBOX = eINSTANCE.getFXCheckbox();
+		EClass FX_CHECK_BOX = eINSTANCE.getFXCheckBox();
 
 		/**
 		 * The meta object literal for the '{@link de.dc.fx.ui.model.fxui.impl.FXChoiceBoxImpl <em>FX Choice Box</em>}' class.
@@ -1455,6 +1567,24 @@ public interface FxuiPackage extends EPackage {
 		 * @generated
 		 */
 		EClass FX_COMBO_BOX = eINSTANCE.getFXComboBox();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.fx.ui.model.fxui.impl.FXSelectedControlImpl <em>FX Selected Control</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.fx.ui.model.fxui.impl.FXSelectedControlImpl
+		 * @see de.dc.fx.ui.model.fxui.impl.FxuiPackageImpl#getFXSelectedControl()
+		 * @generated
+		 */
+		EClass FX_SELECTED_CONTROL = eINSTANCE.getFXSelectedControl();
+
+		/**
+		 * The meta object literal for the '<em><b>Selected</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FX_SELECTED_CONTROL__SELECTED = eINSTANCE.getFXSelectedControl_Selected();
 
 		/**
 		 * The meta object literal for the '{@link de.dc.fx.ui.model.fxui.Pos <em>Pos</em>}' enum.

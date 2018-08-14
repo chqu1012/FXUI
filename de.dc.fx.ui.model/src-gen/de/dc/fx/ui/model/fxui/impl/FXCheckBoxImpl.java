@@ -2,25 +2,25 @@
  */
 package de.dc.fx.ui.model.fxui.impl;
 
-import de.dc.fx.ui.model.fxui.FXCheckbox;
+import de.dc.fx.ui.model.fxui.FXCheckBox;
 import de.dc.fx.ui.model.fxui.FxuiPackage;
 
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>FX Checkbox</b></em>'.
+ * An implementation of the model object '<em><b>FX Check Box</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class FXCheckboxImpl extends FXControlImpl implements FXCheckbox {
+public class FXCheckBoxImpl extends FXSelectedControlImpl implements FXCheckBox {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected FXCheckboxImpl() {
+	protected FXCheckBoxImpl() {
 		super();
 	}
 
@@ -31,7 +31,7 @@ public class FXCheckboxImpl extends FXControlImpl implements FXCheckbox {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return FxuiPackage.Literals.FX_CHECKBOX;
+		return FxuiPackage.Literals.FX_CHECK_BOX;
 	}
 
-} //FXCheckboxImpl
+} //FXCheckBoxImpl

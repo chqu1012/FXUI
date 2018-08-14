@@ -117,8 +117,8 @@ public class FxuiAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseFXCheckbox(FXCheckbox object) {
-			return createFXCheckboxAdapter();
+		public Adapter caseFXCheckBox(FXCheckBox object) {
+			return createFXCheckBoxAdapter();
 		}
 
 		@Override
@@ -134,6 +134,11 @@ public class FxuiAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseFXComboBox(FXComboBox object) {
 			return createFXComboBoxAdapter();
+		}
+
+		@Override
+		public Adapter caseFXSelectedControl(FXSelectedControl object) {
+			return createFXSelectedControlAdapter();
 		}
 
 		@Override
@@ -296,16 +301,16 @@ public class FxuiAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.dc.fx.ui.model.fxui.FXCheckbox <em>FX Checkbox</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.dc.fx.ui.model.fxui.FXCheckBox <em>FX Check Box</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.dc.fx.ui.model.fxui.FXCheckbox
+	 * @see de.dc.fx.ui.model.fxui.FXCheckBox
 	 * @generated
 	 */
-	public Adapter createFXCheckboxAdapter() {
+	public Adapter createFXCheckBoxAdapter() {
 		return null;
 	}
 
@@ -348,6 +353,20 @@ public class FxuiAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createFXComboBoxAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.fx.ui.model.fxui.FXSelectedControl <em>FX Selected Control</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.fx.ui.model.fxui.FXSelectedControl
+	 * @generated
+	 */
+	public Adapter createFXSelectedControlAdapter() {
 		return null;
 	}
 

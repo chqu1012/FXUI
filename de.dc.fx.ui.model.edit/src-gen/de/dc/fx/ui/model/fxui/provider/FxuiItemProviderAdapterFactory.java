@@ -280,26 +280,26 @@ public class FxuiItemProviderAdapterFactory extends FxuiAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.dc.fx.ui.model.fxui.FXCheckbox} instances.
+	 * This keeps track of the one adapter used for all {@link de.dc.fx.ui.model.fxui.FXCheckBox} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected FXCheckboxItemProvider fxCheckboxItemProvider;
+	protected FXCheckBoxItemProvider fxCheckBoxItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.dc.fx.ui.model.fxui.FXCheckbox}.
+	 * This creates an adapter for a {@link de.dc.fx.ui.model.fxui.FXCheckBox}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createFXCheckboxAdapter() {
-		if (fxCheckboxItemProvider == null) {
-			fxCheckboxItemProvider = new FXCheckboxItemProvider(this);
+	public Adapter createFXCheckBoxAdapter() {
+		if (fxCheckBoxItemProvider == null) {
+			fxCheckBoxItemProvider = new FXCheckBoxItemProvider(this);
 		}
 
-		return fxCheckboxItemProvider;
+		return fxCheckBoxItemProvider;
 	}
 
 	/**
@@ -488,8 +488,8 @@ public class FxuiItemProviderAdapterFactory extends FxuiAdapterFactory
 			fxButtonItemProvider.dispose();
 		if (fxToggleButtonItemProvider != null)
 			fxToggleButtonItemProvider.dispose();
-		if (fxCheckboxItemProvider != null)
-			fxCheckboxItemProvider.dispose();
+		if (fxCheckBoxItemProvider != null)
+			fxCheckBoxItemProvider.dispose();
 		if (fxChoiceBoxItemProvider != null)
 			fxChoiceBoxItemProvider.dispose();
 		if (fxRadioButtonItemProvider != null)

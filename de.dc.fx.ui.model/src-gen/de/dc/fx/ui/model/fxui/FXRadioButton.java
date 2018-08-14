@@ -12,5 +12,5 @@ package de.dc.fx.ui.model.fxui;
  * @model
  * @generated
  */
-public interface FXRadioButton extends FXControl {
+public interface FXRadioButton extends FXSelectedControl {
 } // FXRadioButton

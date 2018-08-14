@@ -209,7 +209,7 @@ public class FXFormItemProvider extends FXNamedElementItemProvider {
 				FxuiFactory.eINSTANCE.createFXToggleButton()));
 
 		newChildDescriptors.add(createChildParameter(FxuiPackage.Literals.FX_FORM__FXCONTROLS,
-				FxuiFactory.eINSTANCE.createFXCheckbox()));
+				FxuiFactory.eINSTANCE.createFXCheckBox()));
 
 		newChildDescriptors.add(createChildParameter(FxuiPackage.Literals.FX_FORM__FXCONTROLS,
 				FxuiFactory.eINSTANCE.createFXChoiceBox()));

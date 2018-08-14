@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class FXRadioButtonImpl extends FXControlImpl implements FXRadioButton {
+public class FXRadioButtonImpl extends FXSelectedControlImpl implements FXRadioButton {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

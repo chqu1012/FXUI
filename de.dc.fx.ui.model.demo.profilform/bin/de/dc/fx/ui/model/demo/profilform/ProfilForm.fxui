@@ -10,4 +10,5 @@
   <fxcontrols xsi:type="fxui:FXToggleButton" name="Helllo Toggle"/>
   <fxcontrols xsi:type="fxui:FXToggleButton" name="Maennlich" showLabel="false"/>
   <fxcontrols xsi:type="fxui:FXToggleButton" name="weiblich" showLabel="false"/>
+  <fxcontrols xsi:type="fxui:FXRadioButton" name="Wecker"/>
 </fxui:FXForm>

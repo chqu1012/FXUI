@@ -54,11 +54,12 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="prompt" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FXButton" eSuperTypes="#//FXControl"/>
-  <eClassifiers xsi:type="ecore:EClass" name="FXToggleButton" eSuperTypes="#//FXControl"/>
-  <eClassifiers xsi:type="ecore:EClass" name="FXCheckbox" eSuperTypes="#//FXControl">
+  <eClassifiers xsi:type="ecore:EClass" name="FXToggleButton" eSuperTypes="#//FXSelectedControl"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FXCheckBox" eSuperTypes="#//FXSelectedControl"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FXChoiceBox" eSuperTypes="#//FXSelectedControl"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FXRadioButton" eSuperTypes="#//FXSelectedControl"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FXComboBox" eSuperTypes="#//FXControl"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FXSelectedControl" abstract="true" eSuperTypes="#//FXControl">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="selected" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FXChoiceBox" eSuperTypes="#//FXControl"/>
-  <eClassifiers xsi:type="ecore:EClass" name="FXRadioButton" eSuperTypes="#//FXControl"/>
-  <eClassifiers xsi:type="ecore:EClass" name="FXComboBox" eSuperTypes="#//FXControl"/>
 </ecore:EPackage>

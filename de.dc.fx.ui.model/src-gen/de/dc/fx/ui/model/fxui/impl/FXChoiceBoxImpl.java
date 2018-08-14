@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class FXChoiceBoxImpl extends FXControlImpl implements FXChoiceBox {
+public class FXChoiceBoxImpl extends FXSelectedControlImpl implements FXChoiceBox {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

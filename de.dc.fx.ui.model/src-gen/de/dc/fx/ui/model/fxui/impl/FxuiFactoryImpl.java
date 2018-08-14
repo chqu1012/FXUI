@@ -74,8 +74,8 @@ public class FxuiFactoryImpl extends EFactoryImpl implements FxuiFactory {
 			return createFXButton();
 		case FxuiPackage.FX_TOGGLE_BUTTON:
 			return createFXToggleButton();
-		case FxuiPackage.FX_CHECKBOX:
-			return createFXCheckbox();
+		case FxuiPackage.FX_CHECK_BOX:
+			return createFXCheckBox();
 		case FxuiPackage.FX_CHOICE_BOX:
 			return createFXChoiceBox();
 		case FxuiPackage.FX_RADIO_BUTTON:
@@ -212,9 +212,9 @@ public class FxuiFactoryImpl extends EFactoryImpl implements FxuiFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FXCheckbox createFXCheckbox() {
-		FXCheckboxImpl fxCheckbox = new FXCheckboxImpl();
-		return fxCheckbox;
+	public FXCheckBox createFXCheckBox() {
+		FXCheckBoxImpl fxCheckBox = new FXCheckBoxImpl();
+		return fxCheckBox;
 	}
 
 	/**
