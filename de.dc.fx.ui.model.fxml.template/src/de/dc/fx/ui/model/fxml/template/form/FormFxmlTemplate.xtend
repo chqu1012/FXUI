@@ -5,6 +5,8 @@ import de.dc.fx.ui.model.fxui.FXForm
 
 class FormFxmlTemplate implements IGenerator<FXForm>{
 	
+	FormSwitch fxSwitch = new FormSwitch
+	
 	override gen(FXForm data)'''
 	<?xml version="1.0" encoding="UTF-8"?>
 	
@@ -24,9 +26,9 @@ class FormFxmlTemplate implements IGenerator<FXForm>{
 	  </rowConstraints>
 	   <children>
 	   		«FOR n: 1..data.fxcontrols.size»
-	   		«val c = data.fxcontrols.get(n-1)»«val controlName = c.class.simpleName.replaceFirst("FX", "").replace("Impl", "")»
+	   		«val c = data.fxcontrols.get(n-1)»
 	   		<Label «IF c.showLabel»text="«c.name»:" «ENDIF»GridPane.rowIndex="«n»" />
-	   		<«controlName» fx:id="«c.name.toFirstLower.replace(" ","")»«controlName»" text="«c.name»" GridPane.columnIndex="1" GridPane.rowIndex="«n»" />
+	   		«fxSwitch.doSwitch(c)» GridPane.columnIndex="1" GridPane.rowIndex="«n»" />
 	   		«ENDFOR»	
 	   </children>
 	   <padding>

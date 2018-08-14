@@ -23,25 +23,25 @@
   </rowConstraints>
    <children>
    		<Label text="Name:" GridPane.rowIndex="1" />
-   		<TextField fx:id="nameTextField" text="Name" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+   		<TextField fx:id="nameTextField" text="Name" promptText="Hello Name" GridPane.columnIndex="1" GridPane.rowIndex="1" />
    		<Label text="Vorname:" GridPane.rowIndex="2" />
-   		<TextField fx:id="vornameTextField" text="Vorname" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+   		<TextField fx:id="vornameTextField" text="Vorname" promptText="" GridPane.columnIndex="1" GridPane.rowIndex="2" />
    		<Label text="Alter:" GridPane.rowIndex="3" />
-   		<TextField fx:id="alterTextField" text="Alter" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+   		<TextField fx:id="alterTextField" text="Alter" promptText="" GridPane.columnIndex="1" GridPane.rowIndex="3" />
    		<Label text="Strasse:" GridPane.rowIndex="4" />
-   		<TextField fx:id="strasseTextField" text="Strasse" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+   		<TextField fx:id="strasseTextField" text="Strasse" promptText="" GridPane.columnIndex="1" GridPane.rowIndex="4" />
    		<Label text="PLZ:" GridPane.rowIndex="5" />
-   		<TextField fx:id="pLZTextField" text="PLZ" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+   		<TextField fx:id="pLZTextField" text="PLZ" promptText="" GridPane.columnIndex="1" GridPane.rowIndex="5" />
    		<Label text="Stadt:" GridPane.rowIndex="6" />
-   		<TextField fx:id="stadtTextField" text="Stadt" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+   		<TextField fx:id="stadtTextField" text="Stadt" promptText="" GridPane.columnIndex="1" GridPane.rowIndex="6" />
    		<Label text="Hello World:" GridPane.rowIndex="7" />
-   		<Button fx:id="helloWorldButton" text="Hello World" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+   		<Button fx:id="helloWorldButton" text="HelloWorld" GridPane.columnIndex="1" GridPane.rowIndex="7" />
    		<Label text="Helllo Toggle:" GridPane.rowIndex="8" />
-   		<ToggleButton fx:id="hellloToggleToggleButton" text="Helllo Toggle" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+   		<ToggleButton fx:id="hellloToggleToggleButton" text="HellloToggle" GridPane.columnIndex="1" GridPane.rowIndex="8" />
    		<Label GridPane.rowIndex="9" />
    		<ToggleButton fx:id="maennlichToggleButton" text="Maennlich" GridPane.columnIndex="1" GridPane.rowIndex="9" />
    		<Label GridPane.rowIndex="10" />
-   		<ToggleButton fx:id="weiblichToggleButton" text="weiblich" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+   		<ToggleButton fx:id="weiblichToggleButton" text="Weiblich" GridPane.columnIndex="1" GridPane.rowIndex="10" />
    </children>
    <padding>
       <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />

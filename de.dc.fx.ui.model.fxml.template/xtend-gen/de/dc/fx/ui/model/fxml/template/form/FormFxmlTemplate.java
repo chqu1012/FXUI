@@ -1,15 +1,17 @@
 package de.dc.fx.ui.model.fxml.template.form;
 
 import de.dc.fx.ui.model.fxml.template.IGenerator;
+import de.dc.fx.ui.model.fxml.template.form.FormSwitch;
 import de.dc.fx.ui.model.fxui.FXControl;
 import de.dc.fx.ui.model.fxui.FXForm;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.xbase.lib.IntegerRange;
-import org.eclipse.xtext.xbase.lib.StringExtensions;
 
 @SuppressWarnings("all")
 public class FormFxmlTemplate implements IGenerator<FXForm> {
+  private FormSwitch fxSwitch = new FormSwitch();
+  
   @Override
   public String gen(final FXForm data) {
     StringConcatenation _builder = new StringConcatenation();
@@ -63,7 +65,6 @@ public class FormFxmlTemplate implements IGenerator<FXForm> {
       for(final Integer n : _upTo) {
         _builder.append("   \t\t");
         final FXControl c = data.getFxcontrols().get(((n).intValue() - 1));
-        final String controlName = c.getClass().getSimpleName().replaceFirst("FX", "").replace("Impl", "");
         _builder.newLineIfNotEmpty();
         _builder.append("   \t\t");
         _builder.append("<Label ");
@@ -81,16 +82,9 @@ public class FormFxmlTemplate implements IGenerator<FXForm> {
         _builder.append("\" />");
         _builder.newLineIfNotEmpty();
         _builder.append("   \t\t");
-        _builder.append("<");
-        _builder.append(controlName, "   \t\t");
-        _builder.append(" fx:id=\"");
-        String _replace = StringExtensions.toFirstLower(c.getName()).replace(" ", "");
-        _builder.append(_replace, "   \t\t");
-        _builder.append(controlName, "   \t\t");
-        _builder.append("\" text=\"");
-        String _name_2 = c.getName();
-        _builder.append(_name_2, "   \t\t");
-        _builder.append("\" GridPane.columnIndex=\"1\" GridPane.rowIndex=\"");
+        String _doSwitch = this.fxSwitch.doSwitch(c);
+        _builder.append(_doSwitch, "   \t\t");
+        _builder.append(" GridPane.columnIndex=\"1\" GridPane.rowIndex=\"");
         _builder.append(n, "   \t\t");
         _builder.append("\" />");
         _builder.newLineIfNotEmpty();
