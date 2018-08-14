@@ -3,11 +3,11 @@
   <fxcontrols xsi:type="fxui:FXTextField" name="Name"/>
   <fxcontrols xsi:type="fxui:FXTextField" name="Vorname"/>
   <fxcontrols xsi:type="fxui:FXTextField" name="Alter"/>
-  <fxcontrols xsi:type="fxui:FXTextField" name="Straße"/>
+  <fxcontrols xsi:type="fxui:FXTextField" name="Strasse"/>
   <fxcontrols xsi:type="fxui:FXTextField" name="PLZ"/>
   <fxcontrols xsi:type="fxui:FXTextField" name="Stadt"/>
   <fxcontrols xsi:type="fxui:FXButton" name="Hello World"/>
   <fxcontrols xsi:type="fxui:FXToggleButton" name="Helllo Toggle"/>
-  <fxcontrols xsi:type="fxui:FXToggleButton" name="Männlich" showLabel="false"/>
+  <fxcontrols xsi:type="fxui:FXToggleButton" name="Maennlich" showLabel="false"/>
   <fxcontrols xsi:type="fxui:FXToggleButton" name="weiblich" showLabel="false"/>
 </fxui:FXForm>

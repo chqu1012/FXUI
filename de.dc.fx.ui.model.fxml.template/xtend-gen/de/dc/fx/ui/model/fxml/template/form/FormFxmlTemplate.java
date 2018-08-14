@@ -23,8 +23,11 @@ public class FormFxmlTemplate implements IGenerator<FXForm> {
     _builder.append("<?import javafx.scene.layout.*?>");
     _builder.newLine();
     _builder.newLine();
-    _builder.append("<fx:root type=\"GridPane\" fx:id=\"root\" hgap=\"20.0\" maxHeight=\"1.7976931348623157E308\" maxWidth=\"1.7976931348623157E308\" minHeight=\"-Infinity\" minWidth=\"-Infinity\" vgap=\"10.0\" xmlns:fx=\"http://javafx.com/fxml/1\" xmlns=\"http://javafx.com/javafx/8.0.162\">");
-    _builder.newLine();
+    _builder.append("<fx:root type=\"GridPane\" fx:id=\"root\" stylesheets=\"@css/");
+    String _name = data.getName();
+    _builder.append(_name);
+    _builder.append("Form.css\" hgap=\"20.0\" maxHeight=\"1.7976931348623157E308\" maxWidth=\"1.7976931348623157E308\" minHeight=\"-Infinity\" minWidth=\"-Infinity\" vgap=\"10.0\" xmlns:fx=\"http://javafx.com/fxml/1\" xmlns=\"http://javafx.com/javafx/8.0.162\">");
+    _builder.newLineIfNotEmpty();
     _builder.append("  ");
     _builder.append("<columnConstraints>");
     _builder.newLine();
@@ -68,8 +71,8 @@ public class FormFxmlTemplate implements IGenerator<FXForm> {
           boolean _isShowLabel = c.isShowLabel();
           if (_isShowLabel) {
             _builder.append("text=\"");
-            String _name = c.getName();
-            _builder.append(_name, "   \t\t");
+            String _name_1 = c.getName();
+            _builder.append(_name_1, "   \t\t");
             _builder.append(":\" ");
           }
         }
@@ -85,8 +88,8 @@ public class FormFxmlTemplate implements IGenerator<FXForm> {
         _builder.append(_replace, "   \t\t");
         _builder.append(controlName, "   \t\t");
         _builder.append("\" text=\"");
-        String _name_1 = c.getName();
-        _builder.append(_name_1, "   \t\t");
+        String _name_2 = c.getName();
+        _builder.append(_name_2, "   \t\t");
         _builder.append("\" GridPane.columnIndex=\"1\" GridPane.rowIndex=\"");
         _builder.append(n, "   \t\t");
         _builder.append("\" />");

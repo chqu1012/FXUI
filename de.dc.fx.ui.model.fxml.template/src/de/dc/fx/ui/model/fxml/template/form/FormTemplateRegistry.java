@@ -7,9 +7,11 @@ import de.dc.fx.ui.model.fxml.template.SrcType;
 import de.dc.fx.ui.model.fxui.FXForm;
 
 public enum FormTemplateRegistry {
+	Application(new FormApplicationTemplate(), "/", "Application.java", false, SrcType.SrcGen),
 	BaseFormController(new BaseFormControllerTemplate(), "/form/", "BaseForm.java", false, SrcType.SrcGen),
+	Css(new FormCssTemplate(), "/form/css/", "Form.css"),
 	FormController(new FormControllerTemplate(), "/form/", "Form.java"),
-	FormFxml(new FormFxmlTemplate(), "/form/","Form.fxml");
+	FormFxml(new FormFxmlTemplate(), "/form/","Form.fxml", false, SrcType.SrcGen);
 	
 	private IGenerator<FXForm> template;
 	private String fileExtension;
