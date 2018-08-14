@@ -74,8 +74,8 @@ public class FormFxmlTemplate implements IGenerator<FXForm> {
         _builder.append("<");
         _builder.append(controlName, "   \t\t");
         _builder.append(" fx:id=\"");
-        String _firstLower = StringExtensions.toFirstLower(c.getName());
-        _builder.append(_firstLower, "   \t\t");
+        String _replace = StringExtensions.toFirstLower(c.getName()).replace(" ", "");
+        _builder.append(_replace, "   \t\t");
         _builder.append(controlName, "   \t\t");
         _builder.append("\" text=\"");
         String _name_1 = c.getName();

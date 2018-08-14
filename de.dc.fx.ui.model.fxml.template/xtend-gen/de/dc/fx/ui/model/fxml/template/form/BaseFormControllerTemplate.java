@@ -47,8 +47,8 @@ public class BaseFormControllerTemplate implements IGenerator<FXForm> {
         _builder.append("protected ");
         _builder.append(controlName, "\t");
         _builder.append(" ");
-        String _firstLower = StringExtensions.toFirstLower(c.getName());
-        _builder.append(_firstLower, "\t");
+        String _replace = StringExtensions.toFirstLower(c.getName()).replace(" ", "");
+        _builder.append(_replace, "\t");
         _builder.append(controlName, "\t");
         _builder.append(";");
         _builder.newLineIfNotEmpty();

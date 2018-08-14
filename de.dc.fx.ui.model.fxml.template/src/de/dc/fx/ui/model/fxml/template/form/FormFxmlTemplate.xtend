@@ -26,7 +26,7 @@ class FormFxmlTemplate implements IGenerator<FXForm>{
 	   		«FOR n: 1..data.fxcontrols.size»
 	   		«val c = data.fxcontrols.get(n-1)»«val controlName = c.class.simpleName.replaceFirst("FX", "").replace("Impl", "")»
 	   		<Label text="«c.name»:" GridPane.rowIndex="«n»" />
-	   		<«controlName» fx:id="«c.name.toFirstLower»«controlName»" text="«c.name»" GridPane.columnIndex="1" GridPane.rowIndex="«n»" />
+	   		<«controlName» fx:id="«c.name.toFirstLower.replace(" ","")»«controlName»" text="«c.name»" GridPane.columnIndex="1" GridPane.rowIndex="«n»" />
 	   		«ENDFOR»	
 	   </children>
 	   <padding>

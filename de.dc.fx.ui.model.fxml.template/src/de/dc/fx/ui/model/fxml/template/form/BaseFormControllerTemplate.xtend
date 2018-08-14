@@ -18,7 +18,7 @@ class BaseFormControllerTemplate implements IGenerator<FXForm>{
 	public abstract class «data.name»BaseFormController<T> extends GridPane{
 		«FOR c : data.fxcontrols»
 		@FXML «val controlName = c.class.simpleName.replaceFirst("FX", "").replace("Impl", "")»
-		protected «controlName» «c.name.toFirstLower»«controlName»;
+		protected «controlName» «c.name.toFirstLower.replace(" ", "")»«controlName»;
 	    «ENDFOR»
 	}
 	'''
