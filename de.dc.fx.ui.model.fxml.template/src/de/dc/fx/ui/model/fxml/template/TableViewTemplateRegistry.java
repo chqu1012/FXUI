@@ -8,7 +8,7 @@ public enum TableViewTemplateRegistry {
 	Application(new ApplicationTemplate(), "/", "Application.java"),
 	BaseController(new BaseControllerTemplate(), "/ui/", "BaseTableViewer.java", false, SrcType.SrcGen),
 	Controller(new ControllerTemplate(), "/ui/", "TableViewer.java"),
-	Fxml(new FxmlTemplate(),"/ui/", "TableViewer.fxml"),
+	Fxml(new FxmlTemplate(),"/ui/", "TableViewer.fxml", false, SrcType.SrcGen),
 	Css(new CssTemplate(), "/ui/css/", "TableViewer.css");
 	
 	private IGenerator<FXTableView> template;

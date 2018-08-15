@@ -1,14 +1,14 @@
 package de.dc.fx.ui.model.fxml.template.form
 
 import de.dc.fx.ui.model.fxui.FXButton
+import de.dc.fx.ui.model.fxui.FXCheckBox
+import de.dc.fx.ui.model.fxui.FXChoiceBox
 import de.dc.fx.ui.model.fxui.FXComboBox
 import de.dc.fx.ui.model.fxui.FXRadioButton
 import de.dc.fx.ui.model.fxui.FXSelectedControl
 import de.dc.fx.ui.model.fxui.FXTextField
 import de.dc.fx.ui.model.fxui.FXToggleButton
 import de.dc.fx.ui.model.fxui.util.FxuiSwitch
-import de.dc.fx.ui.model.fxui.FXChoiceBox
-import de.dc.fx.ui.model.fxui.FXCheckBox
 
 class FormSwitch extends FxuiSwitch<String>{
 	
