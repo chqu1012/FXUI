@@ -2,7 +2,7 @@
 <feature
       id="de.dc.fx.ui.model.feature"
       label="Feature"
-      version="1.0.0.qualifier">
+      version="0.8.2.qualifier">
 
    <description url="http://www.example.com/description">
       [Enter Feature Description here.]

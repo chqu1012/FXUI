@@ -39,12 +39,6 @@ public abstract class ProfilBaseForm extends GridPane{
 	protected ToggleButton weiblichToggleButton;
 	
 	@FXML 
-	protected CheckBox maennlichCheckbox;
-	
-	@FXML 
-	protected ChoiceBox asdChoiceBox;
-	
-	@FXML 
 	protected RadioButton weckerRadioButton;
     
     public ProfilBaseForm() {
