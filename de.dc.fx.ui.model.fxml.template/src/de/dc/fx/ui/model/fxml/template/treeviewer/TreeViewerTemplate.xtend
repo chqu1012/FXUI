@@ -31,6 +31,7 @@ class TreeViewerTemplate implements IGenerator<FXModel>{
 		}
 
 		private void buildTree(TreeItem<T> parentItem, T element){
+									
 			TreeItem<T> currentItem=new TreeItem<T>();
 			currentItem.setValue(element);
 			parentItem.getChildren().add(currentItem);	
