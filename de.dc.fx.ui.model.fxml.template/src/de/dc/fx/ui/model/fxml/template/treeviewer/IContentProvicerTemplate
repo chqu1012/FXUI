@@ -1,0 +1,21 @@
+package de.dc.fx.ui.model.fxml.treeviewer
+
+import de.dc.fx.ui.model.fxui.FXModel
+import de.dc.fx.ui.model.fxui.FXProperty
+import de.dc.fx.ui.model.fxui.FXTableView
+
+class IContentProviderTemplate implements IGenerator<FXModel>{
+	
+	override gen(FXModel data)'''
+  package treeviewer;
+
+  import java.util.List;
+
+  public interface IContentProvider<T> {
+    boolean hasChildren(T element);
+    T getParent(T element);
+    List<T> getElements(T inputElement);
+    List<T> getChildren(T parentElement);
+  }
+  '''
+}
