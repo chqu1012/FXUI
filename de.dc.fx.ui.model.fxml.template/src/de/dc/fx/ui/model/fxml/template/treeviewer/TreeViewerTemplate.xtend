@@ -28,12 +28,21 @@ class TreeViewerTemplate implements IGenerator<FXModel>{
 			List<T> elements = contentprovider.getElements(input);
 			elements.stream().forEach(element->buildTree(root, element));
 			setRoot(root);
+			setCellFactory(view->new TreeCell<T>(){
+	                    protected void updateItem(T item, boolean empty){
+			           super.updateItem(item, empty);
+				   if(empty){
+				      setText(null);
+				   }else{
+				       setText(labelProvider.getText(item));
+				   }
+			    }
+			});
 		}
 
 		private void buildTree(TreeItem<T> parentItem, T element){
-									
-			TreeItem<T> currentItem=new TreeItem<T>();
-			currentItem.setValue(element);
+			Node image = labelprovider.getImage(element);                        
+     			TreeItem<T> currentItem=new TreeItem<T>(element, image);		
 			parentItem.getChildren().add(currentItem);	
 			// Build current item
 			// Link with parent
