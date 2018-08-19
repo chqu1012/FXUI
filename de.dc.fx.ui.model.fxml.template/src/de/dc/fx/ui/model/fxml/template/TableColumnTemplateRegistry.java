@@ -5,10 +5,10 @@ import java.io.File;
 import de.dc.fx.ui.model.fxui.FXColumn;
 
 public enum TableColumnTemplateRegistry {
-	BaseCellFactory(new BaseCellFactoryTemplate(),"/cell/", "BaseCellFactory.java", true, SrcType.SrcGen),
-	BaseEditingSupport(new BaseEditingSupportTemplate(), "/cell/edit/", "BaseEditingSupport.java", true, SrcType.SrcGen),
-	CellFactory(new CellFactoryTemplate(),"/cell/", "CellFactory.java"),
-	EditingSupport(new EditingSupportTemplate(), "/cell/edit/","EditingSupport.java");
+	BaseCellFactory(new BaseCellFactoryTemplate(),"/cell/", "BaseCellFactory.java", true, SrcType.Gen),
+	BaseEditingSupport(new BaseEditingSupportTemplate(), "/cell/edit/", "BaseEditingSupport.java", true, SrcType.Gen),
+	CellFactory(new CellFactoryTemplate(),"/cell/", "CellFactory.java", false, SrcType.Gen),
+	EditingSupport(new EditingSupportTemplate(), "/cell/edit/","EditingSupport.java", false, SrcType.Gen);
 	
 	private IGenerator<FXColumn> template;
 	private String fileExtension;

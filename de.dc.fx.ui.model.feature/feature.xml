@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="de.dc.fx.ui.model.feature"
-      label="Feature"
-      version="0.8.2.qualifier">
+      label="JavaFX Control Generator Feature"
+      version="0.8.3.qualifier">
 
    <description url="http://www.example.com/description">
       [Enter Feature Description here.]

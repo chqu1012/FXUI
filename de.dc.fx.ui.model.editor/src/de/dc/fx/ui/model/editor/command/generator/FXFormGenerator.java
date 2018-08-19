@@ -13,9 +13,17 @@ public class FXFormGenerator extends AbstractGenerator<FXForm> {
 
 	@Override
 	public void gen(FXForm view, IProject project) {
-//		FormFxmlTemplate tpl = new FormFxmlTemplate();
+//		IWorkspaceRoot root = ResourcesPlugin.getWorkspace().getRoot();
+//		ContainerSelectionDialog dialog = new ContainerSelectionDialog(new Shell(), root, true, "Choose a project to generate");
+//		int open = dialog.open();
+//		String srcPath = "";
+//		if (open==0) {
+//			srcPath=((Path)dialog.getResult()[0]).toOSString();
+//			System.out.println(srcPath);
+//		}
+		
 		for (FormTemplateRegistry template : FormTemplateRegistry.values()) {
-			String srcPath = getLocation(template.getSrcType(), project, view);
+			String srcPath =  getLocation(template.getSrcType(), project, view);
 			String content = template.getTemplate().gen(view);
 			String genFilePath =  template.getGenFilePath(srcPath, view.getName());
 			writeFile(genFilePath, content);

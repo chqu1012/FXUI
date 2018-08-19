@@ -16,8 +16,17 @@ public class FXTableViewGenerator extends AbstractGenerator<FXTableView>{
 
 	@Override
 	public void gen(FXTableView view, IProject project) {
+//		IWorkspaceRoot root = ResourcesPlugin.getWorkspace().getRoot();
+//		ContainerSelectionDialog dialog = new ContainerSelectionDialog(new Shell(), root, true, "Choose a project to generate");
+//		int open = dialog.open();
+//		String srcPath = "";
+//		if (open==0) {
+//			srcPath=((Path)dialog.getResult()[0]).toOSString();
+//			System.out.println(srcPath);
+//		}
+		
 		for (TableViewTemplateRegistry template : TableViewTemplateRegistry.values()) {
-			String srcPath = getLocation(template.getSrcType(), project, view);
+			String srcPath =  getLocation(template.getSrcType(), project, view);
 			String content = template.getTemplate().gen(view);
 			String genFilePath = template.getGenFilePath(srcPath, view.getName());
 			writeFile(genFilePath, content);
@@ -25,7 +34,7 @@ public class FXTableViewGenerator extends AbstractGenerator<FXTableView>{
 		
 		for (FXColumn column : view.getFxColumns()) {
 			for (TableColumnTemplateRegistry template : TableColumnTemplateRegistry.values()) {
-				String srcPath = getLocation(template.getSrcType(), project, view);
+				String srcPath =  getLocation(template.getSrcType(), project, view);
 				String content = template.getTemplate().gen(column);
 				String name = view.getName()+column.getAssociatedFXProperty().getName(); 
 				String genFilePath = template.getGenFilePath(srcPath, name);
@@ -34,7 +43,7 @@ public class FXTableViewGenerator extends AbstractGenerator<FXTableView>{
 		}
 
 		for (TableEntityRegistry template : TableEntityRegistry.values()) {
-			String srcPath = getLocation(template.getSrcType(), project, view);
+			String srcPath =  getLocation(template.getSrcType(), project, view);
 			String content = template.getTemplate().gen(view.getFxEntity());
 			String genFilePath = template.getGenFilePath(srcPath, view.getFxEntity().getName());
 			writeFile(genFilePath, content);

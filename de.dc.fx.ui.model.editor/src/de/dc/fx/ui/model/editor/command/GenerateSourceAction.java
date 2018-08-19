@@ -7,7 +7,7 @@ import org.eclipse.ui.IActionDelegate;
 
 public class GenerateSourceAction implements IActionDelegate{
 
-	GenerateSourceHandler handler = new GenerateSourceHandler();
+	protected GenerateSourceHandler handler = new GenerateSourceHandler();
 
 	@Override
 	public void run(IAction action) {
