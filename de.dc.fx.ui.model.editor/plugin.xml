@@ -118,6 +118,13 @@
     <action  id="de.dc.fx.ui.model.editor.GenerateSource"
       label="Generate Source" menubarPath="additions"    class="de.dc.fx.ui.model.editor.command.GenerateSourceAction"
       enablesFor="1"/>
+    <action
+          class="de.dc.fx.ui.model.editor.command.CreateColumnsByModel"
+          enablesFor="1"
+          id="de.dc.fx.ui.model.editor.CreateColumnsByModel"
+          label="Create Columns By Model"
+          menubarPath="additions">
+    </action>
   </objectContribution>
   <objectContribution
         id="de.dc.fx.ui.model.editor.menu"
@@ -127,6 +134,17 @@
            enablesFor="1"
            id="de.dc.fx.ui.model.editor.GenerateSource"
            label="Generate Source"
+           menubarPath="additions">
+     </action>
+  </objectContribution>
+  <objectContribution
+        id="de.dc.fx.ui.model.editor.menu"
+        objectClass="de.dc.fx.ui.model.fxui.FXModel">
+     <action
+           class="de.dc.fx.ui.model.editor.command.CreateColumnsByModel"
+           enablesFor="1"
+           id="de.dc.fx.ui.model.editor.CreateColumnsByModel"
+           label="Create Columns By Model"
            menubarPath="additions">
      </action>
   </objectContribution>
