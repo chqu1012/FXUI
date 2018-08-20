@@ -72,10 +72,10 @@ public class ApplicationTemplate implements IGenerator<FXTableView> {
     String _firstLower_1 = StringExtensions.toFirstLower(data.getName());
     _builder.append(_firstLower_1, "\t\t");
     _builder.append("TableViewer.setItems(");
-    String _firstUpper_3 = StringExtensions.toFirstUpper(data.getName());
+    String _firstUpper_3 = StringExtensions.toFirstUpper(data.getFxEntity().getName());
     _builder.append(_firstUpper_3, "\t\t");
     _builder.append("ModelProvider.Instance.get");
-    String _firstUpper_4 = StringExtensions.toFirstUpper(data.getName());
+    String _firstUpper_4 = StringExtensions.toFirstUpper(data.getFxEntity().getName());
     _builder.append(_firstUpper_4, "\t\t");
     _builder.append("s());");
     _builder.newLineIfNotEmpty();

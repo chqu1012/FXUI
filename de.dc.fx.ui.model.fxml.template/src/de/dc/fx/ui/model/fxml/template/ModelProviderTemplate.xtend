@@ -10,11 +10,10 @@ class ModelProviderTemplate implements IGenerator<FXModel>{
 	«val view = data.eContainer as FXTableView»
 	package «view.packagePath».provider;
 	
-	import java.time.LocalDate;
-	import java.util.Random;
-	import «view.packagePath».model.«data.name.toFirstUpper»;
-	import javafx.collections.FXCollections;
-	import javafx.collections.ObservableList;
+	import java.time.*;
+	import java.util.*;
+	import «view.packagePath».model.*;
+	import javafx.collections.*;
 	
 	public enum «data.name.toFirstUpper»ModelProvider {
 		Instance;

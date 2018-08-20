@@ -13,7 +13,7 @@ class CellFactoryTemplate implements IGenerator<FXColumn>{
 	import «view.packagePath».model.«view.fxEntity.name»;
 	import javafx.geometry.Pos;
 	«val fieldName = data.associatedFXProperty.name.toFirstUpper»
-	public class «view.fxEntity.name»«fieldName»CellFactory extends BaseCellFactory<«view.fxEntity.name»> {
+	public class «view.name.toFirstUpper»«fieldName»CellFactory extends BaseCellFactory<«view.fxEntity.name»> {
 	
 		@Override
 		protected String extractValue(«view.fxEntity.name» data) {
