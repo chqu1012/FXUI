@@ -32,8 +32,6 @@ public class GenerateSourceHandler extends AbstractHandler {
 			IStructuredSelection ss = (IStructuredSelection) selectionService.getSelection();
 			IEditorPart activeEditor = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().getActiveEditor();
 			IEditorInput input = activeEditor.getEditorInput();
-			IFile file2 = ResourceUtil.getFile(input);
-			System.out.println(file2);
 			if (input instanceof IFileEditorInput) {
 				IFileEditorInput fileEditorInput = (IFileEditorInput) input;
 				IFile file = fileEditorInput.getFile();

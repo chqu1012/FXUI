@@ -7,6 +7,7 @@ import de.dc.fx.ui.model.fxui.FXExistingModel;
 import de.dc.fx.ui.model.fxui.FXModel;
 import de.dc.fx.ui.model.fxui.FXTableView;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.xbase.lib.StringExtensions;
 
@@ -23,10 +24,10 @@ public class EditingSupportTemplate implements IGenerator<FXColumn> {
     _builder.append(_packagePath);
     _builder.append(".cell.edit;");
     _builder.newLineIfNotEmpty();
-    EObject _eContainer_1 = data.getAssociatedFXProperty().eContainer();
-    final FXModel model = ((FXModel) _eContainer_1);
+    EObject _rootContainer = EcoreUtil.getRootContainer(data);
+    final FXTableView root = ((FXTableView) _rootContainer);
     _builder.newLineIfNotEmpty();
-    final String name = StringExtensions.toFirstUpper(model.getName());
+    final FXModel model = root.getInput();
     _builder.newLineIfNotEmpty();
     {
       FXExistingModel _useExistingModel = model.getUseExistingModel();
@@ -70,13 +71,22 @@ public class EditingSupportTemplate implements IGenerator<FXColumn> {
     _builder.append(_type_2);
     _builder.append(">{");
     _builder.newLineIfNotEmpty();
-    _builder.newLine();
+    String _xifexpression = null;
+    FXExistingModel _useExistingModel_1 = model.getUseExistingModel();
+    boolean _tripleNotEquals_1 = (_useExistingModel_1 != null);
+    if (_tripleNotEquals_1) {
+      _xifexpression = model.getUseExistingModel().getImportUri();
+    } else {
+      _xifexpression = model.getName();
+    }
+    final String className = _xifexpression;
+    _builder.newLineIfNotEmpty();
     _builder.append("\t");
     _builder.append("@Override");
     _builder.newLine();
     _builder.append("\t");
     _builder.append("protected void setValue(");
-    _builder.append(name, "\t");
+    _builder.append(className, "\t");
     _builder.append(" current, ");
     String _type_3 = data.getAssociatedFXProperty().getType();
     _builder.append(_type_3, "\t");

@@ -1,7 +1,7 @@
 package de.dc.fx.ui.model.fxml.template
 
-import de.dc.fx.ui.model.fxui.FXTableView
 import de.dc.fx.ui.model.fxui.FXProperty
+import de.dc.fx.ui.model.fxui.FXTableView
 
 class ControllerTemplate implements IGenerator<FXTableView>{
 	
@@ -12,11 +12,15 @@ class ControllerTemplate implements IGenerator<FXTableView>{
 	import javafx.scene.control.cell.TextFieldTableCell;
 	import javafx.fxml.FXMLLoader;
 	import «view.packagePath».cell.edit.*;
+	«IF view.input.useExistingModel!==null»
+	import «view.input.useExistingModel.importUri»;
+	«ELSE»
 	import «view.packagePath».model.*;
+	«ENDIF»
 	import javafx.util.converter.*;
 	import java.time.*;
-
-	public class «view.name»TableViewer extends «view.name»BaseTableViewer<«view.input.name.toFirstUpper»>{
+	«val className = if(view.input.useExistingModel!==null){view.input.useExistingModel.importUri}else{view.input.name}»
+	public class «view.name»TableViewer extends «view.name»BaseTableViewer<«className»>{
 	
 		@Override
 		protected void init() {

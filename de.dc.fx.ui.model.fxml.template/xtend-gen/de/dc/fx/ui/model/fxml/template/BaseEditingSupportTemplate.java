@@ -6,8 +6,8 @@ import de.dc.fx.ui.model.fxui.FXExistingModel;
 import de.dc.fx.ui.model.fxui.FXModel;
 import de.dc.fx.ui.model.fxui.FXTableView;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.xtend2.lib.StringConcatenation;
-import org.eclipse.xtext.xbase.lib.StringExtensions;
 
 @SuppressWarnings("all")
 public class BaseEditingSupportTemplate implements IGenerator<FXColumn> {
@@ -24,8 +24,6 @@ public class BaseEditingSupportTemplate implements IGenerator<FXColumn> {
     String _packagePath = view.getPackagePath();
     _builder.append(_packagePath);
     _builder.append(".cell.edit;");
-    _builder.newLineIfNotEmpty();
-    final String name = StringExtensions.toFirstUpper(model.getName());
     _builder.newLineIfNotEmpty();
     {
       FXExistingModel _useExistingModel = model.getUseExistingModel();
@@ -50,9 +48,21 @@ public class BaseEditingSupportTemplate implements IGenerator<FXColumn> {
     _builder.newLine();
     _builder.append("import javafx.scene.control.TableColumn.CellEditEvent;");
     _builder.newLine();
-    _builder.newLine();
+    EObject _rootContainer = EcoreUtil.getRootContainer(data);
+    final FXTableView root = ((FXTableView) _rootContainer);
+    _builder.newLineIfNotEmpty();
+    String _xifexpression = null;
+    FXExistingModel _useExistingModel_1 = root.getInput().getUseExistingModel();
+    boolean _tripleNotEquals_1 = (_useExistingModel_1 != null);
+    if (_tripleNotEquals_1) {
+      _xifexpression = root.getInput().getUseExistingModel().getImportUri();
+    } else {
+      _xifexpression = model.getName();
+    }
+    final String className = _xifexpression;
+    _builder.newLineIfNotEmpty();
     _builder.append("public abstract class BaseEditingSupport<T> implements EventHandler<CellEditEvent<");
-    _builder.append(name);
+    _builder.append(className);
     _builder.append(",T>>{");
     _builder.newLineIfNotEmpty();
     _builder.newLine();
@@ -61,21 +71,21 @@ public class BaseEditingSupportTemplate implements IGenerator<FXColumn> {
     _builder.newLine();
     _builder.append("\t");
     _builder.append("public void handle(CellEditEvent<");
-    _builder.append(name, "\t");
+    _builder.append(className, "\t");
     _builder.append(", T> t) {");
     _builder.newLineIfNotEmpty();
     _builder.append("\t\t");
     _builder.append("ObservableList<");
-    _builder.append(name, "\t\t");
+    _builder.append(className, "\t\t");
     _builder.append("> items = t.getTableView().getItems();");
     _builder.newLineIfNotEmpty();
     _builder.append("\t\t");
     _builder.append("int selection = t.getTablePosition().getRow();");
     _builder.newLine();
     _builder.append("\t\t");
-    _builder.append(name, "\t\t");
+    _builder.append(className, "\t\t");
     _builder.append(" current = (");
-    _builder.append(name, "\t\t");
+    _builder.append(className, "\t\t");
     _builder.append(") items.get(selection);");
     _builder.newLineIfNotEmpty();
     _builder.append("\t\t");
@@ -87,7 +97,7 @@ public class BaseEditingSupportTemplate implements IGenerator<FXColumn> {
     _builder.newLine();
     _builder.append("\t");
     _builder.append("protected abstract void setValue(");
-    _builder.append(name, "\t");
+    _builder.append(className, "\t");
     _builder.append(" current, T newValue);");
     _builder.newLineIfNotEmpty();
     _builder.append("}");

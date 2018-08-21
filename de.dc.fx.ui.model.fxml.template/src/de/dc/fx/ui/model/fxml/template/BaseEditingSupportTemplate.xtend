@@ -3,6 +3,7 @@ package de.dc.fx.ui.model.fxml.template
 import de.dc.fx.ui.model.fxui.FXColumn
 import de.dc.fx.ui.model.fxui.FXTableView
 import de.dc.fx.ui.model.fxui.FXModel
+import org.eclipse.emf.ecore.util.EcoreUtil
 
 class BaseEditingSupportTemplate implements IGenerator<FXColumn>{
 	
@@ -10,7 +11,6 @@ class BaseEditingSupportTemplate implements IGenerator<FXColumn>{
 	«val view = data.eContainer as FXTableView»
 	«val model = data.associatedFXProperty.eContainer as FXModel»
 	package «view.packagePath».cell.edit;
-	«val name = model.name.toFirstUpper»
 	«IF model.useExistingModel!==null»
 	import «model.useExistingModel.importUri»;
 	«ELSE»
@@ -19,18 +19,19 @@ class BaseEditingSupportTemplate implements IGenerator<FXColumn>{
 	import javafx.collections.ObservableList;
 	import javafx.event.EventHandler;
 	import javafx.scene.control.TableColumn.CellEditEvent;
-	
-	public abstract class BaseEditingSupport<T> implements EventHandler<CellEditEvent<«name»,T>>{
+	«val root = EcoreUtil.getRootContainer(data) as FXTableView»
+	«val className = if(root.input.useExistingModel!==null){root.input.useExistingModel.importUri}else{model.name}»
+	public abstract class BaseEditingSupport<T> implements EventHandler<CellEditEvent<«className»,T>>{
 	
 		@Override
-		public void handle(CellEditEvent<«name», T> t) {
-			ObservableList<«name»> items = t.getTableView().getItems();
+		public void handle(CellEditEvent<«className», T> t) {
+			ObservableList<«className»> items = t.getTableView().getItems();
 			int selection = t.getTablePosition().getRow();
-			«name» current = («name») items.get(selection);
+			«className» current = («className») items.get(selection);
 			setValue(current, t.getNewValue());
 		}
 	
-		protected abstract void setValue(«name» current, T newValue);
+		protected abstract void setValue(«className» current, T newValue);
 	}
 	'''
 	

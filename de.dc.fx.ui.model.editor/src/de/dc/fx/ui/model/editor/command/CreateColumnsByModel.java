@@ -33,7 +33,8 @@ public class CreateColumnsByModel implements IActionDelegate{
 			if (ss.getFirstElement() instanceof FXModel) {
 				FXModel model = (FXModel) ss.getFirstElement();
 				FXTableView tableView = (FXTableView)model.eContainer();
-					
+				tableView.getFxColumns().clear();
+				
 				EditingDomain editingDomain = AdapterFactoryEditingDomain.getEditingDomainFor(tableView);
 				EList<FXColumn> columns = new BasicEList<FXColumn>();
 				for (FXProperty property : model.getFxProperties()) {

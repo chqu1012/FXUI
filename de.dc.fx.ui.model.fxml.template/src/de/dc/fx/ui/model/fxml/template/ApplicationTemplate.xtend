@@ -10,9 +10,8 @@ class ApplicationTemplate implements IGenerator<FXTableView>{
 	import «data.packagePath».ui.*;
 	import «data.packagePath».provider.*;
 	import javafx.application.Application;
-	import javafx.scene.Scene;
-	import javafx.stage.Stage;
-	import javafx.stage.StageStyle;
+	import javafx.scene.*;
+	import javafx.stage.*;
 	
 	public class «data.name.toFirstUpper»Application extends Application {
 	

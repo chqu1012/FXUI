@@ -18,11 +18,11 @@ class ModelProviderTemplate implements IGenerator<FXModel>{
 	import «view.packagePath».model.*;
 	«ENDIF»
 	import javafx.collections.*;
-	
+	«val className = if(data.useExistingModel!==null){data.useExistingModel.importUri}else{data.name}»
 	public enum «data.name.toFirstUpper»ModelProvider {
 		Instance;
 		
-		private ObservableList<«data.name.toFirstUpper»> «data.name.toFirstLower»s = FXCollections.observableArrayList();
+		private ObservableList<«className»> «data.name.toFirstLower»s = FXCollections.observableArrayList();
 		private Random random = new Random();
 	
 		private «data.name.toFirstUpper»ModelProvider() {
@@ -30,15 +30,15 @@ class ModelProviderTemplate implements IGenerator<FXModel>{
 			«FOR n : 0..data.fxProperties.size-1»
 			«data.fxProperties.get(n).getType(n)»
 			«ENDFOR»«val parameter = data.fxProperties.map[it.name.toFirstLower].reduce[p1, p2|p1+', '+p2]»
-			«data.name.toFirstLower»s.add(new «data.name.toFirstUpper»(«parameter»));
+			«data.name.toFirstLower»s.add(new «className»(«parameter»));
 			}
 		}
 		
-		public ObservableList<«data.name.toFirstUpper»> get«data.name.toFirstUpper»s() {
+		public ObservableList<«className»> get«data.name.toFirstUpper»s() {
 			return «data.name.toFirstLower»s;
 		}
 	
-		public void set«data.name.toFirstUpper»s(ObservableList<«data.name.toFirstUpper»> «data.name.toFirstLower»s) {
+		public void set«data.name.toFirstUpper»s(ObservableList<«className»> «data.name.toFirstLower»s) {
 			this.«data.name.toFirstLower»s = «data.name.toFirstLower»s;
 		}
 	}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fxui:FXTableView xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:fxui="http://www.example.org/fxui" name="Registration" packagePath="de.dc.fx.ui.model.demo.registration">
+  <fxColumns name="id" associatedFXProperty="//@fxEntity/@fxProperties.1" editable="true"/>
+  <fxColumns name="name" associatedFXProperty="//@fxEntity/@fxProperties.0"/>
+  <fxEntity name="Registration">
+    <fxProperties name="Name" type="String"/>
+    <fxProperties name="Id" type="Long"/>
+  </fxEntity>
+</fxui:FXTableView>

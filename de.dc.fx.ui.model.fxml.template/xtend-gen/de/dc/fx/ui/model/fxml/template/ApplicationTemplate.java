@@ -28,11 +28,9 @@ public class ApplicationTemplate implements IGenerator<FXTableView> {
     _builder.newLineIfNotEmpty();
     _builder.append("import javafx.application.Application;");
     _builder.newLine();
-    _builder.append("import javafx.scene.Scene;");
+    _builder.append("import javafx.scene.*;");
     _builder.newLine();
-    _builder.append("import javafx.stage.Stage;");
-    _builder.newLine();
-    _builder.append("import javafx.stage.StageStyle;");
+    _builder.append("import javafx.stage.*;");
     _builder.newLine();
     _builder.newLine();
     _builder.append("public class ");
