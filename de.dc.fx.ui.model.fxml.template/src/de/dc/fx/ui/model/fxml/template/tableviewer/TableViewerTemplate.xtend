@@ -1,4 +1,4 @@
-//package de.dc.fx.ui.model.fxml.tableviewer
+//package de.dc.fx.ui.model.fxml.treeviewer
 //
 //import de.dc.fx.ui.model.fxui.FXModel
 //import de.dc.fx.ui.model.fxui.FXProperty

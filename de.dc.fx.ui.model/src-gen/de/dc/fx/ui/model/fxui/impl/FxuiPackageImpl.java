@@ -19,6 +19,7 @@ import de.dc.fx.ui.model.fxui.FXSelectedControl;
 import de.dc.fx.ui.model.fxui.FXTableView;
 import de.dc.fx.ui.model.fxui.FXTextField;
 import de.dc.fx.ui.model.fxui.FXToggleButton;
+import de.dc.fx.ui.model.fxui.FXTreeView;
 import de.dc.fx.ui.model.fxui.FxuiFactory;
 import de.dc.fx.ui.model.fxui.FxuiPackage;
 import de.dc.fx.ui.model.fxui.Pos;
@@ -156,6 +157,13 @@ public class FxuiPackageImpl extends EPackageImpl implements FxuiPackage {
 	 * @generated
 	 */
 	private EClass fxExistingModelEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass fxTreeViewEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -620,6 +628,24 @@ public class FxuiPackageImpl extends EPackageImpl implements FxuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getFXTreeView() {
+		return fxTreeViewEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFXTreeView_PackagePath() {
+		return (EAttribute) fxTreeViewEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getPos() {
 		return posEEnum;
 	}
@@ -712,6 +738,9 @@ public class FxuiPackageImpl extends EPackageImpl implements FxuiPackage {
 
 		fxExistingModelEClass = createEClass(FX_EXISTING_MODEL);
 		createEAttribute(fxExistingModelEClass, FX_EXISTING_MODEL__IMPORT_URI);
+
+		fxTreeViewEClass = createEClass(FX_TREE_VIEW);
+		createEAttribute(fxTreeViewEClass, FX_TREE_VIEW__PACKAGE_PATH);
 
 		// Create enums
 		posEEnum = createEEnum(POS);
@@ -876,6 +905,12 @@ public class FxuiPackageImpl extends EPackageImpl implements FxuiPackage {
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFXExistingModel_ImportUri(), ecorePackage.getEString(), "importUri", null, 0, 1,
 				FXExistingModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(fxTreeViewEClass, FXTreeView.class, "FXTreeView", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getFXTreeView_PackagePath(), ecorePackage.getEString(), "packagePath", null, 0, 1,
+				FXTreeView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals

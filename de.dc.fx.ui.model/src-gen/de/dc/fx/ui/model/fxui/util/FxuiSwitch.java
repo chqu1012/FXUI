@@ -237,6 +237,13 @@ public class FxuiSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case FxuiPackage.FX_TREE_VIEW: {
+			FXTreeView fxTreeView = (FXTreeView) theEObject;
+			T result = caseFXTreeView(fxTreeView);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
@@ -494,6 +501,21 @@ public class FxuiSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseFXExistingModel(FXExistingModel object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>FX Tree View</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>FX Tree View</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFXTreeView(FXTreeView object) {
 		return null;
 	}
 

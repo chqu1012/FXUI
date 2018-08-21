@@ -75,5 +75,8 @@
     <genClasses ecoreClass="fxui.ecore#//FXExistingModel">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fxui.ecore#//FXExistingModel/importUri"/>
     </genClasses>
+    <genClasses ecoreClass="fxui.ecore#//FXTreeView">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fxui.ecore#//FXTreeView/packagePath"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

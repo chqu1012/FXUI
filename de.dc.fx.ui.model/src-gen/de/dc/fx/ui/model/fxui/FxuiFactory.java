@@ -157,6 +157,15 @@ public interface FxuiFactory extends EFactory {
 	FXExistingModel createFXExistingModel();
 
 	/**
+	 * Returns a new object of class '<em>FX Tree View</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>FX Tree View</em>'.
+	 * @generated
+	 */
+	FXTreeView createFXTreeView();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -418,6 +418,29 @@ public class FxuiItemProviderAdapterFactory extends FxuiAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.fx.ui.model.fxui.FXTreeView} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FXTreeViewItemProvider fxTreeViewItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.fx.ui.model.fxui.FXTreeView}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFXTreeViewAdapter() {
+		if (fxTreeViewItemProvider == null) {
+			fxTreeViewItemProvider = new FXTreeViewItemProvider(this);
+		}
+
+		return fxTreeViewItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -546,6 +569,8 @@ public class FxuiItemProviderAdapterFactory extends FxuiAdapterFactory
 			fxReferenceItemProvider.dispose();
 		if (fxExistingModelItemProvider != null)
 			fxExistingModelItemProvider.dispose();
+		if (fxTreeViewItemProvider != null)
+			fxTreeViewItemProvider.dispose();
 	}
 
 }

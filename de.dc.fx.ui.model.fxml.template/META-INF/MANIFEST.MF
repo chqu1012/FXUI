@@ -11,5 +11,6 @@ Require-Bundle: de.dc.fx.ui.model;bundle-version="0.1.0",
  org.eclipse.xtend.lib,
  org.eclipse.xtend.lib.macro
 Export-Package: de.dc.fx.ui.model.fxml.template,
- de.dc.fx.ui.model.fxml.template.form
+ de.dc.fx.ui.model.fxml.template.form,
+ de.dc.fx.ui.model.fxml.template.treeviewer
 

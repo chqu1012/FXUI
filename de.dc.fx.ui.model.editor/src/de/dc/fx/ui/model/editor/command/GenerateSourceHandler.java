@@ -13,17 +13,19 @@ import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IFileEditorInput;
 import org.eclipse.ui.ISelectionService;
 import org.eclipse.ui.PlatformUI;
-import org.eclipse.ui.ide.ResourceUtil;
 
 import de.dc.fx.ui.model.editor.command.generator.FXFormGenerator;
 import de.dc.fx.ui.model.editor.command.generator.FXTableViewGenerator;
+import de.dc.fx.ui.model.editor.command.generator.FXTreeViewGenerator;
 import de.dc.fx.ui.model.fxui.FXForm;
 import de.dc.fx.ui.model.fxui.FXTableView;
+import de.dc.fx.ui.model.fxui.FXTreeView;
 
 public class GenerateSourceHandler extends AbstractHandler {
 
 	private FXTableViewGenerator tableViewGenerator = new FXTableViewGenerator();
 	private FXFormGenerator formGenerator = new FXFormGenerator();
+	private FXTreeViewGenerator treeGenerator = new FXTreeViewGenerator();
 
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
@@ -42,6 +44,9 @@ public class GenerateSourceHandler extends AbstractHandler {
 				}else if (ss.getFirstElement() instanceof FXForm) {
 					FXForm form = (FXForm) ss.getFirstElement();
 					formGenerator.gen(form, project);
+				}else if (ss.getFirstElement() instanceof FXTreeView) {
+					FXTreeView tree = (FXTreeView) ss.getFirstElement();
+					treeGenerator.gen(tree, project);
 				}
 				refresh(project);
 			}

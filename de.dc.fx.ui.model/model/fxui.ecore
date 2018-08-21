@@ -75,4 +75,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="FXExistingModel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="importUri" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FXTreeView">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="packagePath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
 </ecore:EPackage>
