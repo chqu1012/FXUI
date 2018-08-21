@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fxui:FXTableView xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:fxui="http://www.example.org/fxui" name="Wiki" packagePath="de.dc.fx.ui.model.demo.wiki" input="//@fxEntity.0">
+  <fxColumns name="Name" associatedFXProperty="//@fxEntity.0/@fxProperties.0"/>
+  <fxColumns name="Content" associatedFXProperty="//@fxEntity.0/@fxProperties.1"/>
+  <fxColumns name="CreatedOn" associatedFXProperty="//@fxEntity.0/@fxProperties.2"/>
+  <fxColumns name="UpdatedOn" associatedFXProperty="//@fxEntity.0/@fxProperties.3"/>
+  <fxEntity name="Entry">
+    <fxProperties name="Name" type="String"/>
+    <fxProperties name="Content" type="String"/>
+    <fxProperties name="CreatedOn" type="LocalDateTime"/>
+    <fxProperties name="UpdatedOn" type="LocalDateTime"/>
+    <fxreference referenceTo="//@fxEntity.1" upperBound="-1"/>
+  </fxEntity>
+  <fxEntity name="Category">
+    <fxProperties name="Name" type="String"/>
+    <fxProperties name="Tag" type="String"/>
+  </fxEntity>
+</fxui:FXTableView>

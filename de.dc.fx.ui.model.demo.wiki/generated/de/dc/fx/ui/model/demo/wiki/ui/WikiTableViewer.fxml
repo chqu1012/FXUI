@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import de.dc.fx.ui.model.demo.wiki.cell.WikiNameCellFactory?>
+<?import de.dc.fx.ui.model.demo.wiki.cell.WikiContentCellFactory?>
+<?import de.dc.fx.ui.model.demo.wiki.cell.WikiCreatedOnCellFactory?>
+<?import de.dc.fx.ui.model.demo.wiki.cell.WikiUpdatedOnCellFactory?>
+<fx:root type="TableView" fx:id="tableView" editable="true" stylesheets="@css/WikiTableViewer.css" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.162">
+  <columns>
+	<TableColumn fx:id="nameColumn" prefWidth="100.0" text="Name">
+		<cellValueFactory>
+		    <PropertyValueFactory property="name"/>
+		</cellValueFactory>
+		<cellFactory>
+			<WikiNameCellFactory/>
+		</cellFactory>
+	</TableColumn>
+	<TableColumn fx:id="contentColumn" prefWidth="100.0" text="Content">
+		<cellValueFactory>
+		    <PropertyValueFactory property="content"/>
+		</cellValueFactory>
+		<cellFactory>
+			<WikiContentCellFactory/>
+		</cellFactory>
+	</TableColumn>
+	<TableColumn fx:id="createdOnColumn" prefWidth="100.0" text="CreatedOn">
+		<cellValueFactory>
+		    <PropertyValueFactory property="createdOn"/>
+		</cellValueFactory>
+		<cellFactory>
+			<WikiCreatedOnCellFactory/>
+		</cellFactory>
+	</TableColumn>
+	<TableColumn fx:id="updatedOnColumn" prefWidth="100.0" text="UpdatedOn">
+		<cellValueFactory>
+		    <PropertyValueFactory property="updatedOn"/>
+		</cellValueFactory>
+		<cellFactory>
+			<WikiUpdatedOnCellFactory/>
+		</cellFactory>
+	</TableColumn>
+  </columns>
+</fx:root>
