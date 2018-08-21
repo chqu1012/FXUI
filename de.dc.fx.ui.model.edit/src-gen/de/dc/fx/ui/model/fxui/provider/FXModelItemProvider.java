@@ -48,6 +48,7 @@ public class FXModelItemProvider extends FXNamedElementItemProvider {
 
 			addFxPropertiesPropertyDescriptor(object);
 			addFxreferencePropertyDescriptor(object);
+			addUseExistingModelPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -83,6 +84,21 @@ public class FXModelItemProvider extends FXNamedElementItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Use Existing Model feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addUseExistingModelPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_FXModel_useExistingModel_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_FXModel_useExistingModel_feature",
+								"_UI_FXModel_type"),
+						FxuiPackage.Literals.FX_MODEL__USE_EXISTING_MODEL, true, false, true, null, null, null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -96,6 +112,7 @@ public class FXModelItemProvider extends FXNamedElementItemProvider {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(FxuiPackage.Literals.FX_MODEL__FX_PROPERTIES);
 			childrenFeatures.add(FxuiPackage.Literals.FX_MODEL__FXREFERENCE);
+			childrenFeatures.add(FxuiPackage.Literals.FX_MODEL__USE_EXISTING_MODEL);
 		}
 		return childrenFeatures;
 	}
@@ -161,6 +178,7 @@ public class FXModelItemProvider extends FXNamedElementItemProvider {
 		switch (notification.getFeatureID(FXModel.class)) {
 		case FxuiPackage.FX_MODEL__FX_PROPERTIES:
 		case FxuiPackage.FX_MODEL__FXREFERENCE:
+		case FxuiPackage.FX_MODEL__USE_EXISTING_MODEL:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -183,6 +201,9 @@ public class FXModelItemProvider extends FXNamedElementItemProvider {
 
 		newChildDescriptors.add(createChildParameter(FxuiPackage.Literals.FX_MODEL__FXREFERENCE,
 				FxuiFactory.eINSTANCE.createFXReference()));
+
+		newChildDescriptors.add(createChildParameter(FxuiPackage.Literals.FX_MODEL__USE_EXISTING_MODEL,
+				FxuiFactory.eINSTANCE.createFXExistingModel()));
 	}
 
 }

@@ -148,6 +148,15 @@ public interface FxuiFactory extends EFactory {
 	FXReference createFXReference();
 
 	/**
+	 * Returns a new object of class '<em>FX Existing Model</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>FX Existing Model</em>'.
+	 * @generated
+	 */
+	FXExistingModel createFXExistingModel();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

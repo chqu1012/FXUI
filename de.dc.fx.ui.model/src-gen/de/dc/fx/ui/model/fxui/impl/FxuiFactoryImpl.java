@@ -84,6 +84,8 @@ public class FxuiFactoryImpl extends EFactoryImpl implements FxuiFactory {
 			return createFXComboBox();
 		case FxuiPackage.FX_REFERENCE:
 			return createFXReference();
+		case FxuiPackage.FX_EXISTING_MODEL:
+			return createFXExistingModel();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -257,6 +259,16 @@ public class FxuiFactoryImpl extends EFactoryImpl implements FxuiFactory {
 	public FXReference createFXReference() {
 		FXReferenceImpl fxReference = new FXReferenceImpl();
 		return fxReference;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FXExistingModel createFXExistingModel() {
+		FXExistingModelImpl fxExistingModel = new FXExistingModelImpl();
+		return fxExistingModel;
 	}
 
 	/**

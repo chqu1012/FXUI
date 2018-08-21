@@ -12,7 +12,11 @@ class ModelProviderTemplate implements IGenerator<FXModel>{
 	
 	import java.time.*;
 	import java.util.*;
+	«IF data.useExistingModel!==null»
+	import «data.useExistingModel.importUri»;
+	«ELSE»
 	import «view.packagePath».model.*;
+	«ENDIF»
 	import javafx.collections.*;
 	
 	public enum «data.name.toFirstUpper»ModelProvider {

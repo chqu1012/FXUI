@@ -395,6 +395,29 @@ public class FxuiItemProviderAdapterFactory extends FxuiAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.fx.ui.model.fxui.FXExistingModel} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FXExistingModelItemProvider fxExistingModelItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.fx.ui.model.fxui.FXExistingModel}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFXExistingModelAdapter() {
+		if (fxExistingModelItemProvider == null) {
+			fxExistingModelItemProvider = new FXExistingModelItemProvider(this);
+		}
+
+		return fxExistingModelItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -521,6 +544,8 @@ public class FxuiItemProviderAdapterFactory extends FxuiAdapterFactory
 			fxComboBoxItemProvider.dispose();
 		if (fxReferenceItemProvider != null)
 			fxReferenceItemProvider.dispose();
+		if (fxExistingModelItemProvider != null)
+			fxExistingModelItemProvider.dispose();
 	}
 
 }

@@ -2,6 +2,7 @@
  */
 package de.dc.fx.ui.model.fxui.impl;
 
+import de.dc.fx.ui.model.fxui.FXExistingModel;
 import de.dc.fx.ui.model.fxui.FXModel;
 import de.dc.fx.ui.model.fxui.FXProperty;
 import de.dc.fx.ui.model.fxui.FXReference;
@@ -31,6 +32,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link de.dc.fx.ui.model.fxui.impl.FXModelImpl#getFxProperties <em>Fx Properties</em>}</li>
  *   <li>{@link de.dc.fx.ui.model.fxui.impl.FXModelImpl#getFxreference <em>Fxreference</em>}</li>
+ *   <li>{@link de.dc.fx.ui.model.fxui.impl.FXModelImpl#getUseExistingModel <em>Use Existing Model</em>}</li>
  * </ul>
  *
  * @generated
@@ -55,6 +57,16 @@ public class FXModelImpl extends FXNamedElementImpl implements FXModel {
 	 * @ordered
 	 */
 	protected FXReference fxreference;
+
+	/**
+	 * The cached value of the '{@link #getUseExistingModel() <em>Use Existing Model</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUseExistingModel()
+	 * @generated
+	 * @ordered
+	 */
+	protected FXExistingModel useExistingModel;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -143,6 +155,56 @@ public class FXModelImpl extends FXNamedElementImpl implements FXModel {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public FXExistingModel getUseExistingModel() {
+		return useExistingModel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetUseExistingModel(FXExistingModel newUseExistingModel, NotificationChain msgs) {
+		FXExistingModel oldUseExistingModel = useExistingModel;
+		useExistingModel = newUseExistingModel;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					FxuiPackage.FX_MODEL__USE_EXISTING_MODEL, oldUseExistingModel, newUseExistingModel);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUseExistingModel(FXExistingModel newUseExistingModel) {
+		if (newUseExistingModel != useExistingModel) {
+			NotificationChain msgs = null;
+			if (useExistingModel != null)
+				msgs = ((InternalEObject) useExistingModel).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - FxuiPackage.FX_MODEL__USE_EXISTING_MODEL, null, msgs);
+			if (newUseExistingModel != null)
+				msgs = ((InternalEObject) newUseExistingModel).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - FxuiPackage.FX_MODEL__USE_EXISTING_MODEL, null, msgs);
+			msgs = basicSetUseExistingModel(newUseExistingModel, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FxuiPackage.FX_MODEL__USE_EXISTING_MODEL,
+					newUseExistingModel, newUseExistingModel));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -150,6 +212,8 @@ public class FXModelImpl extends FXNamedElementImpl implements FXModel {
 			return ((InternalEList<?>) getFxProperties()).basicRemove(otherEnd, msgs);
 		case FxuiPackage.FX_MODEL__FXREFERENCE:
 			return basicSetFxreference(null, msgs);
+		case FxuiPackage.FX_MODEL__USE_EXISTING_MODEL:
+			return basicSetUseExistingModel(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -166,6 +230,8 @@ public class FXModelImpl extends FXNamedElementImpl implements FXModel {
 			return getFxProperties();
 		case FxuiPackage.FX_MODEL__FXREFERENCE:
 			return getFxreference();
+		case FxuiPackage.FX_MODEL__USE_EXISTING_MODEL:
+			return getUseExistingModel();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -186,6 +252,9 @@ public class FXModelImpl extends FXNamedElementImpl implements FXModel {
 		case FxuiPackage.FX_MODEL__FXREFERENCE:
 			setFxreference((FXReference) newValue);
 			return;
+		case FxuiPackage.FX_MODEL__USE_EXISTING_MODEL:
+			setUseExistingModel((FXExistingModel) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -204,6 +273,9 @@ public class FXModelImpl extends FXNamedElementImpl implements FXModel {
 		case FxuiPackage.FX_MODEL__FXREFERENCE:
 			setFxreference((FXReference) null);
 			return;
+		case FxuiPackage.FX_MODEL__USE_EXISTING_MODEL:
+			setUseExistingModel((FXExistingModel) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -220,6 +292,8 @@ public class FXModelImpl extends FXNamedElementImpl implements FXModel {
 			return fxProperties != null && !fxProperties.isEmpty();
 		case FxuiPackage.FX_MODEL__FXREFERENCE:
 			return fxreference != null;
+		case FxuiPackage.FX_MODEL__USE_EXISTING_MODEL:
+			return useExistingModel != null;
 		}
 		return super.eIsSet(featureID);
 	}

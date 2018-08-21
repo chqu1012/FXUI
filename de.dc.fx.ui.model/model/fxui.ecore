@@ -28,6 +28,8 @@
         eType="#//FXProperty" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="fxreference" eType="#//FXReference"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="useExistingModel" eType="#//FXExistingModel"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FXProperty" eSuperTypes="#//FXNamedElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -69,5 +71,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="referenceTo" eType="#//FXModel"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="upperBound" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="lowerBound" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FXExistingModel">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="importUri" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>

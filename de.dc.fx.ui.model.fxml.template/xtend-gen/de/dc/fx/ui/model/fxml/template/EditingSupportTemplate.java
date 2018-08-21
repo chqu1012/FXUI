@@ -3,6 +3,7 @@ package de.dc.fx.ui.model.fxml.template;
 import com.google.common.base.Objects;
 import de.dc.fx.ui.model.fxml.template.IGenerator;
 import de.dc.fx.ui.model.fxui.FXColumn;
+import de.dc.fx.ui.model.fxui.FXExistingModel;
 import de.dc.fx.ui.model.fxui.FXModel;
 import de.dc.fx.ui.model.fxui.FXTableView;
 import org.eclipse.emf.ecore.EObject;
@@ -27,13 +28,23 @@ public class EditingSupportTemplate implements IGenerator<FXColumn> {
     _builder.newLineIfNotEmpty();
     final String name = StringExtensions.toFirstUpper(model.getName());
     _builder.newLineIfNotEmpty();
-    _builder.append("import ");
-    String _packagePath_1 = view.getPackagePath();
-    _builder.append(_packagePath_1);
-    _builder.append(".model.");
-    _builder.append(name);
-    _builder.append(";");
-    _builder.newLineIfNotEmpty();
+    {
+      FXExistingModel _useExistingModel = model.getUseExistingModel();
+      boolean _tripleNotEquals = (_useExistingModel != null);
+      if (_tripleNotEquals) {
+        _builder.append("import ");
+        String _importUri = model.getUseExistingModel().getImportUri();
+        _builder.append(_importUri);
+        _builder.append(";");
+        _builder.newLineIfNotEmpty();
+      } else {
+        _builder.append("import ");
+        String _packagePath_1 = view.getPackagePath();
+        _builder.append(_packagePath_1);
+        _builder.append(".model.*;");
+        _builder.newLineIfNotEmpty();
+      }
+    }
     {
       String _type = data.getAssociatedFXProperty().getType();
       boolean _equals = Objects.equal(_type, "LocalDate");

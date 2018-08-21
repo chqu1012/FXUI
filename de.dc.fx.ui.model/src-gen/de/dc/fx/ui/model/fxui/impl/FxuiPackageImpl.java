@@ -8,6 +8,7 @@ import de.dc.fx.ui.model.fxui.FXChoiceBox;
 import de.dc.fx.ui.model.fxui.FXColumn;
 import de.dc.fx.ui.model.fxui.FXComboBox;
 import de.dc.fx.ui.model.fxui.FXControl;
+import de.dc.fx.ui.model.fxui.FXExistingModel;
 import de.dc.fx.ui.model.fxui.FXForm;
 import de.dc.fx.ui.model.fxui.FXModel;
 import de.dc.fx.ui.model.fxui.FXNamedElement;
@@ -148,6 +149,13 @@ public class FxuiPackageImpl extends EPackageImpl implements FxuiPackage {
 	 * @generated
 	 */
 	private EClass fxReferenceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass fxExistingModelEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -387,6 +395,15 @@ public class FxuiPackageImpl extends EPackageImpl implements FxuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getFXModel_UseExistingModel() {
+		return (EReference) fxModelEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getFXProperty() {
 		return fxPropertyEClass;
 	}
@@ -585,6 +602,24 @@ public class FxuiPackageImpl extends EPackageImpl implements FxuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getFXExistingModel() {
+		return fxExistingModelEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFXExistingModel_ImportUri() {
+		return (EAttribute) fxExistingModelEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getPos() {
 		return posEEnum;
 	}
@@ -639,6 +674,7 @@ public class FxuiPackageImpl extends EPackageImpl implements FxuiPackage {
 		fxModelEClass = createEClass(FX_MODEL);
 		createEReference(fxModelEClass, FX_MODEL__FX_PROPERTIES);
 		createEReference(fxModelEClass, FX_MODEL__FXREFERENCE);
+		createEReference(fxModelEClass, FX_MODEL__USE_EXISTING_MODEL);
 
 		fxPropertyEClass = createEClass(FX_PROPERTY);
 		createEAttribute(fxPropertyEClass, FX_PROPERTY__TYPE);
@@ -673,6 +709,9 @@ public class FxuiPackageImpl extends EPackageImpl implements FxuiPackage {
 		createEReference(fxReferenceEClass, FX_REFERENCE__REFERENCE_TO);
 		createEAttribute(fxReferenceEClass, FX_REFERENCE__UPPER_BOUND);
 		createEAttribute(fxReferenceEClass, FX_REFERENCE__LOWER_BOUND);
+
+		fxExistingModelEClass = createEClass(FX_EXISTING_MODEL);
+		createEAttribute(fxExistingModelEClass, FX_EXISTING_MODEL__IMPORT_URI);
 
 		// Create enums
 		posEEnum = createEEnum(POS);
@@ -771,6 +810,9 @@ public class FxuiPackageImpl extends EPackageImpl implements FxuiPackage {
 		initEReference(getFXModel_Fxreference(), this.getFXReference(), null, "fxreference", null, 0, 1, FXModel.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFXModel_UseExistingModel(), this.getFXExistingModel(), null, "useExistingModel", null, 0, 1,
+				FXModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(fxPropertyEClass, FXProperty.class, "FXProperty", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -829,6 +871,12 @@ public class FxuiPackageImpl extends EPackageImpl implements FxuiPackage {
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFXReference_LowerBound(), ecorePackage.getEInt(), "lowerBound", null, 0, 1, FXReference.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(fxExistingModelEClass, FXExistingModel.class, "FXExistingModel", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getFXExistingModel_ImportUri(), ecorePackage.getEString(), "importUri", null, 0, 1,
+				FXExistingModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(posEEnum, Pos.class, "Pos");

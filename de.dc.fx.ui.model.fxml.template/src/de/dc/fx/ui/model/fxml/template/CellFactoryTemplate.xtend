@@ -12,7 +12,11 @@ class CellFactoryTemplate implements IGenerator<FXColumn>{
 	package «view.packagePath».cell;
 	
 	import «view.packagePath».cell.*;
+	«IF model.useExistingModel!==null»
+	import «model.useExistingModel.importUri»;
+	«ELSE»
 	import «view.packagePath».model.*;
+	«ENDIF»
 	import javafx.geometry.Pos;
 	«val fieldName = data.associatedFXProperty.name.toFirstUpper»
 	public class «view.name.toFirstUpper»«fieldName»CellFactory extends BaseCellFactory<«model.name»> {

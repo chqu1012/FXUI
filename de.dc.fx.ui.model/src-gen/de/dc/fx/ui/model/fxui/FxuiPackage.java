@@ -305,13 +305,22 @@ public interface FxuiPackage extends EPackage {
 	int FX_MODEL__FXREFERENCE = FX_NAMED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Use Existing Model</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_MODEL__USE_EXISTING_MODEL = FX_NAMED_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>FX Model</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FX_MODEL_FEATURE_COUNT = FX_NAMED_ELEMENT_FEATURE_COUNT + 2;
+	int FX_MODEL_FEATURE_COUNT = FX_NAMED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>FX Model</em>' class.
@@ -956,6 +965,43 @@ public interface FxuiPackage extends EPackage {
 	int FX_REFERENCE_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link de.dc.fx.ui.model.fxui.impl.FXExistingModelImpl <em>FX Existing Model</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.fx.ui.model.fxui.impl.FXExistingModelImpl
+	 * @see de.dc.fx.ui.model.fxui.impl.FxuiPackageImpl#getFXExistingModel()
+	 * @generated
+	 */
+	int FX_EXISTING_MODEL = 16;
+
+	/**
+	 * The feature id for the '<em><b>Import Uri</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_EXISTING_MODEL__IMPORT_URI = 0;
+
+	/**
+	 * The number of structural features of the '<em>FX Existing Model</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_EXISTING_MODEL_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>FX Existing Model</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_EXISTING_MODEL_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link de.dc.fx.ui.model.fxui.Pos <em>Pos</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -963,7 +1009,7 @@ public interface FxuiPackage extends EPackage {
 	 * @see de.dc.fx.ui.model.fxui.impl.FxuiPackageImpl#getPos()
 	 * @generated
 	 */
-	int POS = 16;
+	int POS = 17;
 
 	/**
 	 * Returns the meta object for class '{@link de.dc.fx.ui.model.fxui.FXTableView <em>FX Table View</em>}'.
@@ -1158,6 +1204,17 @@ public interface FxuiPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getFXModel_Fxreference();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link de.dc.fx.ui.model.fxui.FXModel#getUseExistingModel <em>Use Existing Model</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Use Existing Model</em>'.
+	 * @see de.dc.fx.ui.model.fxui.FXModel#getUseExistingModel()
+	 * @see #getFXModel()
+	 * @generated
+	 */
+	EReference getFXModel_UseExistingModel();
 
 	/**
 	 * Returns the meta object for class '{@link de.dc.fx.ui.model.fxui.FXProperty <em>FX Property</em>}'.
@@ -1390,6 +1447,27 @@ public interface FxuiPackage extends EPackage {
 	EAttribute getFXReference_LowerBound();
 
 	/**
+	 * Returns the meta object for class '{@link de.dc.fx.ui.model.fxui.FXExistingModel <em>FX Existing Model</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>FX Existing Model</em>'.
+	 * @see de.dc.fx.ui.model.fxui.FXExistingModel
+	 * @generated
+	 */
+	EClass getFXExistingModel();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.model.fxui.FXExistingModel#getImportUri <em>Import Uri</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Import Uri</em>'.
+	 * @see de.dc.fx.ui.model.fxui.FXExistingModel#getImportUri()
+	 * @see #getFXExistingModel()
+	 * @generated
+	 */
+	EAttribute getFXExistingModel_ImportUri();
+
+	/**
 	 * Returns the meta object for enum '{@link de.dc.fx.ui.model.fxui.Pos <em>Pos</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1573,6 +1651,14 @@ public interface FxuiPackage extends EPackage {
 		 * @generated
 		 */
 		EReference FX_MODEL__FXREFERENCE = eINSTANCE.getFXModel_Fxreference();
+
+		/**
+		 * The meta object literal for the '<em><b>Use Existing Model</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FX_MODEL__USE_EXISTING_MODEL = eINSTANCE.getFXModel_UseExistingModel();
 
 		/**
 		 * The meta object literal for the '{@link de.dc.fx.ui.model.fxui.impl.FXPropertyImpl <em>FX Property</em>}' class.
@@ -1773,6 +1859,24 @@ public interface FxuiPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute FX_REFERENCE__LOWER_BOUND = eINSTANCE.getFXReference_LowerBound();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.fx.ui.model.fxui.impl.FXExistingModelImpl <em>FX Existing Model</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.fx.ui.model.fxui.impl.FXExistingModelImpl
+		 * @see de.dc.fx.ui.model.fxui.impl.FxuiPackageImpl#getFXExistingModel()
+		 * @generated
+		 */
+		EClass FX_EXISTING_MODEL = eINSTANCE.getFXExistingModel();
+
+		/**
+		 * The meta object literal for the '<em><b>Import Uri</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FX_EXISTING_MODEL__IMPORT_URI = eINSTANCE.getFXExistingModel_ImportUri();
 
 		/**
 		 * The meta object literal for the '{@link de.dc.fx.ui.model.fxui.Pos <em>Pos</em>}' enum.

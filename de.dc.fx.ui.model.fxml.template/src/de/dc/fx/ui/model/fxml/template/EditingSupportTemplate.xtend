@@ -11,7 +11,11 @@ class EditingSupportTemplate implements IGenerator<FXColumn>{
 	package «view.packagePath».cell.edit;
 	«val model = data.associatedFXProperty.eContainer as FXModel»
 	«val name = model.name.toFirstUpper»
-	import «view.packagePath».model.«name»;
+	«IF model.useExistingModel!==null»
+	import «model.useExistingModel.importUri»;
+	«ELSE»
+	import «view.packagePath».model.*;
+	«ENDIF»
 	«IF data.associatedFXProperty.type=='LocalDate'»
 	import java.time.LocalDate;
 	«ELSEIF data.associatedFXProperty.type=='LocalDateTime'»

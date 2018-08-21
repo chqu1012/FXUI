@@ -7,7 +7,7 @@ class ControllerTemplate implements IGenerator<FXTableView>{
 	
 	override gen(FXTableView view)'''
 	package «view.packagePath».ui;
-	
+
 	import java.io.IOException;
 	import javafx.scene.control.cell.TextFieldTableCell;
 	import javafx.fxml.FXMLLoader;

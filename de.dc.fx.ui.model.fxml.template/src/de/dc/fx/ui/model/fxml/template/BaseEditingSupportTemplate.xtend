@@ -11,7 +11,11 @@ class BaseEditingSupportTemplate implements IGenerator<FXColumn>{
 	«val model = data.associatedFXProperty.eContainer as FXModel»
 	package «view.packagePath».cell.edit;
 	«val name = model.name.toFirstUpper»
-	import «view.packagePath».model.«name»;
+	«IF model.useExistingModel!==null»
+	import «model.useExistingModel.importUri»;
+	«ELSE»
+	import «view.packagePath».model.*;
+	«ENDIF»
 	import javafx.collections.ObservableList;
 	import javafx.event.EventHandler;
 	import javafx.scene.control.TableColumn.CellEditEvent;
