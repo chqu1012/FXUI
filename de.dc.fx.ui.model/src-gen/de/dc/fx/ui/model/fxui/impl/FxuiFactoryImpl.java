@@ -82,6 +82,8 @@ public class FxuiFactoryImpl extends EFactoryImpl implements FxuiFactory {
 			return createFXRadioButton();
 		case FxuiPackage.FX_COMBO_BOX:
 			return createFXComboBox();
+		case FxuiPackage.FX_REFERENCE:
+			return createFXReference();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -245,6 +247,16 @@ public class FxuiFactoryImpl extends EFactoryImpl implements FxuiFactory {
 	public FXComboBox createFXComboBox() {
 		FXComboBoxImpl fxComboBox = new FXComboBoxImpl();
 		return fxComboBox;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FXReference createFXReference() {
+		FXReferenceImpl fxReference = new FXReferenceImpl();
+		return fxReference;
 	}
 
 	/**

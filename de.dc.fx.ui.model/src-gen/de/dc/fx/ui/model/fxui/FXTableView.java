@@ -18,6 +18,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link de.dc.fx.ui.model.fxui.FXTableView#isHasFilter <em>Has Filter</em>}</li>
  *   <li>{@link de.dc.fx.ui.model.fxui.FXTableView#isHasSorter <em>Has Sorter</em>}</li>
  *   <li>{@link de.dc.fx.ui.model.fxui.FXTableView#getPackagePath <em>Package Path</em>}</li>
+ *   <li>{@link de.dc.fx.ui.model.fxui.FXTableView#getInput <em>Input</em>}</li>
  * </ul>
  *
  * @see de.dc.fx.ui.model.fxui.FxuiPackage#getFXTableView()
@@ -42,30 +43,20 @@ public interface FXTableView extends FXNamedElement {
 	EList<FXColumn> getFxColumns();
 
 	/**
-	 * Returns the value of the '<em><b>Fx Entity</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Fx Entity</b></em>' containment reference list.
+	 * The list contents are of type {@link de.dc.fx.ui.model.fxui.FXModel}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Fx Entity</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Fx Entity</em>' containment reference.
-	 * @see #setFxEntity(FXModel)
+	 * @return the value of the '<em>Fx Entity</em>' containment reference list.
 	 * @see de.dc.fx.ui.model.fxui.FxuiPackage#getFXTableView_FxEntity()
 	 * @model containment="true"
 	 * @generated
 	 */
-	FXModel getFxEntity();
-
-	/**
-	 * Sets the value of the '{@link de.dc.fx.ui.model.fxui.FXTableView#getFxEntity <em>Fx Entity</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Fx Entity</em>' containment reference.
-	 * @see #getFxEntity()
-	 * @generated
-	 */
-	void setFxEntity(FXModel value);
+	EList<FXModel> getFxEntity();
 
 	/**
 	 * Returns the value of the '<em><b>Has Filter</b></em>' attribute.
@@ -144,5 +135,31 @@ public interface FXTableView extends FXNamedElement {
 	 * @generated
 	 */
 	void setPackagePath(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Input</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Input</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Input</em>' reference.
+	 * @see #setInput(FXModel)
+	 * @see de.dc.fx.ui.model.fxui.FxuiPackage#getFXTableView_Input()
+	 * @model
+	 * @generated
+	 */
+	FXModel getInput();
+
+	/**
+	 * Sets the value of the '{@link de.dc.fx.ui.model.fxui.FXTableView#getInput <em>Input</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Input</em>' reference.
+	 * @see #getInput()
+	 * @generated
+	 */
+	void setInput(FXModel value);
 
 } // FXTableView

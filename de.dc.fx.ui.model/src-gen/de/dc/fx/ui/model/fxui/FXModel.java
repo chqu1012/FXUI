@@ -14,6 +14,7 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link de.dc.fx.ui.model.fxui.FXModel#getFxProperties <em>Fx Properties</em>}</li>
+ *   <li>{@link de.dc.fx.ui.model.fxui.FXModel#getFxreference <em>Fxreference</em>}</li>
  * </ul>
  *
  * @see de.dc.fx.ui.model.fxui.FxuiPackage#getFXModel()
@@ -36,5 +37,31 @@ public interface FXModel extends FXNamedElement {
 	 * @generated
 	 */
 	EList<FXProperty> getFxProperties();
+
+	/**
+	 * Returns the value of the '<em><b>Fxreference</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Fxreference</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Fxreference</em>' containment reference.
+	 * @see #setFxreference(FXReference)
+	 * @see de.dc.fx.ui.model.fxui.FxuiPackage#getFXModel_Fxreference()
+	 * @model containment="true"
+	 * @generated
+	 */
+	FXReference getFxreference();
+
+	/**
+	 * Sets the value of the '{@link de.dc.fx.ui.model.fxui.FXModel#getFxreference <em>Fxreference</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Fxreference</em>' containment reference.
+	 * @see #getFxreference()
+	 * @generated
+	 */
+	void setFxreference(FXReference value);
 
 } // FXModel

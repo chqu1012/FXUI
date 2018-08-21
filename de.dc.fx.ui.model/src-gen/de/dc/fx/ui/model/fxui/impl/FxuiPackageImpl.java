@@ -13,6 +13,7 @@ import de.dc.fx.ui.model.fxui.FXModel;
 import de.dc.fx.ui.model.fxui.FXNamedElement;
 import de.dc.fx.ui.model.fxui.FXProperty;
 import de.dc.fx.ui.model.fxui.FXRadioButton;
+import de.dc.fx.ui.model.fxui.FXReference;
 import de.dc.fx.ui.model.fxui.FXSelectedControl;
 import de.dc.fx.ui.model.fxui.FXTableView;
 import de.dc.fx.ui.model.fxui.FXTextField;
@@ -146,6 +147,13 @@ public class FxuiPackageImpl extends EPackageImpl implements FxuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass fxReferenceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum posEEnum = null;
 
 	/**
@@ -271,6 +279,15 @@ public class FxuiPackageImpl extends EPackageImpl implements FxuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getFXTableView_Input() {
+		return (EReference) fxTableViewEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getFXColumn() {
 		return fxColumnEClass;
 	}
@@ -354,6 +371,15 @@ public class FxuiPackageImpl extends EPackageImpl implements FxuiPackage {
 	 */
 	public EReference getFXModel_FxProperties() {
 		return (EReference) fxModelEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFXModel_Fxreference() {
+		return (EReference) fxModelEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -523,6 +549,42 @@ public class FxuiPackageImpl extends EPackageImpl implements FxuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getFXReference() {
+		return fxReferenceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFXReference_ReferenceTo() {
+		return (EReference) fxReferenceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFXReference_UpperBound() {
+		return (EAttribute) fxReferenceEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFXReference_LowerBound() {
+		return (EAttribute) fxReferenceEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getPos() {
 		return posEEnum;
 	}
@@ -562,6 +624,7 @@ public class FxuiPackageImpl extends EPackageImpl implements FxuiPackage {
 		createEAttribute(fxTableViewEClass, FX_TABLE_VIEW__HAS_FILTER);
 		createEAttribute(fxTableViewEClass, FX_TABLE_VIEW__HAS_SORTER);
 		createEAttribute(fxTableViewEClass, FX_TABLE_VIEW__PACKAGE_PATH);
+		createEReference(fxTableViewEClass, FX_TABLE_VIEW__INPUT);
 
 		fxColumnEClass = createEClass(FX_COLUMN);
 		createEReference(fxColumnEClass, FX_COLUMN__ASSOCIATED_FX_PROPERTY);
@@ -575,6 +638,7 @@ public class FxuiPackageImpl extends EPackageImpl implements FxuiPackage {
 
 		fxModelEClass = createEClass(FX_MODEL);
 		createEReference(fxModelEClass, FX_MODEL__FX_PROPERTIES);
+		createEReference(fxModelEClass, FX_MODEL__FXREFERENCE);
 
 		fxPropertyEClass = createEClass(FX_PROPERTY);
 		createEAttribute(fxPropertyEClass, FX_PROPERTY__TYPE);
@@ -604,6 +668,11 @@ public class FxuiPackageImpl extends EPackageImpl implements FxuiPackage {
 
 		fxSelectedControlEClass = createEClass(FX_SELECTED_CONTROL);
 		createEAttribute(fxSelectedControlEClass, FX_SELECTED_CONTROL__SELECTED);
+
+		fxReferenceEClass = createEClass(FX_REFERENCE);
+		createEReference(fxReferenceEClass, FX_REFERENCE__REFERENCE_TO);
+		createEAttribute(fxReferenceEClass, FX_REFERENCE__UPPER_BOUND);
+		createEAttribute(fxReferenceEClass, FX_REFERENCE__LOWER_BOUND);
 
 		// Create enums
 		posEEnum = createEEnum(POS);
@@ -659,7 +728,7 @@ public class FxuiPackageImpl extends EPackageImpl implements FxuiPackage {
 		initEReference(getFXTableView_FxColumns(), this.getFXColumn(), null, "fxColumns", null, 0, -1,
 				FXTableView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFXTableView_FxEntity(), this.getFXModel(), null, "fxEntity", null, 0, 1, FXTableView.class,
+		initEReference(getFXTableView_FxEntity(), this.getFXModel(), null, "fxEntity", null, 0, -1, FXTableView.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFXTableView_HasFilter(), ecorePackage.getEBoolean(), "hasFilter", null, 0, 1,
@@ -671,6 +740,9 @@ public class FxuiPackageImpl extends EPackageImpl implements FxuiPackage {
 		initEAttribute(getFXTableView_PackagePath(), ecorePackage.getEString(), "packagePath", null, 0, 1,
 				FXTableView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEReference(getFXTableView_Input(), this.getFXModel(), null, "input", null, 0, 1, FXTableView.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(fxColumnEClass, FXColumn.class, "FXColumn", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -696,6 +768,9 @@ public class FxuiPackageImpl extends EPackageImpl implements FxuiPackage {
 		initEReference(getFXModel_FxProperties(), this.getFXProperty(), null, "fxProperties", null, 0, -1,
 				FXModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFXModel_Fxreference(), this.getFXReference(), null, "fxreference", null, 0, 1, FXModel.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(fxPropertyEClass, FXProperty.class, "FXProperty", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -744,6 +819,16 @@ public class FxuiPackageImpl extends EPackageImpl implements FxuiPackage {
 		initEAttribute(getFXSelectedControl_Selected(), ecorePackage.getEBoolean(), "selected", null, 0, 1,
 				FXSelectedControl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(fxReferenceEClass, FXReference.class, "FXReference", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getFXReference_ReferenceTo(), this.getFXModel(), null, "referenceTo", null, 0, 1,
+				FXReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFXReference_UpperBound(), ecorePackage.getEInt(), "upperBound", null, 0, 1, FXReference.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFXReference_LowerBound(), ecorePackage.getEInt(), "lowerBound", null, 0, 1, FXReference.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(posEEnum, Pos.class, "Pos");

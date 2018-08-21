@@ -2,21 +2,23 @@ package de.dc.fx.ui.model.fxml.template
 
 import de.dc.fx.ui.model.fxui.FXTableView
 import de.dc.fx.ui.model.fxui.FXColumn
+import de.dc.fx.ui.model.fxui.FXModel
 
 class CellFactoryTemplate implements IGenerator<FXColumn>{
 	
 	override gen(FXColumn data)'''
 	«val view = data.eContainer as FXTableView»
+	«val model = data.associatedFXProperty.eContainer as FXModel»
 	package «view.packagePath».cell;
 	
-	import «view.packagePath».cell.BaseCellFactory;
-	import «view.packagePath».model.«view.fxEntity.name»;
+	import «view.packagePath».cell.*;
+	import «view.packagePath».model.*;
 	import javafx.geometry.Pos;
 	«val fieldName = data.associatedFXProperty.name.toFirstUpper»
-	public class «view.name.toFirstUpper»«fieldName»CellFactory extends BaseCellFactory<«view.fxEntity.name»> {
+	public class «view.name.toFirstUpper»«fieldName»CellFactory extends BaseCellFactory<«model.name»> {
 	
 		@Override
-		protected String extractValue(«view.fxEntity.name» data) {
+		protected String extractValue(«model.name» data) {
 			return String.valueOf(data.get«fieldName»());
 		}
 		

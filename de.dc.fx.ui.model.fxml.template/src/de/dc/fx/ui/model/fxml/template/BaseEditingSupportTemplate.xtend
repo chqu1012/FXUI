@@ -2,13 +2,15 @@ package de.dc.fx.ui.model.fxml.template
 
 import de.dc.fx.ui.model.fxui.FXColumn
 import de.dc.fx.ui.model.fxui.FXTableView
+import de.dc.fx.ui.model.fxui.FXModel
 
 class BaseEditingSupportTemplate implements IGenerator<FXColumn>{
 	
 	override gen(FXColumn data)'''
 	«val view = data.eContainer as FXTableView»
+	«val model = data.associatedFXProperty.eContainer as FXModel»
 	package «view.packagePath».cell.edit;
-	«val name = view.fxEntity.name.toFirstUpper»
+	«val name = model.name.toFirstUpper»
 	import «view.packagePath».model.«name»;
 	import javafx.collections.ObservableList;
 	import javafx.event.EventHandler;

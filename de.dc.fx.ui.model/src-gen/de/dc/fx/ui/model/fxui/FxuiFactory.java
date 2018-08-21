@@ -139,6 +139,15 @@ public interface FxuiFactory extends EFactory {
 	FXComboBox createFXComboBox();
 
 	/**
+	 * Returns a new object of class '<em>FX Reference</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>FX Reference</em>'.
+	 * @generated
+	 */
+	FXReference createFXReference();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

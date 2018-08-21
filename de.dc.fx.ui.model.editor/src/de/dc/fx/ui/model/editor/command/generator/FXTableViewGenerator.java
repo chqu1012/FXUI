@@ -10,6 +10,7 @@ import de.dc.fx.ui.model.fxml.template.TableColumnTemplateRegistry;
 import de.dc.fx.ui.model.fxml.template.TableEntityRegistry;
 import de.dc.fx.ui.model.fxml.template.TableViewTemplateRegistry;
 import de.dc.fx.ui.model.fxui.FXColumn;
+import de.dc.fx.ui.model.fxui.FXModel;
 import de.dc.fx.ui.model.fxui.FXTableView;
 
 public class FXTableViewGenerator extends AbstractGenerator<FXTableView>{
@@ -43,10 +44,12 @@ public class FXTableViewGenerator extends AbstractGenerator<FXTableView>{
 		}
 
 		for (TableEntityRegistry template : TableEntityRegistry.values()) {
-			String srcPath =  getLocation(template.getSrcType(), project, view);
-			String content = template.getTemplate().gen(view.getFxEntity());
-			String genFilePath = template.getGenFilePath(srcPath, view.getFxEntity().getName());
-			writeFile(genFilePath, content);
+			for (FXModel model : view.getFxEntity()){
+				String srcPath =  getLocation(template.getSrcType(), project, view);
+				String content = template.getTemplate().gen(model);
+				String genFilePath = template.getGenFilePath(srcPath, model.getName());
+				writeFile(genFilePath, content);
+			}
 		}		
 	}
 

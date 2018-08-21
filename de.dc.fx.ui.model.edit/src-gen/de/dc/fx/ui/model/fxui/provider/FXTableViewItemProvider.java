@@ -52,6 +52,7 @@ public class FXTableViewItemProvider extends FXNamedElementItemProvider {
 			addHasFilterPropertyDescriptor(object);
 			addHasSorterPropertyDescriptor(object);
 			addPackagePathPropertyDescriptor(object);
+			addInputPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -132,6 +133,21 @@ public class FXTableViewItemProvider extends FXNamedElementItemProvider {
 								"_UI_FXTableView_type"),
 						FxuiPackage.Literals.FX_TABLE_VIEW__PACKAGE_PATH, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Input feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addInputPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_FXTableView_input_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_FXTableView_input_feature",
+								"_UI_FXTableView_type"),
+						FxuiPackage.Literals.FX_TABLE_VIEW__INPUT, true, false, true, null, null, null));
 	}
 
 	/**

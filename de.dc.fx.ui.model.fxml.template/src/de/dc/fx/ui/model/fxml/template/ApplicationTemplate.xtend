@@ -23,7 +23,7 @@ class ApplicationTemplate implements IGenerator<FXTableView>{
 		@Override
 		public void start(Stage primaryStage) throws Exception {
 			«data.name.toFirstUpper»TableViewer «data.name.toFirstLower»TableViewer = new «data.name.toFirstUpper»TableViewer();
-			«data.name.toFirstLower»TableViewer.setItems(«data.fxEntity.name.toFirstUpper»ModelProvider.Instance.get«data.fxEntity.name.toFirstUpper»s());
+			«data.name.toFirstLower»TableViewer.setItems(«data.input.name.toFirstUpper»ModelProvider.Instance.get«data.input.name.toFirstUpper»s());
 			Scene scene = new Scene(«data.name.toFirstLower»TableViewer, 1400, 800);
 			primaryStage.setScene(scene);
 			primaryStage.initStyle(StageStyle.DECORATED);

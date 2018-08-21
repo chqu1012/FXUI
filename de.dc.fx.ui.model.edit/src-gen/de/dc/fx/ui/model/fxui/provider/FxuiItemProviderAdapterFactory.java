@@ -372,6 +372,29 @@ public class FxuiItemProviderAdapterFactory extends FxuiAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.fx.ui.model.fxui.FXReference} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FXReferenceItemProvider fxReferenceItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.fx.ui.model.fxui.FXReference}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFXReferenceAdapter() {
+		if (fxReferenceItemProvider == null) {
+			fxReferenceItemProvider = new FXReferenceItemProvider(this);
+		}
+
+		return fxReferenceItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -496,6 +519,8 @@ public class FxuiItemProviderAdapterFactory extends FxuiAdapterFactory
 			fxRadioButtonItemProvider.dispose();
 		if (fxComboBoxItemProvider != null)
 			fxComboBoxItemProvider.dispose();
+		if (fxReferenceItemProvider != null)
+			fxReferenceItemProvider.dispose();
 	}
 
 }

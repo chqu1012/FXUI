@@ -123,7 +123,7 @@ public interface FxuiPackage extends EPackage {
 	int FX_TABLE_VIEW__FX_COLUMNS = FX_NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Fx Entity</b></em>' containment reference.
+	 * The feature id for the '<em><b>Fx Entity</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -159,13 +159,22 @@ public interface FxuiPackage extends EPackage {
 	int FX_TABLE_VIEW__PACKAGE_PATH = FX_NAMED_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
+	 * The feature id for the '<em><b>Input</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TABLE_VIEW__INPUT = FX_NAMED_ELEMENT_FEATURE_COUNT + 5;
+
+	/**
 	 * The number of structural features of the '<em>FX Table View</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FX_TABLE_VIEW_FEATURE_COUNT = FX_NAMED_ELEMENT_FEATURE_COUNT + 5;
+	int FX_TABLE_VIEW_FEATURE_COUNT = FX_NAMED_ELEMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>FX Table View</em>' class.
@@ -287,13 +296,22 @@ public interface FxuiPackage extends EPackage {
 	int FX_MODEL__FX_PROPERTIES = FX_NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Fxreference</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_MODEL__FXREFERENCE = FX_NAMED_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>FX Model</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FX_MODEL_FEATURE_COUNT = FX_NAMED_ELEMENT_FEATURE_COUNT + 1;
+	int FX_MODEL_FEATURE_COUNT = FX_NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>FX Model</em>' class.
@@ -883,6 +901,61 @@ public interface FxuiPackage extends EPackage {
 	int FX_COMBO_BOX_OPERATION_COUNT = FX_CONTROL_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link de.dc.fx.ui.model.fxui.impl.FXReferenceImpl <em>FX Reference</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.fx.ui.model.fxui.impl.FXReferenceImpl
+	 * @see de.dc.fx.ui.model.fxui.impl.FxuiPackageImpl#getFXReference()
+	 * @generated
+	 */
+	int FX_REFERENCE = 15;
+
+	/**
+	 * The feature id for the '<em><b>Reference To</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_REFERENCE__REFERENCE_TO = 0;
+
+	/**
+	 * The feature id for the '<em><b>Upper Bound</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_REFERENCE__UPPER_BOUND = 1;
+
+	/**
+	 * The feature id for the '<em><b>Lower Bound</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_REFERENCE__LOWER_BOUND = 2;
+
+	/**
+	 * The number of structural features of the '<em>FX Reference</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_REFERENCE_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>FX Reference</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_REFERENCE_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link de.dc.fx.ui.model.fxui.Pos <em>Pos</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -890,7 +963,7 @@ public interface FxuiPackage extends EPackage {
 	 * @see de.dc.fx.ui.model.fxui.impl.FxuiPackageImpl#getPos()
 	 * @generated
 	 */
-	int POS = 15;
+	int POS = 16;
 
 	/**
 	 * Returns the meta object for class '{@link de.dc.fx.ui.model.fxui.FXTableView <em>FX Table View</em>}'.
@@ -914,10 +987,10 @@ public interface FxuiPackage extends EPackage {
 	EReference getFXTableView_FxColumns();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link de.dc.fx.ui.model.fxui.FXTableView#getFxEntity <em>Fx Entity</em>}'.
+	 * Returns the meta object for the containment reference list '{@link de.dc.fx.ui.model.fxui.FXTableView#getFxEntity <em>Fx Entity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Fx Entity</em>'.
+	 * @return the meta object for the containment reference list '<em>Fx Entity</em>'.
 	 * @see de.dc.fx.ui.model.fxui.FXTableView#getFxEntity()
 	 * @see #getFXTableView()
 	 * @generated
@@ -956,6 +1029,17 @@ public interface FxuiPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getFXTableView_PackagePath();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.dc.fx.ui.model.fxui.FXTableView#getInput <em>Input</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Input</em>'.
+	 * @see de.dc.fx.ui.model.fxui.FXTableView#getInput()
+	 * @see #getFXTableView()
+	 * @generated
+	 */
+	EReference getFXTableView_Input();
 
 	/**
 	 * Returns the meta object for class '{@link de.dc.fx.ui.model.fxui.FXColumn <em>FX Column</em>}'.
@@ -1063,6 +1147,17 @@ public interface FxuiPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getFXModel_FxProperties();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link de.dc.fx.ui.model.fxui.FXModel#getFxreference <em>Fxreference</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Fxreference</em>'.
+	 * @see de.dc.fx.ui.model.fxui.FXModel#getFxreference()
+	 * @see #getFXModel()
+	 * @generated
+	 */
+	EReference getFXModel_Fxreference();
 
 	/**
 	 * Returns the meta object for class '{@link de.dc.fx.ui.model.fxui.FXProperty <em>FX Property</em>}'.
@@ -1252,6 +1347,49 @@ public interface FxuiPackage extends EPackage {
 	EAttribute getFXSelectedControl_Selected();
 
 	/**
+	 * Returns the meta object for class '{@link de.dc.fx.ui.model.fxui.FXReference <em>FX Reference</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>FX Reference</em>'.
+	 * @see de.dc.fx.ui.model.fxui.FXReference
+	 * @generated
+	 */
+	EClass getFXReference();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.dc.fx.ui.model.fxui.FXReference#getReferenceTo <em>Reference To</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Reference To</em>'.
+	 * @see de.dc.fx.ui.model.fxui.FXReference#getReferenceTo()
+	 * @see #getFXReference()
+	 * @generated
+	 */
+	EReference getFXReference_ReferenceTo();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.model.fxui.FXReference#getUpperBound <em>Upper Bound</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Upper Bound</em>'.
+	 * @see de.dc.fx.ui.model.fxui.FXReference#getUpperBound()
+	 * @see #getFXReference()
+	 * @generated
+	 */
+	EAttribute getFXReference_UpperBound();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.model.fxui.FXReference#getLowerBound <em>Lower Bound</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Lower Bound</em>'.
+	 * @see de.dc.fx.ui.model.fxui.FXReference#getLowerBound()
+	 * @see #getFXReference()
+	 * @generated
+	 */
+	EAttribute getFXReference_LowerBound();
+
+	/**
 	 * Returns the meta object for enum '{@link de.dc.fx.ui.model.fxui.Pos <em>Pos</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1303,7 +1441,7 @@ public interface FxuiPackage extends EPackage {
 		EReference FX_TABLE_VIEW__FX_COLUMNS = eINSTANCE.getFXTableView_FxColumns();
 
 		/**
-		 * The meta object literal for the '<em><b>Fx Entity</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Fx Entity</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1333,6 +1471,14 @@ public interface FxuiPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute FX_TABLE_VIEW__PACKAGE_PATH = eINSTANCE.getFXTableView_PackagePath();
+
+		/**
+		 * The meta object literal for the '<em><b>Input</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FX_TABLE_VIEW__INPUT = eINSTANCE.getFXTableView_Input();
 
 		/**
 		 * The meta object literal for the '{@link de.dc.fx.ui.model.fxui.impl.FXColumnImpl <em>FX Column</em>}' class.
@@ -1419,6 +1565,14 @@ public interface FxuiPackage extends EPackage {
 		 * @generated
 		 */
 		EReference FX_MODEL__FX_PROPERTIES = eINSTANCE.getFXModel_FxProperties();
+
+		/**
+		 * The meta object literal for the '<em><b>Fxreference</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FX_MODEL__FXREFERENCE = eINSTANCE.getFXModel_Fxreference();
 
 		/**
 		 * The meta object literal for the '{@link de.dc.fx.ui.model.fxui.impl.FXPropertyImpl <em>FX Property</em>}' class.
@@ -1585,6 +1739,40 @@ public interface FxuiPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute FX_SELECTED_CONTROL__SELECTED = eINSTANCE.getFXSelectedControl_Selected();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.fx.ui.model.fxui.impl.FXReferenceImpl <em>FX Reference</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.fx.ui.model.fxui.impl.FXReferenceImpl
+		 * @see de.dc.fx.ui.model.fxui.impl.FxuiPackageImpl#getFXReference()
+		 * @generated
+		 */
+		EClass FX_REFERENCE = eINSTANCE.getFXReference();
+
+		/**
+		 * The meta object literal for the '<em><b>Reference To</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FX_REFERENCE__REFERENCE_TO = eINSTANCE.getFXReference_ReferenceTo();
+
+		/**
+		 * The meta object literal for the '<em><b>Upper Bound</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FX_REFERENCE__UPPER_BOUND = eINSTANCE.getFXReference_UpperBound();
+
+		/**
+		 * The meta object literal for the '<em><b>Lower Bound</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FX_REFERENCE__LOWER_BOUND = eINSTANCE.getFXReference_LowerBound();
 
 		/**
 		 * The meta object literal for the '{@link de.dc.fx.ui.model.fxui.Pos <em>Pos</em>}' enum.

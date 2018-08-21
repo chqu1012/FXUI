@@ -47,6 +47,7 @@ public class FXModelItemProvider extends FXNamedElementItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addFxPropertiesPropertyDescriptor(object);
+			addFxreferencePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -67,6 +68,21 @@ public class FXModelItemProvider extends FXNamedElementItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Fxreference feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addFxreferencePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_FXModel_fxreference_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_FXModel_fxreference_feature",
+								"_UI_FXModel_type"),
+						FxuiPackage.Literals.FX_MODEL__FXREFERENCE, true, false, true, null, null, null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -79,6 +95,7 @@ public class FXModelItemProvider extends FXNamedElementItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(FxuiPackage.Literals.FX_MODEL__FX_PROPERTIES);
+			childrenFeatures.add(FxuiPackage.Literals.FX_MODEL__FXREFERENCE);
 		}
 		return childrenFeatures;
 	}
@@ -143,6 +160,7 @@ public class FXModelItemProvider extends FXNamedElementItemProvider {
 
 		switch (notification.getFeatureID(FXModel.class)) {
 		case FxuiPackage.FX_MODEL__FX_PROPERTIES:
+		case FxuiPackage.FX_MODEL__FXREFERENCE:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -162,6 +180,9 @@ public class FXModelItemProvider extends FXNamedElementItemProvider {
 
 		newChildDescriptors.add(createChildParameter(FxuiPackage.Literals.FX_MODEL__FX_PROPERTIES,
 				FxuiFactory.eINSTANCE.createFXProperty()));
+
+		newChildDescriptors.add(createChildParameter(FxuiPackage.Literals.FX_MODEL__FXREFERENCE,
+				FxuiFactory.eINSTANCE.createFXReference()));
 	}
 
 }

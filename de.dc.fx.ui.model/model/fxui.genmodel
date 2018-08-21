@@ -27,6 +27,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fxui.ecore#//FXTableView/hasFilter"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fxui.ecore#//FXTableView/hasSorter"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fxui.ecore#//FXTableView/packagePath"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fxui.ecore#//FXTableView/input"/>
     </genClasses>
     <genClasses ecoreClass="fxui.ecore#//FXColumn">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fxui.ecore#//FXColumn/associatedFXProperty"/>
@@ -40,6 +41,7 @@
     </genClasses>
     <genClasses ecoreClass="fxui.ecore#//FXModel">
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fxui.ecore#//FXModel/fxProperties"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fxui.ecore#//FXModel/fxreference"/>
     </genClasses>
     <genClasses ecoreClass="fxui.ecore#//FXProperty">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fxui.ecore#//FXProperty/type"/>
@@ -63,6 +65,11 @@
     <genClasses ecoreClass="fxui.ecore#//FXComboBox"/>
     <genClasses ecoreClass="fxui.ecore#//FXSelectedControl">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fxui.ecore#//FXSelectedControl/selected"/>
+    </genClasses>
+    <genClasses ecoreClass="fxui.ecore#//FXReference">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fxui.ecore#//FXReference/referenceTo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fxui.ecore#//FXReference/upperBound"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fxui.ecore#//FXReference/lowerBound"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

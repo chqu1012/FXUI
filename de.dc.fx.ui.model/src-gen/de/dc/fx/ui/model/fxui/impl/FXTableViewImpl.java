@@ -35,6 +35,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.dc.fx.ui.model.fxui.impl.FXTableViewImpl#isHasFilter <em>Has Filter</em>}</li>
  *   <li>{@link de.dc.fx.ui.model.fxui.impl.FXTableViewImpl#isHasSorter <em>Has Sorter</em>}</li>
  *   <li>{@link de.dc.fx.ui.model.fxui.impl.FXTableViewImpl#getPackagePath <em>Package Path</em>}</li>
+ *   <li>{@link de.dc.fx.ui.model.fxui.impl.FXTableViewImpl#getInput <em>Input</em>}</li>
  * </ul>
  *
  * @generated
@@ -51,14 +52,14 @@ public class FXTableViewImpl extends FXNamedElementImpl implements FXTableView {
 	protected EList<FXColumn> fxColumns;
 
 	/**
-	 * The cached value of the '{@link #getFxEntity() <em>Fx Entity</em>}' containment reference.
+	 * The cached value of the '{@link #getFxEntity() <em>Fx Entity</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getFxEntity()
 	 * @generated
 	 * @ordered
 	 */
-	protected FXModel fxEntity;
+	protected EList<FXModel> fxEntity;
 
 	/**
 	 * The default value of the '{@link #isHasFilter() <em>Has Filter</em>}' attribute.
@@ -121,6 +122,16 @@ public class FXTableViewImpl extends FXNamedElementImpl implements FXTableView {
 	protected String packagePath = PACKAGE_PATH_EDEFAULT;
 
 	/**
+	 * The cached value of the '{@link #getInput() <em>Input</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInput()
+	 * @generated
+	 * @ordered
+	 */
+	protected FXModel input;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -157,49 +168,11 @@ public class FXTableViewImpl extends FXNamedElementImpl implements FXTableView {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FXModel getFxEntity() {
-		return fxEntity;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetFxEntity(FXModel newFxEntity, NotificationChain msgs) {
-		FXModel oldFxEntity = fxEntity;
-		fxEntity = newFxEntity;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					FxuiPackage.FX_TABLE_VIEW__FX_ENTITY, oldFxEntity, newFxEntity);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
+	public EList<FXModel> getFxEntity() {
+		if (fxEntity == null) {
+			fxEntity = new EObjectContainmentEList<FXModel>(FXModel.class, this, FxuiPackage.FX_TABLE_VIEW__FX_ENTITY);
 		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setFxEntity(FXModel newFxEntity) {
-		if (newFxEntity != fxEntity) {
-			NotificationChain msgs = null;
-			if (fxEntity != null)
-				msgs = ((InternalEObject) fxEntity).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - FxuiPackage.FX_TABLE_VIEW__FX_ENTITY, null, msgs);
-			if (newFxEntity != null)
-				msgs = ((InternalEObject) newFxEntity).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - FxuiPackage.FX_TABLE_VIEW__FX_ENTITY, null, msgs);
-			msgs = basicSetFxEntity(newFxEntity, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FxuiPackage.FX_TABLE_VIEW__FX_ENTITY, newFxEntity,
-					newFxEntity));
+		return fxEntity;
 	}
 
 	/**
@@ -273,13 +246,52 @@ public class FXTableViewImpl extends FXNamedElementImpl implements FXTableView {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public FXModel getInput() {
+		if (input != null && input.eIsProxy()) {
+			InternalEObject oldInput = (InternalEObject) input;
+			input = (FXModel) eResolveProxy(oldInput);
+			if (input != oldInput) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, FxuiPackage.FX_TABLE_VIEW__INPUT,
+							oldInput, input));
+			}
+		}
+		return input;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FXModel basicGetInput() {
+		return input;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setInput(FXModel newInput) {
+		FXModel oldInput = input;
+		input = newInput;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FxuiPackage.FX_TABLE_VIEW__INPUT, oldInput, input));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case FxuiPackage.FX_TABLE_VIEW__FX_COLUMNS:
 			return ((InternalEList<?>) getFxColumns()).basicRemove(otherEnd, msgs);
 		case FxuiPackage.FX_TABLE_VIEW__FX_ENTITY:
-			return basicSetFxEntity(null, msgs);
+			return ((InternalEList<?>) getFxEntity()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -302,6 +314,10 @@ public class FXTableViewImpl extends FXNamedElementImpl implements FXTableView {
 			return isHasSorter();
 		case FxuiPackage.FX_TABLE_VIEW__PACKAGE_PATH:
 			return getPackagePath();
+		case FxuiPackage.FX_TABLE_VIEW__INPUT:
+			if (resolve)
+				return getInput();
+			return basicGetInput();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -320,7 +336,8 @@ public class FXTableViewImpl extends FXNamedElementImpl implements FXTableView {
 			getFxColumns().addAll((Collection<? extends FXColumn>) newValue);
 			return;
 		case FxuiPackage.FX_TABLE_VIEW__FX_ENTITY:
-			setFxEntity((FXModel) newValue);
+			getFxEntity().clear();
+			getFxEntity().addAll((Collection<? extends FXModel>) newValue);
 			return;
 		case FxuiPackage.FX_TABLE_VIEW__HAS_FILTER:
 			setHasFilter((Boolean) newValue);
@@ -330,6 +347,9 @@ public class FXTableViewImpl extends FXNamedElementImpl implements FXTableView {
 			return;
 		case FxuiPackage.FX_TABLE_VIEW__PACKAGE_PATH:
 			setPackagePath((String) newValue);
+			return;
+		case FxuiPackage.FX_TABLE_VIEW__INPUT:
+			setInput((FXModel) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -347,7 +367,7 @@ public class FXTableViewImpl extends FXNamedElementImpl implements FXTableView {
 			getFxColumns().clear();
 			return;
 		case FxuiPackage.FX_TABLE_VIEW__FX_ENTITY:
-			setFxEntity((FXModel) null);
+			getFxEntity().clear();
 			return;
 		case FxuiPackage.FX_TABLE_VIEW__HAS_FILTER:
 			setHasFilter(HAS_FILTER_EDEFAULT);
@@ -357,6 +377,9 @@ public class FXTableViewImpl extends FXNamedElementImpl implements FXTableView {
 			return;
 		case FxuiPackage.FX_TABLE_VIEW__PACKAGE_PATH:
 			setPackagePath(PACKAGE_PATH_EDEFAULT);
+			return;
+		case FxuiPackage.FX_TABLE_VIEW__INPUT:
+			setInput((FXModel) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -373,13 +396,15 @@ public class FXTableViewImpl extends FXNamedElementImpl implements FXTableView {
 		case FxuiPackage.FX_TABLE_VIEW__FX_COLUMNS:
 			return fxColumns != null && !fxColumns.isEmpty();
 		case FxuiPackage.FX_TABLE_VIEW__FX_ENTITY:
-			return fxEntity != null;
+			return fxEntity != null && !fxEntity.isEmpty();
 		case FxuiPackage.FX_TABLE_VIEW__HAS_FILTER:
 			return hasFilter != HAS_FILTER_EDEFAULT;
 		case FxuiPackage.FX_TABLE_VIEW__HAS_SORTER:
 			return hasSorter != HAS_SORTER_EDEFAULT;
 		case FxuiPackage.FX_TABLE_VIEW__PACKAGE_PATH:
 			return PACKAGE_PATH_EDEFAULT == null ? packagePath != null : !PACKAGE_PATH_EDEFAULT.equals(packagePath);
+		case FxuiPackage.FX_TABLE_VIEW__INPUT:
+			return input != null;
 		}
 		return super.eIsSet(featureID);
 	}

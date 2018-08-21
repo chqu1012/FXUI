@@ -16,7 +16,7 @@ class ControllerTemplate implements IGenerator<FXTableView>{
 	import javafx.util.converter.*;
 	import java.time.*;
 
-	public class «view.name»TableViewer extends «view.name»BaseTableViewer<«view.fxEntity.name.toFirstUpper»>{
+	public class «view.name»TableViewer extends «view.name»BaseTableViewer<«view.input.name.toFirstUpper»>{
 	
 		@Override
 		protected void init() {

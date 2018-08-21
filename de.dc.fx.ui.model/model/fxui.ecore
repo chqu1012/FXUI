@@ -4,11 +4,12 @@
   <eClassifiers xsi:type="ecore:EClass" name="FXTableView" eSuperTypes="#//FXNamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="fxColumns" upperBound="-1"
         eType="#//FXColumn" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="fxEntity" eType="#//FXModel"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fxEntity" upperBound="-1"
+        eType="#//FXModel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="hasFilter" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="hasSorter" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="packagePath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="input" eType="#//FXModel"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FXColumn" eSuperTypes="#//FXNamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="associatedFXProperty" eType="#//FXProperty"/>
@@ -25,6 +26,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="FXModel" eSuperTypes="#//FXNamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="fxProperties" upperBound="-1"
         eType="#//FXProperty" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fxreference" eType="#//FXReference"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FXProperty" eSuperTypes="#//FXNamedElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -61,5 +64,10 @@
   <eClassifiers xsi:type="ecore:EClass" name="FXComboBox" eSuperTypes="#//FXControl"/>
   <eClassifiers xsi:type="ecore:EClass" name="FXSelectedControl" abstract="true" eSuperTypes="#//FXControl">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="selected" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FXReference">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="referenceTo" eType="#//FXModel"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="upperBound" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lowerBound" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
 </ecore:EPackage>

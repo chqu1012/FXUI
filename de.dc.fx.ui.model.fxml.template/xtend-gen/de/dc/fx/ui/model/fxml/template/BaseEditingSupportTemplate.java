@@ -2,6 +2,7 @@ package de.dc.fx.ui.model.fxml.template;
 
 import de.dc.fx.ui.model.fxml.template.IGenerator;
 import de.dc.fx.ui.model.fxui.FXColumn;
+import de.dc.fx.ui.model.fxui.FXModel;
 import de.dc.fx.ui.model.fxui.FXTableView;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtend2.lib.StringConcatenation;
@@ -15,12 +16,15 @@ public class BaseEditingSupportTemplate implements IGenerator<FXColumn> {
     EObject _eContainer = data.eContainer();
     final FXTableView view = ((FXTableView) _eContainer);
     _builder.newLineIfNotEmpty();
+    EObject _eContainer_1 = data.getAssociatedFXProperty().eContainer();
+    final FXModel model = ((FXModel) _eContainer_1);
+    _builder.newLineIfNotEmpty();
     _builder.append("package ");
     String _packagePath = view.getPackagePath();
     _builder.append(_packagePath);
     _builder.append(".cell.edit;");
     _builder.newLineIfNotEmpty();
-    final String name = StringExtensions.toFirstUpper(view.getFxEntity().getName());
+    final String name = StringExtensions.toFirstUpper(model.getName());
     _builder.newLineIfNotEmpty();
     _builder.append("import ");
     String _packagePath_1 = view.getPackagePath();
