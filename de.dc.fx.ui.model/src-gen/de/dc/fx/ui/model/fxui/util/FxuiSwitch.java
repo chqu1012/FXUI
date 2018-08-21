@@ -244,6 +244,20 @@ public class FxuiSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case FxuiPackage.FX_TREE_ROOT: {
+			FXTreeRoot fxTreeRoot = (FXTreeRoot) theEObject;
+			T result = caseFXTreeRoot(fxTreeRoot);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case FxuiPackage.FX_NODE: {
+			FXNode fxNode = (FXNode) theEObject;
+			T result = caseFXNode(fxNode);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
@@ -516,6 +530,36 @@ public class FxuiSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseFXTreeView(FXTreeView object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>FX Tree Root</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>FX Tree Root</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFXTreeRoot(FXTreeRoot object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>FX Node</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>FX Node</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFXNode(FXNode object) {
 		return null;
 	}
 

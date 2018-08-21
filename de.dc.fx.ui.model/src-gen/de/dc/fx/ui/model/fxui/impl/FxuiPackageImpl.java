@@ -12,6 +12,7 @@ import de.dc.fx.ui.model.fxui.FXExistingModel;
 import de.dc.fx.ui.model.fxui.FXForm;
 import de.dc.fx.ui.model.fxui.FXModel;
 import de.dc.fx.ui.model.fxui.FXNamedElement;
+import de.dc.fx.ui.model.fxui.FXNode;
 import de.dc.fx.ui.model.fxui.FXProperty;
 import de.dc.fx.ui.model.fxui.FXRadioButton;
 import de.dc.fx.ui.model.fxui.FXReference;
@@ -19,6 +20,7 @@ import de.dc.fx.ui.model.fxui.FXSelectedControl;
 import de.dc.fx.ui.model.fxui.FXTableView;
 import de.dc.fx.ui.model.fxui.FXTextField;
 import de.dc.fx.ui.model.fxui.FXToggleButton;
+import de.dc.fx.ui.model.fxui.FXTreeRoot;
 import de.dc.fx.ui.model.fxui.FXTreeView;
 import de.dc.fx.ui.model.fxui.FxuiFactory;
 import de.dc.fx.ui.model.fxui.FxuiPackage;
@@ -164,6 +166,20 @@ public class FxuiPackageImpl extends EPackageImpl implements FxuiPackage {
 	 * @generated
 	 */
 	private EClass fxTreeViewEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass fxTreeRootEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass fxNodeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -646,6 +662,87 @@ public class FxuiPackageImpl extends EPackageImpl implements FxuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getFXTreeView_Root() {
+		return (EReference) fxTreeViewEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getFXTreeRoot() {
+		return fxTreeRootEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFXTreeRoot_Children() {
+		return (EReference) fxTreeRootEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFXTreeRoot_InstanceType() {
+		return (EAttribute) fxTreeRootEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFXTreeRoot_Name() {
+		return (EAttribute) fxTreeRootEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getFXNode() {
+		return fxNodeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFXNode_Parent() {
+		return (EReference) fxNodeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFXNode_InstanceType() {
+		return (EAttribute) fxNodeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFXNode_Name() {
+		return (EAttribute) fxNodeEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getPos() {
 		return posEEnum;
 	}
@@ -741,6 +838,17 @@ public class FxuiPackageImpl extends EPackageImpl implements FxuiPackage {
 
 		fxTreeViewEClass = createEClass(FX_TREE_VIEW);
 		createEAttribute(fxTreeViewEClass, FX_TREE_VIEW__PACKAGE_PATH);
+		createEReference(fxTreeViewEClass, FX_TREE_VIEW__ROOT);
+
+		fxTreeRootEClass = createEClass(FX_TREE_ROOT);
+		createEReference(fxTreeRootEClass, FX_TREE_ROOT__CHILDREN);
+		createEAttribute(fxTreeRootEClass, FX_TREE_ROOT__INSTANCE_TYPE);
+		createEAttribute(fxTreeRootEClass, FX_TREE_ROOT__NAME);
+
+		fxNodeEClass = createEClass(FX_NODE);
+		createEReference(fxNodeEClass, FX_NODE__PARENT);
+		createEAttribute(fxNodeEClass, FX_NODE__INSTANCE_TYPE);
+		createEAttribute(fxNodeEClass, FX_NODE__NAME);
 
 		// Create enums
 		posEEnum = createEEnum(POS);
@@ -912,6 +1020,29 @@ public class FxuiPackageImpl extends EPackageImpl implements FxuiPackage {
 		initEAttribute(getFXTreeView_PackagePath(), ecorePackage.getEString(), "packagePath", null, 0, 1,
 				FXTreeView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEReference(getFXTreeView_Root(), this.getFXTreeRoot(), null, "root", null, 0, 1, FXTreeView.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(fxTreeRootEClass, FXTreeRoot.class, "FXTreeRoot", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getFXTreeRoot_Children(), this.getFXNode(), null, "children", null, 0, -1, FXTreeRoot.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFXTreeRoot_InstanceType(), ecorePackage.getEString(), "instanceType", null, 0, 1,
+				FXTreeRoot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFXTreeRoot_Name(), ecorePackage.getEString(), "Name", null, 0, 1, FXTreeRoot.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(fxNodeEClass, FXNode.class, "FXNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getFXNode_Parent(), this.getFXTreeRoot(), null, "parent", null, 0, 1, FXNode.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFXNode_InstanceType(), ecorePackage.getEString(), "instanceType", null, 0, 1, FXNode.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFXNode_Name(), ecorePackage.getEString(), "name", null, 0, 1, FXNode.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(posEEnum, Pos.class, "Pos");

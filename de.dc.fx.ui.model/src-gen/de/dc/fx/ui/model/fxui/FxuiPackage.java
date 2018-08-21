@@ -1021,13 +1021,22 @@ public interface FxuiPackage extends EPackage {
 	int FX_TREE_VIEW__PACKAGE_PATH = 0;
 
 	/**
+	 * The feature id for the '<em><b>Root</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TREE_VIEW__ROOT = 1;
+
+	/**
 	 * The number of structural features of the '<em>FX Tree View</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FX_TREE_VIEW_FEATURE_COUNT = 1;
+	int FX_TREE_VIEW_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>FX Tree View</em>' class.
@@ -1039,6 +1048,116 @@ public interface FxuiPackage extends EPackage {
 	int FX_TREE_VIEW_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link de.dc.fx.ui.model.fxui.impl.FXTreeRootImpl <em>FX Tree Root</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.fx.ui.model.fxui.impl.FXTreeRootImpl
+	 * @see de.dc.fx.ui.model.fxui.impl.FxuiPackageImpl#getFXTreeRoot()
+	 * @generated
+	 */
+	int FX_TREE_ROOT = 18;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TREE_ROOT__CHILDREN = 0;
+
+	/**
+	 * The feature id for the '<em><b>Instance Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TREE_ROOT__INSTANCE_TYPE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TREE_ROOT__NAME = 2;
+
+	/**
+	 * The number of structural features of the '<em>FX Tree Root</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TREE_ROOT_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>FX Tree Root</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TREE_ROOT_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.dc.fx.ui.model.fxui.impl.FXNodeImpl <em>FX Node</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.fx.ui.model.fxui.impl.FXNodeImpl
+	 * @see de.dc.fx.ui.model.fxui.impl.FxuiPackageImpl#getFXNode()
+	 * @generated
+	 */
+	int FX_NODE = 19;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_NODE__PARENT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Instance Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_NODE__INSTANCE_TYPE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_NODE__NAME = 2;
+
+	/**
+	 * The number of structural features of the '<em>FX Node</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_NODE_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>FX Node</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_NODE_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link de.dc.fx.ui.model.fxui.Pos <em>Pos</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1046,7 +1165,7 @@ public interface FxuiPackage extends EPackage {
 	 * @see de.dc.fx.ui.model.fxui.impl.FxuiPackageImpl#getPos()
 	 * @generated
 	 */
-	int POS = 18;
+	int POS = 20;
 
 	/**
 	 * Returns the meta object for class '{@link de.dc.fx.ui.model.fxui.FXTableView <em>FX Table View</em>}'.
@@ -1526,6 +1645,103 @@ public interface FxuiPackage extends EPackage {
 	EAttribute getFXTreeView_PackagePath();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link de.dc.fx.ui.model.fxui.FXTreeView#getRoot <em>Root</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Root</em>'.
+	 * @see de.dc.fx.ui.model.fxui.FXTreeView#getRoot()
+	 * @see #getFXTreeView()
+	 * @generated
+	 */
+	EReference getFXTreeView_Root();
+
+	/**
+	 * Returns the meta object for class '{@link de.dc.fx.ui.model.fxui.FXTreeRoot <em>FX Tree Root</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>FX Tree Root</em>'.
+	 * @see de.dc.fx.ui.model.fxui.FXTreeRoot
+	 * @generated
+	 */
+	EClass getFXTreeRoot();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.dc.fx.ui.model.fxui.FXTreeRoot#getChildren <em>Children</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Children</em>'.
+	 * @see de.dc.fx.ui.model.fxui.FXTreeRoot#getChildren()
+	 * @see #getFXTreeRoot()
+	 * @generated
+	 */
+	EReference getFXTreeRoot_Children();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.model.fxui.FXTreeRoot#getInstanceType <em>Instance Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Instance Type</em>'.
+	 * @see de.dc.fx.ui.model.fxui.FXTreeRoot#getInstanceType()
+	 * @see #getFXTreeRoot()
+	 * @generated
+	 */
+	EAttribute getFXTreeRoot_InstanceType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.model.fxui.FXTreeRoot#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see de.dc.fx.ui.model.fxui.FXTreeRoot#getName()
+	 * @see #getFXTreeRoot()
+	 * @generated
+	 */
+	EAttribute getFXTreeRoot_Name();
+
+	/**
+	 * Returns the meta object for class '{@link de.dc.fx.ui.model.fxui.FXNode <em>FX Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>FX Node</em>'.
+	 * @see de.dc.fx.ui.model.fxui.FXNode
+	 * @generated
+	 */
+	EClass getFXNode();
+
+	/**
+	 * Returns the meta object for the reference '{@link de.dc.fx.ui.model.fxui.FXNode#getParent <em>Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Parent</em>'.
+	 * @see de.dc.fx.ui.model.fxui.FXNode#getParent()
+	 * @see #getFXNode()
+	 * @generated
+	 */
+	EReference getFXNode_Parent();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.model.fxui.FXNode#getInstanceType <em>Instance Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Instance Type</em>'.
+	 * @see de.dc.fx.ui.model.fxui.FXNode#getInstanceType()
+	 * @see #getFXNode()
+	 * @generated
+	 */
+	EAttribute getFXNode_InstanceType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.model.fxui.FXNode#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see de.dc.fx.ui.model.fxui.FXNode#getName()
+	 * @see #getFXNode()
+	 * @generated
+	 */
+	EAttribute getFXNode_Name();
+
+	/**
 	 * Returns the meta object for enum '{@link de.dc.fx.ui.model.fxui.Pos <em>Pos</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1953,6 +2169,82 @@ public interface FxuiPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute FX_TREE_VIEW__PACKAGE_PATH = eINSTANCE.getFXTreeView_PackagePath();
+
+		/**
+		 * The meta object literal for the '<em><b>Root</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FX_TREE_VIEW__ROOT = eINSTANCE.getFXTreeView_Root();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.fx.ui.model.fxui.impl.FXTreeRootImpl <em>FX Tree Root</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.fx.ui.model.fxui.impl.FXTreeRootImpl
+		 * @see de.dc.fx.ui.model.fxui.impl.FxuiPackageImpl#getFXTreeRoot()
+		 * @generated
+		 */
+		EClass FX_TREE_ROOT = eINSTANCE.getFXTreeRoot();
+
+		/**
+		 * The meta object literal for the '<em><b>Children</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FX_TREE_ROOT__CHILDREN = eINSTANCE.getFXTreeRoot_Children();
+
+		/**
+		 * The meta object literal for the '<em><b>Instance Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FX_TREE_ROOT__INSTANCE_TYPE = eINSTANCE.getFXTreeRoot_InstanceType();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FX_TREE_ROOT__NAME = eINSTANCE.getFXTreeRoot_Name();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.fx.ui.model.fxui.impl.FXNodeImpl <em>FX Node</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.fx.ui.model.fxui.impl.FXNodeImpl
+		 * @see de.dc.fx.ui.model.fxui.impl.FxuiPackageImpl#getFXNode()
+		 * @generated
+		 */
+		EClass FX_NODE = eINSTANCE.getFXNode();
+
+		/**
+		 * The meta object literal for the '<em><b>Parent</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FX_NODE__PARENT = eINSTANCE.getFXNode_Parent();
+
+		/**
+		 * The meta object literal for the '<em><b>Instance Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FX_NODE__INSTANCE_TYPE = eINSTANCE.getFXNode_InstanceType();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FX_NODE__NAME = eINSTANCE.getFXNode_Name();
 
 		/**
 		 * The meta object literal for the '{@link de.dc.fx.ui.model.fxui.Pos <em>Pos</em>}' enum.

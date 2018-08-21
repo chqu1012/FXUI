@@ -77,5 +77,18 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FXTreeView">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="packagePath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="root" eType="#//FXTreeRoot"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FXTreeRoot">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="children" upperBound="-1"
+        eType="#//FXNode" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="instanceType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FXNode">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" eType="#//FXTreeRoot"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="instanceType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>

@@ -441,6 +441,52 @@ public class FxuiItemProviderAdapterFactory extends FxuiAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.fx.ui.model.fxui.FXTreeRoot} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FXTreeRootItemProvider fxTreeRootItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.fx.ui.model.fxui.FXTreeRoot}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFXTreeRootAdapter() {
+		if (fxTreeRootItemProvider == null) {
+			fxTreeRootItemProvider = new FXTreeRootItemProvider(this);
+		}
+
+		return fxTreeRootItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.fx.ui.model.fxui.FXNode} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FXNodeItemProvider fxNodeItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.fx.ui.model.fxui.FXNode}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFXNodeAdapter() {
+		if (fxNodeItemProvider == null) {
+			fxNodeItemProvider = new FXNodeItemProvider(this);
+		}
+
+		return fxNodeItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -571,6 +617,10 @@ public class FxuiItemProviderAdapterFactory extends FxuiAdapterFactory
 			fxExistingModelItemProvider.dispose();
 		if (fxTreeViewItemProvider != null)
 			fxTreeViewItemProvider.dispose();
+		if (fxTreeRootItemProvider != null)
+			fxTreeRootItemProvider.dispose();
+		if (fxNodeItemProvider != null)
+			fxNodeItemProvider.dispose();
 	}
 
 }

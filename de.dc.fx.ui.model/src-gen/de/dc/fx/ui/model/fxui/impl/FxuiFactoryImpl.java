@@ -88,6 +88,10 @@ public class FxuiFactoryImpl extends EFactoryImpl implements FxuiFactory {
 			return createFXExistingModel();
 		case FxuiPackage.FX_TREE_VIEW:
 			return createFXTreeView();
+		case FxuiPackage.FX_TREE_ROOT:
+			return createFXTreeRoot();
+		case FxuiPackage.FX_NODE:
+			return createFXNode();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -281,6 +285,26 @@ public class FxuiFactoryImpl extends EFactoryImpl implements FxuiFactory {
 	public FXTreeView createFXTreeView() {
 		FXTreeViewImpl fxTreeView = new FXTreeViewImpl();
 		return fxTreeView;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FXTreeRoot createFXTreeRoot() {
+		FXTreeRootImpl fxTreeRoot = new FXTreeRootImpl();
+		return fxTreeRoot;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FXNode createFXNode() {
+		FXNodeImpl fxNode = new FXNodeImpl();
+		return fxNode;
 	}
 
 	/**

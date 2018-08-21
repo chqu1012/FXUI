@@ -157,6 +157,16 @@ public class FxuiAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseFXTreeRoot(FXTreeRoot object) {
+			return createFXTreeRootAdapter();
+		}
+
+		@Override
+		public Adapter caseFXNode(FXNode object) {
+			return createFXNodeAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -424,6 +434,34 @@ public class FxuiAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createFXTreeViewAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.fx.ui.model.fxui.FXTreeRoot <em>FX Tree Root</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.fx.ui.model.fxui.FXTreeRoot
+	 * @generated
+	 */
+	public Adapter createFXTreeRootAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.fx.ui.model.fxui.FXNode <em>FX Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.fx.ui.model.fxui.FXNode
+	 * @generated
+	 */
+	public Adapter createFXNodeAdapter() {
 		return null;
 	}
 

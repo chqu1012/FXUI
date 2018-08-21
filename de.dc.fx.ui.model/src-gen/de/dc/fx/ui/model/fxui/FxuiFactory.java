@@ -166,6 +166,24 @@ public interface FxuiFactory extends EFactory {
 	FXTreeView createFXTreeView();
 
 	/**
+	 * Returns a new object of class '<em>FX Tree Root</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>FX Tree Root</em>'.
+	 * @generated
+	 */
+	FXTreeRoot createFXTreeRoot();
+
+	/**
+	 * Returns a new object of class '<em>FX Node</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>FX Node</em>'.
+	 * @generated
+	 */
+	FXNode createFXNode();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

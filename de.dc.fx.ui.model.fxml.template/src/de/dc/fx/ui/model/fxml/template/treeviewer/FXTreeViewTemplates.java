@@ -11,6 +11,7 @@ public enum FXTreeViewTemplates {
 	ILabelProvider(new ILabelProviderTemplate(), "/provider/", "ILabelProvider.java", false, SrcType.Src),
 	IViewer(new IViewerTemplate(), "/viewer/", "IViewer.java", false, SrcType.Src),
 	TreeViewer(new TreeViewerTemplate(), "/viewer/", "TreeViewer.java", false, SrcType.Src),
+	Css(new CssTemplate(), "/viewer/css/", "TreeViewer.css", false, SrcType.Src),
 	TreeViewSample(new TreeViewSampleTemplate(), "/", "TreeViewSample.java", false, SrcType.Src);
 	
 	private IGenerator<FXTreeView> template;

@@ -3,6 +3,7 @@
 package de.dc.fx.ui.model.fxui.provider;
 
 import de.dc.fx.ui.model.fxui.FXTreeView;
+import de.dc.fx.ui.model.fxui.FxuiFactory;
 import de.dc.fx.ui.model.fxui.FxuiPackage;
 
 import java.util.Collection;
@@ -13,6 +14,7 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -54,6 +56,7 @@ public class FXTreeViewItemProvider extends ItemProviderAdapter implements IEdit
 			super.getPropertyDescriptors(object);
 
 			addPackagePathPropertyDescriptor(object);
+			addRootPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -72,6 +75,51 @@ public class FXTreeViewItemProvider extends ItemProviderAdapter implements IEdit
 								"_UI_FXTreeView_type"),
 						FxuiPackage.Literals.FX_TREE_VIEW__PACKAGE_PATH, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Root feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addRootPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_FXTreeView_root_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_FXTreeView_root_feature",
+								"_UI_FXTreeView_type"),
+						FxuiPackage.Literals.FX_TREE_VIEW__ROOT, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
+		if (childrenFeatures == null) {
+			super.getChildrenFeatures(object);
+			childrenFeatures.add(FxuiPackage.Literals.FX_TREE_VIEW__ROOT);
+		}
+		return childrenFeatures;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EStructuralFeature getChildFeature(Object object, Object child) {
+		// Check the type of the specified child object and return the proper feature to use for
+		// adding (see {@link AddCommand}) it as a child.
+
+		return super.getChildFeature(object, child);
 	}
 
 	/**
@@ -123,6 +171,9 @@ public class FXTreeViewItemProvider extends ItemProviderAdapter implements IEdit
 		case FxuiPackage.FX_TREE_VIEW__PACKAGE_PATH:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
+		case FxuiPackage.FX_TREE_VIEW__ROOT:
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+			return;
 		}
 		super.notifyChanged(notification);
 	}
@@ -137,6 +188,9 @@ public class FXTreeViewItemProvider extends ItemProviderAdapter implements IEdit
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add(createChildParameter(FxuiPackage.Literals.FX_TREE_VIEW__ROOT,
+				FxuiFactory.eINSTANCE.createFXTreeRoot()));
 	}
 
 	/**
