@@ -188,22 +188,22 @@ public class ModelProviderTemplate implements IGenerator<FXModel> {
         _builder_1.append("random.nextInt()");
         return _builder_1.toString();
       } else {
-        if ((Objects.equal(property.getType(), "double") || Objects.equal(property, "Double"))) {
+        if ((Objects.equal(property.getType(), "double") || Objects.equal(property.getType(), "Double"))) {
           StringConcatenation _builder_2 = new StringConcatenation();
           _builder_2.append("random.nextDouble()");
           return _builder_2.toString();
         } else {
-          if ((Objects.equal(property.getType(), "float") || Objects.equal(property, "Float"))) {
+          if ((Objects.equal(property.getType(), "float") || Objects.equal(property.getType(), "Float"))) {
             StringConcatenation _builder_3 = new StringConcatenation();
             _builder_3.append("random.nextFloat()");
             return _builder_3.toString();
           } else {
-            if ((Objects.equal(property.getType(), "long") || Objects.equal(property, "Long"))) {
+            if ((Objects.equal(property.getType(), "long") || Objects.equal(property.getType(), "Long"))) {
               StringConcatenation _builder_4 = new StringConcatenation();
               _builder_4.append("random.nextLong()");
               return _builder_4.toString();
             } else {
-              if ((Objects.equal(property.getType(), "Boolean") || Objects.equal(property, "boolean"))) {
+              if ((Objects.equal(property.getType(), "Boolean") || Objects.equal(property.getType(), "boolean"))) {
                 StringConcatenation _builder_5 = new StringConcatenation();
                 _builder_5.append("random.nextBoolean()");
                 return _builder_5.toString();

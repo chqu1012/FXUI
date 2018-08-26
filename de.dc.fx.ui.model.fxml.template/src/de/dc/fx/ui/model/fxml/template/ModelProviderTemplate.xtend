@@ -46,13 +46,13 @@ class ModelProviderTemplate implements IGenerator<FXModel>{
 			return '''"«property.name»"+j'''
 		}else if (property.type=="Integer" || property.type=="int") {
 			return '''random.nextInt()'''
-		}else if (property.type=="double" || property=="Double") {
+		}else if (property.type=="double" || property.type=="Double") {
 			return '''random.nextDouble()'''
-		}else if (property.type=="float" || property=="Float") {
+		}else if (property.type=="float" || property.type=="Float") {
 			return '''random.nextFloat()'''
-		}else if (property.type=="long" || property=="Long") {
+		}else if (property.type=="long" || property.type=="Long") {
 			return '''random.nextLong()'''
-		}else if (property.type=="Boolean" || property=="boolean") {
+		}else if (property.type=="Boolean" || property.type=="boolean") {
 			return '''random.nextBoolean()'''
 		}else if (property.type=="LocalDate") {
 			return '''LocalDate.now()'''
