@@ -18,7 +18,7 @@ class ModelProviderTemplate implements IGenerator<FXModel>{
 	public enum «data.name.toFirstUpper»ModelProvider {
 		Instance;
 		
-		private ObservableList<«data.name.toFirstUpper»> «data.name.toFirstLower»s = FXCollections.observableArrayList();
+		private ObservableList<«view.input.name.toFirstUpper»> «data.name.toFirstLower»s = FXCollections.observableArrayList();
 		private Random random = new Random();
 	
 		private «data.name.toFirstUpper»ModelProvider() {
@@ -30,11 +30,11 @@ class ModelProviderTemplate implements IGenerator<FXModel>{
 			}
 		}
 		
-		public ObservableList<«data.name.toFirstUpper»> get«data.name.toFirstUpper»s() {
+		public ObservableList<«view.input.name.toFirstUpper»> get«data.name.toFirstUpper»s() {
 			return «data.name.toFirstLower»s;
 		}
 	
-		public void set«data.name.toFirstUpper»s(ObservableList<«data.name.toFirstUpper»> «data.name.toFirstLower»s) {
+		public void set«data.name.toFirstUpper»s(ObservableList<«view.input.name.toFirstUpper»> «data.name.toFirstLower»s) {
 			this.«data.name.toFirstLower»s = «data.name.toFirstLower»s;
 		}
 	}

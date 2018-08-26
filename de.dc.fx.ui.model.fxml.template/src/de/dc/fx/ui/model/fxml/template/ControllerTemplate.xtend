@@ -20,7 +20,7 @@ class ControllerTemplate implements IGenerator<FXTableView>{
 	«ENDIF»
 	import javafx.util.converter.*;
 	import java.time.*;
-	public class «view.name»TableViewer extends «view.name»BaseTableViewer{
+	public class «view.name»TableViewer extends «view.name»BaseTableViewer<«view.input.name.toFirstUpper»>{
 	
 		@Override
 		protected void init() {

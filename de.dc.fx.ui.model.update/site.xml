@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/de.dc.fx.ui.model.feature_0.8.13.201808261724.jar" id="de.dc.fx.ui.model.feature" version="0.8.13.201808261724">
+   <feature url="features/de.dc.fx.ui.model.feature_0.8.14.201808261755.jar" id="de.dc.fx.ui.model.feature" version="0.8.14.201808261755">
       <category name="de.dc.fx.ui.model.feature"/>
    </feature>
    <category-def name="de.dc.fx.ui.model.feature" label="DC Soft"/>

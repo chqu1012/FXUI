@@ -52,7 +52,7 @@ public class ModelProviderTemplate implements IGenerator<FXModel> {
     _builder.newLine();
     _builder.append("\t");
     _builder.append("private ObservableList<");
-    String _firstUpper_1 = StringExtensions.toFirstUpper(data.getName());
+    String _firstUpper_1 = StringExtensions.toFirstUpper(view.getInput().getName());
     _builder.append(_firstUpper_1, "\t");
     _builder.append("> ");
     String _firstLower = StringExtensions.toFirstLower(data.getName());
@@ -112,7 +112,7 @@ public class ModelProviderTemplate implements IGenerator<FXModel> {
     _builder.newLine();
     _builder.append("\t");
     _builder.append("public ObservableList<");
-    String _firstUpper_4 = StringExtensions.toFirstUpper(data.getName());
+    String _firstUpper_4 = StringExtensions.toFirstUpper(view.getInput().getName());
     _builder.append(_firstUpper_4, "\t");
     _builder.append("> get");
     String _firstUpper_5 = StringExtensions.toFirstUpper(data.getName());
@@ -134,7 +134,7 @@ public class ModelProviderTemplate implements IGenerator<FXModel> {
     String _firstUpper_6 = StringExtensions.toFirstUpper(data.getName());
     _builder.append(_firstUpper_6, "\t");
     _builder.append("s(ObservableList<");
-    String _firstUpper_7 = StringExtensions.toFirstUpper(data.getName());
+    String _firstUpper_7 = StringExtensions.toFirstUpper(view.getInput().getName());
     _builder.append(_firstUpper_7, "\t");
     _builder.append("> ");
     String _firstLower_3 = StringExtensions.toFirstLower(data.getName());
