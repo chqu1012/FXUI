@@ -44,19 +44,13 @@ class ModelProviderTemplate implements IGenerator<FXModel>{
 	def String createTypeValue(FXProperty property, int loopIndex){
 		if (property.type=='String') {
 			return '''"«property.name»"+j'''
-		}else if (property.type=="Integer" || property=="int") {
+		}else if (property.type=="Integer" || property.type=="int") {
 			return '''random.nextInt()'''
-		}else if (property.type=="Integer" || property=="Integer") {
-			return '''random.nextInt()'''
-		}else if (property.type=="Integer" || property=="Double") {
+		}else if (property.type=="double" || property=="Double") {
 			return '''random.nextDouble()'''
-		}else if (property.type=="Integer" || property=="Float") {
+		}else if (property.type=="float" || property=="Float") {
 			return '''random.nextFloat()'''
-		}else if (property.type=="Integer" || property=="Long") {
-			return '''random.nextLong()'''
-		}else if (property.type=="Double" || property=="double") {
-			return '''random.nextDouble()'''
-		}else if (property.type=="Long" || property=="long") {
+		}else if (property.type=="long" || property=="Long") {
 			return '''random.nextLong()'''
 		}else if (property.type=="Boolean" || property=="boolean") {
 			return '''random.nextBoolean()'''

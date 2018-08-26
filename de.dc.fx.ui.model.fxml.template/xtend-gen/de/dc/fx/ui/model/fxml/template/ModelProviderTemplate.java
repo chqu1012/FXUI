@@ -183,62 +183,44 @@ public class ModelProviderTemplate implements IGenerator<FXModel> {
       _builder.append("\"+j");
       return _builder.toString();
     } else {
-      if ((Objects.equal(property.getType(), "Integer") || Objects.equal(property, "int"))) {
+      if ((Objects.equal(property.getType(), "Integer") || Objects.equal(property.getType(), "int"))) {
         StringConcatenation _builder_1 = new StringConcatenation();
         _builder_1.append("random.nextInt()");
         return _builder_1.toString();
       } else {
-        if ((Objects.equal(property.getType(), "Integer") || Objects.equal(property, "Integer"))) {
+        if ((Objects.equal(property.getType(), "double") || Objects.equal(property, "Double"))) {
           StringConcatenation _builder_2 = new StringConcatenation();
-          _builder_2.append("random.nextInt()");
+          _builder_2.append("random.nextDouble()");
           return _builder_2.toString();
         } else {
-          if ((Objects.equal(property.getType(), "Integer") || Objects.equal(property, "Double"))) {
+          if ((Objects.equal(property.getType(), "float") || Objects.equal(property, "Float"))) {
             StringConcatenation _builder_3 = new StringConcatenation();
-            _builder_3.append("random.nextDouble()");
+            _builder_3.append("random.nextFloat()");
             return _builder_3.toString();
           } else {
-            if ((Objects.equal(property.getType(), "Integer") || Objects.equal(property, "Float"))) {
+            if ((Objects.equal(property.getType(), "long") || Objects.equal(property, "Long"))) {
               StringConcatenation _builder_4 = new StringConcatenation();
-              _builder_4.append("random.nextFloat()");
+              _builder_4.append("random.nextLong()");
               return _builder_4.toString();
             } else {
-              if ((Objects.equal(property.getType(), "Integer") || Objects.equal(property, "Long"))) {
+              if ((Objects.equal(property.getType(), "Boolean") || Objects.equal(property, "boolean"))) {
                 StringConcatenation _builder_5 = new StringConcatenation();
-                _builder_5.append("random.nextLong()");
+                _builder_5.append("random.nextBoolean()");
                 return _builder_5.toString();
               } else {
-                if ((Objects.equal(property.getType(), "Double") || Objects.equal(property, "double"))) {
+                String _type_1 = property.getType();
+                boolean _equals_1 = Objects.equal(_type_1, "LocalDate");
+                if (_equals_1) {
                   StringConcatenation _builder_6 = new StringConcatenation();
-                  _builder_6.append("random.nextDouble()");
+                  _builder_6.append("LocalDate.now()");
                   return _builder_6.toString();
                 } else {
-                  if ((Objects.equal(property.getType(), "Long") || Objects.equal(property, "long"))) {
+                  String _type_2 = property.getType();
+                  boolean _equals_2 = Objects.equal(_type_2, "LocalDateTime");
+                  if (_equals_2) {
                     StringConcatenation _builder_7 = new StringConcatenation();
-                    _builder_7.append("random.nextLong()");
+                    _builder_7.append("LocalDateTime.now()");
                     return _builder_7.toString();
-                  } else {
-                    if ((Objects.equal(property.getType(), "Boolean") || Objects.equal(property, "boolean"))) {
-                      StringConcatenation _builder_8 = new StringConcatenation();
-                      _builder_8.append("random.nextBoolean()");
-                      return _builder_8.toString();
-                    } else {
-                      String _type_1 = property.getType();
-                      boolean _equals_1 = Objects.equal(_type_1, "LocalDate");
-                      if (_equals_1) {
-                        StringConcatenation _builder_9 = new StringConcatenation();
-                        _builder_9.append("LocalDate.now()");
-                        return _builder_9.toString();
-                      } else {
-                        String _type_2 = property.getType();
-                        boolean _equals_2 = Objects.equal(_type_2, "LocalDateTime");
-                        if (_equals_2) {
-                          StringConcatenation _builder_10 = new StringConcatenation();
-                          _builder_10.append("LocalDateTime.now()");
-                          return _builder_10.toString();
-                        }
-                      }
-                    }
                   }
                 }
               }

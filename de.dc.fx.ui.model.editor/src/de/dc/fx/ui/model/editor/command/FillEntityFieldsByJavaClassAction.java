@@ -60,7 +60,7 @@ public class FillEntityFieldsByJavaClassAction implements IActionDelegate{
 										FXProperty property = FxuiFactory.eINSTANCE.createFXProperty();
 										String name = field.getElementName().substring(0, 1).toUpperCase()+field.getElementName().substring(1);
 										property.setName(name);
-										property.setType(field.getTypeSignature().substring(0, field.getTypeSignature().length() - 1).replaceFirst("Q", ""));
+										property.setType(getType(field.getTypeSignature()));
 										properties.add(property);
 									}
 									EReference eReference = FxuiPackage.eINSTANCE.getFXModel_FxProperties();
@@ -74,6 +74,23 @@ public class FillEntityFieldsByJavaClassAction implements IActionDelegate{
 					}
 				}
 			}
+		}
+	}
+	
+	public String getType(String type) {
+		String newType = type.replaceFirst("Q", "").replaceAll(";", "");
+		if (newType.equals("I")) {
+			return "int";
+		}else if (newType.equals("D")) {
+			return "double";
+		}else if (newType.equals("F")) {
+			return "float";
+		}else if (newType.equals("L")) {
+			return "long";
+		}else if (newType.equals("Z")) {
+			return "boolean";
+		}else {
+			return newType;
 		}
 	}
 

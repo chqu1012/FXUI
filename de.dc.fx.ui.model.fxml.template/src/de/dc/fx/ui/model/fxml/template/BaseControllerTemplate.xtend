@@ -60,6 +60,10 @@ class BaseControllerTemplate implements IGenerator<FXTableView>{
 		public ObservableList<T> getInput(){
 			return input;
 		}
+		
+		public void setInput(ObservableList<T> input) {
+			this.input = input;
+		}
 	}
 	'''
 }

@@ -25,6 +25,9 @@ class CellFactoryTemplate implements IGenerator<FXColumn>{
 	
 		@Override
 		protected String extractValue(«className» data) {
+			if(data==null){
+				return null;
+			}
 			return String.valueOf(data.get«fieldName»());
 		}
 		
