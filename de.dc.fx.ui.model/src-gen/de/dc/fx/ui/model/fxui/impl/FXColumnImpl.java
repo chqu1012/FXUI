@@ -27,6 +27,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link de.dc.fx.ui.model.fxui.impl.FXColumnImpl#isUseCustomCellFactory <em>Use Custom Cell Factory</em>}</li>
  *   <li>{@link de.dc.fx.ui.model.fxui.impl.FXColumnImpl#getWidth <em>Width</em>}</li>
  *   <li>{@link de.dc.fx.ui.model.fxui.impl.FXColumnImpl#getAlignment <em>Alignment</em>}</li>
+ *   <li>{@link de.dc.fx.ui.model.fxui.impl.FXColumnImpl#isFilterCriteria <em>Filter Criteria</em>}</li>
  * </ul>
  *
  * @generated
@@ -121,6 +122,26 @@ public class FXColumnImpl extends FXNamedElementImpl implements FXColumn {
 	 * @ordered
 	 */
 	protected Pos alignment = ALIGNMENT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isFilterCriteria() <em>Filter Criteria</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isFilterCriteria()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean FILTER_CRITERIA_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isFilterCriteria() <em>Filter Criteria</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isFilterCriteria()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean filterCriteria = FILTER_CRITERIA_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -274,6 +295,28 @@ public class FXColumnImpl extends FXNamedElementImpl implements FXColumn {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isFilterCriteria() {
+		return filterCriteria;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFilterCriteria(boolean newFilterCriteria) {
+		boolean oldFilterCriteria = filterCriteria;
+		filterCriteria = newFilterCriteria;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, FxuiPackage.FX_COLUMN__FILTER_CRITERIA,
+					oldFilterCriteria, filterCriteria));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -289,6 +332,8 @@ public class FXColumnImpl extends FXNamedElementImpl implements FXColumn {
 			return getWidth();
 		case FxuiPackage.FX_COLUMN__ALIGNMENT:
 			return getAlignment();
+		case FxuiPackage.FX_COLUMN__FILTER_CRITERIA:
+			return isFilterCriteria();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -315,6 +360,9 @@ public class FXColumnImpl extends FXNamedElementImpl implements FXColumn {
 			return;
 		case FxuiPackage.FX_COLUMN__ALIGNMENT:
 			setAlignment((Pos) newValue);
+			return;
+		case FxuiPackage.FX_COLUMN__FILTER_CRITERIA:
+			setFilterCriteria((Boolean) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -343,6 +391,9 @@ public class FXColumnImpl extends FXNamedElementImpl implements FXColumn {
 		case FxuiPackage.FX_COLUMN__ALIGNMENT:
 			setAlignment(ALIGNMENT_EDEFAULT);
 			return;
+		case FxuiPackage.FX_COLUMN__FILTER_CRITERIA:
+			setFilterCriteria(FILTER_CRITERIA_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -365,6 +416,8 @@ public class FXColumnImpl extends FXNamedElementImpl implements FXColumn {
 			return width != WIDTH_EDEFAULT;
 		case FxuiPackage.FX_COLUMN__ALIGNMENT:
 			return alignment != ALIGNMENT_EDEFAULT;
+		case FxuiPackage.FX_COLUMN__FILTER_CRITERIA:
+			return filterCriteria != FILTER_CRITERIA_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -388,6 +441,8 @@ public class FXColumnImpl extends FXNamedElementImpl implements FXColumn {
 		result.append(width);
 		result.append(", alignment: ");
 		result.append(alignment);
+		result.append(", filterCriteria: ");
+		result.append(filterCriteria);
 		result.append(')');
 		return result.toString();
 	}

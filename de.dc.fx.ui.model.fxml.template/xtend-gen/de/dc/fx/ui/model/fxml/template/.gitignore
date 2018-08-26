@@ -22,3 +22,5 @@
 /.BaseEditingSupport.java._trace
 /.BaseEditingSupportTemplate.java._trace
 /.EditingSupportTemplate.java._trace
+/.TextChangeListener.java._trace
+/.TextChangeListenerTemplate.java._trace

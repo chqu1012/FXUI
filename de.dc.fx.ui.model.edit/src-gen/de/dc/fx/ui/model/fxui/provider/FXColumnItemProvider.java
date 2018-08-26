@@ -49,6 +49,7 @@ public class FXColumnItemProvider extends FXNamedElementItemProvider {
 			addUseCustomCellFactoryPropertyDescriptor(object);
 			addWidthPropertyDescriptor(object);
 			addAlignmentPropertyDescriptor(object);
+			addFilterCriteriaPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -133,6 +134,22 @@ public class FXColumnItemProvider extends FXNamedElementItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Filter Criteria feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addFilterCriteriaPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_FXColumn_filterCriteria_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_FXColumn_filterCriteria_feature",
+								"_UI_FXColumn_type"),
+						FxuiPackage.Literals.FX_COLUMN__FILTER_CRITERIA, true, false, false,
+						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+	}
+
+	/**
 	 * This returns FXColumn.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -182,6 +199,7 @@ public class FXColumnItemProvider extends FXNamedElementItemProvider {
 		case FxuiPackage.FX_COLUMN__USE_CUSTOM_CELL_FACTORY:
 		case FxuiPackage.FX_COLUMN__WIDTH:
 		case FxuiPackage.FX_COLUMN__ALIGNMENT:
+		case FxuiPackage.FX_COLUMN__FILTER_CRITERIA:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

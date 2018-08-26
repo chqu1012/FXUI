@@ -16,6 +16,7 @@ package de.dc.fx.ui.model.fxui;
  *   <li>{@link de.dc.fx.ui.model.fxui.FXColumn#isUseCustomCellFactory <em>Use Custom Cell Factory</em>}</li>
  *   <li>{@link de.dc.fx.ui.model.fxui.FXColumn#getWidth <em>Width</em>}</li>
  *   <li>{@link de.dc.fx.ui.model.fxui.FXColumn#getAlignment <em>Alignment</em>}</li>
+ *   <li>{@link de.dc.fx.ui.model.fxui.FXColumn#isFilterCriteria <em>Filter Criteria</em>}</li>
  * </ul>
  *
  * @see de.dc.fx.ui.model.fxui.FxuiPackage#getFXColumn()
@@ -157,5 +158,31 @@ public interface FXColumn extends FXNamedElement {
 	 * @generated
 	 */
 	void setAlignment(Pos value);
+
+	/**
+	 * Returns the value of the '<em><b>Filter Criteria</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Filter Criteria</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Filter Criteria</em>' attribute.
+	 * @see #setFilterCriteria(boolean)
+	 * @see de.dc.fx.ui.model.fxui.FxuiPackage#getFXColumn_FilterCriteria()
+	 * @model
+	 * @generated
+	 */
+	boolean isFilterCriteria();
+
+	/**
+	 * Sets the value of the '{@link de.dc.fx.ui.model.fxui.FXColumn#isFilterCriteria <em>Filter Criteria</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Filter Criteria</em>' attribute.
+	 * @see #isFilterCriteria()
+	 * @generated
+	 */
+	void setFilterCriteria(boolean value);
 
 } // FXColumn

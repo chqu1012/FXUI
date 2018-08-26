@@ -250,13 +250,22 @@ public interface FxuiPackage extends EPackage {
 	int FX_COLUMN__ALIGNMENT = FX_NAMED_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
+	 * The feature id for the '<em><b>Filter Criteria</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_COLUMN__FILTER_CRITERIA = FX_NAMED_ELEMENT_FEATURE_COUNT + 5;
+
+	/**
 	 * The number of structural features of the '<em>FX Column</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FX_COLUMN_FEATURE_COUNT = FX_NAMED_ELEMENT_FEATURE_COUNT + 5;
+	int FX_COLUMN_FEATURE_COUNT = FX_NAMED_ELEMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>FX Column</em>' class.
@@ -1309,6 +1318,17 @@ public interface FxuiPackage extends EPackage {
 	EAttribute getFXColumn_Alignment();
 
 	/**
+	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.model.fxui.FXColumn#isFilterCriteria <em>Filter Criteria</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Filter Criteria</em>'.
+	 * @see de.dc.fx.ui.model.fxui.FXColumn#isFilterCriteria()
+	 * @see #getFXColumn()
+	 * @generated
+	 */
+	EAttribute getFXColumn_FilterCriteria();
+
+	/**
 	 * Returns the meta object for class '{@link de.dc.fx.ui.model.fxui.FXNamedElement <em>FX Named Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1881,6 +1901,14 @@ public interface FxuiPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute FX_COLUMN__ALIGNMENT = eINSTANCE.getFXColumn_Alignment();
+
+		/**
+		 * The meta object literal for the '<em><b>Filter Criteria</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FX_COLUMN__FILTER_CRITERIA = eINSTANCE.getFXColumn_FilterCriteria();
 
 		/**
 		 * The meta object literal for the '{@link de.dc.fx.ui.model.fxui.impl.FXNamedElementImpl <em>FX Named Element</em>}' class.

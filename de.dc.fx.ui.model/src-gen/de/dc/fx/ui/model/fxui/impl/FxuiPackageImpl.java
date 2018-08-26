@@ -374,6 +374,15 @@ public class FxuiPackageImpl extends EPackageImpl implements FxuiPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getFXColumn_FilterCriteria() {
+		return (EAttribute) fxColumnEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getFXNamedElement() {
 		return fxNamedElementEClass;
 	}
@@ -790,6 +799,7 @@ public class FxuiPackageImpl extends EPackageImpl implements FxuiPackage {
 		createEAttribute(fxColumnEClass, FX_COLUMN__USE_CUSTOM_CELL_FACTORY);
 		createEAttribute(fxColumnEClass, FX_COLUMN__WIDTH);
 		createEAttribute(fxColumnEClass, FX_COLUMN__ALIGNMENT);
+		createEAttribute(fxColumnEClass, FX_COLUMN__FILTER_CRITERIA);
 
 		fxNamedElementEClass = createEClass(FX_NAMED_ELEMENT);
 		createEAttribute(fxNamedElementEClass, FX_NAMED_ELEMENT__NAME);
@@ -934,6 +944,9 @@ public class FxuiPackageImpl extends EPackageImpl implements FxuiPackage {
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFXColumn_Alignment(), this.getPos(), "alignment", "CENTER", 0, 1, FXColumn.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFXColumn_FilterCriteria(), ecorePackage.getEBoolean(), "filterCriteria", null, 0, 1,
+				FXColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(fxNamedElementEClass, FXNamedElement.class, "FXNamedElement", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
