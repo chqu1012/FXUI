@@ -58,7 +58,8 @@ public class FillEntityFieldsByJavaClassAction implements IActionDelegate{
 									EList<FXProperty> properties = new BasicEList<FXProperty>();
 									for (IField field : type.getFields()) {
 										FXProperty property = FxuiFactory.eINSTANCE.createFXProperty();
-										property.setName(field.getElementName());
+										String name = field.getElementName().substring(0, 1).toUpperCase()+field.getElementName().substring(1);
+										property.setName(name);
 										property.setType(field.getTypeSignature().replaceFirst("Q", "").replaceAll(";", ""));
 										properties.add(property);
 									}
