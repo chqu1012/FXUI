@@ -26,7 +26,7 @@ class BaseControllerTemplate implements IGenerator<FXTableView>{
 	
 		«FOR col : view.fxColumns»
 		@FXML
-		protected TableColumn<T, «col.associatedFXProperty.type»> «col.associatedFXProperty.name.toFirstLower»Column;
+		protected TableColumn<T, T> «col.associatedFXProperty.name.toFirstLower»Column;
 		«ENDFOR»
 	
 		public «view.name»BaseTableViewer() {

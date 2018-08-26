@@ -25,6 +25,7 @@ class ControllerTemplate implements IGenerator<FXTableView>{
 		@Override
 		protected void init() {
 		«FOR col : view.fxColumns»
+			«col.associatedFXProperty.name.toFirstLower»Column.setCellFactory(new «view.name.toFirstUpper»«col.associatedFXProperty.name.toFirstUpper»CellFactory());
 			«IF col.editable»
 			«col.associatedFXProperty.name.toFirstLower»Column.setCellFactory(TextFieldTableCell.forTableColumn(«getConverter(col.associatedFXProperty)»));
 			«col.associatedFXProperty.name.toFirstLower»Column.setOnEditCommit(new «view.name.toFirstUpper»«col.associatedFXProperty.name.toFirstUpper»EditingSupport());
