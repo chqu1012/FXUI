@@ -47,44 +47,12 @@ public class FXTableViewItemProvider extends FXNamedElementItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addFxColumnsPropertyDescriptor(object);
-			addFxEntityPropertyDescriptor(object);
 			addHasFilterPropertyDescriptor(object);
 			addHasSorterPropertyDescriptor(object);
 			addPackagePathPropertyDescriptor(object);
 			addInputPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Fx Columns feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addFxColumnsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_FXTableView_fxColumns_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_FXTableView_fxColumns_feature",
-								"_UI_FXTableView_type"),
-						FxuiPackage.Literals.FX_TABLE_VIEW__FX_COLUMNS, true, false, true, null, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Fx Entity feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addFxEntityPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_FXTableView_fxEntity_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_FXTableView_fxEntity_feature",
-								"_UI_FXTableView_type"),
-						FxuiPackage.Literals.FX_TABLE_VIEW__FX_ENTITY, true, false, true, null, null, null));
 	}
 
 	/**

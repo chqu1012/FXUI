@@ -46,26 +46,10 @@ public class FXModelItemProvider extends FXNamedElementItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addFxPropertiesPropertyDescriptor(object);
 			addFxreferencePropertyDescriptor(object);
 			addUseExistingModelPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Fx Properties feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addFxPropertiesPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_FXModel_fxProperties_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_FXModel_fxProperties_feature",
-								"_UI_FXModel_type"),
-						FxuiPackage.Literals.FX_MODEL__FX_PROPERTIES, true, false, true, null, null, null));
 	}
 
 	/**
