@@ -67,8 +67,8 @@ public class EditingSupportTemplate implements IGenerator<FXColumn> {
     String _firstUpper_1 = StringExtensions.toFirstUpper(data.getAssociatedFXProperty().getName());
     _builder.append(_firstUpper_1);
     _builder.append("EditingSupport extends BaseEditingSupport<");
-    String _type_2 = data.getAssociatedFXProperty().getType();
-    _builder.append(_type_2);
+    String _normalize = this.normalize(data.getAssociatedFXProperty().getType());
+    _builder.append(_normalize);
     _builder.append(">{");
     _builder.newLineIfNotEmpty();
     String _xifexpression = null;
@@ -88,8 +88,8 @@ public class EditingSupportTemplate implements IGenerator<FXColumn> {
     _builder.append("protected void setValue(");
     _builder.append(className, "\t");
     _builder.append(" current, ");
-    String _type_3 = data.getAssociatedFXProperty().getType();
-    _builder.append(_type_3, "\t");
+    String _normalize_1 = this.normalize(data.getAssociatedFXProperty().getType());
+    _builder.append(_normalize_1, "\t");
     _builder.append(" newValue) {");
     _builder.newLineIfNotEmpty();
     _builder.append("\t\t");
@@ -104,5 +104,29 @@ public class EditingSupportTemplate implements IGenerator<FXColumn> {
     _builder.append("}");
     _builder.newLine();
     return _builder.toString();
+  }
+  
+  public String normalize(final String type) {
+    boolean _equals = Objects.equal(type, "int");
+    if (_equals) {
+      return "Integer";
+    } else {
+      boolean _equals_1 = Objects.equal(type, "double");
+      if (_equals_1) {
+        return "Double";
+      } else {
+        boolean _equals_2 = Objects.equal(type, "long");
+        if (_equals_2) {
+          return "Long";
+        } else {
+          boolean _equals_3 = Objects.equal(type, "float");
+          if (_equals_3) {
+            return "Float";
+          } else {
+            return type;
+          }
+        }
+      }
+    }
   }
 }

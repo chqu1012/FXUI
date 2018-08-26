@@ -2,7 +2,7 @@
 <feature
       id="de.dc.fx.ui.model.feature"
       label="JavaFX Control Generator Feature"
-      version="0.8.7.qualifier">
+      version="0.8.9.qualifier">
 
    <description url="http://www.example.com/description">
       [Enter Feature Description here.]

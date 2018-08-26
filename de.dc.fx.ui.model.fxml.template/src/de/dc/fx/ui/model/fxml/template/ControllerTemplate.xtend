@@ -12,6 +12,7 @@ class ControllerTemplate implements IGenerator<FXTableView>{
 	import javafx.scene.control.cell.TextFieldTableCell;
 	import javafx.fxml.FXMLLoader;
 	import «view.packagePath».cell.edit.*;
+	import «view.packagePath».cell.*;
 	«IF view.input.useExistingModel!==null»
 	import «view.input.useExistingModel.importUri»;
 	«ELSE»
@@ -19,8 +20,7 @@ class ControllerTemplate implements IGenerator<FXTableView>{
 	«ENDIF»
 	import javafx.util.converter.*;
 	import java.time.*;
-	«val className = if(view.input.useExistingModel!==null){view.input.useExistingModel.importUri}else{view.input.name}»
-	public class «view.name»TableViewer extends «view.name»BaseTableViewer<«className»>{
+	public class «view.name»TableViewer extends «view.name»BaseTableViewer{
 	
 		@Override
 		protected void init() {

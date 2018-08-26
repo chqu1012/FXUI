@@ -11,7 +11,7 @@ class EntityTemplate implements IGenerator<FXModel>{
 	
 	import java.time.*;
 	«val name = data.name.toFirstUpper»
-	public class «name»{
+	public class «name»«IF data.useExistingModel!==null» extends «data.useExistingModel.importUri»«ENDIF»{
 		«FOR property : data.fxProperties»
 		private «property.type» «property.name.toFirstLower»;
 		«ENDFOR»

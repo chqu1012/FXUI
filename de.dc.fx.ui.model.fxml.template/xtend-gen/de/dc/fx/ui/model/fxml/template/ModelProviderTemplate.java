@@ -2,7 +2,6 @@ package de.dc.fx.ui.model.fxml.template;
 
 import com.google.common.base.Objects;
 import de.dc.fx.ui.model.fxml.template.IGenerator;
-import de.dc.fx.ui.model.fxui.FXExistingModel;
 import de.dc.fx.ui.model.fxui.FXModel;
 import de.dc.fx.ui.model.fxui.FXProperty;
 import de.dc.fx.ui.model.fxui.FXTableView;
@@ -33,35 +32,14 @@ public class ModelProviderTemplate implements IGenerator<FXModel> {
     _builder.newLine();
     _builder.append("import java.util.*;");
     _builder.newLine();
-    {
-      FXExistingModel _useExistingModel = data.getUseExistingModel();
-      boolean _tripleNotEquals = (_useExistingModel != null);
-      if (_tripleNotEquals) {
-        _builder.append("import ");
-        String _importUri = data.getUseExistingModel().getImportUri();
-        _builder.append(_importUri);
-        _builder.append(";");
-        _builder.newLineIfNotEmpty();
-      } else {
-        _builder.append("import ");
-        String _packagePath_1 = view.getPackagePath();
-        _builder.append(_packagePath_1);
-        _builder.append(".model.*;");
-        _builder.newLineIfNotEmpty();
-      }
-    }
+    _builder.append("import ");
+    String _packagePath_1 = view.getPackagePath();
+    _builder.append(_packagePath_1);
+    _builder.append(".model.*;");
+    _builder.newLineIfNotEmpty();
     _builder.append("import javafx.collections.*;");
     _builder.newLine();
-    String _xifexpression = null;
-    FXExistingModel _useExistingModel_1 = data.getUseExistingModel();
-    boolean _tripleNotEquals_1 = (_useExistingModel_1 != null);
-    if (_tripleNotEquals_1) {
-      _xifexpression = data.getUseExistingModel().getImportUri();
-    } else {
-      _xifexpression = data.getName();
-    }
-    final String className = _xifexpression;
-    _builder.newLineIfNotEmpty();
+    _builder.newLine();
     _builder.append("public enum ");
     String _firstUpper = StringExtensions.toFirstUpper(data.getName());
     _builder.append(_firstUpper);
@@ -74,7 +52,8 @@ public class ModelProviderTemplate implements IGenerator<FXModel> {
     _builder.newLine();
     _builder.append("\t");
     _builder.append("private ObservableList<");
-    _builder.append(className, "\t");
+    String _firstUpper_1 = StringExtensions.toFirstUpper(data.getName());
+    _builder.append(_firstUpper_1, "\t");
     _builder.append("> ");
     String _firstLower = StringExtensions.toFirstLower(data.getName());
     _builder.append(_firstLower, "\t");
@@ -86,8 +65,8 @@ public class ModelProviderTemplate implements IGenerator<FXModel> {
     _builder.newLine();
     _builder.append("\t");
     _builder.append("private ");
-    String _firstUpper_1 = StringExtensions.toFirstUpper(data.getName());
-    _builder.append(_firstUpper_1, "\t");
+    String _firstUpper_2 = StringExtensions.toFirstUpper(data.getName());
+    _builder.append(_firstUpper_2, "\t");
     _builder.append("ModelProvider() {");
     _builder.newLineIfNotEmpty();
     _builder.append("\t\t");
@@ -117,7 +96,8 @@ public class ModelProviderTemplate implements IGenerator<FXModel> {
     String _firstLower_1 = StringExtensions.toFirstLower(data.getName());
     _builder.append(_firstLower_1, "\t\t");
     _builder.append("s.add(new ");
-    _builder.append(className, "\t\t");
+    String _firstUpper_3 = StringExtensions.toFirstUpper(data.getName());
+    _builder.append(_firstUpper_3, "\t\t");
     _builder.append("(");
     _builder.append(parameter, "\t\t");
     _builder.append("));");
@@ -132,10 +112,11 @@ public class ModelProviderTemplate implements IGenerator<FXModel> {
     _builder.newLine();
     _builder.append("\t");
     _builder.append("public ObservableList<");
-    _builder.append(className, "\t");
+    String _firstUpper_4 = StringExtensions.toFirstUpper(data.getName());
+    _builder.append(_firstUpper_4, "\t");
     _builder.append("> get");
-    String _firstUpper_2 = StringExtensions.toFirstUpper(data.getName());
-    _builder.append(_firstUpper_2, "\t");
+    String _firstUpper_5 = StringExtensions.toFirstUpper(data.getName());
+    _builder.append(_firstUpper_5, "\t");
     _builder.append("s() {");
     _builder.newLineIfNotEmpty();
     _builder.append("\t\t");
@@ -150,10 +131,11 @@ public class ModelProviderTemplate implements IGenerator<FXModel> {
     _builder.newLine();
     _builder.append("\t");
     _builder.append("public void set");
-    String _firstUpper_3 = StringExtensions.toFirstUpper(data.getName());
-    _builder.append(_firstUpper_3, "\t");
+    String _firstUpper_6 = StringExtensions.toFirstUpper(data.getName());
+    _builder.append(_firstUpper_6, "\t");
     _builder.append("s(ObservableList<");
-    _builder.append(className, "\t");
+    String _firstUpper_7 = StringExtensions.toFirstUpper(data.getName());
+    _builder.append(_firstUpper_7, "\t");
     _builder.append("> ");
     String _firstLower_3 = StringExtensions.toFirstLower(data.getName());
     _builder.append(_firstLower_3, "\t");
@@ -206,34 +188,58 @@ public class ModelProviderTemplate implements IGenerator<FXModel> {
         _builder_1.append("random.nextInt()");
         return _builder_1.toString();
       } else {
-        if ((Objects.equal(property.getType(), "Double") || Objects.equal(property, "double"))) {
+        if ((Objects.equal(property.getType(), "Integer") || Objects.equal(property, "Integer"))) {
           StringConcatenation _builder_2 = new StringConcatenation();
-          _builder_2.append("random.nextDouble()");
+          _builder_2.append("random.nextInt()");
           return _builder_2.toString();
         } else {
-          if ((Objects.equal(property.getType(), "Long") || Objects.equal(property, "long"))) {
+          if ((Objects.equal(property.getType(), "Integer") || Objects.equal(property, "Double"))) {
             StringConcatenation _builder_3 = new StringConcatenation();
-            _builder_3.append("random.nextLong()");
+            _builder_3.append("random.nextDouble()");
             return _builder_3.toString();
           } else {
-            if ((Objects.equal(property.getType(), "Boolean") || Objects.equal(property, "boolean"))) {
+            if ((Objects.equal(property.getType(), "Integer") || Objects.equal(property, "Float"))) {
               StringConcatenation _builder_4 = new StringConcatenation();
-              _builder_4.append("random.nextBoolean()");
+              _builder_4.append("random.nextFloat()");
               return _builder_4.toString();
             } else {
-              String _type_1 = property.getType();
-              boolean _equals_1 = Objects.equal(_type_1, "LocalDate");
-              if (_equals_1) {
+              if ((Objects.equal(property.getType(), "Integer") || Objects.equal(property, "Long"))) {
                 StringConcatenation _builder_5 = new StringConcatenation();
-                _builder_5.append("LocalDate.now()");
+                _builder_5.append("random.nextLong()");
                 return _builder_5.toString();
               } else {
-                String _type_2 = property.getType();
-                boolean _equals_2 = Objects.equal(_type_2, "LocalDateTime");
-                if (_equals_2) {
+                if ((Objects.equal(property.getType(), "Double") || Objects.equal(property, "double"))) {
                   StringConcatenation _builder_6 = new StringConcatenation();
-                  _builder_6.append("LocalDateTime.now()");
+                  _builder_6.append("random.nextDouble()");
                   return _builder_6.toString();
+                } else {
+                  if ((Objects.equal(property.getType(), "Long") || Objects.equal(property, "long"))) {
+                    StringConcatenation _builder_7 = new StringConcatenation();
+                    _builder_7.append("random.nextLong()");
+                    return _builder_7.toString();
+                  } else {
+                    if ((Objects.equal(property.getType(), "Boolean") || Objects.equal(property, "boolean"))) {
+                      StringConcatenation _builder_8 = new StringConcatenation();
+                      _builder_8.append("random.nextBoolean()");
+                      return _builder_8.toString();
+                    } else {
+                      String _type_1 = property.getType();
+                      boolean _equals_1 = Objects.equal(_type_1, "LocalDate");
+                      if (_equals_1) {
+                        StringConcatenation _builder_9 = new StringConcatenation();
+                        _builder_9.append("LocalDate.now()");
+                        return _builder_9.toString();
+                      } else {
+                        String _type_2 = property.getType();
+                        boolean _equals_2 = Objects.equal(_type_2, "LocalDateTime");
+                        if (_equals_2) {
+                          StringConcatenation _builder_10 = new StringConcatenation();
+                          _builder_10.append("LocalDateTime.now()");
+                          return _builder_10.toString();
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -241,6 +247,6 @@ public class ModelProviderTemplate implements IGenerator<FXModel> {
         }
       }
     }
-    return "\"\";";
+    return "\"\"";
   }
 }

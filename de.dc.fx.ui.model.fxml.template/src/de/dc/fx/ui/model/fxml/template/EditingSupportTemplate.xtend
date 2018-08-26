@@ -21,12 +21,26 @@ class EditingSupportTemplate implements IGenerator<FXColumn>{
 	«ELSEIF data.associatedFXProperty.type=='LocalDateTime'»
 	import java.time.LocalDateTime;
 	«ENDIF»
-	public class «view.name.toFirstUpper»«data.associatedFXProperty.name.toFirstUpper»EditingSupport extends BaseEditingSupport<«data.associatedFXProperty.type»>{
+	public class «view.name.toFirstUpper»«data.associatedFXProperty.name.toFirstUpper»EditingSupport extends BaseEditingSupport<«data.associatedFXProperty.type.normalize»>{
 	«val className = if(model.useExistingModel!==null){model.useExistingModel.importUri}else{model.name}»
 		@Override
-		protected void setValue(«className» current, «data.associatedFXProperty.type» newValue) {
+		protected void setValue(«className» current, «data.associatedFXProperty.type.normalize» newValue) {
 			current.set«data.associatedFXProperty.name.toFirstUpper»(newValue);
 		}
 	}
 	'''
+	
+	def String normalize(String type){
+		if (type=='int') {
+			return 'Integer'
+		}else if (type=='double') {
+			return 'Double'
+		}else if (type=='long') {
+			return 'Long'
+		}else if (type=='float') {
+			return 'Float'
+		}else{
+			return type;
+		}
+	}
 }

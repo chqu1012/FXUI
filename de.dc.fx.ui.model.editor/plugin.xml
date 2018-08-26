@@ -159,6 +159,17 @@
            menubarPath="additions">
      </action>
   </objectContribution>
+  <objectContribution
+        id="de.dc.fx.ui.model.editor.menu"
+        objectClass="de.dc.fx.ui.model.fxui.FXModel">
+     <action
+           class="de.dc.fx.ui.model.editor.command.FillEntityFieldsByJavaClassAction"
+           enablesFor="1"
+           id="de.dc.fx.ui.model.editor.FillFieldsAction"
+           label="Fill fields by existing java class"
+           menubarPath="additions">
+     </action>
+  </objectContribution>
 </extension>
 <extension
       id="product"
