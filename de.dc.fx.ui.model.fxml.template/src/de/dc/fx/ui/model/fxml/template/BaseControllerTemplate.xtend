@@ -30,7 +30,7 @@ class BaseControllerTemplate implements IGenerator<FXTableView>{
 		«ENDFOR»
 	
 		public «view.name»BaseTableViewer() {
-			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(getClass().getSimpleName()+".fxml"));
+			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(fxml()));
 			fxmlLoader.setRoot(this);
 			fxmlLoader.setController(this);
 			
@@ -40,6 +40,10 @@ class BaseControllerTemplate implements IGenerator<FXTableView>{
 				throw new RuntimeException(exception);
 			}
 		}	
+		
+		public String fxml() {
+			return getClass().getSimpleName()+".fxml";
+		}
 	
 		public void initialize() {
 			sortedInput.comparatorProperty().bind(tableView.comparatorProperty());
